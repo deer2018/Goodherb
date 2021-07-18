@@ -1,5 +1,5 @@
 <div class="form-group {{ $errors->has('title') ? 'has-error' : ''}}">
-    <label for="title" class="control-label">{{ 'Title' }}</label>
+    <label for="title" class="control-label">{{ 'ยนา่เด' }}</label>
     <input class="form-control" name="title" type="text" id="title" value="{{ isset($crud->title) ? $crud->title : ''}}" >
     {!! $errors->first('title', '<p class="help-block">:message</p>') !!}
 </div>

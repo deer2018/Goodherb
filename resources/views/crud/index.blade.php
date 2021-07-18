@@ -10,7 +10,7 @@
                     <div class="card-header">Crud</div>
                     <div class="card-body">
                         <a href="{{ url('/crud/create') }}" class="btn btn-success btn-sm" title="Add New Crud">
-                            <i class="fa fa-plus" aria-hidden="true"></i> Add New
+                            <i class="fa fa-plus" aria-hidden="true"></i> เพิ่มข้อมูล
                         </a>
 
                         <form method="GET" action="{{ url('/crud') }}" accept-charset="UTF-8" class="form-inline my-2 my-lg-0 float-right" role="search">
@@ -30,14 +30,22 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>Title</th><th>Content</th><th>Category</th><th>User Id</th><th>Actions</th>
+                                        <th>ลำดับ</th>
+                                        <th>Title</th>
+                                        <th>Content</th>
+                                        <th>Category</th>
+                                        <th>User Id</th>
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($crud as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->title }}</td><td>{{ $item->content }}</td><td>{{ $item->category }}</td><td>{{ $item->user_id }}</td>
+                                        <td>{{ $item->title }}</td>
+                                        <td>{{ $item->content }}</td>
+                                        <td>{{ $item->category }}</td>
+                                        <td>{{ $item->user_id }}</td>
                                         <td>
                                             <a href="{{ url('/crud/' . $item->id) }}" title="View Crud"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/crud/' . $item->id . '/edit') }}" title="Edit Crud"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
