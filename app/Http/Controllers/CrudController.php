@@ -33,6 +33,8 @@ class CrudController extends Controller
         return view('crud.index', compact('crud'));
     }
 
+    
+
     /**
      * Show the form for creating a new resource.
      *

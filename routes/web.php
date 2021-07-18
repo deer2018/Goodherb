@@ -23,3 +23,10 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('crud', 'CrudController');
+
+Route::get('/x', function () {
+    return view('xx.index');
+});
+Route::get('/xx', function () {
+    return view('xx.create');
+});
