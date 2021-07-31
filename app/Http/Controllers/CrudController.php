@@ -32,7 +32,6 @@ class CrudController extends Controller
 
         return view('crud.index', compact('crud'));
     }
-
     
 
     /**

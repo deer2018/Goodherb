@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controller\Admin\AdminIndexController;
+use App\Http\Controller\Medic\MedicIndexController;
+use App\Http\Controller\Volunteer\VolunteerIndexController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,18 +17,25 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
-
+}); 
 
 Auth::routes();
 
+
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('crud', 'CrudController');
+//Route Admin
+Route::get('/admin_index', function () {
+        return view('admin.admin_index'); 
+    });
 
-Route::get('/x', function () {
-    return view('xx.index');
+//Route Volunteer
+Route::get('/volunteer_index', function () {
+    return view('volunteer.volunteer_index');
 });
-Route::get('/xx', function () {
-    return view('xx.create');
+//Route Medic
+Route::get('/medic_index', function () {
+    return view('medic.medic_index');
 });
+
+Route::resource('crud', 'CrudController');
