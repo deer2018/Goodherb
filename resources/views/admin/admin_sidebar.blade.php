@@ -8,11 +8,18 @@
             <ul class="nav" role="tablist">
                 <li role="presentation">
                     <a href="{{ url('/admin_index') }}">
-                        ADMIN <br>
+                        หน้าหลัก <br>
                     </a>
                     <a href="{{ url('/crud') }}">
-                        CRUD
+                        CRUD <br>
                     </a>
+                    <a href="{{ url('/admin_volunteer_index') }}">
+                        ข้อมูลอาสาสมัคร <br>
+                    </a>
+                    <a href="{{ url('/admin_medic_index') }}">
+                        ข้อมูลแพทย์ <br>
+                    </a>
+
                 </li>
               
             </ul>
