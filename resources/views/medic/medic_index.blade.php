@@ -2,22 +2,15 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+        <div class="row">
+            @include('medic.medic_sidebar')
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in Medic5555555555555555555555555555555! ') }}
-                </div>
-            </div>
-        </div>
-    </div>
+            <div class="col-md-10">
+                <div class="card">
+                    <div class="card-header">Crud</div>
+                    <div class="card-body">
+        
+        </div></div></div></div>
+</div>
 </div>
 @endsection
