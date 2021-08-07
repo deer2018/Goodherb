@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in Medic! ') }}
+                    {{ __('You are logged in Medic5555555555555555555555555555555! ') }}
                 </div>
             </div>
         </div>
