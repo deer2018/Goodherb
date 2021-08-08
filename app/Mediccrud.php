@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+<<<<<<< Updated upstream
 class CrudController extends Controller
 {
    
@@ -77,4 +78,9 @@ class CrudController extends Controller
 
         return redirect('crud')->with('flash_message', 'Crud deleted!');
     }
+=======
+class Mediccrud extends Model
+{
+    //
+>>>>>>> Stashed changes
 }

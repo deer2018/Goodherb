@@ -18,5 +18,5 @@ class AdminIndexController extends Controller
     {
         return view('admin_index');
     }
-
+};
    

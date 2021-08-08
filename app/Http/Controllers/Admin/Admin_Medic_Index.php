@@ -17,5 +17,4 @@ class Admin_Medic_Index extends Controller
     {
         return view('admin_medic_index');
     }
-}
-}
+};

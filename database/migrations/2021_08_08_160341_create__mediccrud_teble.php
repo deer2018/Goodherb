@@ -16,9 +16,12 @@ class CreateMediccrudTeble extends Migration
         Schema::create('_mediccrud_teble', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+<<<<<<< Updated upstream
             $table->string('name');
             $table->string('lastname')
             $table->int
+=======
+>>>>>>> Stashed changes
         });
     }
 

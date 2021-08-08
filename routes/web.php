@@ -13,11 +13,14 @@ Route::get('/', function () {
     return view('welcome');
 }); 
 //auth
-Auth::routes();
-//crud
-Route::resource('crud', 'CrudController');
 
+Auth::routes();
+
+//crud
+
+Route::resource('crud', 'CrudController');
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('medic_crud', 'MediccrudController');
 
 //Route Admin ------------------------------------------------------------------------
 
@@ -52,6 +55,14 @@ Route::get('/volunteer_conclusion', function () {
 
 Route::get('/medic_index', function () {
     return view('medic.medic_index');
+});
+
+Route::get('/medic_history', function () {
+    return view('medic.medic_history.medic_history');
+});
+
+Route::get('/medic_volunteer', function () {
+    return view('medic.medic_volunteer.medic_volunteer');
 });
 
 

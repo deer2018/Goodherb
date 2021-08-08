@@ -7,7 +7,7 @@
 
             <div class="col-md-10">
                 <div class="card">
-                    <div class="card-header">Crud</div>
+                    <div class="card-header">หน้าแรกของหมอ</div>
                     <div class="card-body">
         
         </div></div></div></div>
