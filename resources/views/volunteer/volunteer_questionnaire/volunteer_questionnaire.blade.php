@@ -7,17 +7,25 @@
 
             <div class="col-md-10">
                 <div class="card">
-                    <div class="card-header">ข้อมูลอาสาสมัคร</div>
+                    <div class="card-header">แบบสอบถาม</div>
                     <div class="card-body">
                         <div class="table-responsive">
                         <table class="table">   
                             <thead>
                                     <tr>
-                                        <th>ลำดับ</th>
-                                        <th>ชื่อ</th>
-                                        <th>นามสกุล</th>
-                                        <th>เบอร์โทรศัพท์</th>
-                                        <th>กลุ่มอสม</th>
+                                        <th>1</th>
+                                        <th>ชื่อแบบสอบถามที่ 1</th>
+                                        <th>8-8-64</th>
+                                        <th><a href="#">คลิก</a></th>
+                                        <th></th>
+                                    </tr>
+                            </thead>
+                            <thead>
+                                    <tr>
+                                        <th>2</th>
+                                        <th>ชื่อแบบสอบถามที่ 2</th>
+                                        <th>22-8-64</th>
+                                        <th><a href="#">คลิก</a></th>
                                         <th></th>
                                     </tr>
                             </thead>

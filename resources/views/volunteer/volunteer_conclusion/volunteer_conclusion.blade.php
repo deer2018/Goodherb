@@ -7,25 +7,33 @@
 
             <div class="col-md-10">
                 <div class="card">
-                    <div class="card-header">ข้อมูลแพทย์</div>
+                    <div class="card-header">ผลการรักษา</div>
                     <div class="card-body">
                         <div class="table-responsive">
                         <table class="table">   
                             <thead>
                                     <tr>
-                                        <th>ลำดับ</th>
-                                        <th>ชื่อ</th>
-                                        <th>นามสกุล</th>
-                                        <th>เบอร์โทรศัพท์</th>
+                                        <th>ชื่อ - สกุล</th>
+                                        <th>วีรพล พรมราช</th>
                                         <th></th>
                                     </tr>
                             </thead>
                             <tbody>
                                     <tr>
+                                        <td>ประเภท</td>
                                         <td>1</td>
-                                        <td>นายก</td>
-                                        <td>จันทร์กระจ่าง</td>
-                                        <td>081-1231212</td>
+                                    </tr>
+                            </tbody>
+                            <tbody>
+                                    <tr>
+                                        <td>ผลวินิจฉัย</td>
+                                        <td>อยู่ในเกณฑ์ปลอดภัย</td>
+                                    </tr>
+                            </tbody>
+                            <tbody>
+                                    <tr>
+                                        <td>รับยา</td>
+                                        <td>น้ำดอกไม้ M 78</td>
                                     </tr>
                             </tbody>
                         </table>
