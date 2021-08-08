@@ -1,27 +1,21 @@
 <div class="col-md-2">
     <div class="card">
         <div class="card-header">
-            เมนู
+            Main Menu
         </div>
-
         <div class="card-body">
             <ul class="nav" role="tablist">
                 <li role="presentation">
                     <a href="{{ url('/medic_index') }}">
-                        หน้าหลัก <br>
+                        หน้าแรก <br>
                     </a>
-                    <a href="{{ url('/crud') }}">
-                        ประวัติ <br>
+                    <a href="{{ url('/medic_history') }}">
+                        ประวัติแพทย์ <br>
                     </a>
-                    <a href="{{ url('/admin_volunteer_index') }}">
+                    <a href="{{ url('/medic_volunteer') }}">
                         ข้อมูลอาสาสมัคร <br>
                     </a>
-                    <a href="{{ url('/admin_medic_index') }}">
-                        ข้อมูลแพทย์ <br>
-                    </a>
-
                 </li>
-              
             </ul>
         </div>
     </div>

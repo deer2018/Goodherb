@@ -11,7 +11,6 @@
 
                     <div class="card-body">
                         Your application's dashboard.
-                        28262525215
                     </div>
                 </div>
             </div>
