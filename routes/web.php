@@ -36,6 +36,15 @@ Route::get('/admin_medic_index', function() {
 Route::get('/volunteer_index', function () {
     return view('volunteer.volunteer_index');
 });
+Route::get('/volunteer_personal', function () {
+    return view('volunteer.volunteer_personal.volunteer_personal');
+});
+Route::get('/volunteer_questionnaire', function () {
+    return view('volunteer.volunteer_questionnaire.volunteer_questionnaire');
+});
+Route::get('/volunteer_conclusion', function () {
+    return view('volunteer.volunteer_conclusion.volunteer_conclusion');
+});
 
 
 
