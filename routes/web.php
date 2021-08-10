@@ -45,6 +45,9 @@ Route::get('/volunteer_personal', function () {
 Route::get('/volunteer_questionnaire', function () {
     return view('volunteer.volunteer_questionnaire.volunteer_questionnaire');
 });
+Route::get('/volunteer_questionnaire_sub', function () {
+    return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_sub');
+});
 Route::get('/volunteer_conclusion', function () {
     return view('volunteer.volunteer_conclusion.volunteer_conclusion');
 });

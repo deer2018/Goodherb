@@ -13,22 +13,27 @@
                         <table class="table">   
                             <thead>
                                     <tr>
-                                        <th>1</th>
-                                        <th>ชื่อแบบสอบถามที่ 1</th>
-                                        <th>8-8-64</th>
-                                        <th><a href="#">คลิก</a></th>
-                                        <th></th>
+                                        <th>ลำดับ</th>
+                                        <th>แบบสอบถาม</th>
+                                        <th>วันที่</th>          
                                     </tr>
                             </thead>
-                            <thead>
+                            <tbody>
                                     <tr>
-                                        <th>2</th>
-                                        <th>ชื่อแบบสอบถามที่ 2</th>
-                                        <th>22-8-64</th>
-                                        <th><a href="#">คลิก</a></th>
-                                        <th></th>
+                                        <td>1</td>
+                                        <td>แบบสอบถามครั้งที่ 1</td>
+                                        <td>1-8-64</td>
+                                        <td><a href="{{ url('/volunteer_questionnaire_sub') }}" title="Back">คลิก</a></td>
+                                        
                                     </tr>
-                            </thead>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>แบบสอบถามครั้งที่ 2</td>
+                                        <td>14-8-64</td>
+                                        <td><a href="{{ url('/volunteer_questionnaire_sub') }}" title="Back"><button  class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>คลิก</button></a></td>
+                                     
+                                    </tr>
+                            </tbody>
                         </table>
                         </div>
                     

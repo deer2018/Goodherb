@@ -9,25 +9,38 @@
                 <div class="card">
                     <div class="card-header">หน้าข้อมูลของหมอ</div>
                     <div class="card-body">
-        <p><h4>แพทย์หญิง Scarlett Johansson</h4>
-        <hr>
-        <b>ความเชี่ยวชาญ</b>
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ปัญหาด้านความเครียด<hr>
-        <b>ความชำนาญเฉพาะทาง</b>
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ความเครียดวิทยา<hr>
-        <b>ภาษาที่พูด</b>
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ไทย / อังกฤษ<hr>
-        <b>คุณวุฒิ</b>
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- แพทย์ศาสตรบัณฑิต, คณะแพทยศาสตร์, มหาวิทยาลัยสงขลานครินทร์, ประเทศไทย
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- แพทย์เฉพาะทางสาขาความเครียดทั่วไป, ราชวิทยาลัยศัลยแพทย์แห่งประเทศไทย
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- แพทย์ปฎิบัติการ (Fellowship), แผนกความเครียดวิทยา, ศูนย์การแพทย์โรงพยาบาลกรุงเทพ, ประเทศไทย<hr>
-        <b>วุฒิบัตร</b>
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สาขาความเครียดทั่วไป, ประเทศไทย<hr>
-        <b>ความชำนาญพิเศษ</b>
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ช่วยกำจัดความเครียดให้ The Hulk<hr>
-        <b>การศึกษาอื่นๆ และประสบการณ์การทำงาน</b>
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ภาควิชาความเครียดศาสตร์ มหาวิทยาลัยสงขลานครินทร์ ตำแหน่ง อาจารย์แพทย์, ประเทศไทย<hr>
-        </p>
+                    <div class="form-group {{ $errors->has('title') ? 'has-error' : ''}}">
+    <label for="title" class="control-label">{{ 'ชื่อ' }}</label>
+    <input class="form-control" name="title" type="text" id="title" value="{{ isset($crud->title) ? $crud->title : ''}}" >
+    {!! $errors->first('title', '<p class="help-block">:message</p>') !!}
+</div>
+
+<div class="form-group {{ $errors->has('content') ? 'has-error' : ''}}">
+    <label for="content" class="control-label">{{ 'นามสกุล' }}</label>
+    <input class="form-control" rows="5" name="content" type="text" id="content" value="{{ isset($crud->content) ? $crud->content : ''}}">
+    {!! $errors->first('content', '<p class="help-block">:message</p>') !!}
+</div>
+
+<div class="form-group {{ $errors->has('category') ? 'has-error' : ''}}">
+    <label for="category" class="control-label">{{ 'เพศ' }}</label>
+    <select name="category" class="form-control" id="category" >
+    @foreach (json_decode('{"ชาย":"ชาย","หญิง":"หญิง"}', true) as $optionKey => $optionValue)
+        <option value="{{ $optionKey }}" {{ (isset($crud->category) && $crud->category == $optionKey) ? 'selected' : ''}}>{{ $optionValue }}</option>
+    @endforeach
+</select>
+    {!! $errors->first('category', '<p class="help-block">:message</p>') !!}
+</div>
+
+<div class="form-group {{ $errors->has('user_id') ? 'has-error' : ''}}">
+    <label for="user_id" class="control-label">{{ 'อายุ' }}</label>
+    <input class="form-control" name="user_id" type="number" id="user_id" value="{{ isset($crud->user_id) ? $crud->user_id : ''}}" >
+    {!! $errors->first('user_id', '<p class="help-block">:message</p>') !!}
+</div>
+
+<div class="form-group">
+    <input class="btn btn-primary" type="submit" value="บันทึก">
+</div>
+
 
         </div></div></div></div>
 </div>
