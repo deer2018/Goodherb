@@ -20,7 +20,7 @@ Auth::routes();
 
 Route::resource('crud', 'CrudController');
 Route::get('/home', 'HomeController@index')->name('home');
-Route::resource('medic_crud', 'MediccrudController');
+
 
 //Route Admin ------------------------------------------------------------------------
 
@@ -56,6 +56,7 @@ Route::get('/volunteer_conclusion', function () {
 
 //Route Medic -------------------------------------------------------------------------
 
+
 Route::get('/medic_index', function () {
     return view('medic.medic_index');
 });
@@ -67,7 +68,7 @@ Route::get('/medic_history', function () {
 Route::get('/medic_volunteer', function () {
     return view('medic.medic_volunteer.medic_volunteer');
 });
-
-
-
+Route::get('/medic_volunteer_sub', function () {
+    return view('medic.medic_volunteer.medic_volunteer_sub');
+});
 

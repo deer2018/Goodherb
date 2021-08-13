@@ -7,7 +7,7 @@
 
             <div class="col-md-10">
                 <div class="card">
-                    <div class="card-header">หน้าข้อมูลของหมอ</div>
+                    <div class="card-header">ประวัติส่วนตัว</div>
                     <div class="card-body">
                     <div class="form-group {{ $errors->has('title') ? 'has-error' : ''}}">
     <label for="title" class="control-label">{{ 'ชื่อ' }}</label>
@@ -41,8 +41,11 @@
     <input class="btn btn-primary" type="submit" value="บันทึก">
 </div>
 
-
-        </div></div></div></div>
-</div>
+                    
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 </div>
 @endsection

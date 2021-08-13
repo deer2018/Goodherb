@@ -14,11 +14,11 @@
     <tr>
         <td>1</td>
         <td>ท่านพอใจกับสุขภาพของท่านในตอนนี้เพียงใด</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
+        <td><input id="qt26_s1_rd5" type="radio" name="quest26" value="rd5"></td>
+        <td><input id="qt26_s1_rd4" type="radio" name="quest26" value="rd4"></td>
+        <td><input id="qt26_s1_rd3" type="radio" name="quest26" value="rd3"></td>
+        <td><input id="qt26_s1_rd2" type="radio" name="quest26" value="rd2"></td>
+        <td><input id="qt26_s1_rd1" type="radio" name="quest26" value="rd1"></td>
     </tr>
   <tr>
         <td>2</td>

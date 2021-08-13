@@ -22,11 +22,10 @@
 		<tr>
 			<td>1</td>
 			<td>มีปัญหาการนอน นอนไม่หลับหรือนอนมาก</td>
-			<td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          
+			<td><input id="qt5_s1_rd0" type="radio" name="quest5" value="rd0"></td>
+            <td><input id="qt5_s1_rd1" type="radio" name="quest5" value="rd1"></td>
+            <td><input id="qt5_s1_rd2" type="radio" name="quest5" value="rd2"></td>
+            <td><input id="qt5_s1_rd3" type="radio" name="quest5" value="rd3"></td>
 		</tr>
 		<tr>
 			<td>2</td>

@@ -10,9 +10,8 @@
 <tbody>
     <tr>
         <td>นอนไม่เพียงพอ (เพราะผู้พิการตื่นบ่อยหรือร้องขอความช่วยเหลือฯลฯ)</td>
-        <td>0</td>
-        <td>0</td>
-      
+        <td><input id="qt13_s1_rd1" type="radio" name="quest13" value="rd1"></td>
+        <td><input id="qt13_s1_rd0" type="radio" name="quest13" value="rd0"></td>
     </tr>
   <tr>
     
