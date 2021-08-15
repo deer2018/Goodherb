@@ -15,16 +15,19 @@
   <button class="tablinks" onclick="openCity(event, '26')">แบบสอบถาม 26 ข้อ</button>
 </div>
 
-<div id="13" class="tabcontent">
+<div style="text-align: right" id="13" class="tabcontent">
     @include ('questionnaire.quest13', ['formMode' => 'volunteer_questionnaire_sub'])
+    <button class="tablinks" onclick="openCity(event, '5')">ถัดไป</button>
 </div>
 
-<div id="5" class="tabcontent">
+<div style="text-align: right" id="5" class="tabcontent">
     @include ('questionnaire.quest5', ['formMode' => 'volunteer_questionnaire_sub'])
+    <button class="tablinks" onclick="openCity(event, '26')">ถัดไป</button>
 </div>
 
-<div id="26" class="tabcontent">
+<div style="text-align: right" id="26" class="tabcontent">
     @include ('questionnaire.quest26', ['formMode' => 'volunteer_questionnaire_sub'])
+    <a href="{{ url('/volunteer_questionnaire_confirm') }}">ยืนยัน<br></a>
 </div>
 
                     </div>
