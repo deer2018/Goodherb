@@ -103,7 +103,7 @@
 
 <td>
   <div style="text-align: right">
-  <a href="{{ url('/quest5') }}">ถัดไป<br></a>
+  <a href="{{ url('/quest5_2') }}">ถัดไป<br></a>
   </div>
   </td>
   

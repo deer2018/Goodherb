@@ -1,7 +1,13 @@
-<!DOCTYPE html>
-<html>
+@extends('layouts.app')
 
-<body>
+@section('content')
+<div class="container">
+      
+
+            <div class="col-md-10">
+                <div class="card">
+                    <div class="card-header">แบบสอบถาม</div>
+                    <div class="card-body">
 
 	<table class="table table-bordered">
         <thead>
@@ -156,6 +162,18 @@
         </tbody>
 	</table>
 
-</body>
+   <td>
+		<div class="row">
+	<div class="col" style="text-align: left">
+  <a href="{{ url('/quest26') }}">ย้อนกลับ</a></div>
+  <div class="col" style="text-align: right">
+  <a href="{{ url('/volunteer_questionnaire_confirm') }}">ยืนยัน<br></a>
+  </div>
+  </div>
+  </td>
 
-</html>
+</div>
+</div>
+</div>
+</div>
+@endsection

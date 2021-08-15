@@ -77,9 +77,9 @@
 	<td>
 		<div class="row">
 	<div class="col" style="text-align: left">
-  <a href="{{ url('/quest13') }}">ย้อนกลับ</a></div>
+  <a href="{{ url('/quest13_2') }}">ย้อนกลับ</a></div>
   <div class="col" style="text-align: right">
-  <a href="{{ url('/quest26') }}">ถัดไป<br></a>
+  <a href="{{ url('/quest26_2') }}">ถัดไป<br></a>
   </div>
   </div>
   </td>

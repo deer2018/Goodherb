@@ -8,8 +8,8 @@
                 <div class="card">
                     <div class="card-header">แบบสอบถาม</div>
                     <div class="card-body">
-
-<table class="table table-bordered">
+                        
+        <table class="table table-bordered">
 <thead>
         <tr>
         <th scope="col">ข้อที่</th>
@@ -260,14 +260,14 @@
 </table>
 
 <td>
-		<div class="row">
-	<div class="col" style="text-align: left">
-  <a href="{{ url('/quest5') }}">ย้อนกลับ</a></div>
-  <div class="col" style="text-align: right">
-  <a href="{{ url('/quest_select') }}">ถัดไป<br></a>
-  </div>
-  </div>
-  </td>
+<div class="row">
+<div class="col" style="text-align: left">
+<a href="{{ url('/quest5_2') }}">ย้อนกลับ</a></div>
+<div class="col" style="text-align: right">
+<a href="{{ url('/quest3') }}">ยืนยัน<br></a>
+</div>
+</div>
+</td>
 
 </div>
 </div>
