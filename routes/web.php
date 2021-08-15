@@ -64,8 +64,12 @@ Route::get('/medic_index', function () {
     return view('medic.medic_index');
 });
 
-Route::get('/medic_history', function () {
-    return view('medic.medic_history.medic_history');
+Route::get('/medic_personal', function () {
+    return view('medic.medic_personal.medic_personal');
+});
+
+Route::get('/medic_edit', function () {
+    return view('medic.medic_personal.medic_edit');
 });
 
 Route::get('/medic_volunteer', function () {

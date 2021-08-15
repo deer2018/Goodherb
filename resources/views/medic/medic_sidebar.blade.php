@@ -9,7 +9,7 @@
                     <a href="{{ url('/medic_index') }}">
                         หน้าแรก <br>
                     </a>
-                    <a href="{{ url('/medic_history') }}">
+                    <a href="{{ url('/medic_personal') }}">
                         ประวัติแพทย์ <br>
                     </a>
                     <a href="{{ url('/medic_volunteer') }}">
