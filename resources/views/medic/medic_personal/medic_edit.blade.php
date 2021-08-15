@@ -5,8 +5,13 @@
         <div class="row">
             @include('medic.medic_sidebar')
                 <div class="col-md-8">
+				<div class="card-header">แก้ไขข้อมูล</div>
+			
+				
 					<div class="card">
 						<div class="card-body">
+						<a href="{{ url('/medic_personal') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
+							</br></br>
 							<div class="row mb-3">
 								<div class="col-sm-3">
 									<h6 class="mb-0">Full Name</h6>

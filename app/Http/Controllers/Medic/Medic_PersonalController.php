@@ -14,13 +14,12 @@ class Medic_PersonalController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $id = Auth::id();
-
-         $data = User::findOrFail($id);
-            return view('medic_personal/medic_personal', compact('data'));
-        
+             $id = Auth::id();
+             $user = User::findOrFail($id);
+           
+            return view('medic_personal.medic_personal', compact('user'));
     }
 
     /**

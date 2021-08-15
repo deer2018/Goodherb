@@ -13,7 +13,7 @@
                       <h6 class="mb-0">Full Name</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                    { $data->name }
+                    {{ $user->name }}
                     </div>
                   </div>
                   <hr>
@@ -55,7 +55,7 @@
                   <hr>
                   <div class="row">
                     <div class="col-sm-12">
-                      <a class="btn btn-info " target="__blank" href="medic_edit">Edit</a>
+                      <a class="btn btn-info " target="_parent" href="medic_edit">Edit</a>
                     </div>
                   </div>
                 </div>
