@@ -45,29 +45,29 @@ Route::get('/volunteer_personal', function () {
 Route::get('/volunteer_questionnaire', function () {
     return view('volunteer.volunteer_questionnaire.volunteer_questionnaire');
 });
-Route::get('/quest13', function () {
-    return view('questionnaire.quest13');
+Route::get('/volunteer_questionnaire_sub1', function () {
+    return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_sub1');
 });
-Route::get('/quest13_2', function () {
-    return view('questionnaire.quest13_2');
+Route::get('/volunteer_questionnaire_sub1_2', function () {
+    return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_sub1_2');
 });
-Route::get('/quest5', function () {
-    return view('questionnaire.quest5');
+Route::get('/volunteer_questionnaire_sub2', function () {
+    return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_sub2');
 });
-Route::get('/quest5_2', function () {
-    return view('questionnaire.quest5_2');
+Route::get('/volunteer_questionnaire_sub2_2', function () {
+    return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_sub2_2');
 });
-Route::get('/quest26', function () {
-    return view('questionnaire.quest26');
+Route::get('/volunteer_questionnaire_sub3', function () {
+    return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_sub3');
 });
-Route::get('/quest26_2', function () {
-    return view('questionnaire.quest26_2');
+Route::get('/volunteer_questionnaire_sub3_2', function () {
+    return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_sub3_2');
 });
-Route::get('/quest3', function () {
-    return view('questionnaire.quest3');
+Route::get('/volunteer_questionnaire_sub4', function () {
+    return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_sub4');
 });
-Route::get('/quest_select', function () {
-    return view('questionnaire.quest_select');
+Route::get('/volunteer_questionnaire_sub4_2', function () {
+    return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_sub4_2');
 });
 Route::get('/volunteer_questionnaire_confirm', function () {
     return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_confirm');

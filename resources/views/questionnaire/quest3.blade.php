@@ -1,14 +1,3 @@
-@extends('layouts.app')
-
-@section('content')
-<div class="container">
-      
-
-<div class="col-md-10">
-<div class="card">
-<div class="card-header">แบบประเมินความสม่ำเสมอในการได้รับน้ำดอกไม้</div>
-<div class="card-body">
-
 <table class="table table-bordered">
 <thead>
 
@@ -44,19 +33,3 @@
 
 </table>
 </thead>
-
-<td>
-<div class="row">
-<div class="col" style="text-align: left">
-<a href="{{ url('/quest26_2') }}">ย้อนกลับ</a></div>
-<div class="col" style="text-align: right">
-<a href="{{ url('/volunteer_questionnaire_confirm') }}">ยืนยัน<br></a>
-</div>
-</div>
-</td>
-
-</div>
-</div>
-</div>
-</div>
-@endsection

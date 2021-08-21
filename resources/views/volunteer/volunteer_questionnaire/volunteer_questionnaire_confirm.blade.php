@@ -16,9 +16,9 @@
 	</table>
 
 	<td>
-  <div style="text-align: left">
-  <a href="{{ url('/volunteer_questionnaire') }}">ย้อนกลับ<br></a>
-  </div>
+  <div class="col" style="text-align: left">
+  <a href="{{ url('/volunteer_questionnaire') }}" class="btn btn-success btn-sm" title="Go_Back">
+  <i class="fa fa-plus" aria-hidden="true"></i>ย้อนกลับ</a></div>
   </td>
 
 </div>

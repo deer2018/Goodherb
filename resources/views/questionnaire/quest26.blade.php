@@ -1,14 +1,3 @@
-@extends('layouts.app')
-
-@section('content')
-<div class="container">
-      
-
-            <div class="col-md-10">
-                <div class="card">
-                    <div class="card-header">แบบสอบถาม</div>
-                    <div class="card-body">
-
 <table class="table table-bordered">
 <thead>
         <tr>
@@ -258,19 +247,3 @@
   </tr>
 </tbody>
 </table>
-
-<td>
-		<div class="row">
-	<div class="col" style="text-align: left">
-  <a href="{{ url('/quest5') }}">ย้อนกลับ</a></div>
-  <div class="col" style="text-align: right">
-  <a href="{{ url('/quest_select') }}">ถัดไป<br></a>
-  </div>
-  </div>
-  </td>
-
-</div>
-</div>
-</div>
-</div>
-@endsection

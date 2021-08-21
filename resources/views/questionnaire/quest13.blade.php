@@ -1,14 +1,3 @@
-@extends('layouts.app')
-
-@section('content')
-<div class="container">
-      
-
-            <div class="col-md-10">
-                <div class="card">
-                    <div class="card-header">แบบสอบถาม</div>
-                    <div class="card-body">
-
 <table class="table table-bordered">
 <thead>
     <tr>
@@ -100,15 +89,3 @@
   </tr>
   </tbody>
 </table>
-
-<td>
-  <div style="text-align: right">
-  <a href="{{ url('/quest5') }}">ถัดไป<br></a>
-  </div>
-  </td>
-  
-</div>
-</div>
-</div>
-</div>
-@endsection
