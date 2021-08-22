@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
+use Illuminate\Support\Facades\Auth;
+use App\Models\Medic;
+use Illuminate\Http\Request;
 
 class Medic_PersonalController extends Controller
 {
@@ -16,10 +18,9 @@ class Medic_PersonalController extends Controller
      */
     public function index(Request $request)
     {
-             $id = Auth::id();
-             $user = User::findOrFail($id);
+          
            
-            return view('medic_personal.medic_personal', compact('user'));
+            
     }
 
     /**

@@ -10,8 +10,11 @@
                     <a href="{{ url('/admin_index') }}">
                         หน้าหลัก <br>
                     </a>
+                    <a href="{{ url('/admin_user') }}">
+                        ยืนยันสิทธื์สมาชิก <br>
+                    </a>
                     <a href="{{ url('/crud') }}">
-                        CRUD <br>
+                        Crud <br>
                     </a>
                     <a href="{{ url('/admin_volunteer_index') }}">
                         ข้อมูลอาสาสมัคร <br>
