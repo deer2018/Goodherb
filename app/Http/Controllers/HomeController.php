@@ -19,7 +19,7 @@ class HomeController extends Controller
             return redirect("admin_index");
 
     }else if(Auth::user()->role == "volunteer"){
-            return redirect("volunteer_index");
+            return redirect("volunteer");
 
     }else if(Auth::user()->role == "medic"){
         return redirect("medic_index");

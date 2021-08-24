@@ -7,11 +7,8 @@
         <div class="card-body">
             <ul class="nav" role="tablist">
                 <li role="presentation">
-                    <a href="{{ url('/volunteer_index') }}">
+                    <a href="{{ url('/volunteer') }}">
                         หน้าหลัก <br>
-                    </a>
-                    <a href="{{ url('/volunteer_personal') }}">
-                        ประวัติส่วนตัว <br>
                     </a>
                     <a href="{{ url('/volunteer_questionnaire') }}">
                         แบบสอบถาม <br>
