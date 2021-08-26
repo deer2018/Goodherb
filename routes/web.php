@@ -31,30 +31,30 @@ Route::get('/admin_medic_index', 'Admin\Admin_MedicController@index');
 Route::get('/volunteer_questionnaire', function () {
     return view('volunteer.volunteer_questionnaire.volunteer_questionnaire');
 });
-Route::get('/volunteer_questionnaire_sub1', function () {
-    return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_sub1');
-});
-Route::get('/volunteer_questionnaire_sub1_2', function () {
-    return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_sub1_2');
-});
-Route::get('/volunteer_questionnaire_sub2', function () {
-    return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_sub2');
-});
-Route::get('/volunteer_questionnaire_sub2_2', function () {
-    return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_sub2_2');
-});
-Route::get('/volunteer_questionnaire_sub3', function () {
-    return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_sub3');
-});
-Route::get('/volunteer_questionnaire_sub3_2', function () {
-    return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_sub3_2');
-});
-Route::get('/volunteer_questionnaire_sub4', function () {
-    return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_sub4');
-});
-Route::get('/volunteer_questionnaire_sub4_2', function () {
-    return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_sub4_2');
-});
+// Route::get('/volunteer_questionnaire_sub1', function () {
+//     return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_sub1');
+// });
+// Route::get('/volunteer_questionnaire_sub1_2', function () {
+//     return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_sub1_2');
+// });
+// Route::get('/volunteer_questionnaire_sub2', function () {
+//     return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_sub2');
+// });
+// Route::get('/volunteer_questionnaire_sub2_2', function () {
+//     return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_sub2_2');
+// });
+// Route::get('/volunteer_questionnaire_sub3', function () {
+//     return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_sub3');
+// });
+// Route::get('/volunteer_questionnaire_sub3_2', function () {
+//     return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_sub3_2');
+// });
+// Route::get('/volunteer_questionnaire_sub4', function () {
+//     return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_sub4');
+// });
+// Route::get('/volunteer_questionnaire_sub4_2', function () {
+//     return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_sub4_2');
+// });
 Route::get('/volunteer_questionnaire_confirm', function () {
     return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_confirm');
 });
@@ -63,6 +63,16 @@ Route::get('/volunteer_conclusion', function () {
 });
 
 Route::resource('volunteer', 'VolunteerController');
+
+Route::get('Q1','QuestiononeController@create');
+Route::get('Q1-2','QuestiononeController@edit');
+Route::get('Q1-3','QuestiononeController@editeIII');
+Route::get('Q1-4','QuestiononeController@editteIV');
+
+Route::get('Q2','QuestiontwoController@create');
+Route::get('Q2-2','QuestiontwoController@edit');
+Route::get('Q2-3','QuestiontwoController@editeIII');
+Route::get('Q2-4','QuestiontwoController@editteIV');
 
 //Route Medic -------------------------------------------------------------------------
 

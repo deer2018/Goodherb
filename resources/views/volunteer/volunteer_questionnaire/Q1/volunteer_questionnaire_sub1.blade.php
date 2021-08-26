@@ -12,7 +12,10 @@
                 <!--แบบสอบถามวัดความเครียดของผู้ดูแล 13 ข้อคำถาม -->
 
                 <div id="13" class="tabcontent">
-                    @include ('questionnaire.quest13', ['formMode' => 'volunteer_questionnaire_sub1'])
+                <form method="POST" action="{{ url('/crud') }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
+                            {{ csrf_field() }}
+                    @include ('questionnaireone.quest13', ['formMode' => 'volunteer_questionnaire_sub1'])
+                </form>
                 </div>
 
                 <td>
@@ -21,7 +24,7 @@
                 <a href="{{ url('/volunteer_questionnaire') }}" class="btn btn-success btn-sm" title="Go_Back">
                       <i class="fa fa-plus" aria-hidden="true"></i>ย้อนกลับ</a></div>
                 <div class="col" style="text-align: right">
-                <a href="{{ url('/volunteer_questionnaire_sub2') }}" class="btn btn-success btn-sm" title="Go_Back">
+                <a href="{{ url('/Q1-2') }}" class="btn btn-success btn-sm" title="Go_Back">
                       <i class="fa fa-plus" aria-hidden="true"></i>ถัดไป</a></a>
                 </div>
                 </div>
