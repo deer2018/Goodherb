@@ -28,9 +28,7 @@ class Admin_UserController extends Controller
                             ->orwhere('role', '=',"guest" )
                             ->latest()->paginate($perPage);
                     } else {
-                        $users = User::where('role', "guest")
-                        ->orwhere('role', "guest")
-                        ->latest()->paginate($perPage);
+                        $users = User::latest()->paginate($perPage);
                     }
                     break;
             default : 

@@ -1,15 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.main')
 
 @section('content')
-<div class="container">
-        <div class="row">
-            @include('admin.admin_sidebar')
-
-            <div class="col-md-10">
-                <div class="card">
-                    <div class="card-header">ข้อมูลแพทย์</div>
-                    <div class="card-body">
-                        <div class="table-responsive">
+            <div class="table-responsive">
                         <table class="table">   
                             <thead>
                                     <tr>
@@ -30,10 +22,4 @@
                             </tbody>
                         </table>
                         </div>
-                    </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-</div>
 @endsection
