@@ -66,7 +66,7 @@ Route::get('/volunteer_conclusion', function () {
     return view('volunteer.volunteer_conclusion.volunteer_conclusion');
 });
 
-Route::resource('volunteer', 'VolunteerController');
+Route::resource('volunteer', 'volunteerController');
 
 Route::get('Q1','QuestiononeController@create');
 Route::get('Q1-2','QuestiononeController@edit');
@@ -100,3 +100,5 @@ Route::get('/medic_volunteer_sub', function () {
     return view('medic.medic_volunteer.medic_volunteer_sub');
 });
 
+
+Route::resource('test', 'TestController');

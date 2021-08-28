@@ -16,11 +16,11 @@
                             {{ csrf_field() }}
 
                            
-                    <div class="form-group {{ $errors->has('name') ? 'has-error' : ''}}">
+                    <div class="form-group {{ $errors->has('username') ? 'has-error' : ''}}">
                         
-                        <label for="name" class="control-label">{{ 'ชื่อ' }}</label>
-                        <input class="form-control" name="name" type="text" id="name" value="{{ isset($User->name) ? $User->name : ''}}" >
-                        {!! $errors->first('name', '<p class="help-block">:message</p>') !!}
+                        <label for="username" class="control-label">{{ 'ชื่อ' }}</label>
+                        <input class="form-control" name="username" type="text" id="username" value="{{ isset($User->username) ? $User->username : ''}}" >
+                        {!! $errors->first('username', '<p class="help-block">:message</p>') !!}
                     </div>
 
                     <div class="form-group {{ $errors->has('surname') ? 'has-error' : ''}}">

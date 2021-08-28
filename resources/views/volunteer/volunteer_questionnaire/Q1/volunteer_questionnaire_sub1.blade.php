@@ -12,23 +12,26 @@
                 <!--แบบสอบถามวัดความเครียดของผู้ดูแล 13 ข้อคำถาม -->
 
                 <div id="13" class="tabcontent">
-                <form method="POST" action="{{ url('/crud') }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
+                <form method="POST" action="{{ url('/Q1') }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
                             {{ csrf_field() }}
-                    @include ('questionnaireone.quest13', ['formMode' => 'volunteer_questionnaire_sub1'])
+                    @include ('questionnaireone.quest13')
+
+                    <td>
+		        <div class="row">
+                    <div class="col" style="text-align: left">
+                        <a href="{{ url('/volunteer_questionnaire') }}" class="btn btn-success btn-sm" >
+                            <i class="fa fa-plus" aria-hidden="true"></i>ย้อนกลับ</a>
+                    </div>
+                    <div class="col" style="text-align: right">
+                        <a href="{{ url('/Q1-2') }}" class="btn btn-success btn-sm"  type="submit">
+                            <i class="fa fa-plus" aria-hidden="true"></i>ถัดไป</a></a>
+                    </div>
+                </div>
+                </td>
                 </form>
                 </div>
 
-                <td>
-		        <div class="row">
-	            <div class="col" style="text-align: left">
-                <a href="{{ url('/volunteer_questionnaire') }}" class="btn btn-success btn-sm" title="Go_Back">
-                      <i class="fa fa-plus" aria-hidden="true"></i>ย้อนกลับ</a></div>
-                <div class="col" style="text-align: right">
-                <a href="{{ url('/Q1-2') }}" class="btn btn-success btn-sm" title="Go_Back">
-                      <i class="fa fa-plus" aria-hidden="true"></i>ถัดไป</a></a>
-                </div>
-                </div>
-                </td>
+                
 
 </div>
 </div>

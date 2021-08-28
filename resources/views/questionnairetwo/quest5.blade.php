@@ -17,46 +17,97 @@
 		<tr>
 			<td>1</td>
 			<td>มีปัญหาการนอน นอนไม่หลับหรือนอนมาก</td>
-			<td><input id="qt5_s1_rd0" type="radio" name="quest5_1" value="rd0"></td>
-            <td><input id="qt5_s1_rd1" type="radio" name="quest5_1" value="rd1"></td>
-            <td><input id="qt5_s1_rd2" type="radio" name="quest5_1" value="rd2"></td>
-            <td><input id="qt5_s1_rd3" type="radio" name="quest5_1" value="rd3"></td>
+			<div class="form-group {{ $errors->has('ep2_1') ? 'has-error' : ''}}">
+			<td><div class="radio">
+                <label><input name="ep2_1" type="radio" value="0" {{ (isset($_q1) && 0 == $_q1->ep2_1) ? 'checked' : '' }}> </label>
+            </div></td>
+            <td><div class="radio">
+                <label><input name="ep2_1" type="radio" value="1" @if (isset($_q1)) {{ (1 == $_q1->ep2_1) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            </div></td>
+            <td><div class="radio">
+                <label><input name="ep2_1" type="radio" value="2" @if (isset($_q1)) {{ (2 == $_q1->ep2_1) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            </div></td>
+            <td><div class="radio">
+                <label><input name="ep2_1" type="radio" value="3" @if (isset($_q1)) {{ (3 == $_q1->ep2_1) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            </div></td>
+			{!! $errors->first('ep2_1', '<p class="help-block">:message</p>') !!}
+        	</div>
 		</tr>
 		<tr>
 			<td>2</td>
 			<td>มีสมาธิน้อยลง</td>
-			<td><input id="qt5_s2_rd0" type="radio" name="quest5_2" value="rd0"></td>
-            <td><input id="qt5_s2_rd1" type="radio" name="quest5_2" value="rd1"></td>
-            <td><input id="qt5_s2_rd2" type="radio" name="quest5_2" value="rd2"></td>
-            <td><input id="qt5_s2_rd3" type="radio" name="quest5_2" value="rd3"></td>
-           
+			<div class="form-group {{ $errors->has('ep2_2') ? 'has-error' : ''}}">
+			<td><div class="radio">
+                <label><input name="ep2_2" type="radio" value="0" {{ (isset($_q1) && 0 == $_q1->ep2_2) ? 'checked' : '' }}> </label>
+            </div></td>
+            <td><div class="radio">
+                <label><input name="ep2_2" type="radio" value="1" @if (isset($_q1)) {{ (1 == $_q1->ep2_2) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            </div></td>
+            <td><div class="radio">
+                <label><input name="ep2_2" type="radio" value="2" @if (isset($_q1)) {{ (2 == $_q1->ep2_2) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            </div></td>
+            <td><div class="radio">
+                <label><input name="ep2_2" type="radio" value="3" @if (isset($_q1)) {{ (3 == $_q1->ep2_2) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            </div></td>
+			{!! $errors->first('ep2_2', '<p class="help-block">:message</p>') !!}
+        	</div>
 		</tr>
 		<tr>
 			<td>3</td>
 			<td>หงุดหงิด/กระวนกระวาย/ว้าวุ้นใจ</td>
-			<td><input id="qt5_s3_rd0" type="radio" name="quest5_3" value="rd0"></td>
-            <td><input id="qt5_s3_rd1" type="radio" name="quest5_3" value="rd1"></td>
-            <td><input id="qt5_s3_rd2" type="radio" name="quest5_3" value="rd2"></td>
-            <td><input id="qt5_s3_rd3" type="radio" name="quest5_3" value="rd3"></td>
-       
+			<div class="form-group {{ $errors->has('ep2_3') ? 'has-error' : ''}}">
+			<td><div class="radio">
+                <label><input name="ep2_3" type="radio" value="0" {{ (isset($_q1) && 0 == $_q1->ep2_3) ? 'checked' : '' }}> </label>
+            </div></td>
+            <td><div class="radio">
+                <label><input name="ep2_3" type="radio" value="1" @if (isset($_q1)) {{ (1 == $_q1->ep2_3) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            </div></td>
+            <td><div class="radio">
+                <label><input name="ep2_3" type="radio" value="2" @if (isset($_q1)) {{ (2 == $_q1->ep2_3) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            </div></td>
+            <td><div class="radio">
+                <label><input name="ep2_3" type="radio" value="3" @if (isset($_q1)) {{ (3 == $_q1->ep2_3) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            </div></td>
+			{!! $errors->first('ep2_3', '<p class="help-block">:message</p>') !!}
+        	</div>
 		</tr>
 		<tr>
 			<td>4</td>
 			<td>รู้สึกเบื่อ เซ็ง</td>
-			<td><input id="qt5_s4_rd0" type="radio" name="quest5_4" value="rd0"></td>
-            <td><input id="qt5_s4_rd1" type="radio" name="quest5_4" value="rd1"></td>
-            <td><input id="qt5_s4_rd2" type="radio" name="quest5_4" value="rd2"></td>
-            <td><input id="qt5_s4_rd3" type="radio" name="quest5_4" value="rd3"></td>
-       
+			<div class="form-group {{ $errors->has('ep2_4') ? 'has-error' : ''}}">
+			<td><div class="radio">
+                <label><input name="ep2_4" type="radio" value="0" {{ (isset($_q1) && 0 == $_q1->ep2_4) ? 'checked' : '' }}> </label>
+            </div></td>
+            <td><div class="radio">
+                <label><input name="ep2_4" type="radio" value="1" @if (isset($_q1)) {{ (1 == $_q1->ep2_4) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            </div></td>
+            <td><div class="radio">
+                <label><input name="ep2_4" type="radio" value="2" @if (isset($_q1)) {{ (2 == $_q1->ep2_4) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            </div></td>
+            <td><div class="radio">
+                <label><input name="ep2_4" type="radio" value="3" @if (isset($_q1)) {{ (3 == $_q1->ep2_4) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            </div></td>
+			{!! $errors->first('ep2_4', '<p class="help-block">:message</p>') !!}
+        	</div>
 		</tr>
 		<tr>
 			<td>5</td>
 			<td>ไม่อยากพบปะผู้คน</td>
-			<td><input id="qt5_s5_rd0" type="radio" name="quest5_5" value="rd0"></td>
-            <td><input id="qt5_s5_rd1" type="radio" name="quest5_5" value="rd1"></td>
-            <td><input id="qt5_s5_rd2" type="radio" name="quest5_5" value="rd2"></td>
-            <td><input id="qt5_s5_rd3" type="radio" name="quest5_5" value="rd3"></td>
-       
+			<div class="form-group {{ $errors->has('ep2_5') ? 'has-error' : ''}}">
+			<td><div class="radio">
+                <label><input name="ep2_5" type="radio" value="0" {{ (isset($_q1) && 0 == $_q1->ep2_5) ? 'checked' : '' }}> </label>
+            </div></td>
+            <td><div class="radio">
+                <label><input name="ep2_5" type="radio" value="1" @if (isset($_q1)) {{ (1 == $_q1->ep2_5) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            </div></td>
+            <td><div class="radio">
+                <label><input name="ep2_5" type="radio" value="2" @if (isset($_q1)) {{ (2 == $_q1->ep2_5) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            </div></td>
+            <td><div class="radio">
+                <label><input name="ep2_5" type="radio" value="3" @if (isset($_q1)) {{ (3 == $_q1->ep2_5) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            </div></td>
+			{!! $errors->first('ep2_5', '<p class="help-block">:message</p>') !!}
+        	</div>
 		</tr>
         </tbody>
 	</table>

@@ -39,9 +39,9 @@ class QuestiononeController extends Controller
     {
         $requestData = $request->all();
         
-        Crud::create($requestData);
+        Questionone::create($requestData);
 
-        return redirect('crud')->with('flash_message', 'Crud added!');
+        return redirect('Questionone')->with('flash_message', 'Questionone added!');
     }
 
     /**
@@ -112,10 +112,10 @@ class QuestiononeController extends Controller
     {
         $requestData = $request->all();
         
-        $crud = Crud::findOrFail($id);
-        $crud->update($requestData);
+        $Questionone = Questionone::findOrFail($id);
+        $Questionone->update($requestData);
 
-        return redirect('crud')->with('flash_message', 'Crud updated!');
+        return redirect('Questionone')->with('flash_message', 'Questionone updated!');
     }
 
     /**

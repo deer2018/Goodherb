@@ -12,6 +12,7 @@
                 <!--แบบคัดเลือกอาสาสมัคร 10 ข้อคำถาม -->
 
                 <div id="13" class="tabcontent">
+                <form method="POST" action="{{ url('/_q1') }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
                     @include ('questionnaireone.quest_select', ['formMode' => 'volunteer_questionnaire_sub4'])
                 </div>
 

@@ -1,0 +1,13 @@
+
+{
+    "fields": [
+        {
+            "name": "category",
+            "type": "radio",
+            "options": {
+                "1": "1",
+                "0": "0"
+            }
+        }
+    ]
+}

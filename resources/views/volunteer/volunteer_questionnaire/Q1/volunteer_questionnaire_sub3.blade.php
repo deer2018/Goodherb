@@ -12,6 +12,7 @@
                 <!--เครื่องชี้วัดคุณภาพชีวิตขององค์การอนามัยโลก 26 ข้อคำถาม -->
 
                 <div id="13" class="tabcontent">
+                <form method="POST" action="{{ url('/_q1') }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
                     @include ('questionnaireone.quest26', ['formMode' => 'volunteer_questionnaire_sub3'])
                 </div>
 

@@ -44,7 +44,7 @@
                                         <p class="m-b-10 f-w-600">ชื่อ - นามสกุล</p>
                                     </div>
                                     <div class="col-6">
-                                        <p class="m-b-10 f-w-600">{{ $data->name }}  {{ $data->surname }}</p>
+                                        <p class="m-b-10 f-w-600">{{ $data->username }}  {{ $data->surname }}</p>
                                     </div>
                                 </div>
                                 <div class="row">
