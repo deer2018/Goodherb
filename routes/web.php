@@ -18,6 +18,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/404', function () {
     return view('404'); 
 }); 
+
+Route::get('/login2', function () {
+    return view('auth.login2'); 
+}); 
 //Route Admin ------------------------------------------------------------------------
 
 Route::resource('admin_user', 'admin\Admin_UserController');
