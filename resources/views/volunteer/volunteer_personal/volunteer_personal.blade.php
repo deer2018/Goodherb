@@ -11,7 +11,7 @@
                 <div class="card">
                     <div class="card-header">ประวัติส่วนตัว</div>
                     <div class="card-body">
-                    <form method="POST" action="{{ url('/volunteer_personal/' . $User->id) }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
+                    <form method="POST" action="{{ url('/volunteer_per/' . $User->id) }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
                             {{ method_field('PATCH') }}
                             {{ csrf_field() }}
 

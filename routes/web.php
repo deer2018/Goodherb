@@ -66,7 +66,7 @@ Route::get('/volunteer_conclusion', function () {
     return view('volunteer.volunteer_conclusion.volunteer_conclusion');
 });
 
-Route::resource('volunteer_personal', 'volunteer_personalController');
+Route::resource('volunteer_per', 'Volunteer\volunteer_perController');
 
 Route::get('Q1','QuestiononeController@create');
 Route::post('Q1','QuestiononeController@store');

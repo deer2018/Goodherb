@@ -3,11 +3,12 @@
 namespace App\Http\Controllers\Volunteer;
 
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\User;
 use Illuminate\Http\Request;
 
-class volunteer_personalController extends Controller
+class volunteer_perController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -93,7 +94,7 @@ class volunteer_personalController extends Controller
         $User = User::findOrFail($id);
         $User->update($requestData);
 
-        return redirect('volunteer_personal')->with('flash_message', 'volunteer_personal updated!');
+        return redirect('volunteer_per')->with('flash_message', 'volunteer_per updated!');
     }
 
     /**
