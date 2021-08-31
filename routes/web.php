@@ -73,6 +73,7 @@ Route::post('Q1','QuestiononeController@store');
 Route::get('Q1-2','QuestiononeController@edit');
 Route::get('Q1-3','QuestiononeController@editeIII');
 Route::get('Q1-4','QuestiononeController@editteIV');
+Route::post('Q1','QuestiononeController@store');
 
 Route::get('Q2','QuestiontwoController@create');
 Route::get('Q2-2','QuestiontwoController@edit');

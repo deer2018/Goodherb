@@ -23,8 +23,9 @@
                             <i class="fa fa-plus" aria-hidden="true"></i>ย้อนกลับ</a>
                     </div>
                     <div class="col" style="text-align: right">
-                        <a href="{{ url('/Q1-2') }}" class="btn btn-success btn-sm"  type="submit">
-                            <i class="fa fa-plus" aria-hidden="true"></i>ถัดไป</a></a>
+                        <a href="{{ url('/Q1-2') }}"   >                    
+                            <input class="btn btn-primary" type="submit" value="ถัดไป">
+                        </a>
                     </div>
                 </div>
                 </td>

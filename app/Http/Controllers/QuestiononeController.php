@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Http\Requests;
-
+use App\User;
 use App\Models\Questionone;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -26,7 +26,9 @@ class QuestiononeController extends Controller
      */
     public function create()
     {
-        return view('volunteer.volunteer_questionnaire.Q1.volunteer_questionnaire_sub1');
+        $id = Auth::id();  
+        
+        return view('volunteer.volunteer_questionnaire.Q1.volunteer_questionnaire_sub1', compact('id'));
     }
 
     /**
@@ -61,18 +63,17 @@ class QuestiononeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function edit($id)
     {
 
-        // if (Auth::id()  == $id){
+        if (Auth::id()  == $id){
 
-        //     $data = Questionone::findOrFail($id);
+            $data = Questionone::findOrFail($id);
 
-            return view('volunteer.volunteer_questionnaire.Q1.volunteer_questionnaire_sub2');
-            // compact('data')
+            return view('volunteer.volunteer_questionnaire.Q1.volunteer_questionnaire_sub2',compact('data'));
 
-        //  }else
-        //  return view('404');
+         }else
+         return view('404');
     }
     public function editeIII()
     {
