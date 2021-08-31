@@ -1,27 +1,27 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Volunteer;
 
+use Illuminate\Support\Facades\Auth;
+use App\Http\Requests;
 use App\User;
 use Illuminate\Http\Request;
-use App\Http\Requests;
-use Illuminate\Support\Facades\Auth;
 
-class VolunteerController extends Controller
+class volunteer_personalController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
-
     public function index()
     {
-        $id = Auth::id();
-        $data = User::findOrFail($id);
-
-        return view('/volunteer/volunteer_index', compact('data'));
+        {
+            $id = Auth::id();
+            $data = User::findOrFail($id);
+    
+            return view('/volunteer/volunteer_index', compact('data'));
+        }
     }
 
     /**
@@ -93,7 +93,7 @@ class VolunteerController extends Controller
         $User = User::findOrFail($id);
         $User->update($requestData);
 
-        return redirect('volunteer')->with('flash_message', 'volunteer updated!');
+        return redirect('volunteer_personal')->with('flash_message', 'volunteer_personal updated!');
     }
 
     /**

@@ -66,9 +66,10 @@ Route::get('/volunteer_conclusion', function () {
     return view('volunteer.volunteer_conclusion.volunteer_conclusion');
 });
 
-Route::resource('volunteer', 'volunteerController');
+Route::resource('volunteer_personal', 'volunteer_personalController');
 
 Route::get('Q1','QuestiononeController@create');
+Route::post('Q1','QuestiononeController@store');
 Route::get('Q1-2','QuestiononeController@edit');
 Route::get('Q1-3','QuestiononeController@editeIII');
 Route::get('Q1-4','QuestiononeController@editteIV');
