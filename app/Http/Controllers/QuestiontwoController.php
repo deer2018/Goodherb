@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Http\Requests;
 
-use App\Models\Questionone;
+use App\Http\Requests;
+use App\User;
+use App\Models\Questiontwo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -26,7 +27,9 @@ class QuestiontwoController extends Controller
      */
     public function create()
     {
-        return view('volunteer.volunteer_questionnaire.Q2.volunteer_questionnaire_sub1_2');
+        $id = Auth::id();
+
+        return view('volunteer.volunteer_questionnaire.Q2.volunteer_questionnaire_sub1_2', compact('id'));
     }
 
     /**
@@ -38,10 +41,11 @@ class QuestiontwoController extends Controller
     public function store(Request $request)
     {
         $requestData = $request->all();
-        
-        Crud::create($requestData);
+        $user_id = Auth::id();
+        $requestData["user_id"] = $user_id;
+        Questiontwo::create($requestData);
 
-        return redirect('crud')->with('flash_message', 'Crud added!');
+        return redirect('Q2-2')->with('flash_message', 'Questiontwo added!');
     }
 
     /**
@@ -61,35 +65,9 @@ class QuestiontwoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function edit($id)
     {
-        return view('volunteer.volunteer_questionnaire.Q2.volunteer_questionnaire_sub2_2');
-    }
-
-    public function editeIII()
-    {
-        // if (Auth::id()  == $id){
-
-        //     $data = Questionone::findOrFail($id);
-
-        //     return view('volunteer.volunteer_personal.volunteer_personal', compact('data'));
-
-        //  }else
-        //  return view('404');
-
-        return view('volunteer.volunteer_questionnaire.Q2.volunteer_questionnaire_sub3_2');
-    }
-    public function editteIV()
-    {
-        // if (Auth::id()  == $id){
-
-        //     $data = Questionone::findOrFail($id);
-
-        //     return view('volunteer.volunteer_personal.volunteer_personal', compact('data'));
-
-        //  }else
-        //  return view('404');
-        return view('volunteer.volunteer_questionnaire.Q2.volunteer_questionnaire_sub4_2');
+        //
     }
 
     /**
@@ -101,7 +79,12 @@ class QuestiontwoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $requestData = $request->all();
+
+        $Questiontwo = Questiontwo::findOrFail($id);
+        $Questiontwo->update($requestData);
+
+        return redirect('Questiontwo')->with('flash_message', 'Questiontwo updated!');
     }
 
     /**

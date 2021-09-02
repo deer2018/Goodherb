@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 //Admin ------------------------------------------------------------
 
 Route::get('/', function () {
@@ -70,15 +71,27 @@ Route::resource('volunteer_per', 'Volunteer\volunteer_perController');
 
 Route::get('Q1','QuestiononeController@create');
 Route::post('Q1','QuestiononeController@store');
-Route::get('Q1-2','QuestiononeController@edit');
-Route::get('Q1-3','QuestiononeController@editeIII');
-Route::get('Q1-4','QuestiononeController@editteIV');
-Route::post('Q1','QuestiononeController@store');
+
+Route::get('Q1-2','Questionone_twoController@create');
+Route::post('Q1-2','Questionone_twoController@store');
+
+Route::get('Q1-3','Questionone_treeController@create');
+Route::post('Q1-3','Questionone_treeController@store');
+
+Route::get('Q1-4','Questionone_fourController@create');
+Route::post('Q1-4','Questionone_fourController@store');
 
 Route::get('Q2','QuestiontwoController@create');
-Route::get('Q2-2','QuestiontwoController@edit');
-Route::get('Q2-3','QuestiontwoController@editeIII');
-Route::get('Q2-4','QuestiontwoController@editteIV');
+Route::post('Q2','QuestiontwoController@store');
+
+Route::get('Q2-2','Questiontwo_twoController@create');
+Route::post('Q2-2','Questiontwo_twoController@store');
+
+Route::get('Q2-3','Questiontwo_treeController@create');
+Route::post('Q2-3','Questiontwo_treeController@store');
+
+Route::get('Q2-4','Questiontwo_fourController@create');
+Route::post('Q2-4','Questiontwo_fourController@store');
 
 //Route Medic -------------------------------------------------------------------------
 

@@ -4,11 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use App\User;
-use App\Models\Questionone;
+use App\Models\Questiontwo_four;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class QuestiononeController extends Controller
+class Questiontwo_fourController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -29,7 +29,7 @@ class QuestiononeController extends Controller
     {
         $id = Auth::id();
 
-        return view('volunteer.volunteer_questionnaire.Q1.volunteer_questionnaire_sub1', compact('id'));
+        return view('volunteer.volunteer_questionnaire.Q2.volunteer_questionnaire_sub4_2', compact('id'));
     }
 
     /**
@@ -43,9 +43,9 @@ class QuestiononeController extends Controller
         $requestData = $request->all();
         $user_id = Auth::id();
         $requestData["user_id"] = $user_id;
-        Questionone::create($requestData);
+        Questiontwo_four::create($requestData);
 
-        return redirect('Q1-2')->with('flash_message', 'Questionone added!');
+        return redirect('volunteer_questionnaire')->with('flash_message', 'Questiontwo_four added!');
     }
 
     /**
@@ -67,41 +67,8 @@ class QuestiononeController extends Controller
      */
     public function edit($id)
     {
-
-        // if (Auth::id()  == $id) {
-
-        //     $data = Questionone::findOrFail($id);
-
-        //     return view('volunteer.volunteer_questionnaire.Q1.volunteer_questionnaire_sub2', compact('data'));
-        // } else
-        //     return view('404');
+        //
     }
-    public function editeIII()
-    {
-        // if (Auth::id()  == $id){
-
-        //     $data = Questionone::findOrFail($id);
-
-        //     return view('volunteer.volunteer_personal.volunteer_personal', compact('data'));
-
-        //  }else
-        //  return view('404');
-
-        // return view('volunteer.volunteer_questionnaire.Q1.volunteer_questionnaire_sub3');
-    }
-    public function editteIV()
-    {
-        // if (Auth::id()  == $id){
-
-        //     $data = Questionone::findOrFail($id);
-
-        //     return view('volunteer.volunteer_personal.volunteer_personal', compact('data'));
-
-        //  }else
-        //  return view('404');
-        // return view('volunteer.volunteer_questionnaire.Q1.volunteer_questionnaire_sub4');
-    }
-
 
     /**
      * Update the specified resource in storage.
@@ -114,10 +81,10 @@ class QuestiononeController extends Controller
     {
         $requestData = $request->all();
 
-        $Questionone = Questionone::findOrFail($id);
-        $Questionone->update($requestData);
+        $Questiontwo_four = Questiontwo_four::findOrFail($id);
+        $Questiontwo_four->update($requestData);
 
-        return redirect('Questionone')->with('flash_message', 'Questionone updated!');
+        return redirect('Questiontwo_four')->with('flash_message', 'Questiontwo_four updated!');
     }
 
     /**

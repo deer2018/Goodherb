@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateQ2Table extends Migration
+class CreateQ13Table extends Migration
 {
     /**
      * Run the migrations.
@@ -13,30 +13,10 @@ class CreateQ2Table extends Migration
      */
     public function up()
     {
-        Schema::create('_q2', function (Blueprint $table) {
+        Schema::create('_q1_3', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->integer('user_id')->nullable();
-            $table->integer('ep1_1')->nullable();
-            $table->integer('ep1_2')->nullable();
-            $table->integer('ep1_3')->nullable();
-            $table->integer('ep1_4')->nullable();
-            $table->integer('ep1_5')->nullable();
-            $table->integer('ep1_6')->nullable();
-            $table->integer('ep1_7')->nullable();
-            $table->integer('ep1_8')->nullable();
-            $table->integer('ep1_9')->nullable();
-            $table->integer('ep1_10')->nullable();
-            $table->integer('ep1_11')->nullable();
-            $table->integer('ep1_12')->nullable();
-            $table->integer('ep1_13')->nullable();
-
-            $table->integer('ep2_1')->nullable();
-            $table->integer('ep2_2')->nullable();
-            $table->integer('ep2_3')->nullable();
-            $table->integer('ep2_4')->nullable();
-            $table->integer('ep2_5')->nullable();
-
             $table->integer('ep3_1')->nullable();
             $table->integer('ep3_2')->nullable();
             $table->integer('ep3_3')->nullable();
@@ -63,12 +43,6 @@ class CreateQ2Table extends Migration
             $table->integer('ep3_24')->nullable();
             $table->integer('ep3_25')->nullable();
             $table->integer('ep3_26')->nullable();
-
-            $table->integer('ep4_1')->nullable();
-            $table->integer('ep4_2')->nullable();
-            $table->integer('ep4_3')->nullable();
-           
-
         });
     }
 
@@ -79,6 +53,6 @@ class CreateQ2Table extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('_q2');
+        Schema::dropIfExists('_q1_3');
     }
 }
