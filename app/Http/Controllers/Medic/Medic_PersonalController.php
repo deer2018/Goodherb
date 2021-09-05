@@ -1,26 +1,24 @@
 <?php
 
-namespace App\Http\Controllers;
-
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+namespace App\Http\Controllers\Medic;
 
 use Illuminate\Support\Facades\Auth;
-use App\Models\Medic;
+use App\Http\Controllers\Controller;
+use App\Http\Requests;
+
+use App\User;
 use Illuminate\Http\Request;
 
 class Medic_PersonalController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index(Request $request)
+    public function index()
     {
-          
-           
-            
+        {
+            $id = Auth::id();
+            $data = User::findOrFail($id);
+    
+            return view('medic.medic_personal.medic_personal', compact('data'));
+        }
     }
 
     /**
@@ -41,7 +39,11 @@ class Medic_PersonalController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $requestData = $request->all();
+        
+        User::create($requestData);
+
+        return redirect('User')->with('flash_message', 'User added!');
     }
 
     /**
@@ -63,8 +65,15 @@ class Medic_PersonalController extends Controller
      */
     public function edit($id)
     {
-        
+         if (Auth::id()  == $id){
 
+            $User = User::findOrFail($id);
+
+            return view('medic.medic_personal.medic_edit', compact('User'));
+
+         }else
+         return view('404');
+        
     }
 
     /**
@@ -76,7 +85,12 @@ class Medic_PersonalController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $requestData = $request->all();
+        
+        $User = User::findOrFail($id);
+        $User->update($requestData);
+
+        return redirect('medic_personal')->with('flash_message', 'medic updated!');
     }
 
     /**

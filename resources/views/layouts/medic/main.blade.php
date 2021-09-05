@@ -3,16 +3,16 @@
  
 <head>
  
-  @include('layouts.head')
+  @include('layouts.medic.head')
  
 </head>
- 
+
 <body id="page-top">
  
   <!-- Page Wrapper -->
   <div id="wrapper">
  
-    @include('layouts.sidebar')
+    @include('layouts.medic.sidebar')
  
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
@@ -20,7 +20,7 @@
       <!-- Main Content -->
       <div id="content">
  
-          @include('layouts.navbar')
+          @include('layouts.medic.navbar')
  
         <!-- Begin Page Content -->
         <div class="container-fluid">
@@ -33,7 +33,7 @@
       </div>
       <!-- End of Main Content -->
  
-      @include('layouts.footer')
+      @include('layouts.medic.footer')
  
     </div>
     <!-- End of Content Wrapper -->
@@ -41,7 +41,7 @@
   </div>
   <!-- End of Page Wrapper -->
  
-    @include('layouts.js')
+    @include('layouts.medic.js')
     
 </body>
  

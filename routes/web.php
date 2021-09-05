@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Auth;
 //Admin ------------------------------------------------------------
 
 Route::get('/', function () {
@@ -24,12 +23,21 @@ Route::get('/login2', function () {
     return view('auth.login2'); 
 }); 
 //Route Admin ------------------------------------------------------------------------
+        //Admin
+Route::resource('admin_user', 'Admin\Admin_UserController');
 
-Route::resource('admin_user', 'admin\Admin_UserController');
+        //Admin->Volunteer ---------------------------------------
+Route::get('/admin_volunteer_index', 'Admin\Admin_VolunteerController@index');
+Route::get('/admin_volunteer_index/{id}', 'Admin\Admin_VolunteerController@show');
+// Route::resource('admin_volunteer', 'Admin\Admin_VolunteerController');
+
+        //Admin->Medic -------------------------------------------
+// Route::get('/admin_medic_index', 'Admin\Admin_MedicController@index');
+Route::resource('admin_medic', 'Admin\Admin_MedicController');
 
 Route::get('/admin_index', 'Admin\AdminIndexController@index');
-Route::get('/admin_volunteer_index', 'Admin\Admin_VolunteerController@index');
-Route::get('/admin_medic_index', 'Admin\Admin_MedicController@index');
+
+
 
 //Route Volunteer --------------------------------------------------------------------
 
@@ -81,8 +89,9 @@ Route::post('Q1-3','Questionone_treeController@store');
 Route::get('Q1-4','Questionone_fourController@create');
 Route::post('Q1-4','Questionone_fourController@store');
 
+
+
 Route::get('Q2','QuestiontwoController@create');
-Route::post('Q2','QuestiontwoController@store');
 
 Route::get('Q2-2','Questiontwo_twoController@create');
 Route::post('Q2-2','Questiontwo_twoController@store');
@@ -94,26 +103,26 @@ Route::get('Q2-4','Questiontwo_fourController@create');
 Route::post('Q2-4','Questiontwo_fourController@store');
 
 //Route Medic -------------------------------------------------------------------------
-
+Route::resource('medic_personal', 'Medic\Medic_PersonalController');
 
 Route::get('/medic_index', function () {
     return view('medic.medic_index');
 });
 
-Route::get('/medic_personal', function () {
-    return view('medic.medic_personal.medic_personal');
-});
+// Route::get('/medic_personal', function () {
+//     return view('medic.medic_personal.medic_personal');
+// });
 
-Route::get('/medic_edit', function () {
-    return view('medic.medic_personal.medic_edit');
-});
+// Route::get('/medic_edit', function () {
+//     return view('medic.medic_personal.medic_edit');
+// });
 
-Route::get('/medic_volunteer', function () {
-    return view('medic.medic_volunteer.medic_volunteer');
-});
+
 Route::get('/medic_volunteer_sub', function () {
     return view('medic.medic_volunteer.medic_volunteer_sub');
 });
 
+Route::get('/medic_volunteer', 'Medic\MedicController@index');
+Route::get('/medic_volunteer/{id}', 'Medic\MedicController@show');
 
 Route::resource('test', 'TestController');

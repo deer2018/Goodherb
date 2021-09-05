@@ -27,7 +27,7 @@
       <li class="nav-item">
                 <a class="nav-link" href="{{ url('/admin_user') }}">
                     <i class="fas fa-circle"></i>
-                    <span>ยืนยันสิทธื์สมาชิก</span></a>
+                    <span>จัดการสมาชิก</span></a>
             </li>
       <li class="nav-item">
                 <a class="nav-link" href="{{ url('/admin_volunteer_index') }}">
@@ -38,6 +38,11 @@
                 <a class="nav-link" href="{{ url('/admin_medic_index') }}">
                     <i class="fas fa-circle"></i>
                     <span>ข้อมูลแพทย์</span></a>
+            </li>
+      <li class="nav-item">
+                <a class="nav-link" href="{{ url('/crud') }}">
+                    <i class="fas fa-circle"></i>
+                    <span>crud</span></a>
             </li>
     </ul>
     <!-- End of Sidebar -->

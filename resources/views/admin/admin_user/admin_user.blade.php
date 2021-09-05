@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.admin.main')
 
 @section('content')
 
@@ -15,23 +15,34 @@
     <div class="col-sm-12 col-md-10">
       <div class="dataTables_length" id="dataTable_length">
         <label>Show <select name="dataTable_length" aria-controls="dataTable" class="custom-select custom-select-sm form-control form-control-sm">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="100">100</option>
+          <option value="guest">guest</option>
+          <option value="volunteer">volunteer</option>
+          <option value="medic">medic</option>
+          <option value="admin">admin</option>
         </select> entries</label>
       </div>
     </div>
-<!-- ค้นหา -->
+  <!-- ค้นหา -->
     <div class="col-sm-12 col-md-2">
-      <div id="dataTable_filter" class="dataTables_filter">
-        <label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="dataTable">
-      </label>
-    </div>
+    <form method="GET" action="{{ url('/admin_user') }}" accept-charset="UTF-8" class="form-inline my-2 my-lg-0 float-right" role="search">
+                            <div class="input-group">
+                                <input type="text" class="form-control form-control" name="search" placeholder="Search..." value="{{ request('search') }}">
+                                <span class="input-group-append">
+                                    <button class="btn btn-primary" type="submit">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </form>
     </div>
   </div>
+
+  
+
+
+
       <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
-    
+       
         <table class="table dataTable">
           <thead>
             <tr>

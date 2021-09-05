@@ -11,6 +11,12 @@ use Illuminate\Http\Request;
 
 class Admin_UserController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('role:admin');
+    }
+
   
     public function index(Request $request)
     {
@@ -38,7 +44,7 @@ class Admin_UserController extends Controller
         
         return view('admin.admin_user.admin_user', compact('users'));
 
-        }
+    }
 
 
     public function create()

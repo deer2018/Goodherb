@@ -17,8 +17,76 @@ class Admin_VolunteerController extends Controller
         $this->middleware('role:admin');
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        return view('admin.admin_volunteer.admin_volunteer_index');
+        $perPage = 25;
+        $users = User::all();
+        switch(Auth::user()->role)
+        {
+                case "admin" : 
+                    $users = User::latest()->paginate($perPage);
+    
+                    if (!empty($keyword)) {
+                        $users = User::where('user_id', 'LIKE', "%$keyword%")
+                            ->orWhere('name', 'LIKE', "%$keyword%")
+                            ->orWhere('email', 'LIKE', "%$keyword%")
+                            ->orwhere('role', '=',"guest" )
+                            ->latest()->paginate($perPage);
+                    } else {
+                        $users = User::where('role', "volunteer")
+                        ->orwhere('role', "volunteer")
+                        ->latest()->paginate($perPage);
+                    }
+                    break;
+            default : 
+                //means guest
+                $users = User::where('id',Auth::id() )->latest()->paginate($perPage);      
+        }  
+        
+        return view('admin.admin_volunteer.admin_volunteer_index', compact('users'));
+
     }
+    
+    
+    public function create()
+    {
+        //
+    }
+
+   
+    public function store(Request $request)
+    {
+        //
+    }
+
+    
+    public function show($id)
+    {
+        $users = User::findOrFail($id);
+
+        return view('admin.admin_volunteer.volunteer_show', compact('users'));
+    }
+
+   
+    public function edit($id)
+    {
+        //
+    }
+
+   
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+   
+    public function destroy($id)
+    {
+        //
+    }
+
+
+
+    
+
 }
