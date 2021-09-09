@@ -12,7 +12,7 @@ class Questionone extends Model
 
     protected $fillable = [
         'user_id',
-        'ep1_1', 'ep1_2', 'ep1_3', 'ep1_4', 'ep1_5', 'ep1_6', 'ep1_7', 'ep1_8', 'ep1_9', 'ep1_10', 'ep1_11', 'ep1_12', 'ep1_13'
+        'ep1_1', 'ep1_2', 'ep1_3', 'ep1_4', 'ep1_5', 'ep1_6', 'ep1_7', 'ep1_8', 'ep1_9', 'ep1_10', 'ep1_11', 'ep1_12', 'ep1_13','total'
 
 
 

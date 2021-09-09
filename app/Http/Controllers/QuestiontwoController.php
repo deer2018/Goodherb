@@ -43,6 +43,12 @@ class QuestiontwoController extends Controller
         $requestData = $request->all();
         $user_id = Auth::id();
         $requestData["user_id"] = $user_id;
+        $requestData["user_id"] = Auth::id();
+        // เอาคะแนนของทุกๆ คอลัมน์มาบวกัน 
+        $requestData["total"] = $requestData["ep1_1"] + $requestData["ep1_2"] + $requestData["ep1_3"] +
+        $requestData["ep1_4"] + $requestData["ep1_5"] + $requestData["ep1_6"] + $requestData["ep1_7"] + 
+        $requestData["ep1_8"] + $requestData["ep1_9"] + $requestData["ep1_10"] + $requestData["ep1_11"] +
+        $requestData["ep1_12"] + $requestData["ep1_13"];
         Questiontwo::create($requestData);
 
         return redirect('Q2-2')->with('flash_message', 'Questiontwo added!');

@@ -12,7 +12,7 @@ class Questionone_four extends Model
 
     protected $fillable = [
         'user_id',
-        'ep4_1', 'ep4_2', 'ep4_3', 'ep4_4', 'ep4_5', 'ep4_6', 'ep4_7', 'ep4_8', 'ep4_9', 'ep4_10'
+        'ep4_1', 'ep4_2', 'ep4_3', 'ep4_4', 'ep4_5', 'ep4_6', 'ep4_7', 'ep4_8', 'ep4_9', 'ep4_10','total'
 
     ];
 }

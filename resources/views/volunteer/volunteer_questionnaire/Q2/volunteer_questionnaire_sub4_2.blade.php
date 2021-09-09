@@ -19,10 +19,6 @@
 
                         <td>
                             <div class="row">
-                                <div class="col" style="text-align: left">
-                                    <a href="{{ url('/Q2-3') }}" class="btn btn-success btn-sm" title="Go_Back">
-                                        <i class="fa fa-plus" aria-hidden="true"></i>ย้อนกลับ</a>
-                                </div>
                                 <div class="col" style="text-align: right">
 
                                     <input class="btn btn-primary" type="submit" value="ถัดไป">

@@ -43,6 +43,7 @@ class CreateQ23Table extends Migration
             $table->integer('ep3_24')->nullable();
             $table->integer('ep3_25')->nullable();
             $table->integer('ep3_26')->nullable();
+            $table->integer('total')->nullable();
         });
     }
 

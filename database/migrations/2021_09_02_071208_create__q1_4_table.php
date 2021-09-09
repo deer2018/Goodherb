@@ -27,6 +27,7 @@ class CreateQ14Table extends Migration
             $table->integer('ep4_8')->nullable();
             $table->integer('ep4_9')->nullable();
             $table->integer('ep4_10')->nullable();
+            $table->integer('total')->nullable();
         });
     }
 

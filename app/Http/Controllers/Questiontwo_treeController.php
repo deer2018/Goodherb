@@ -43,6 +43,15 @@ class Questiontwo_treeController extends Controller
         $requestData = $request->all();
         $user_id = Auth::id();
         $requestData["user_id"] = $user_id;
+        $requestData["user_id"] = Auth::id();
+        // เอาคะแนนของทุกๆ คอลัมน์มาบวกัน 
+        $requestData["total"] = $requestData["ep3_1"] + $requestData["ep3_2"] + $requestData["ep3_3"] +
+        $requestData["ep3_4"] + $requestData["ep3_5"] + $requestData["ep3_6"] + $requestData["ep3_7"] + 
+        $requestData["ep3_8"] + $requestData["ep3_9"] + $requestData["ep3_10"] + $requestData["ep3_11"] +
+        $requestData["ep3_12"] + $requestData["ep3_13"] + $requestData["ep3_14"] + $requestData["ep3_15"] + 
+        $requestData["ep3_16"] + $requestData["ep3_17"] + $requestData["ep3_18"] + $requestData["ep3_19"] + 
+        $requestData["ep3_20"] + $requestData["ep3_21"] + $requestData["ep3_22"] + $requestData["ep3_23"] + 
+        $requestData["ep3_24"] + $requestData["ep3_25"] + $requestData["ep3_26"];
         Questiontwo_tree::create($requestData);
 
         return redirect('Q2-4')->with('flash_message', 'Questiontwo_tree added!');
