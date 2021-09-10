@@ -19,6 +19,7 @@ class AddUserTable extends Migration
             $table->string('sex')->nullable();
             $table->integer('age')->nullable();
             $table->string('phone')->nullable();
+            $table->string('address')->nullable();
         });
     }
 
