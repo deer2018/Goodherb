@@ -88,6 +88,68 @@
                                                         </div>
                                                     </div>
 
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <p class="m-b-10 f-w-600">เชื้อชาติ</p>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <p class="m-b-10 f-w-600">{{ $data->race }} </p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <p class="m-b-10 f-w-600">ศาสนา</p>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <p class="m-b-10 f-w-600">{{ $data->religion }} </p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <p class="m-b-10 f-w-600">สถานภาพสมรส</p>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <p class="m-b-10 f-w-600">{{ $data->status }} </p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <p class="m-b-10 f-w-600">อาชีพ</p>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <p class="m-b-10 f-w-600">{{ $data->occupation }} </p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <p class="m-b-10 f-w-600">รายได้ต่อเดือน</p>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <p class="m-b-10 f-w-600">{{ $data->income }} </p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <p class="m-b-10 f-w-600">ระดับการศึกษา</p>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <p class="m-b-10 f-w-600">{{ $data->education }} </p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <p class="m-b-10 f-w-600">ความเกี่ยวข้องกับผู้ป่วยที่ดูแล</p>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <p class="m-b-10 f-w-600">{{ $data->relevance }} </p>
+                                                        </div>
+                                                    </div>
 
                                                 </div>
                                             </div>

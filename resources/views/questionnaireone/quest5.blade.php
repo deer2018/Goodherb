@@ -1,7 +1,6 @@
 <table class="table table-bordered">
     <thead>
         <tr>
-            <th rowspan="2">ข้อที่</th>
             <th rowspan="2">อาการหรือความรู้สึกที่เกิดในระยะ 2 - 4 สัปดาห์</th>
             <th style="text-align: center" colspan="4">คะแนน</th>
         </tr>
@@ -15,8 +14,7 @@
 
     <tbody>
         <tr>
-            <td>1</td>
-            <td>มีปัญหาการนอน นอนไม่หลับหรือนอนมาก</td>
+            <td>1.มีปัญหาการนอน นอนไม่หลับหรือนอนมาก</td>
             <div class="form-group {{ $errors->has('ep2_1') ? 'has-error' : ''}}">
                 <td>
                     <div class="radio">
@@ -42,8 +40,7 @@
             </div>
         </tr>
         <tr>
-            <td>2</td>
-            <td>มีสมาธิน้อยลง</td>
+            <td>2.มีสมาธิน้อยลง</td>
             <div class="form-group {{ $errors->has('ep2_2') ? 'has-error' : ''}}">
                 <td>
                     <div class="radio">
@@ -69,8 +66,7 @@
             </div>
         </tr>
         <tr>
-            <td>3</td>
-            <td>หงุดหงิด/กระวนกระวาย/ว้าวุ้นใจ</td>
+            <td>3.หงุดหงิด/กระวนกระวาย/ว้าวุ้นใจ</td>
             <div class="form-group {{ $errors->has('ep2_3') ? 'has-error' : ''}}">
                 <td>
                     <div class="radio">
@@ -96,8 +92,7 @@
             </div>
         </tr>
         <tr>
-            <td>4</td>
-            <td>รู้สึกเบื่อ เซ็ง</td>
+            <td>4.รู้สึกเบื่อ เซ็ง</td>
             <div class="form-group {{ $errors->has('ep2_4') ? 'has-error' : ''}}">
                 <td>
                     <div class="radio">
@@ -123,8 +118,7 @@
             </div>
         </tr>
         <tr>
-            <td>5</td>
-            <td>ไม่อยากพบปะผู้คน</td>
+            <td>5.ไม่อยากพบปะผู้คน</td>
             <div class="form-group {{ $errors->has('ep2_5') ? 'has-error' : ''}}">
                 <td>
                     <div class="radio">

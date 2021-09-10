@@ -10,6 +10,6 @@ class volunteer extends Model
 
     protected $primaryKey = 'id';
 
-    protected $fillable = ['username', 'surname', 'sex', 'age' , 'phone', 'address'];
+    protected $fillable = ['username', 'surname', 'sex', 'age' , 'phone', 'address', 'race', 'status', 'occupation', 'income', 'religion', 'education', 'relevance'];
 
 }

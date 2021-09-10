@@ -58,6 +58,71 @@
                             {!! $errors->first('address', '<p class="help-block">:message</p>') !!}
                         </div>
 
+                        <div class="form-group {{ $errors->has('race') ? 'has-error' : ''}}">
+                            <label for="race" class="control-label">{{ 'เชื้อชาติ' }}</label>
+                            <input class="form-control" name="race" type="text" id="race" value="{{ isset($User->race) ? $User->race : ''}}">
+                            {!! $errors->first('race', '<p class="help-block">:message</p>') !!}
+                        </div>
+
+                        <div class="form-group {{ $errors->has('religion') ? 'has-error' : ''}}">
+                            <label for="religion" class="control-label">{{ 'ศาสนา' }}</label>
+                            <select name="religion" class="form-control" id="religion">
+                                @foreach (json_decode('{"พุทธ":"พุทธ","คริสต์":"คริสต์","อิสลาม":"อิสลาม","ฮินดู":"ฮินดู"}', true) as $optionKey => $optionValue)
+                                <option value="{{ $optionKey }}" {{ (isset($User->religion) && $User->religion == $optionKey) ? 'selected' : ''}}>{{ $optionValue }}</option>
+                                @endforeach
+                            </select>
+                            {!! $errors->first('religion', '<p class="help-block">:message</p>') !!}
+                        </div>
+
+                        <div class="form-group {{ $errors->has('status') ? 'has-error' : ''}}">
+                            <label for="status" class="control-label">{{ 'สถานภาพสมรส' }}</label>
+                            <select name="status" class="form-control" id="status">
+                                @foreach (json_decode('{"โสด":"โสด","สมรส":"สมรส","หม้าย":"หม้าย","หย่า":"หย่า","แยกกันอยู่":"แยกกันอยู่"}', true) as $optionKey => $optionValue)
+                                <option value="{{ $optionKey }}" {{ (isset($User->status) && $User->status == $optionKey) ? 'selected' : ''}}>{{ $optionValue }}</option>
+                                @endforeach
+                            </select>
+                            {!! $errors->first('status', '<p class="help-block">:message</p>') !!}
+                        </div>
+
+                        <div class="form-group {{ $errors->has('occupation') ? 'has-error' : ''}}">
+                            <label for="occupation" class="control-label">{{ 'อาชีพ' }}</label>
+                            <select name="occupation" class="form-control" id="occupation">
+                                @foreach (json_decode('{"ข้าราชการ/รัฐวิสาหกิจ":"ข้าราชการ/รัฐวิสาหกิจ","ค้าขาย/ธุรกิจส่วนตัว/เจ้าของกิจการ":"ค้าขาย/ธุรกิจส่วนตัว/เจ้าของกิจการ","เกษตรกรรม/ประมง":"เกษตรกรรม/ประมง","พนักงานบริษัท":"พนักงานบริษัท","นักเรียน/นักศึกษา":"นักเรียน/นักศึกษา"}', true) as $optionKey => $optionValue)
+                                <option value="{{ $optionKey }}" {{ (isset($User->occupation) && $User->occupation == $optionKey) ? 'selected' : ''}}>{{ $optionValue }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+
+                        <div class="form-group {{ $errors->has('income') ? 'has-error' : ''}}">
+                            <label for="income" class="control-label">{{ 'รายได้ต่อเดือน' }}</label>
+                            <select name="income" class="form-control" id="income">
+                                @foreach (json_decode('{"ต่ำกว่า 3,000 บาท":"ต่ำกว่า 3,000 บาท","3,000 - 5,000 บาท":"3,000 - 5,000 บาท","5,000 - 10,000 บาท":"5,000 - 10,000 บาท","10,000 - 20,000 บาท":"10,000 - 20,000 บาท","20,000 บาทขึ้นไป":"20,000 บาทขึ้นไป"}', true) as $optionKey => $optionValue)
+                                <option value="{{ $optionKey }}" {{ (isset($User->income) && $User->income == $optionKey) ? 'selected' : ''}}>{{ $optionValue }}</option>
+                                @endforeach
+                            </select>
+                            {!! $errors->first('income', '<p class="help-block">:message</p>') !!}
+                        </div>
+
+                        <div class="form-group {{ $errors->has('education') ? 'has-error' : ''}}">
+                            <label for="education" class="control-label">{{ 'ระดับการศึกษา' }}</label>
+                            <select name="education" class="form-control" id="education">
+                                @foreach (json_decode('{"ประถมศึกษา":"ประถมศึกษา","มัธยมศึกษาตอนต้น":"มัธยมศึกษาตอนต้น","มัธยมศึกษาตอนปลาย/ปวช.":"มัธยมศึกษาตอนปลาย/ปวช.","อนุปริญญา/ปวส./ปวท":"อนุปริญญา/ปวส./ปวท","ปริญญาตรี":"ปริญญาตรี","สูงกว่าปริญญาตรี":"สูงกว่าปริญญาตรี"}', true) as $optionKey => $optionValue)
+                                <option value="{{ $optionKey }}" {{ (isset($User->education) && $User->education == $optionKey) ? 'selected' : ''}}>{{ $optionValue }}</option>
+                                @endforeach
+                            </select>
+                            {!! $errors->first('education', '<p class="help-block">:message</p>') !!}
+                        </div>
+
+                        <div class="form-group {{ $errors->has('relevance') ? 'has-error' : ''}}">
+                            <label for="relevance" class="control-label">{{ 'ความเกี่ยวข้องกับผู้ป่วยที่ดูแล' }}</label>
+                            <select name="relevance" class="form-control" id="relevance">
+                                @foreach (json_decode('{"บิดา":"บิดา","มารดา":"มารดา","บุตร":"บุตร","พี่":"พี่","น้อง":"น้อง","ญาติ":"ญาติ"}', true) as $optionKey => $optionValue)
+                                <option value="{{ $optionKey }}" {{ (isset($User->relevance) && $User->relevance == $optionKey) ? 'selected' : ''}}>{{ $optionValue }}</option>
+                                @endforeach
+                            </select>
+                            {!! $errors->first('relevance', '<p class="help-block">:message</p>') !!}
+                        </div>
+
                         <div class="form-group">
                             <input class="btn btn-primary" type="submit" value="บันทึก">
                         </div>

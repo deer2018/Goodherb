@@ -1,65 +1,42 @@
-<table class="table table-bordered">
-    <thead>
-
-        <tr>
-            
-                <h6><b> คำถามต่อไปนี้เป็นคำถามภายหลังการได้รับการวินิจฉัยและให้การบำบัดจากแพทย์/ผู้เชี่ยวชาญ เป็นระยะเวลา 14 วันในการรับประทานน้ำดอกไม้บาค</b></h6>
-            
-        </tr>
-
+<div class="container px-0">
+  <div class="row gx-5">
+    <div class="col">
+     <div class="p-2 border bg-light">&nbsp;&nbsp;&nbsp;&nbsp;คำถามต่อไปนี้เป็นคำถามภายหลังการได้รับการวินิจฉัยและให้การบำบัดจากแพทย์/ผู้เชี่ยวชาญ เป็นระยะเวลา 14 วันในการรับประทานน้ำดอกไม้บาค</div>
+    </div>
+  </div>
+<br>
         <!--////////////////////////////// -->
 
-        <tr>
             <div class="form-group {{ $errors->has('ep4_1') ? 'has-error' : ''}}">
-                
                     <div class="radio">
-                <td>
-                    <input name="ep4_1" type="radio" value="0" > </label>
-            </div> 1.ท่านทานตลอดระยะเวลา 14 วัน</td>
+                    <input name="ep4_1" type="radio" value="0" > 1.ท่านทานตลอดระยะเวลา 14 วัน
+            </div>
             {!! $errors->first('ep4_1', '<p class="help-block">:message</p>') !!}
             </div>
-        </tr>
-
+<hr>
         <!--////////////////////////////// -->
 
-        <tr>
+        &nbsp;&nbsp;&nbsp; 2.ท่านลืมรับประทานเป็นบางครั้งตลอดระยะเวลา 14 วัน
             <div class="radio">
-                <td>
-                    <input name="ep4_1" type="radio" value="1" > </label>
-            </div> 2.ท่านลืมรับประทานเป็นบางครังตลอดระยะเวลา 14 วัน <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>                <input name="ep4_1" type="radio" value="1" > 2-1.ลืม 1 ครั้ง
+            </div>
                 <div class="radio">
-                
-                    <input name="ep4_1" type="radio" value="1" > </label>
-            </div> 2-1.ลืม 1 ครั้ง <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input name="ep4_1" type="radio" value="1" > 2-2.ลืม 2 ครั้ง
+            </div>
                 <div class="radio">
-                
-                    <input name="ep4_1" type="radio" value="1" > </label>
-            </div> 2-2.ลืม 2 ครั้ง <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <div class="radio">
-                
-                    <input name="ep4_1" type="radio" value="1" > </label>
-            </div> 2-3.ลืมมากกว่า 2 ครั้ง
+                    <input name="ep4_1" type="radio" value="1" > 2-3.ลืมมากกว่า 2 ครั้ง
+            </div>
             </td>
-        </tr>
-
+<hr>
         <!--////////////////////////////// -->
 
-        <tr>
             <div class="radio">
-                <td>
-                    <input name="ep4_1" type="radio" value="2" > </label>
-            </div> 3.ท่านไม่ได้ประทานเลยตลอดระยะเวลา 14 วัน</td>
+                    <input name="ep4_1" type="radio" value="2" > 3.ท่านไม่ได้ประทานเลยตลอดระยะเวลา 14 วัน
+            </div>
             {!! $errors->first('ep4_1', '<p class="help-block">:message</p>') !!}
             </div>
-        </tr>
+<hr>
 
-</table>
-
-
-</thead>
 <div class="form-group d-none{{ $errors->has('user_id') ? 'has-error' : ''}}">
     <label for="content" class="control-label">{{ 'ไอดีผู้ใช้' }}</label>
     <input class="form-control" rows="5" name="content" type="text" id="content" value="{{ $id }}">
