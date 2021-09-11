@@ -55,7 +55,7 @@
                 <input name="ep4_3" type="radio" value="2" required> ต้องการความช่วยเหลือบ้าง เช่นบอกให้ทำตาม หรือช่วยพยุงเล็กน้อย หรือต้องมีคนดูแลเพื่อความปลอดภัย
             </div>
             <div class="radio">
-                <input name="ep4_3" type="radio" value="2" required> ทำได้เอง
+                <input name="ep4_3" type="radio" value="3" required> ทำได้เอง
             </div>
             {!! $errors->first('ep4_3', '<p class="help-block">:message</p>') !!}
         	</div>
@@ -100,7 +100,7 @@
                 <input name="ep4_5" type="radio" value="2" required> เดินหรือเคลื่อนที่โดยมีคนช่วย เช่น พยุง หรือบอกให้ทำตาม หรือต้องให้ความสนใจดูแลเพื่อความปลอดภัย
             </div>
             <div class="radio">
-                <input name="ep4_5" type="radio" value="2" required> เดินหรือเคลื่อนที่ได้เอง
+                <input name="ep4_5" type="radio" value="3" required> เดินหรือเคลื่อนที่ได้เอง
             </div>
             {!! $errors->first('ep4_5', '<p class="help-block">:message</p>') !!}
         	</div>
