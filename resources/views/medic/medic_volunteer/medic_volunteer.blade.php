@@ -50,8 +50,9 @@
                     <td> {{ $item->surname }}</td>
                     <td class="text-primary"> ภาวะพึ่งพาโดยสมบูรณ์</td>
                     <td class="text-danger"> ยังไม่ได้ตรวจสอบ</td>
-                    <td><a href="{{ url('/medic_volunteer/' . $item->id) }}" title="Show"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>ข้อมูลอาสาสมัคร</button></a>
-                        <a href="{{ url('/medic_volunteer_sub/') }}" title="Show"><button class="btn btn-info btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>ข้อมูลแบบสอบถาม</button></a>
+                    <td>
+                        <a href="{{ url('/medic_volunteer_sub/' . $item->id) }}"><button class="btn btn-info btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>ประเมินอาการ</button></a>
+                        <a href="{{ url('/medic_volunteer/' . $item->id) }}"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>ข้อมูลอาสาสมัคร</button></a>
                     </td>
                     </tbody>
                 @endforeach

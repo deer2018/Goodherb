@@ -1,9 +1,9 @@
-<table class="table table-bordered">
+<table class="table ">
   <thead>
     <tr>
-      <th scope="col">ลำดับ</th>
-      </th>
-      <th scope="col">ลักษณะภำวะอำรมณ์</th>
+      <th scope="col">ลำดับ</th>     
+      <th scope="col">ลักษณะภาวะอารมณ์</th>
+      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>

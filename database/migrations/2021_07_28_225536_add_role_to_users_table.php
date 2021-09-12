@@ -11,6 +11,7 @@ class AddRoleToUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->string("role")->nullable()->default("guest");
+            $table->string("status")->nullable()->default("ยังไม่ได้ตรวจสอบ");
         });
     }
 

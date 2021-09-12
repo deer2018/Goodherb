@@ -30,7 +30,7 @@
                     <span>จัดการสมาชิก</span></a>
             </li>
       <li class="nav-item">
-                <a class="nav-link" href="{{ url('/admin_volunteer_index') }}">
+                <a class="nav-link" href="{{ url('/admin_volunteer') }}">
                     <i class="fas fa-circle"></i>
                     <span>ข้อมูลอาสาสมัคร</span></a>
             </li>

@@ -28,13 +28,13 @@ class MedicController extends Controller
                     $users = User::latest()->paginate($perPage);
     
                     if (!empty($keyword)) {
-                        $users = User::where('username', 'LIKE', "%$keyword%")
-                            ->orWhere('surname', 'LIKE', "%$keyword%")
-                            ->where('role', 'LIKE', "volunteer")
-                            ->latest()->paginate($perPage);
+                        $users = User::where(function($q) use ($keyword){
+                            $q->where('username', )
+                              ->orWhere('surname', $keyword);        
+                        })
+                        ->get();
                     } else {
                         $users = User::where('role', "volunteer")
-                        ->orwhere('role', "volunteer")
                         ->latest()->paginate($perPage);
                     }
                     break;
@@ -45,6 +45,13 @@ class MedicController extends Controller
         
         return view('medic.medic_volunteer.medic_volunteer', compact('users'));
 
+    }
+
+    public function volunteer_sub()
+    {
+            $users = User::all();   
+      
+         return view('medic.medic_volunteer.medic_volunteer_sub', compact('users'));
     }
 
 

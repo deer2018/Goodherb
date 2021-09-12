@@ -42,7 +42,7 @@ class Questionone_fourController extends Controller
         $user_id = Auth::id();
         $requestData["user_id"] = $user_id;
         $requestData["user_id"] = Auth::id();
-        // เอาคะแนนของทุกๆ คอลัมน์มาบวกัน 
+        // เอาคะแนนของทุกๆ คอลัมน์มาบวกกัน 
         $requestData["total"] = $requestData["ep4_1"] + $requestData["ep4_2"] + $requestData["ep4_3"] +
         $requestData["ep4_4"] + $requestData["ep4_5"] + $requestData["ep4_6"] + $requestData["ep4_7"] + 
         $requestData["ep4_8"] + $requestData["ep4_9"] + $requestData["ep4_10"];

@@ -18,7 +18,7 @@
                         <div class="table-responsive">
                             <table class="table">
                                 <tbody>
-                                   
+                                    <tr><th>รหัสบัตรประชาชน</th><td> </td></tr>
                                     <tr><th>ชื่อ</th><td> {{ $users->username }} </td></tr>
                                     <tr><th>นามสกุล</th><td> {{ $users->surname }} </td></tr>
                                     <tr><th>เพศ</th><td> {{ $users->sex }} </td></tr>

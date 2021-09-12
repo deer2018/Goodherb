@@ -10,14 +10,8 @@
                     <div class="card-header">Info {{ $users->name }}</div>
                     <div class="card-body">
 
-                        <a href="{{ url('/admin_volunteer' . $item->id) }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i>ย้อนกลับ</button></a>
-                        <!-- <a href="{{ url('/admin_volunteer/' . $users->id . '/edit') }}" title="Edit Crud"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> แก้ไขข้อมูล</button></a> -->
-
-                        <!-- <form method="POST" action="{{ url('crud' . '/' . $crud->id) }}" accept-charset="UTF-8" style="display:inline">
-                            {{ method_field('DELETE') }}
-                            {{ csrf_field() }}
-                            <button type="submit" class="btn btn-danger btn-sm" title="Delete Crud" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> ลบข้อมูล</button>
-                        </form> -->
+                        <a href="{{ url('/admin_volunteer/') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i>ย้อนกลับ</button></a>
+                        
                         <br/>
                         <br/>
 
