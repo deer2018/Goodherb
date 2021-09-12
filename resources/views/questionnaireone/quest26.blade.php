@@ -829,11 +829,6 @@
                 มากที่สุด
             </div>
             {!! $errors->first('ep3_26', '<p class="help-block">:message</p>') !!}
-    </div>
+    </div></div></div>
 <hr>
 
-<div class="form-group d-none{{ $errors->has('user_id') ? 'has-error' : ''}}">
-    <label for="content" class="control-label">{{ 'ไอดีผู้ใช้' }}</label>
-    <input class="form-control" rows="5" name="content" type="text" id="content" value="{{ $id }}">
-    {!! $errors->first('content', '<p class="help-block">:message</p>') !!}
-</div>

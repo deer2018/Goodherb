@@ -3,7 +3,7 @@
 @section('content')
 <div class="container-fluid">
  <div class="card shadow mb-4">
-      <div class="card-header py-3"><h6 class="m-1 font-weight-bold text-primary">แบบสอบถามของ {{ $users->id }}</h6></div>                        
+      <div class="card-header py-3"><h6 class="m-1 font-weight-bold text-primary">แบบสอบถามของ {{ $users->username }} </h6></div>                        
           <div class="card-body">
                 <div class="table-responsive">
                         <table class="table">   
@@ -13,13 +13,13 @@
                                         <th>แบบสอบถาม</th>
                                         <th>วันที่</th>          
                                     </tr>
-                            </thead>
+                            </thead>    
                             <tbody>
                                     <tr>
                                         <td>1</td>
                                         <td>แบบสอบถามครั้งที่ 1</td>
                                         <td>1-8-64</td>
-                                        <td><a href="{{ url('/predicate1/'. $item->id) }}" title="Click"><button  class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>คลิก</button></a></td>
+                                        <td><a href="{{ url('/predicate1/' . $users->id ) }}" title="Click"><button  class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>คลิก</button></a></td>
                                         
                                     </tr>
                                     <tr>

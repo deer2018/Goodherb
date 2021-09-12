@@ -19,9 +19,10 @@ class MedicVolunteerController extends Controller
 
     public function index()
     {
-         $users = User::all();
-         
-         return view('medic.medic_volunteer.verify.predicate1', compact('users'));
+        $id = Auth::id();
+        $data = _q1_1::findOrFail($id);  
+
+
     }
 
    
@@ -58,9 +59,11 @@ class MedicVolunteerController extends Controller
      * @param  \App\MedicVolunteerController  $medicVolunteerController
      * @return \Illuminate\Http\Response
      */
-    public function edit(MedicVolunteerController $medicVolunteerController)
+    public function edit($id)
     {
-        //
+        $users = User::findOrFail($id);
+          
+        return view('medic.medic_volunteer.verify.predicate1', compact('users'));
     }
 
     /**

@@ -5,7 +5,7 @@
     <div class="container-fluid">
                         <!-- Page Heading -->
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+                    <h1 class="h3 mb-0 text-gray-800">ข้อมูลของ {{ $users->username }} ครั้งที่ 1</h1>
                     <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                             class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                 </div>
@@ -20,16 +20,16 @@
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                           <h6>แบบสอบถามคัดเลือก</h6></div>
-                                        <div class="text-xs mb-1 font-weight-bold text-gray-800">0 – 4 คะแนน ภาวะพึ่งพาโดยสมบูรณ์</div>
-                                        <div class="text-xs mb-1 font-weight-bold text-gray-800">0 – 4 คะแนน ภาวะพึ่งพาโดยสมบูรณ</div>
-                                        <div class="text-xs mb-1 font-weight-bold text-gray-800">เครียดมาก (8-9 คะแนน)</div>
-                                        <div class="text-xs mb-1 font-weight-bold text-gray-800">เครียดมากที่สุด (10-15 คะแนน)</div>
+                                           <h6>แบบสอบถามคัดเลือก</h6></div>                
+                                        <div class="h6 mb-1 font-weight-bold text-gray-800">เครียดมากที่สุด </div>
                                     </div>
                                     <div class="col-auto">
                                         <i class="fas fa-calendar fa-2x text-gray-300"></i>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="card-footer">
+                                    <!-- @include ('medic.medic_volunteer.quest1.medic_quest1_select', ['formMode' => 'predicate1.blade']) -->
                             </div>
                         </div>
                     </div>
@@ -42,14 +42,15 @@
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                         <h6>แบบวัดความเครียดของผู้ดูแล</h6></div>
-                                        <div class="text-xs mb-1 font-weight-bold text-gray-800">ระดับต่ำ (1-3 คะแนน)</div>
-                                        <div class="text-xs mb-1 font-weight-bold text-gray-800">ระดับปานกลาง (4-6 คะแนน)</div>
-                                        <div class="text-xs mb-1 font-weight-bold text-gray-800">ระดับสูง (7-13 คะแนน)</div>
+                                        <div class="m6 mb-1 font-weight-bold text-gray-800">ระดับต่ำ </div>
                                     </div>
                                     <div class="col-auto">
                                         <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="card-footer">
+                                @include ('medic.medic_volunteer.quest1.medic_quest1_13', ['formMode' => 'predicate1.blade'])
                             </div>
                         </div>
                     </div>
@@ -60,17 +61,16 @@
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                        <h6>แบบประเมินความเครียด</h6></div>
-                                        <div class="text-xs mb-1 font-weight-bold text-gray-800">เครียดน้อย (0-4 คะแนน)</div>
-                                        <div class="text-xs mb-1 font-weight-bold text-gray-800">เครียดปานกลาง (5-7 คะแนน)</div>
-                                        <div class="text-xs mb-1 font-weight-bold text-gray-800">เครียดมาก (8-9 คะแนน)</div>
-                                        <div class="text-xs mb-1 font-weight-bold text-gray-800">เครียดมากที่สุด (10-15 คะแนน)</div>
+                                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1"><h6>แบบประเมินความเครียด</h6></div>
+                                        <div class="m6 mb-1 font-weight-bold text-gray-800">เครียดมากที่สุด</div>
                                     </div>
                                     <div class="col-auto">
                                         <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="card-footer">
+                                @include ('medic.medic_volunteer.quest1.medic_quest1_5', ['formMode' => 'predicate1.blade'])
                             </div>
                         </div>
                     </div>
@@ -84,15 +84,15 @@
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                         <h6>เครื่องชี้วัดคุณภาพชีวิต</h6></div>
-                                        <div class="text-xs mb-1 font-weight-bold text-gray-800">คะแนน 26 – 60 คะแนนแสดงถึง<br>การมีคุณภาพชีวิตที่ไม่ดี</div>
-                                        <div class="text-xs mb-1 font-weight-bold text-gray-800">คะแนน 61 – 95 คะแนนแสดงถึง<br>การมีคุณภาพชีวิตกลาง ๆ</div>
-                                        <div class="text-xs mb-1 font-weight-bold text-gray-800">คะแนน 61 – 95 คะแนนแสดงถึง<br>การมีคุณภาพชีวิตกลาง ๆ</div>
-                
+                                        <div class="m6 mb-1 font-weight-bold text-gray-800">การมีคุณภาพชีวิตที่ไม่ดี</div>
                                     </div>
                                     <div class="col-auto">
                                         <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="card-footer">
+                                <!-- @include ('medic.medic_volunteer.quest1.medic_quest1_26', ['formMode' => 'predicate1.blade']) -->
                             </div>
                         </div>
                     </div>
@@ -113,9 +113,9 @@
                                     <code>เลือกภาวะอารมณ์</code>
                                 </div>
                                 <div class="mb-3">
-                                @include ('medic.medic_volunteer.verify.quest1_medic', ['formMode' => 'predicate1.blade'])
+                                    @include ('medic.medic_volunteer.verify.quest1_medic', ['formMode' => 'predicate1.blade'])
+                                </div>
                             </div>
-                        </div>
                         </div>
                     </div>
 
