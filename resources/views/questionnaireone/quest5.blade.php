@@ -5,10 +5,10 @@
             <th style="text-align: center" colspan="4">คะแนน</th>
         </tr>
         <tr>
-            <th>0</th>
-            <th>1</th>
-            <th>2</th>
-            <th>3</th>
+            <th style="text-align: center">แทบไม่มี</th>
+            <th style="text-align: center">บางครั้ง</th>
+            <th style="text-align: center">บ่อยครั้ง</th>
+            <th style="text-align: center">ประจำ</th>
         </tr>
     </thead>
 
