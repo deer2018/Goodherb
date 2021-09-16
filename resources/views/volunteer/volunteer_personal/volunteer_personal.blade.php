@@ -1,17 +1,32 @@
-@extends('layouts.app')
+@extends('layouts.volunteer.main')
+
+
 
 @section('content')
-<div class="container">
+<div class="card">
+<div class="card-header">ประวัติส่วนตัว</div>
+<br>
+<div class="container bootstrap snippets bootdey">
+<div class="panel-body inf-content">
+    
     <div class="row">
-        @include('volunteer.volunteer_sidebar')
-
-
-
-        <div class="col-md-10">
-            <div class="card">
-                <div class="card-header">ประวัติส่วนตัว</div>
-                <div class="card-body">
-                    <form method="POST" action="{{ url('/volunteer_per/' . $User->id) }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
+        <div class="col-md-3">
+            <img alt="" style="width:600px;" title="" class="img-circle img-thumbnail isTooltip" src="https://bootdey.com/img/Content/avatar/avatar7.png" data-original-title="Usuario"> 
+            <ul title="Ratings" class="list-inline ratings text-center">
+                <!-- <li><a href="#"><span class="fab fa-google fa-fw"></span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li> -->
+            </ul>
+            <div style="text-align: center" > 
+            <a href="#" title="Back"><button class="btn btn-warning"><i class="fa fa-user" aria-hidden="true"></i>แก้ไขรูป</button></a>
+            </div>
+        </div>
+        <div class="col-md-7">
+            
+            <div class="table-responsive">
+            <form method="POST" action="{{ url('/volunteer_per/' . $User->id) }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
                         {{ method_field('PATCH') }}
                         {{ csrf_field() }}
 
@@ -123,17 +138,23 @@
                             {!! $errors->first('relevance', '<p class="help-block">:message</p>') !!}
                         </div>
 
-                        <div class="form-group">
-                            <input class="btn btn-primary" type="submit" value="บันทึก">
-                        </div>
+                <div class="container-fluid">
+                    <div class="row">                  
+                            <div class="col-md-10">
+                                <a href="{{ url('/volunteer_per') }}" title="Back"><button class="btn btn-info" ><i  aria-hidden="true"></i>ย้อนกลับ</button></a>
+                            </div>
 
-                    </form>
-
-
-                </div>
+                            <div class="col-md-2">
+                                <input class="btn btn-primary" type="submit" value="บันทึก">
+                            </div>
+                    </div> 
+                </div>       
+                    <br> 
+                    </form> 
             </div>
         </div>
     </div>
 </div>
-</div>
+</div>                         
+</div>  
 @endsection

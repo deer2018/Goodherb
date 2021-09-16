@@ -1,170 +1,236 @@
-@extends('layouts.app')
+@extends('layouts.volunteer.main')
 
 @section('content')
-<div class="container">
+<div class="card">
+<div class="card-header py-3"><h6 class="m-1 font-weight-bold text-primary">ประวัติส่วนตัว</h6></div>
+<br>
+<div class="container bootstrap snippets bootdey">
+<div class="panel-body inf-content">
     <div class="row">
-        @include('volunteer.volunteer_sidebar')
+        <div class="col-md-3">
+            <img alt="" style="width:600px;" title="" class="img-circle img-thumbnail isTooltip" src="https://bootdey.com/img/Content/avatar/avatar7.png" data-original-title="Usuario"> 
+            <ul title="Ratings" class="list-inline ratings text-center">
+                <!-- <li><a href="#"><span class="fab fa-google fa-fw"></span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li> -->
+            </ul>
+                <div style="text-align: center" > 
+                    <a href="{{ url('/volunteer_per/' . $data->id . '/edit') }}" title="Edit Crud"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>แก้ไขข้อมูล</button></a>
+                </div><br>
+        </div>
+        <div class="col-md-6">
+            
+            <div class="table-responsive">
+            <table class="table table-user-information">
+                <tbody>
+                    <tr>        
+                        <td>
+                            <strong>
+                                <span class="glyphicon glyphicon-asterisk text-primary"></span>
+                                เลขลำดับอาสาสมัคร                                                
+                            </strong>
+                        </td>
+                        <td class="text-primary">
+                                
+                        </td>
+                    </tr>
+                    <tr>    
+                        <td>
+                            <strong>
+                                <span class="glyphicon glyphicon-user  text-primary"></span>    
+                                ชื่อ                                                
+                            </strong>
+                        </td>
+                        <td class="text-primary">
+                        {{ $data->username }}     
+                        </td>
+                    </tr>
+                    <tr>        
+                        <td>
+                            <strong>
+                                <span class="glyphicon glyphicon-cloud text-primary"></span>  
+                                นามสกุล                                                
+                            </strong>
+                        </td>
+                        <td class="text-primary">
+                        {{ $data->surname }}  
+                        </td>
+                    </tr>
 
-        <div class="col-md-10">
-
-            <div class="card">
-                <div class="card-header">หน้าหลัก</div>
-                <div class="card-body">
-
-
-
-
-                    <div class="page-content page-container" id="page-content">
-                        <div class="padding">
-                            <div class="row container d-flex justify-content-center">
-                                <div class="col-xl-10 col-md-12">
-                                    <div class="card user-card-full">
-                                        <div class="row m-l-0 m-r-0">
-
-                                            <!-- ************************  image  **************** -->
-
-                                            <div class="col-sm-4 bg-c-lite-green user-profile">
-                                                <br>
-                                                <div class="card-block text-center text-white">
-                                                    <div class="m-b-25"> <img src="https://img.icons8.com/bubbles/100/000000/user.png" class="img-radius" alt="User-Profile-Image"> </div>
-                                                </div> <br>
-                                                <div style="text-align: center">
-                                                    <a href="{{ url('/volunteer_per/' . $data->id . '/edit') }}" title="Edit Crud"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>แก้ไขข้อมูล</button></a>
-                                                </div>
-                                            </div>
-
-
-                                            <!-- ******************* content ********************* -->
-
-                                            <div class="col"> <br>
-                                                <div class="card-block">
-                                                    <h4 class="m-b-20 p-b-5 b-b-default f-w-600"> โปรไฟล์</h4>
-                                                    <div class="row">
-                                                        <div class="col-6">
-                                                            <p class="m-b-10 f-w-600">ชื่อ - นามสกุล</p>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <p class="m-b-10 f-w-600">{{ $data->username }} {{ $data->surname }}</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-6">
-                                                            <p class="m-b-10 f-w-600">เพศ</p>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <p class="m-b-10 f-w-600">{{ $data->sex }}</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-6">
-                                                            <p class="m-b-10 f-w-600">อายุ</p>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <p class="m-b-10 f-w-600">{{ $data->age }} </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-6">
-                                                            <p class="m-b-10 f-w-600">email</p>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <p class="m-b-10 f-w-600">{{ $data->email }} </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-6">
-                                                            <p class="m-b-10 f-w-600">เบอร์โทร</p>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <p class="m-b-10 f-w-600">{{ $data->phone }} </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-6">
-                                                            <p class="m-b-10 f-w-600">ที่อยู่</p>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <p class="m-b-10 f-w-600">{{ $data->address }} </p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="row">
-                                                        <div class="col-6">
-                                                            <p class="m-b-10 f-w-600">เชื้อชาติ</p>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <p class="m-b-10 f-w-600">{{ $data->race }} </p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="row">
-                                                        <div class="col-6">
-                                                            <p class="m-b-10 f-w-600">ศาสนา</p>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <p class="m-b-10 f-w-600">{{ $data->religion }} </p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="row">
-                                                        <div class="col-6">
-                                                            <p class="m-b-10 f-w-600">สถานภาพสมรส</p>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <p class="m-b-10 f-w-600">{{ $data->status }} </p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="row">
-                                                        <div class="col-6">
-                                                            <p class="m-b-10 f-w-600">อาชีพ</p>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <p class="m-b-10 f-w-600">{{ $data->occupation }} </p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="row">
-                                                        <div class="col-6">
-                                                            <p class="m-b-10 f-w-600">รายได้ต่อเดือน</p>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <p class="m-b-10 f-w-600">{{ $data->income }} </p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="row">
-                                                        <div class="col-6">
-                                                            <p class="m-b-10 f-w-600">ระดับการศึกษา</p>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <p class="m-b-10 f-w-600">{{ $data->education }} </p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="row">
-                                                        <div class="col-6">
-                                                            <p class="m-b-10 f-w-600">ความเกี่ยวข้องกับผู้ป่วยที่ดูแล</p>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <p class="m-b-10 f-w-600">{{ $data->relevance }} </p>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
+                    <tr>        
+                        <td>
+                            <strong>
+                                <span class="glyphicon glyphicon-bookmark text-primary"></span> 
+                                ชื่อที่แสดงบนเว็บไซต์                                                
+                            </strong>
+                        </td>
+                        <td class="text-primary">
+                        {{ $data->name }} 
+                        </td>
+                    </tr>
+                    <tr>        
+                        <td>
+                            <strong>
+                                <span class="glyphicon glyphicon-envelope text-primary"></span> 
+                                อีเมล                                                
+                            </strong>
+                        </td>
+                        <td class="text-primary">
+                        {{ $data->email }} 
+                        </td>
+                    </tr>
+                    <tr>    
+                        <td>
+                            <strong>
+                                <span class="glyphicon glyphicon-user  text-primary"></span>    
+                                อายุ                                                
+                            </strong>
+                        </td>
+                        <td class="text-primary">
+                        {{ $data->age }}     
+                        </td>
+                    </tr>
+                    <tr>        
+                        <td>
+                            <strong>
+                                <span class="glyphicon glyphicon-eye-open text-primary"></span> 
+                                เพศ                                                
+                            </strong>
+                        </td>
+                        <td class="text-primary">
+                        {{ $data->sex }} 
+                        </td>
+                    </tr>
+                    <tr>        
+                        <td>
+                            <strong>
+                                <span class="glyphicon glyphicon-eye-open text-primary"></span> 
+                                เบอร์โทรศัพท์                                                
+                            </strong>
+                        </td>
+                        <td class="text-primary">
+                        {{ $data->phone }} 
+                        </td>
+                    </tr>
+                    <tr>        
+                        <td>
+                            <strong>
+                                <span class="glyphicon glyphicon-eye-open text-primary"></span> 
+                                ประเภทไอดี                                                
+                            </strong>
+                        </td>
+                        <td class="text-primary">
+                        {{ $data->address }}
+                        </td>
+                    </tr>
+                   
+                    <tr>        
+                        <td>
+                            <strong>
+                                <span class="glyphicon glyphicon-eye-open text-primary"></span> 
+                                สถานภาพสมรส                                                
+                            </strong>
+                        </td>
+                        <td class="text-primary">
+                        {{ $data->relationship }}
+                        </td>
+                    </tr>
+                    <tr>        
+                        <td>
+                            <strong>
+                                <span class="glyphicon glyphicon-eye-open text-primary"></span> 
+                                อาชีพ                                                
+                            </strong>
+                        </td>
+                        <td class="text-primary">
+                        {{ $data->occupation }}
+                        </td>
+                    </tr>
+                    <tr>        
+                        <td>
+                            <strong>
+                                <span class="glyphicon glyphicon-eye-open text-primary"></span> 
+                                รายได้ต่อเดือน                                                
+                            </strong>
+                        </td>
+                        <td class="text-primary">
+                        {{ $data->income }}
+                        </td>
+                    </tr>
+                    <tr>        
+                        <td>
+                            <strong>
+                                <span class="glyphicon glyphicon-eye-open text-primary"></span> 
+                                ศาสนา                                                
+                            </strong>
+                        </td>
+                        <td class="text-primary">
+                        {{ $data->religion }}
+                        </td>
+                    </tr>
+                    <tr>        
+                        <td>
+                            <strong>
+                                <span class="glyphicon glyphicon-eye-open text-primary"></span> 
+                                เชื้อชาติ                                                
+                            </strong>
+                        </td>
+                        <td class="text-primary">
+                        {{ $data->race }}
+                        </td>
+                    </tr>
+                    <tr>        
+                        <td>
+                            <strong>
+                                <span class="glyphicon glyphicon-eye-open text-primary"></span> 
+                                ระดับการศึกษา                                                
+                            </strong>
+                        </td>
+                        <td class="text-primary">
+                        {{ $data->education }}
+                        </td>
+                    </tr>
+                    <tr>        
+                        <td>
+                            <strong>
+                                <span class="glyphicon glyphicon-eye-open text-primary"></span> 
+                                ความเกี่ยวข้องกับผู้ป่วยที่ดูแล                                                
+                            </strong>
+                        </td>
+                        <td class="text-primary">
+                        {{ $data->relevance }}
+                        </td>
+                    </tr>
+                    <tr>        
+                        <td>
+                            <strong>
+                                <span class="glyphicon glyphicon-calendar text-primary"></span>
+                                เข้าร่วมเมื่อ                                                
+                            </strong>
+                        </td>
+                        <td class="text-primary">
+                        {{ $data->created_at }} 
+                        </td>
+                    </tr>
+                    <tr>        
+                        <td>
+                            <strong>
+                                <span class="glyphicon glyphicon-calendar text-primary"></span>
+                                แก้ไขเมื่อ                                                
+                            </strong>
+                        </td>
+                        <td class="text-primary">
+                        {{ $data->updated_at }} 
+                        </td>
+                    </tr>                                    
+                </tbody>
+            </table>
             </div>
         </div>
     </div>
 </div>
-</div>
+</div>                         
+</div>  
 @endsection
