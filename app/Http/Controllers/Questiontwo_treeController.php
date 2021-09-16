@@ -28,8 +28,9 @@ class Questiontwo_treeController extends Controller
     public function create()
     {
         $id = Auth::id();
+        $Q = Questiontwo_tree::firstOrNew(array('user_id' => $id));
 
-        return view('volunteer.volunteer_questionnaire.Q2.volunteer_questionnaire_sub3_2', compact('id'));
+        return view('volunteer.volunteer_questionnaire.Q2.volunteer_questionnaire_sub3_2', compact('id','Q'));
     }
 
     /**
@@ -40,6 +41,7 @@ class Questiontwo_treeController extends Controller
      */
     public function store(Request $request)
     {
+        // ดึงข้อมูลจากหน้าฟอร์ม
         $requestData = $request->all();
         $user_id = Auth::id();
         $requestData["user_id"] = $user_id;
@@ -52,7 +54,11 @@ class Questiontwo_treeController extends Controller
         $requestData["ep3_16"] + $requestData["ep3_17"] + $requestData["ep3_18"] + $requestData["ep3_19"] + 
         $requestData["ep3_20"] + $requestData["ep3_21"] + $requestData["ep3_22"] + $requestData["ep3_23"] + 
         $requestData["ep3_24"] + $requestData["ep3_25"] + $requestData["ep3_26"];
-        Questiontwo_tree::create($requestData);
+        
+        //Questiontwo_tree::create($requestData);
+        // ค้นข้อมูลก่อนว่ามีมั้ยแล้วค่อยบันทึก
+        $Q = Questiontwo_tree::firstOrNew(array('user_id' => $user_id));
+        $Q->fill($requestData)->save();
 
         return redirect('Q2-4')->with('flash_message', 'Questiontwo_tree added!');
     }

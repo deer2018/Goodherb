@@ -28,8 +28,9 @@ class QuestiontwoController extends Controller
     public function create()
     {
         $id = Auth::id();
+        $Q = Questiontwo::firstOrNew(array('user_id' => $id));
 
-        return view('volunteer.volunteer_questionnaire.Q2.volunteer_questionnaire_sub1_2', compact('id'));
+        return view('volunteer.volunteer_questionnaire.Q2.volunteer_questionnaire_sub1_2', compact('id','Q'));
     }
 
     /**
@@ -40,6 +41,7 @@ class QuestiontwoController extends Controller
      */
     public function store(Request $request)
     {
+        // ดึงข้อมูลจากหน้าฟอร์ม
         $requestData = $request->all();
         $user_id = Auth::id();
         $requestData["user_id"] = $user_id;
@@ -49,7 +51,11 @@ class QuestiontwoController extends Controller
         $requestData["ep1_4"] + $requestData["ep1_5"] + $requestData["ep1_6"] + $requestData["ep1_7"] + 
         $requestData["ep1_8"] + $requestData["ep1_9"] + $requestData["ep1_10"] + $requestData["ep1_11"] +
         $requestData["ep1_12"] + $requestData["ep1_13"];
-        Questiontwo::create($requestData);
+        
+        //Questiontwo::create($requestData);
+        // ค้นข้อมูลก่อนว่ามีมั้ยแล้วค่อยบันทึก
+        $Q = Questiontwo::firstOrNew(array('user_id' => $user_id));
+        $Q->fill($requestData)->save();
 
         return redirect('Q2-2')->with('flash_message', 'Questiontwo added!');
     }

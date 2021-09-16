@@ -92,6 +92,7 @@ Route::post('Q1-4','Questionone_fourController@store');
 
 
 Route::get('Q2','QuestiontwoController@create');
+Route::post('Q2','QuestiontwoController@store');
 
 Route::get('Q2-2','Questiontwo_twoController@create');
 Route::post('Q2-2','Questiontwo_twoController@store');

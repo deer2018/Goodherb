@@ -26,8 +26,9 @@ class Questionone_fourController extends Controller
     public function create()
     {
         $id = Auth::id();
+        $Q = Questionone_four::firstOrNew(array('user_id' => $id));
 
-        return view('volunteer.volunteer_questionnaire.Q1.volunteer_questionnaire_sub4', compact('id'));
+        return view('volunteer.volunteer_questionnaire.Q1.volunteer_questionnaire_sub4', compact('id','Q'));
     }
 
     /**
@@ -38,6 +39,7 @@ class Questionone_fourController extends Controller
      */
     public function store(Request $request)
     {
+        // ดึงข้อมูลจากหน้าฟอร์ม
         $requestData = $request->all();
         $user_id = Auth::id();
         $requestData["user_id"] = $user_id;
@@ -60,7 +62,11 @@ class Questionone_fourController extends Controller
         }else if($requestData["total"]>15){
             echo $requestData["group"] = 'A';
         }
-        Questionone_four::create($requestData);
+        // บันทึกลงฐานข้อมูล
+        //Questionone_four::create($requestData);
+        // ค้นข้อมูลก่อนว่ามีมั้ยแล้วค่อยบันทึก
+        $Q = Questionone_four::firstOrNew(array('user_id' => $user_id));
+        $Q->fill($requestData)->save();
 
         return redirect('volunteer_questionnaire')->with('flash_message', 'Questionone_four added!');
     }

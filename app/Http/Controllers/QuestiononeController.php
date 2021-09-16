@@ -28,8 +28,9 @@ class QuestiononeController extends Controller
     public function create()
     {
         $id = Auth::id();
+        $Q = Questionone::firstOrNew(array('user_id' => $id));
 
-        return view('volunteer.volunteer_questionnaire.Q1.volunteer_questionnaire_sub1', compact('id'));
+        return view('volunteer.volunteer_questionnaire.Q1.volunteer_questionnaire_sub1', compact('id','Q'));
     }
 
     /**
@@ -39,7 +40,8 @@ class QuestiononeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {   
+        // ดึงข้อมูลจากหน้าฟอร์ม
         $requestData = $request->all();
         $user_id = Auth::id();
         $requestData["user_id"] = $user_id;
@@ -49,7 +51,11 @@ class QuestiononeController extends Controller
         $requestData["ep1_4"] + $requestData["ep1_5"] + $requestData["ep1_6"] + $requestData["ep1_7"] + 
         $requestData["ep1_8"] + $requestData["ep1_9"] + $requestData["ep1_10"] + $requestData["ep1_11"] +
         $requestData["ep1_12"] + $requestData["ep1_13"];
-        Questionone::create($requestData);
+
+        //Questionone::create($requestData);
+        // ค้นข้อมูลก่อนว่ามีมั้ยแล้วค่อยบันทึก
+        $Q = Questionone::firstOrNew(array('user_id' => $user_id));
+        $Q->fill($requestData)->save();
 
         return redirect('Q1-2')->with('flash_message', 'Questionone added!');
     }

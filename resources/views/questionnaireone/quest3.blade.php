@@ -9,7 +9,7 @@
 
             <div class="form-group {{ $errors->has('ep4_1') ? 'has-error' : ''}}">
                     <div class="radio">
-                    <input name="ep4_1" type="radio" value="0" > 1.ท่านทานตลอดระยะเวลา 14 วัน
+                    <input name="ep4_1" type="radio" value="0" @if (isset($Q)) {{ (0 == $Q->ep4_1) ? 'checked' : '' }} @else {{ 'checked' }} @endif> 1.ท่านทานตลอดระยะเวลา 14 วัน
             </div>
             {!! $errors->first('ep4_1', '<p class="help-block">:message</p>') !!}
             </div>
@@ -18,20 +18,20 @@
 
         &nbsp;&nbsp;&nbsp; 2.ท่านลืมรับประทานเป็นบางครั้งตลอดระยะเวลา 14 วัน
             <div class="radio">
-<br>                <input name="ep4_1" type="radio" value="1" > 2-1.ลืม 1 ครั้ง
+<br>                <input name="ep4_1" type="radio" value="1" @if (isset($Q)) {{ (1 == $Q->ep4_1) ? 'checked' : '' }} @else {{ 'checked' }} @endif> 2-1.ลืม 1 ครั้ง
             </div>
                 <div class="radio">
-                    <input name="ep4_1" type="radio" value="1" > 2-2.ลืม 2 ครั้ง
+                    <input name="ep4_1" type="radio" value="1" @if (isset($Q)) {{ (1 == $Q->ep4_1) ? 'checked' : '' }} @else {{ 'checked' }} @endif> 2-2.ลืม 2 ครั้ง
             </div>
                 <div class="radio">
-                    <input name="ep4_1" type="radio" value="1" > 2-3.ลืมมากกว่า 2 ครั้ง
+                    <input name="ep4_1" type="radio" value="1" @if (isset($Q)) {{ (1 == $Q->ep4_1) ? 'checked' : '' }} @else {{ 'checked' }} @endif> 2-3.ลืมมากกว่า 2 ครั้ง
             </div>
             </td>
 <hr>
         <!--////////////////////////////// -->
 
             <div class="radio">
-                    <input name="ep4_1" type="radio" value="2" > 3.ท่านไม่ได้ประทานเลยตลอดระยะเวลา 14 วัน
+                    <input name="ep4_1" type="radio" value="2" @if (isset($Q)) {{ (2 == $Q->ep4_1) ? 'checked' : '' }} @else {{ 'checked' }} @endif> 3.ท่านไม่ได้ประทานเลยตลอดระยะเวลา 14 วัน
             </div>
             {!! $errors->first('ep4_1', '<p class="help-block">:message</p>') !!}
             </div>
