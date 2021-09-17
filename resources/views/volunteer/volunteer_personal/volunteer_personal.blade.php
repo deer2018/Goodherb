@@ -89,14 +89,14 @@
                             {!! $errors->first('religion', '<p class="help-block">:message</p>') !!}
                         </div>
 
-                        <div class="form-group {{ $errors->has('status') ? 'has-error' : ''}}">
-                            <label for="status" class="control-label">{{ 'สถานภาพสมรส' }}</label>
-                            <select name="status" class="form-control" id="status">
+                        <div class="form-group {{ $errors->has('relationship') ? 'has-error' : ''}}">
+                            <label for="relationship" class="control-label">{{ 'สถานภาพสมรส' }}</label>
+                            <select name="relationship" class="form-control" id="relationship">
                                 @foreach (json_decode('{"โสด":"โสด","สมรส":"สมรส","หม้าย":"หม้าย","หย่า":"หย่า","แยกกันอยู่":"แยกกันอยู่"}', true) as $optionKey => $optionValue)
-                                <option value="{{ $optionKey }}" {{ (isset($User->status) && $User->status == $optionKey) ? 'selected' : ''}}>{{ $optionValue }}</option>
+                                <option value="{{ $optionKey }}" {{ (isset($User->relationship) && $User->relationship == $optionKey) ? 'selected' : ''}}>{{ $optionValue }}</option>
                                 @endforeach
                             </select>
-                            {!! $errors->first('status', '<p class="help-block">:message</p>') !!}
+                            {!! $errors->first('relationship', '<p class="help-block">:message</p>') !!}
                         </div>
 
                         <div class="form-group {{ $errors->has('occupation') ? 'has-error' : ''}}">

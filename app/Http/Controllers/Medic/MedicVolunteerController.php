@@ -61,8 +61,9 @@ class MedicVolunteerController extends Controller
      */
     public function edit($id)
     {
-        $users = User::findOrFail($id);
-          
+       
+        $users = User::findOrFail($id);   
+        $user_id = User::findOrFail($id);  
         return view('medic.medic_volunteer.verify.predicate1', compact('users'));
     }
 

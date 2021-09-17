@@ -47,11 +47,14 @@ class MedicController extends Controller
 
     }
 
-    public function volunteer_sub($id)
+    public function volunteer_sub(Request $request, $id)
     {
             
-        $users = User::findOrFail($id);
-      
+
+       
+        $users = User::findOrFail($id);   
+        $user_id = User::findOrFail($id);  
+
          return view('medic.medic_volunteer.medic_volunteer_sub', compact('users'));
     }
 

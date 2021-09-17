@@ -19,20 +19,20 @@
   </div>
 
   <!-- Nav Item - Pages Collapse Menu -->
-  <li class="nav-item">
+        <!-- <li class="nav-item">
             <a class="nav-link" href="{{ url('/medic_index') }}">
                 <i class="fas fa-circle"></i>
                 <span>หน้าหลัก</span></a>
         </li>
-  <li class="nav-item">
+        <li class="nav-item">
             <a class="nav-link" href="{{ url('/medic_personal') }}">
                 <i class="fas fa-circle"></i>
                 <span>ประวัติส่วนตัว</span></a>
-        </li>
-  <li class="nav-item">
+        </li> -->
+        <li class="nav-item">
             <a class="nav-link" href="{{ url('/medic_volunteer') }}">
                 <i class="fas fa-circle"></i>
                 <span>ข้อมูลอาสาสมัคร</span></a>
-     
+        </li>
 </ul>
 <!-- End of Sidebar -->
