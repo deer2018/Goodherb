@@ -1,33 +1,33 @@
 *คำถามทั้งหมดอยู่ในช่วง 2 สัปดาห์ที่ผ่านมา
 
 <div class="container px-0">
-  <div class="row gx-5">
-    <div class="col">
-<br>    <div class="p-2 border bg-light">1.ท่านพอใจกับสุขภาพของท่านในตอนนี้เพียงใด</div>
+    <div class="row gx-5">
+        <div class="col"><br>
+            <div class="p-2 border bg-light">1.ท่านพอใจกับสุขภาพของท่านในตอนนี้เพียงใด</div>
+        </div>
     </div>
-  </div>
 <br>
     <div class="form-group {{ $errors->has('ep3_1') ? 'has-error' : ''}}">
         <div class="radio">
-                <input name="ep3_1" type="radio" value="5" required @if (isset($Q)) {{ (5 == $Q->ep3_1) ? 'checked' : '' }} @else {{ 'checked' }} @endif>
+            <input name="ep3_1" type="radio" value="5" required @if (isset($Q)) {{ (5 == $Q->ep3_1) ? 'checked' : '' }} @else {{ 'checked' }} @endif>
                 ไม่เลย
-            </div>
+        </div>
         <div class="radio">
-                <input name="ep3_1" type="radio" value="4" required @if (isset($Q)) {{ (4 == $Q->ep3_1) ? 'checked' : '' }} @else {{ 'checked' }} @endif>
+            <input name="ep3_1" type="radio" value="4" required @if (isset($Q)) {{ (4 == $Q->ep3_1) ? 'checked' : '' }} @else {{ 'checked' }} @endif>
                 เล็กน้อย
-            </div>
+        </div>
         <div class="radio">
-                <input name="ep3_1" type="radio" value="3" required @if (isset($Q)) {{ (3 == $Q->ep3_1) ? 'checked' : '' }} @else {{ 'checked' }} @endif>
+            <input name="ep3_1" type="radio" value="3" required @if (isset($Q)) {{ (3 == $Q->ep3_1) ? 'checked' : '' }} @else {{ 'checked' }} @endif>
                 ปานกลาง
-            </div>
+        </div>
         <div class="radio">
-                <input name="ep3_1" type="radio" value="2" required @if (isset($Q)) {{ (2 == $Q->ep3_1) ? 'checked' : '' }} @else {{ 'checked' }} @endif>
+            <input name="ep3_1" type="radio" value="2" required @if (isset($Q)) {{ (2 == $Q->ep3_1) ? 'checked' : '' }} @else {{ 'checked' }} @endif>
                 มาก
-            </div>
+        </div>
         <div class="radio">
-                <input name="ep3_1" type="radio" value="1" required @if (isset($Q)) {{ (1 == $Q->ep3_1) ? 'checked' : '' }} @else {{ 'checked' }} @endif>
+            <input name="ep3_1" type="radio" value="1" required @if (isset($Q)) {{ (1 == $Q->ep3_1) ? 'checked' : '' }} @else {{ 'checked' }} @endif>
                 มากที่สุด
-            </div>
+        </div>
             {!! $errors->first('ep3_1', '<p class="help-block">:message</p>') !!}
     </div>
 <hr>
@@ -829,6 +829,6 @@
                 มากที่สุด
             </div>
             {!! $errors->first('ep3_26', '<p class="help-block">:message</p>') !!}
-    </div></div></div>
+    </div>
 <hr>
-
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

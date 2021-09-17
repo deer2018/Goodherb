@@ -31,34 +31,19 @@ class MedicVolunteerController extends Controller
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+   
     public function store(Request $request)
     {
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\MedicVolunteerController  $medicVolunteerController
-     * @return \Illuminate\Http\Response
-     */
+  
     public function show(MedicVolunteerController $medicVolunteerController)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\MedicVolunteerController  $medicVolunteerController
-     * @return \Illuminate\Http\Response
-     */
+    
     public function edit($id)
     {
        
@@ -67,24 +52,21 @@ class MedicVolunteerController extends Controller
         return view('medic.medic_volunteer.verify.predicate1', compact('users'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\MedicVolunteerController  $medicVolunteerController
-     * @return \Illuminate\Http\Response
-     */
+    public function edit2($id)
+    {
+       
+        $users = User::findOrFail($id);   
+        $user_id = User::findOrFail($id);  
+        return view('medic.medic_volunteer.verify.predicate2', compact('users'));
+    }
+
+  
     public function update(Request $request, MedicVolunteerController $medicVolunteerController)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\MedicVolunteerController  $medicVolunteerController
-     * @return \Illuminate\Http\Response
-     */
+  
     public function destroy(MedicVolunteerController $medicVolunteerController)
     {
         //

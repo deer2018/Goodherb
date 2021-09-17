@@ -3,13 +3,6 @@
 <head>
 <style>       
 
-.topnav-centered a {
-  float: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 .modal[data-modal-color] {
   color: #000;
 }
@@ -105,29 +98,34 @@
   background: #607d8b;
 }
     
+
+    
+
 </style>   
 </head>
 <body>
 
 
 <div class="container bootstrap snippets bootdey">
-    <div class="btn-demo " id="btn-color-targets">
-        <a href="#modalmedic_select" data-target-color="bluegray" data-toggle="modal" data-dismiss="modal" class="btn btn-primary btn-user btn-block">แบบสอบถาม</a>
+    <div class="btn-demo" id="btn-color-targets">
+        <a href="#modalmedicine" data-target-color="bluegray" data-toggle="modal" data-dismiss="modal" class="navbar navbar-expand navbar-light bg-light mb-4 ">Medicine</a>
+        
     </div>
     
 </div>
 
-<div class="modal fade" data-modal-color="" id="modalmedic_select" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal fade" data-modal-color="" id="modalmedicine" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">แบบสอบถามคัดเลือก</h4>
+                <h4 class="modal-title">การรับประทานยา</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
-                @include ('questionnaireone.quest_select', ['formMode' => 'medic_quest1_select.blade'])
+                @include ('questionnaireone.quest3', ['formMode' => 'quest2_check_medicine.blade'])
             </div>
             <div class="modal-footer">
+               
                 <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
             </div>
         </div>
@@ -146,11 +144,11 @@
 $(document).ready(function(){
     $('body').on('click', '#btn-color-targets > .btn', function(){
         var color = $(this).data('target-color');
-        $('#modalmedic_select').attr('data-modal-color', color);
+        $('#modalmedicine').attr('data-modal-color', color);
     });
 });
 
-$('#modalmedic_select').modal({
+$('#modalmedicine').modal({
    backdrop: 'static',
    keyboard: false
 });

@@ -5,7 +5,7 @@
     <div class="container-fluid">
                         <!-- Page Heading -->
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h4 mb-0 text-gray-800">ข้อมูลของ<a class="m-1 font-weight-bold text-primary"> {{ $users->username }}</a> ครั้งที่ 1</h1>
+                    <h1 class="h4 mb-0 text-gray-800">ข้อมูลของ<a class="m-1 font-weight-bold text-primary"> {{ $users->username }}</a> ครั้งที่ 2</h1>
                     <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                             class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                 </div>
@@ -29,7 +29,7 @@
                                 </div>
                             </div>
                             <div class="card-footer">
-                                     @include ('medic.medic_volunteer.quest1.medic_quest1_select', ['formMode' => 'predicate1.blade']) 
+                                    <!-- @include ('medic.medic_volunteer.quest1.medic_quest1_select', ['formMode' => 'predicate1.blade']) -->
                             </div>
                         </div>
                     </div>
@@ -92,7 +92,7 @@
                                 </div>
                             </div>
                             <div class="card-footer">
-                                 @include ('medic.medic_volunteer.quest1.medic_quest1_26', ['formMode' => 'predicate1.blade']) 
+                                <!-- @include ('medic.medic_volunteer.quest1.medic_quest1_26', ['formMode' => 'predicate1.blade']) -->
                             </div>
                         </div>
                     </div>
@@ -102,38 +102,21 @@
              <div class="row">
 
                     <!-- แสดงข้อมูล ภาวะอารมณ์ -->
-                    <div class="col-lg-6">
+                    <div class="col-lg-12">
 
                         <div class="card position-relative shadow h-100  border-bottom-dark">
                             <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary">ขั้นตอนการวิเคราะห์เพื่อให้ได้ตัวยาที่คล้ายกับอาการที่ผู้ป่วยเป็น</h6>
+                                <h6 class="m-0 font-weight-bold text-primary">เช็คการรับประทานยา</h6>
                             </div>
                             <div class="card-body">
+                               
                                 <div class="mb-3">
-                                    <code>เลือกภาวะอารมณ์</code>
-                                </div>
-                                <div class="mb-3">
-                                    @include ('medic.medic_volunteer.verify.quest1_medic', ['formMode' => 'predicate1.blade'])
+                                @include ('questionnaireone.quest3', ['formMode' => 'quest2_check_medicine.blade'])
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- แสดงข้อมูล ดอกไม้ -->
-                    <div class="col-lg-6">
-
-                        <div class="card position-relative shadow h-100 border-bottom-dark">
-                            <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary">ขั้นตอนการเลือกความแรงของยา</h6>
-                            </div>
-                            <div class="card-body">
-                                <div class="mb-3">
-                                    <code>เลือกตัวยา</code>
-                                </div>
-                                @include ('medic.medic_volunteer.verify.quest1_medicine', ['formMode' => 'predicate1.blade'])
-                            </div>
-                        </div>
-                    </div>
 
             </div><br>
 
