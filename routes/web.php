@@ -143,6 +143,7 @@ Route::get('/medic_quest26', function () {
 Route::resource('medic_personal', 'Medic\Medic_PersonalController');
 
 Route::get('predicate1/{id}','Medic\MedicVolunteerController@edit');
+Route::get('predicate2/{id}','Medic\MedicVolunteerController@edit2');
 
 Route::get('medic_volunteer_sub/{id}','Medic\MedicController@volunteer_sub');
 Route::get('/medic_volunteer', 'Medic\MedicController@index');
