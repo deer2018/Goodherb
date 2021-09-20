@@ -28,9 +28,9 @@ class Questionone_twoController extends Controller
     public function create()
     {
         $id = Auth::id();
-        $Q = Questionone_two::firstOrNew(array('user_id' => $id));
+        //$Q = Questionone_two::firstOrNew(array('user_id' => $id));
 
-        return view('volunteer.volunteer_questionnaire.Q1.volunteer_questionnaire_sub2', compact('id','Q'));
+        return view('volunteer.volunteer_questionnaire.Q1.volunteer_questionnaire_sub2', compact('id'));
     }
 
     /**

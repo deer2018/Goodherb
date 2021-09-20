@@ -6,12 +6,12 @@
   </div>
 <br>
           <div class="radio">
-            <label><input name="ep1_1" type="radio" value="1" required @if (isset($Q)) {{ (1 == $Q->ep1_1) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            <label><input name="ep1_1" type="radio" value="1" required> </label>
             ใช่
           </div>
 
           <div class="radio">
-            <label><input name="ep1_1" type="radio" value="0" required @if (isset($Q)) {{ (0 == $Q->ep1_1) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            <label><input name="ep1_1" type="radio" value="0" required> </label>
             ไม่
           </div>
 
@@ -26,12 +26,12 @@
   </div>
 <br>
           <div class="radio">
-            <label><input name="ep1_2" type="radio" value="1" required @if (isset($Q)) {{ (1 == $Q->ep1_2) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            <label><input name="ep1_2" type="radio" value="1" required> </label>
             ใช่
           </div>
 
           <div class="radio"> 
-            <label><input name="ep1_2" type="radio" value="0" required @if (isset($Q)) {{ (0 == $Q->ep1_2) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            <label><input name="ep1_2" type="radio" value="0" required> </label>
             ไม่
           </div>
 
@@ -46,12 +46,12 @@
   </div>
 <br>
           <div class="radio">
-            <label><input name="ep1_3" type="radio" value="1" required @if (isset($Q)) {{ (1 == $Q->ep1_3) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            <label><input name="ep1_3" type="radio" value="1" required> </label>
             ใช่
           </div>
 
           <div class="radio">
-            <label><input name="ep1_3" type="radio" value="0" required @if (isset($Q)) {{ (0 == $Q->ep1_3) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            <label><input name="ep1_3" type="radio" value="0" required> </label>
             ไม่
           </div>
 
@@ -66,12 +66,12 @@
   </div>
 <br>
           <div class="radio">
-            <label><input name="ep1_4" type="radio" value="1" required @if (isset($Q)) {{ (1 == $Q->ep1_4) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            <label><input name="ep1_4" type="radio" value="1" required> </label>
             ใช่
           </div>
 
           <div class="radio">
-            <label><input name="ep1_4" type="radio" value="0" required @if (isset($Q)) {{ (0 == $Q->ep1_4) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            <label><input name="ep1_4" type="radio" value="0" required> </label>
             ไม่
           </div>
 
@@ -86,12 +86,12 @@
   </div>
 <br>
           <div class="radio">
-            <label><input name="ep1_5" type="radio" value="1" required @if (isset($Q)) {{ (1 == $Q->ep1_5) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            <label><input name="ep1_5" type="radio" value="1" required> </label>
             ใช่
           </div>
 
           <div class="radio">
-            <label><input name="ep1_5" type="radio" value="0" required @if (isset($Q)) {{ (0 == $Q->ep1_5) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            <label><input name="ep1_5" type="radio" value="0" required> </label>
             ไม่
           </div>
 
@@ -106,12 +106,12 @@
   </div>
 <br>
           <div class="radio">
-            <label><input name="ep1_6" type="radio" value="1" required @if (isset($Q)) {{ (1 == $Q->ep1_6) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            <label><input name="ep1_6" type="radio" value="1" required> </label>
             ใช่
           </div>
 
           <div class="radio">
-            <label><input name="ep1_6" type="radio" value="0" required @if (isset($Q)) {{ (0 == $Q->ep1_6) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            <label><input name="ep1_6" type="radio" value="0" required> </label>
             ไม่
           </div>
 
@@ -126,12 +126,12 @@
   </div>
 <br>
           <div class="radio">
-            <label><input name="ep1_7" type="radio" value="1" required @if (isset($Q)) {{ (1 == $Q->ep1_7) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            <label><input name="ep1_7" type="radio" value="1" required> </label>
             ใช่
           </div>
 
           <div class="radio">
-            <label><input name="ep1_7" type="radio" value="0" required @if (isset($Q)) {{ (0 == $Q->ep1_7) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            <label><input name="ep1_7" type="radio" value="0" required> </label>
             ไม่
           </div>
 
@@ -146,12 +146,12 @@
   </div>
 <br>
           <div class="radio">
-            <label><input name="ep1_8" type="radio" value="1" required @if (isset($Q)) {{ (1 == $Q->ep1_8) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            <label><input name="ep1_8" type="radio" value="1" required> </label>
             ใช่
           </div>
 
           <div class="radio">
-            <label><input name="ep1_8" type="radio" value="0" required @if (isset($Q)) {{ (0 == $Q->ep1_8) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            <label><input name="ep1_8" type="radio" value="0" required> </label>
             ไม่
           </div>
 
@@ -166,12 +166,12 @@
   </div>
 <br>
           <div class="radio">
-            <label><input name="ep1_9" type="radio" value="1" required @if (isset($Q)) {{ (1 == $Q->ep1_9) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            <label><input name="ep1_9" type="radio" value="1" required> </label>
             ใช่
           </div>
 
           <div class="radio">
-            <label><input name="ep1_9" type="radio" value="0" required @if (isset($Q)) {{ (0 == $Q->ep1_9) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            <label><input name="ep1_9" type="radio" value="0" required> </label>
             ไม่
           </div>
 
@@ -186,12 +186,12 @@
   </div>
 <br>
           <div class="radio">
-            <label><input name="ep1_10" type="radio" value="1" required @if (isset($Q)) {{ (1 == $Q->ep1_10) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            <label><input name="ep1_10" type="radio" value="1" required> </label>
             ใช่
           </div>
 
           <div class="radio"> 
-            <label><input name="ep1_10" type="radio" value="0" required @if (isset($Q)) {{ (0 == $Q->ep1_10) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            <label><input name="ep1_10" type="radio" value="0" required> </label>
             ไม่
           </div>
 
@@ -206,12 +206,12 @@
   </div>
 <br>
           <div class="radio">
-            <label><input name="ep1_11" type="radio" value="1" required @if (isset($Q)) {{ (1 == $Q->ep1_11) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            <label><input name="ep1_11" type="radio" value="1" required> </label>
             ใช่
           </div>
 
           <div class="radio">
-            <label><input name="ep1_11" type="radio" value="0" required @if (isset($Q)) {{ (0 == $Q->ep1_11) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            <label><input name="ep1_11" type="radio" value="0" required> </label>
             ไม่
           </div>
 
@@ -226,12 +226,12 @@
   </div>
 <br>
           <div class="radio">
-            <label><input name="ep1_12" type="radio" value="1" required @if (isset($Q)) {{ (1 == $Q->ep1_12) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            <label><input name="ep1_12" type="radio" value="1" required> </label>
             ใช่
           </div>
 
           <div class="radio">
-            <label><input name="ep1_12" type="radio" value="0" required @if (isset($Q)) {{ (0 == $Q->ep1_12) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            <label><input name="ep1_12" type="radio" value="0" required> </label>
             ไม่
           </div>
 
@@ -246,12 +246,12 @@
   </div>
 <br>
           <div class="radio">
-            <label><input name="ep1_13" type="radio" value="1" required @if (isset($Q)) {{ (1 == $Q->ep1_13) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            <label><input name="ep1_13" type="radio" value="1" required> </label>
             ใช่
           </div>
 
           <div class="radio">
-            <label><input name="ep1_13" type="radio" value="0" required @if (isset($Q)) {{ (0 == $Q->ep1_13) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+            <label><input name="ep1_13" type="radio" value="0" required> </label>
             ไม่
           </div>
 

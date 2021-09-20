@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests;
-use App\User;
 use App\Models\Questionone;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -28,9 +26,9 @@ class QuestiononeController extends Controller
     public function create()
     {
         $id = Auth::id();
-        $Q = Questionone::firstOrNew(array('user_id' => $id));
+        //$Q = Questionone::firstOrNew(array('user_id' => $id));
 
-        return view('volunteer.volunteer_questionnaire.Q1.volunteer_questionnaire_sub1', compact('id','Q'));
+        return view('volunteer.volunteer_questionnaire.Q1.volunteer_questionnaire_sub1', compact('id'));
     }
 
     /**
