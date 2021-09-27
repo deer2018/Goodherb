@@ -27,9 +27,13 @@ Route::get('/login2', function () {
 Route::resource('admin_user', 'Admin\Admin_UserController');
 
         //Admin->Volunteer ---------------------------------------
-Route::get('/admin_volunteer', 'Admin\Admin_VolunteerController@index');
-Route::get('/admin_volunteer/{id}', 'Admin\Admin_VolunteerController@show');
-// Route::resource('admin_volunteer', 'Admin\Admin_VolunteerController');
+
+//  Route::get('/admin_volunteer', 'Admin\Admin_VolunteerController@index');
+//  Route::post('/admin_volunteer/{id}/edit', 'Admin\Admin_VolunteerController@edit');
+//  Route::get('/admin_volunteer/{id}', 'Admin\Admin_VolunteerController@show');
+
+
+Route::resource('admin_volunteer', 'Admin\Admin_VolunteerController');
 
         //Admin->Medic -------------------------------------------
 Route::get('/admin_medic_index', 'Admin\Admin_MedicController@index');

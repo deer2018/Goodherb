@@ -29,7 +29,7 @@
                                 </div>
                             </div>
                             <div class="card-footer">
-                                    <!-- @include ('medic.medic_volunteer.quest1.medic_quest1_select', ['formMode' => 'predicate1.blade']) -->
+                                     @include ('medic.medic_volunteer.quest1.medic_quest1_select', ['formMode' => 'predicate1.blade']) 
                             </div>
                         </div>
                     </div>
@@ -92,7 +92,7 @@
                                 </div>
                             </div>
                             <div class="card-footer">
-                                <!-- @include ('medic.medic_volunteer.quest1.medic_quest1_26', ['formMode' => 'predicate1.blade']) -->
+                                @include ('medic.medic_volunteer.quest1.medic_quest1_26', ['formMode' => 'predicate1.blade']) 
                             </div>
                         </div>
                     </div>
@@ -106,7 +106,7 @@
 
                         <div class="card position-relative shadow h-100  border-bottom-dark">
                             <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary">เช็คการรับประทานยา</h6>
+                                <h6 class="m-0 font-weight-bold text-primary">การรับประทานยา</h6>
                             </div>
                             <div class="card-body">
                                
@@ -141,4 +141,5 @@
             </div>
 
     </div>
+</br>
 @endsection

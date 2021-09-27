@@ -62,21 +62,30 @@ class Admin_VolunteerController extends Controller
     
     public function show($id)
     {
+     
         $users = User::findOrFail($id);
 
         return view('admin.admin_volunteer.volunteer_show', compact('users'));
+        
     }
 
    
     public function edit($id)
     {
-        //
+            $users = User::findOrFail($id);
+            return view('admin.admin_volunteer.volunteer_edit', compact('users'));
+    
     }
 
    
     public function update(Request $request, $id)
     {
-        //
+        $requestData = $request->all();
+        
+        $users = User::findOrFail($id);
+        $users->update($requestData);
+
+        return redirect('admin_volunteer')->with('flash_message', 'Crud updated!');
     }
 
    

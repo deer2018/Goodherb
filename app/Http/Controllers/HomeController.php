@@ -22,7 +22,7 @@ class HomeController extends Controller
             return redirect("volunteer_per");
 
     }else if(Auth::user()->role == "medic"){
-        return redirect("medic_index");
+        return redirect("medic_volunteer");
 }
     return view("home");
     

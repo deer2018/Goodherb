@@ -112,7 +112,7 @@
 
 <div class="container bootstrap snippets bootdey">
     <div class="btn-demo " id="btn-color-targets">
-        <a href="#modalmedic_26" data-target-color="bluegray" data-toggle="modal" data-dismiss="modal" class="btn btn-primary btn-user btn-block">แบบสอบถาม</a>
+        <a href="#modalmedic_26" data-target-color="bluegray" data-toggle="modal" data-dismiss="modal" class="btn btn-primary btn-user btn-block"><i class="fas fa-file fa-1x text-gray-300"> แบบสอบถาม</i></a>
     </div>
     
 </div>

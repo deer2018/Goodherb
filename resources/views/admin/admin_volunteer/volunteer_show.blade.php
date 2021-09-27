@@ -15,8 +15,10 @@
                         </br><br>
                             <div class="col-md-4 ">
                                 <img alt="" style="width:600px;" title=""  class="img-circle img-thumbnail isTooltip rounded-circle" src="https://bootdey.com/img/Content/avatar/avatar7.png" data-original-title="Usuario">
-                            </div>  
-                            </br>
+                            </div></br>  
+                            
+                            <a href="{{ url('/admin_volunteer/' . $users->id . '/edit') }}" title="Edit"><button class="btn btn-info btn-sm"><i class="" aria-hidden="true"></i>แก้ไขข้อมูล</button></a>
+                            <br></br>
                         <div class="table-responsive">
                             <table class="table">
                                 <tbody>
