@@ -4,11 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use App\User;
-use App\Models\Questiontwo_tree;
+use App\Models\Questiontree;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class Questiontwo_treeController extends Controller
+class QuestiontreeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -28,9 +28,9 @@ class Questiontwo_treeController extends Controller
     public function create()
     {
         $id = Auth::id();
-        $Q = Questiontwo_tree::firstOrNew(array('user_id' => $id));
+        //$Q = Questiontree::firstOrNew(array('user_id' => $id));
 
-        return view('volunteer.volunteer_questionnaire.Q2.volunteer_questionnaire_sub3_2', compact('id','Q'));
+        return view('volunteer.volunteer_questionnaire.Q3.volunteer_questionnaire_sub1_3', compact('id'));
     }
 
     /**
@@ -45,22 +45,13 @@ class Questiontwo_treeController extends Controller
         $requestData = $request->all();
         $user_id = Auth::id();
         $requestData["user_id"] = $user_id;
-        $requestData["user_id"] = Auth::id();
-        // เอาคะแนนของทุกๆ คอลัมน์มาบวกัน 
-        $requestData["total"] = $requestData["ep3_1"] + $requestData["ep3_2"] + $requestData["ep3_3"] +
-        $requestData["ep3_4"] + $requestData["ep3_5"] + $requestData["ep3_6"] + $requestData["ep3_7"] + 
-        $requestData["ep3_8"] + $requestData["ep3_9"] + $requestData["ep3_10"] + $requestData["ep3_11"] +
-        $requestData["ep3_12"] + $requestData["ep3_13"] + $requestData["ep3_14"] + $requestData["ep3_15"] + 
-        $requestData["ep3_16"] + $requestData["ep3_17"] + $requestData["ep3_18"] + $requestData["ep3_19"] + 
-        $requestData["ep3_20"] + $requestData["ep3_21"] + $requestData["ep3_22"] + $requestData["ep3_23"] + 
-        $requestData["ep3_24"] + $requestData["ep3_25"] + $requestData["ep3_26"];
         
-        //Questiontwo_tree::create($requestData);
+        //Questiontree::create($requestData);
         // ค้นข้อมูลก่อนว่ามีมั้ยแล้วค่อยบันทึก
-        $Q = Questiontwo_tree::firstOrNew(array('user_id' => $user_id));
+        $Q = Questiontree::firstOrNew(array('user_id' => $user_id));
         $Q->fill($requestData)->save();
 
-        return redirect('volunteer_questionnaire')->with('flash_message', 'Questiontwo_tree added!');
+        return redirect('volunteer_questionnaire')->with('flash_message', 'Questiontree added!');
     }
 
     /**
@@ -96,10 +87,10 @@ class Questiontwo_treeController extends Controller
     {
         $requestData = $request->all();
 
-        $Questiontwo_tree = Questiontwo_tree::findOrFail($id);
-        $Questiontwo_tree->update($requestData);
+        $Questiontree = Questiontree::findOrFail($id);
+        $Questiontree->update($requestData);
 
-        return redirect('Questiontwo_tree')->with('flash_message', 'Questiontwo_tree updated!');
+        return redirect('Questiontree')->with('flash_message', 'Questiontree updated!');
     }
 
     /**

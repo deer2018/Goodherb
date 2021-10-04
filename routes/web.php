@@ -107,6 +107,12 @@ Route::post('Q2-3','Questiontwo_treeController@store');
 Route::get('Q2-4','Questiontwo_fourController@create');
 Route::post('Q2-4','Questiontwo_fourController@store');
 
+Route::get('Q3','QuestiontreeController@create');
+Route::post('Q3','QuestiontreeController@store');
+
+Route::get('Q3-2','QuestiontreeController@create');
+Route::post('Q3-2','QuestiontreeController@store');
+
 //Route Medic -------------------------------------------------------------------------
 
 
