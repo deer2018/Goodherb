@@ -118,14 +118,57 @@
                         <td>
                             <strong>
                                 <span class="glyphicon glyphicon-eye-open text-primary"></span> 
-                                ประเภทไอดี                                                
+                                ที่อยู่ (เลขที่บ้าน,หมู่)                                              
                             </strong>
                         </td>
                         <td class="text-primary">
                         {{ $data->address }}
                         </td>
                     </tr>
-                   
+                    <tr>        
+                        <td>
+                            <strong>
+                                <span class="glyphicon glyphicon-eye-open text-primary"></span> 
+                                จังหวัด                                              
+                            </strong>
+                        </td>
+                        <td class="text-primary">
+                        {{ $data->province }}
+                        </td>
+                    </tr>
+                    <tr>        
+                        <td>
+                            <strong>
+                                <span class="glyphicon glyphicon-eye-open text-primary"></span> 
+                                อำเภอ                                             
+                            </strong>
+                        </td>
+                        <td class="text-primary">
+                        {{ $data->district }}
+                        </td>
+                    </tr>
+                    <tr>        
+                        <td>
+                            <strong>
+                                <span class="glyphicon glyphicon-eye-open text-primary"></span> 
+                                ตำบล                                             
+                            </strong>
+                        </td>
+                        <td class="text-primary">
+                        {{ $data->subdistrict }}
+                        </td>
+                    </tr>
+                    <tr>        
+                        <td>
+                            <strong>
+                                <span class="glyphicon glyphicon-eye-open text-primary"></span> 
+                                รหัสไปรษณีย์                                             
+                            </strong>
+                        </td>
+                        <td class="text-primary">
+                        {{ $data->zipcode }}
+                        </td>
+                    </tr>
                     <tr>        
                         <td>
                             <strong>

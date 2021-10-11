@@ -1,7 +1,5 @@
 @extends('layouts.volunteer.main')
 
-
-
 @section('content')
 <div class="card">
 <div class="card-header">ประวัติส่วนตัว</div>
@@ -72,6 +70,37 @@
                             <input class="form-control" name="address" type="text" id="address" value="{{ isset($User->address) ? $User->address : ''}}">
                             {!! $errors->first('address', '<p class="help-block">:message</p>') !!}
                         </div>
+                        <div>
+                        <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">จังหวัด</label>
+                        <div class="col-sm-10">
+                          <select class="form-control" id="input_province" onchange="showAmphoes()">
+
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputPassword" class="col-sm-2 col-form-label">อำเภอ</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" id="input_amphoe" onchange="showDistricts()">
+
+                            </select>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputPassword" class="col-sm-2 col-form-label">ตำบล</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" id="input_district" onchange="showZipcode()">
+
+                            </select>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputPassword" class="col-sm-2 col-form-label">รหัสไปรษณีย์</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" id="input_zipcode" placeholder="รหัสไปรษณีย์" />
+                        </div>
+                      </div>
 
                         <div class="form-group {{ $errors->has('race') ? 'has-error' : ''}}">
                             <label for="race" class="control-label">{{ 'เชื้อชาติ' }}</label>
@@ -157,4 +186,124 @@
 </div>
 </div>                         
 </div>  
+
+<script>
+      $(document).ready(function(){
+        console.log("HELLO");
+        showProvinces();
+        dataTable();
+      });
+      function dataTable(){
+        var url = "{{ url('/') }}/api/district";
+        var callback = function(result){
+          var dataSet = [];
+          result.forEach(function(element,index) {
+            var row = [
+              element.id,
+              element.district,
+              element.amphoe,
+              element.province,
+              element.zipcode,
+            ];
+            dataSet.push(row);
+          }); //END FOREACH
+          //console.log(dataSet);
+          var table = $('#table-example').DataTable({
+            "data": dataSet,
+            "deferRender" : true,
+            "columns": [
+              { title: "id" },
+              { title: "ตำบล" },
+              { title: "อำเภอ" },
+              { title: "จังหวัด" },
+              { title: "zipcode" },
+            ],
+          }); // END DATATABLE
+        };
+        //CALL AJAX
+        ajax(url,callback);
+      }
+      function showProvinces(){
+        //PARAMETERS
+        var url = "{{ url('/') }}/api/province";
+        var callback = function(result){
+          $("#input_province").empty();
+          for(var i=0; i<result.length; i++){
+            $("#input_province").append(
+              $('<option></option>')
+                .attr("value", ""+result[i].province_code)
+                .html(""+result[i].province)
+            );
+          }
+          showAmphoes();
+        };
+        //CALL AJAX
+        ajax(url,callback);
+      }
+      function showAmphoes(){
+        //INPUT
+        var province_code = $("#input_province").val();
+        //PARAMETERS
+        var url = "{{ url('/') }}/api/province/"+province_code+"/amphoe";
+        var callback = function(result){
+          //console.log(result);
+          $("#input_amphoe").empty();
+          for(var i=0; i<result.length; i++){
+            $("#input_amphoe").append(
+              $('<option></option>')
+                .attr("value", ""+result[i].amphoe_code)
+                .html(""+result[i].amphoe)
+            );
+          }
+          showDistricts();
+        };
+        //CALL AJAX
+        ajax(url,callback);
+      }
+      function showDistricts(){
+        //INPUT
+        var province_code = $("#input_province").val();
+        var amphoe_code = $("#input_amphoe").val();
+        //PARAMETERS
+        var url = "{{ url('/') }}/api/province/"+province_code+"/amphoe/"+amphoe_code+"/district";
+        var callback = function(result){
+          //console.log(result);
+          $("#input_district").empty();
+          for(var i=0; i<result.length; i++){
+            $("#input_district").append(
+              $('<option></option>')
+                .attr("value", ""+result[i].district_code)
+                .html(""+result[i].district)
+            );
+          }
+          showZipcode();
+        };
+        //CALL AJAX
+        ajax(url,callback);
+      }
+      function showZipcode(){
+        //INPUT
+        var province_code = $("#input_province").val();
+        var amphoe_code = $("#input_amphoe").val();
+        var district_code = $("#input_district").val();
+        //PARAMETERS
+        var url = "{{ url('/') }}/api/province/"+province_code+"/amphoe/"+amphoe_code+"/district/"+district_code;
+        var callback = function(result){
+          //console.log(result);
+          for(var i=0; i<result.length; i++){
+            $("#input_zipcode").val(result[i].zipcode);
+          }
+        };
+        //CALL AJAX
+        ajax(url,callback);
+      }
+      function ajax(url, callback){
+        $.ajax({
+    			"url" : url,
+    			"type" : "GET",
+    			"dataType" : "json",
+    		})
+        .done(callback); //END AJAX
+      }
+    </script>
 @endsection

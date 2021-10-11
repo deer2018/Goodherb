@@ -20,6 +20,10 @@ class AddUserTable extends Migration
             $table->integer('age')->nullable();
             $table->string('phone')->nullable();
             $table->string('address')->nullable();
+            $table->string('province')->nullable();
+            $table->string('district')->nullable();
+            $table->string('subdistrict')->nullable();
+            $table->string('zipcode')->nullable();
             $table->string('race')->nullable();
             $table->string('relationship')->nullable();
             $table->string('occupation')->nullable();
