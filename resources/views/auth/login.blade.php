@@ -9,7 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Goodherb</title>
+    <title>แอปพลิเคชัน เก็บข้อมูลในโปรแกรมการลดความเครียดด้วยยารักษาใจจากดอกไม้
+            ตามสูตรของบาคของผู้ดูแลผู้สูงอายุที่มีภาวะพึ่งพิง</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -47,7 +48,7 @@
                                     <form class="user" method="POST" action="{{ route('login') }}">
                                     @csrf
                                         <div class="form-group">
-                                        <input id="email" type="email" class="form-control form-control-user" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Enter Email Address">
+                                        <input id="email" type="email" class="form-control form-control-user" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="อีเมล">
                                                 @error('email')
                                                     <div  class="alert alert-danger alert-solid" role="alert">
                                                       ไอดีหรือรหัสผ่านผิดพลาด
@@ -55,7 +56,7 @@
                                                 @enderror
                                         </div>
                                         <div class="form-group">
-                                        <input id="password" type="password" class="form-control form-control-user" name="password" required autocomplete="current-password" placeholder="Enter Password">
+                                        <input id="password" type="password" class="form-control form-control-user" name="password" required autocomplete="current-password" placeholder="รหัสผ่าน">
                                             @error('password')
                                                 <div  class="alert alert-danger alert-solid" role="alert">
                                                     <h6 class="alert-heading">ไอดีหรือรหัสผ่านผิดพลาด</h6>
@@ -67,14 +68,14 @@
 
                                             <input class="custom-control-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                                                         <label class="custom-control-label" for="remember">
-                                                            {{ __('Remember Me') }}
+                                                            {{ __('จดจำฉันในเว็บไซต์') }}
                                                         </label>
 
                 
                                             </div>
                                         </div>
                                         <button type="submit" class="btn btn-primary btn-user btn-block">
-                                        {{ __('Login') }}
+                                        {{ __('เข้าสู่ระบบ') }}
                                         </button>
                                         <hr>
                                         <a href="#" class="btn btn-google btn-user btn-block">
@@ -88,12 +89,12 @@
                                     <div class="text-center">
                                 @if (Route::has('password.request'))
                                     <a class="small" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Password?') }}
+                                        {{ __('ลืมรหัสผ่านของคุณ?') }}
                                     </a>
                                 @endif
                                     </div>
                                     <div class="text-center">
-                                        <a class="small" href="{{ route('register') }}">Create an Account!</a>
+                                        <a class="small" href="{{ route('register') }}">สร้างไอดีและรหัสผ่าน!</a>
                                     </div>
                                 </div>
                             </div>

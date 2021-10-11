@@ -11,7 +11,7 @@
 <div class="form-group {{ $errors->has('role') ? 'has-error' : ''}}">
     <label for="role" class="control-label">{{ 'สถานะ' }}</label>
     <select name="role" class="form-control" id="role" >
-    @foreach (json_decode('{"medic":"หมอ","volunteer":"อาสาสมัคร"}', true) as $optionKey => $optionValue)
+    @foreach (json_decode('{"หมอ":"หมอ","อาสาสมัคร":"อาสาสมัคร"}', true) as $optionKey => $optionValue)
         <option value="{{ $optionKey }}" {{ (isset($users->role) && $users->role == $optionKey) ? 'selected' : ''}}>{{ $optionValue }}</option>
     @endforeach
 </select>

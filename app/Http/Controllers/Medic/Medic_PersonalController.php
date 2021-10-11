@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 
 class Medic_PersonalController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         {
             $id = Auth::id();

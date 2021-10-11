@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>แอปพลิเคชัน เก็บข้อมูลในโปรแกรมการลดความเครียดด้วยยารักษาใจจากดอกไม้ตามสูตรของบาคของผู้ดูแล
-ผู้สูงอายุที่มีภาวะพึ่งพิง</title>
+        <title>แอปพลิเคชัน เก็บข้อมูลในโปรแกรมการลดความเครียดด้วยยารักษาใจจากดอกไม้
+            ตามสูตรของบาคของผู้ดูแลผู้สูงอายุที่มีภาวะพึ่งพิง</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
@@ -42,18 +42,18 @@
             }
 
             .content {
-                text-align: center;
+                text-align: left;
             }
 
             .title {
-                font-size: 48px;
+                font-size: 36px;
             }
 
             .links > a {
                 color: #fff;
                 padding: 0 25px;
-                font-size: 8px;
-                font-weight: 28;
+                font-size: 13px;
+                font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
@@ -82,8 +82,8 @@
 
             <div class="content">
                 <div class="title m-b-md" font-size>
-                แอปพลิเคชัน เก็บข้อมูลในโปรแกรมการลดความเครียดด้วยยารักษาใจจากดอกไม้ตามสูตรของบาคของผู้ดูแล
-ผู้สูงอายุที่มีภาวะพึ่งพิง
+                แอปพลิเคชัน เก็บข้อมูลในโปรแกรมการลดความเครียดด้วยยารักษาใจจากดอกไม้
+                <br>ตามสูตรของบาคของผู้ดูแลผู้สูงอายุที่มีภาวะพึ่งพิง
                 </div>
 
              

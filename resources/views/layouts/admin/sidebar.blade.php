@@ -39,11 +39,7 @@
                     <i class="fas fa-circle"></i>
                     <span>ข้อมูลแพทย์</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url('/crud') }}">
-                    <i class="fas fa-circle"></i>
-                    <span>crud</span></a>
-            </li>
+          
    
     </ul>
     <!-- End of Sidebar -->

@@ -53,8 +53,7 @@ class MedicController extends Controller
 
        
         $users = User::findOrFail($id);   
-        $user_id = User::findOrFail($id);  
-
+          
          return view('medic.medic_volunteer.medic_volunteer_sub', compact('users'));
     }
 

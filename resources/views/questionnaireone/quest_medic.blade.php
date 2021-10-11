@@ -4,6 +4,7 @@
       <th scope="col">ลำดับ</th>     
       <th scope="col">ลักษณะภาวะอารมณ์</th>
       <th scope="col"></th>
+      
     </tr>
   </thead>
   <tbody>
@@ -20,6 +21,7 @@
         </td>
         {!! $errors->first('ep1_1', '<p class="help-block">:message</p>') !!}
       </div>
+      
     </tr>
     <tr>
         <td>2</td>

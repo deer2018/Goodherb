@@ -14,7 +14,7 @@ class Admin_UserController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('role:admin');
+        $this->middleware('role:แอดมิน');
     }
 
   
@@ -24,7 +24,7 @@ class Admin_UserController extends Controller
         $users = User::all();
         switch(Auth::user()->role)
         {
-                case "admin" : 
+                case "แอดมิน" : 
                     $users = User::latest()->paginate($perPage);
     
                     if (!empty($keyword)) {

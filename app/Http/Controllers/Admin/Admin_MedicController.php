@@ -13,7 +13,7 @@ class Admin_MedicController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('role:admin');
+        $this->middleware('role:แอดมิน');
     }
 
     public function index(Request $request)
@@ -23,7 +23,7 @@ class Admin_MedicController extends Controller
         $search = $request->get('search'); 
         switch(Auth::user()->role)
         {
-                case "admin" : 
+                case "แอดมิน" : 
                     $users = User::latest()->paginate($perPage);
     
                     if (!empty($keyword)) {
@@ -33,8 +33,8 @@ class Admin_MedicController extends Controller
                             ->orwhere('role', '=',"guest" )
                             ->latest()->paginate($perPage);
                     } else {
-                        $users = User::where('role', "medic")
-                        ->orwhere('role', "medic")
+                        $users = User::where('role', "หมอ")
+                        ->orwhere('role', "หมอ")
                         ->latest()->paginate($perPage);
                     }
                     break;
