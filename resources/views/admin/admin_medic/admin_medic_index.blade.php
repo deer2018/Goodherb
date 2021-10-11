@@ -43,8 +43,8 @@
                                 <td> {{ $item->name  }}</td>
                                 <td> {{ $item->email  }}</td>
                                 <td> {{ $item->role  }}</td>
-                                <td><a href="#" title="Edit"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>ประวัติส่วนตัว</button></a>
-                                <a href="#" title="Edit"><button class="btn btn-info btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>แบบสอบถาม</button></a>
+                                <td><a href="#" title="Edit"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>ข้อมูลอสม.ที่รับผิดชอบ</button></a>
+                            
                              
                                 </td>
                             </tbody>
