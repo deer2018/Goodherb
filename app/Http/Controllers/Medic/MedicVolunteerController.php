@@ -18,7 +18,7 @@ class MedicVolunteerController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('role:medic');
+        $this->middleware('role:หมอ');
     }
 
     public function index()
