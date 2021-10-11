@@ -4,7 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Goodherb</title>
+        <title>แอปพลิเคชัน เก็บข้อมูลในโปรแกรมการลดความเครียดด้วยยารักษาใจจากดอกไม้ตามสูตรของบาคของผู้ดูแล
+ผู้สูงอายุที่มีภาวะพึ่งพิง</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
@@ -15,7 +16,7 @@
                 background-color: #4e73df;
                 color: #fff;
                 font-family: 'Nunito', sans-serif;
-                font-weight: 200;
+                font-weight: 20;
                 height: 100vh;
                 margin: 0;
             }
@@ -45,21 +46,21 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 48px;
             }
 
             .links > a {
                 color: #fff;
                 padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
+                font-size: 8px;
+                font-weight: 28;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
             }
 
             .m-b-md {
-                margin-bottom: 30px;
+                margin-bottom: 60px;
             }
         </style>
     </head>
@@ -80,8 +81,9 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Goodherb
+                <div class="title m-b-md" font-size>
+                แอปพลิเคชัน เก็บข้อมูลในโปรแกรมการลดความเครียดด้วยยารักษาใจจากดอกไม้ตามสูตรของบาคของผู้ดูแล
+ผู้สูงอายุที่มีภาวะพึ่งพิง
                 </div>
 
              

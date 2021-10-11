@@ -5,7 +5,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Goodherb</title>
+  <title>แอปพลิเคชัน เก็บข้อมูลในโปรแกรมการลดความเครียดด้วยยารักษาใจจากดอกไม้ตามสูตรของบาคของผู้ดูแล
+ผู้สูงอายุที่มีภาวะพึ่งพิง</title>
 
   <!-- Custom fonts for this template-->
     <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css" />
