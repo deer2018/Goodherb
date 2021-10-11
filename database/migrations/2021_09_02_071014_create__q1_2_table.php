@@ -23,6 +23,7 @@ class CreateQ12Table extends Migration
             $table->integer('ep2_4')->nullable();
             $table->integer('ep2_5')->nullable();
             $table->integer('total')->nullable();
+            $table->string('group')->nullable();
         });
     }
 

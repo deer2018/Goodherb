@@ -49,6 +49,16 @@ class QuestiononeController extends Controller
         $requestData["ep1_4"] + $requestData["ep1_5"] + $requestData["ep1_6"] + $requestData["ep1_7"] + 
         $requestData["ep1_8"] + $requestData["ep1_9"] + $requestData["ep1_10"] + $requestData["ep1_11"] +
         $requestData["ep1_12"] + $requestData["ep1_13"];
+        // คำนวนกลุ่ม
+        $requestData["group"] = rand(7,13);
+        echo "<h1> Your Score: {$requestData["total"]}/13 </h1>"; 
+        if($requestData["total"]<4){
+            echo $requestData["group"] = 'ต่ำ';
+        }else if($requestData["total"]<6){
+            echo $requestData["group"] = 'ปานกลาง';
+        }else if($requestData["total"]>6){
+            echo $requestData["group"] = 'สูง';
+        }
 
         //Questionone::create($requestData);
         // ค้นข้อมูลก่อนว่ามีมั้ยแล้วค่อยบันทึก

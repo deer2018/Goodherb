@@ -44,6 +44,7 @@ class CreateQ13Table extends Migration
             $table->integer('ep3_25')->nullable();
             $table->integer('ep3_26')->nullable();
             $table->integer('total')->nullable();
+            $table->string('group')->nullable();
         });
     }
 

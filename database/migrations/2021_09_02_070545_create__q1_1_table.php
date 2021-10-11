@@ -31,7 +31,8 @@ class CreateQ11Table extends Migration
             $table->integer('ep1_12')->nullable();
             $table->integer('ep1_13')->nullable();
             $table->string('total')->nullable();
-            
+            $table->string('group')->nullable();
+           
         });
     }
 

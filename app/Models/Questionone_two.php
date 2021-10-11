@@ -12,7 +12,7 @@ class Questionone_two extends Model
 
     protected $fillable = [
         'user_id',
-        'ep2_1', 'ep2_2', 'ep2_3', 'ep2_4', 'ep2_5','total'
+        'ep2_1', 'ep2_2', 'ep2_3', 'ep2_4', 'ep2_5','total','group'
 
     ];
 }

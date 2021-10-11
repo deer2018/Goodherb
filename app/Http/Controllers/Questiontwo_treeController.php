@@ -54,6 +54,16 @@ class Questiontwo_treeController extends Controller
         $requestData["ep3_16"] + $requestData["ep3_17"] + $requestData["ep3_18"] + $requestData["ep3_19"] + 
         $requestData["ep3_20"] + $requestData["ep3_21"] + $requestData["ep3_22"] + $requestData["ep3_23"] + 
         $requestData["ep3_24"] + $requestData["ep3_25"] + $requestData["ep3_26"];
+        // คำนวนกลุ่ม
+        $requestData["group"] = rand(13,26);
+        echo "<h1> Your Score: {$requestData["total"]}/26 </h1>"; 
+        if($requestData["total"]<61){
+            echo $requestData["group"] = 'ไม่ดี';
+        }else if($requestData["total"]<96){
+            echo $requestData["group"] = 'ปานกลาง';
+        }else if($requestData["total"]>95){
+            echo $requestData["group"] = 'ดี';
+        }
         
         //Questiontwo_tree::create($requestData);
         // ค้นข้อมูลก่อนว่ามีมั้ยแล้วค่อยบันทึก

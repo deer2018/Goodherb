@@ -49,6 +49,20 @@ class Questiontwo_twoController extends Controller
         // เอาคะแนนของทุกๆ คอลัมน์มาบวกัน 
         $requestData["total"] = $requestData["ep2_1"] + $requestData["ep2_2"] + $requestData["ep2_3"] +
         $requestData["ep2_4"] + $requestData["ep2_5"];
+        // คำนวนกลุ่ม
+        $requestData["group"] = rand(10,20);
+        echo "<h1> Your Score: {$requestData["total"]}/20 </h1>"; 
+        if($requestData["total"]<5){
+            echo $requestData["group"] = 'เคลียดน้อย';
+        }else if($requestData["total"]<8){
+            echo $requestData["group"] = 'เคลียดปานกลาง';
+        }else if($requestData["total"]<10){
+            echo $requestData["group"] = 'เคลียดมาก';
+        }else if($requestData["total"]==9){
+            echo $requestData["group"] = 'เคลียดมาก';
+        }else if($requestData["total"]>9){
+            echo $requestData["group"] = 'เคลียดมากที่สุด';
+        }
         
         // บันทึกลงฐานข้อมูล
         //Questiontwo_two::create($requestData);

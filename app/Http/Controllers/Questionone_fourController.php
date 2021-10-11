@@ -51,16 +51,16 @@ class Questionone_fourController extends Controller
         // คำนวนกลุ่ม
         $requestData["group"] = rand(10,20);
         echo "<h1> Your Score: {$requestData["total"]}/20 </h1>"; 
-        if($requestData["total"]<6){
-            echo $requestData["group"] = 'D';
-        }else if($requestData["total"]<11){
-            echo $requestData["group"] = 'C';
-        }else if($requestData["total"]<16){
-            echo $requestData["group"] = 'B';
-        }else if($requestData["total"]==11){
-            echo $requestData["group"] = 'B';
-        }else if($requestData["total"]>15){
-            echo $requestData["group"] = 'A';
+        if($requestData["total"]<5){
+            echo $requestData["group"] = 'พึ่งพาโดยสมบูรณ์';
+        }else if($requestData["total"]<9){
+            echo $requestData["group"] = 'พึ่งพารุนแรง ';
+        }else if($requestData["total"]<12){
+            echo $requestData["group"] = 'พึ่งพาปานกลาง ';
+        }else if($requestData["total"]==9){
+            echo $requestData["group"] = 'พึ่งพาปานกลาง ';
+        }else if($requestData["total"]>11){
+            echo $requestData["group"] = 'ไม่เปนภาระ';
         }
         // บันทึกลงฐานข้อมูล
         //Questionone_four::create($requestData);
