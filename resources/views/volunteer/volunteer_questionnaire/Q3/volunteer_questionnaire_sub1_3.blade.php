@@ -6,7 +6,7 @@
 
     <div class="col-md-10">
         <div class="card">
-            <div class="card-header">แบบสอบถามประเมิณการใช้ยา</div>
+            <div class="card-header">แบบสอบถามประเมินการใช้ยา</div>
             <div class="card-body">
 
                 <!--แบบประเมินความสม่ำเสมอในการได้รับน้ำดอกไม้ -->

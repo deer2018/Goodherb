@@ -13,8 +13,8 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #4e73df;
-                color: #fff;
+                background-color: #FFCCFF;
+                color: #CC0000;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 20;
                 height: 100vh;
@@ -22,7 +22,7 @@
             }
 
             .full-height {
-                height: 100vh;
+                height: 90vh;
             }
 
             .flex-center {
@@ -46,21 +46,21 @@
             }
 
             .title {
-                font-size: 48px;
+                font-size: 69px;
             }
 
             .links > a {
-                color: #fff;
+                color: #CC0000;
                 padding: 0 25px;
-                font-size: 8px;
-                font-weight: 28;
+                font-size: 16px;
+                font-weight: 56;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
             }
 
             .m-b-md {
-                margin-bottom: 60px;
+                margin-bottom: 10px;
             }
         </style>
     </head>
@@ -82,9 +82,18 @@
 
             <div class="content">
                 <div class="title m-b-md" font-size>
-                แอปพลิเคชัน เก็บข้อมูลในโปรแกรมการลดความเครียดด้วยยารักษาใจจากดอกไม้ตามสูตรของบาคของผู้ดูแล
-ผู้สูงอายุที่มีภาวะพึ่งพิง
+                <b><i>ความ❀</i></b>
+                <br><b><i>☹เครียด</i></b></br>
+                
                 </div>
+                    <br>แอปพลิเคชันเก็บข้อมูลในโปรแกรมการลดความเครียด
+                    <br>ด้วยยารักษาใจจากดอกไม้ตามสูตรของบาคของผู้ดูแล
+                    <br>ผู้สูงอายุที่มีภาวะพึ่งพิง
+                    <br>
+                    <br>
+                    <br><marquee scrollamount="15" direction="left" >จัดทำโดย นักศึกษาจาก
+มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์</marquee>
+                
 
              
             </div>
