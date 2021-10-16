@@ -42,7 +42,7 @@
             }
 
             .content {
-                text-align: left;
+                text-align: center;
             }
 
             .title {
@@ -82,9 +82,9 @@
 
             <div class="content">
                 <div class="title m-b-md" font-size>
-                <b><i>ความ❀</i></b>
-                <br><b><i>☹เครียด</i></b></br>
-                
+                <img src="D.jpg" weight="500" height="500" >
+                    <b><i>ความ❀</i></b>
+                    <br><b><i>☹เครียด</i></b></br> 
                 </div>
                     <br>แอปพลิเคชันเก็บข้อมูลในโปรแกรมการลดความเครียด
                     <br>ด้วยยารักษาใจจากดอกไม้ตามสูตรของบาคของผู้ดูแล
