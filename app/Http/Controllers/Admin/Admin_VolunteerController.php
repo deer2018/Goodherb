@@ -14,7 +14,7 @@ class Admin_VolunteerController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('role:admin');
+        $this->middleware('role:แอดมิน');
     }
 
     public function index(Request $request)
@@ -23,7 +23,7 @@ class Admin_VolunteerController extends Controller
         $users = User::all();
         switch(Auth::user()->role)
         {
-                case "admin" : 
+                case "แอดมิน" : 
                     $users = User::latest()->paginate($perPage);
     
                     if (!empty($keyword)) {
@@ -33,8 +33,8 @@ class Admin_VolunteerController extends Controller
                             ->orwhere('role', '=',"guest" )
                             ->latest()->paginate($perPage);
                     } else {
-                        $users = User::where('role', "volunteer")
-                        ->orwhere('role', "volunteer")
+                        $users = User::where('role', "อาสาสมัคร")
+                        ->orwhere('role', "อาสาสมัคร")
                         ->latest()->paginate($perPage);
                     }
                     break;

@@ -14,7 +14,7 @@ class MedicController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('role:medic');
+        $this->middleware('role:หมอ');
     }
     
     public function index(Request $request)
@@ -24,7 +24,7 @@ class MedicController extends Controller
         $keyword = $request->get('search'); 
         switch(Auth::user()->role)
         {
-                case "medic" : 
+                case "หมอ" : 
                     $users = User::latest()->paginate($perPage);
     
                     if (!empty($keyword)) {
@@ -34,7 +34,7 @@ class MedicController extends Controller
                         })
                         ->get();
                     } else {
-                        $users = User::where('role', "volunteer")
+                        $users = User::where('role', "อาสาสมัคร")
                         ->latest()->paginate($perPage);
                     }
                     break;
@@ -53,8 +53,7 @@ class MedicController extends Controller
 
        
         $users = User::findOrFail($id);   
-        $user_id = User::findOrFail($id);  
-
+          
          return view('medic.medic_volunteer.medic_volunteer_sub', compact('users'));
     }
 

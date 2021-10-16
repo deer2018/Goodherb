@@ -155,8 +155,17 @@ Route::resource('medic_personal', 'Medic\Medic_PersonalController');
 Route::get('predicate1/{id}','Medic\MedicVolunteerController@edit');
 Route::get('predicate2/{id}','Medic\MedicVolunteerController@edit2');
 
-Route::get('medic_volunteer_sub/{id}','Medic\MedicController@volunteer_sub');
+Route::get('/medic_volunteer_sub/{id}','Medic\MedicController@volunteer_sub');
 Route::get('/medic_volunteer', 'Medic\MedicController@index');
 Route::get('/medic_volunteer/{id}', 'Medic\MedicController@show');
 
 Route::resource('test', 'TestController');
+
+// Medicine ---------------------------------------------------
+Route::get('/medicine', 'Medic\MedicineController@index');
+Route::get('/medicine/medicine_create', 'Medic\MedicineController@create');
+Route::post('/medicine/', 'Medic\MedicineController@store');
+
+Route::get('/medicine/{id}/medicine_edit', 'Medic\MedicineController@edit');
+Route::patch('/medicine/{id}', 'Medic\MedicineController@update');
+Route::delete('/medicine/{id}', 'Medic\MedicineController@destroy');

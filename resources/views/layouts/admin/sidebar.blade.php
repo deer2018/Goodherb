@@ -19,11 +19,7 @@
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url('/admin_index') }}">
-                    <i class="fas fa-circle"></i>
-                    <span>หน้าหลัก</span></a>
-            </li>
+           
             <li class="nav-item">
                 <a class="nav-link" href="{{ url('/admin_user') }}">
                     <i class="fas fa-circle"></i>
@@ -39,11 +35,7 @@
                     <i class="fas fa-circle"></i>
                     <span>ข้อมูลแพทย์</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url('/crud') }}">
-                    <i class="fas fa-circle"></i>
-                    <span>crud</span></a>
-            </li>
+          
    
     </ul>
     <!-- End of Sidebar -->

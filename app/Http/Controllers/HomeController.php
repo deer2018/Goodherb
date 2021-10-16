@@ -15,13 +15,13 @@ class HomeController extends Controller
 
     public function index()
     {
-        if(Auth::user()->role == "admin"){
+        if(Auth::user()->role == "แอดมิน"){
             return redirect("admin_index");
 
-    }else if(Auth::user()->role == "volunteer"){
+    }else if(Auth::user()->role == "อาสาสมัคร"){
             return redirect("volunteer_per");
 
-    }else if(Auth::user()->role == "medic"){
+    }else if(Auth::user()->role == "หมอ"){
         return redirect("medic_volunteer");
 }
     return view("home");

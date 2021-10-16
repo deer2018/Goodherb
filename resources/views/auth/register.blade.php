@@ -31,15 +31,15 @@
                 <!-- Nested Row within Card Body -->
                 <div class="row">
                     <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
-                    <div class="col-lg-7">
+                    <div class="col-lg-7"> 
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+                                <h1 class="h4 text-gray-900 mb-4">สร้างไอดีและรหัสผ่าน!</h1>
                             </div>
                             <form class="user" method="POST" action="{{ route('register') }}">
                             @csrf
                                 <div class="form-group">
-                                    <input id="name" type="text" class="form-control form-control-user" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus  placeholder="Name on Website">
+                                    <input id="name" type="text" class="form-control form-control-user" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus  placeholder="ชื่อที่แสดงบนเว็บไซต์นี้">
                                             @error('name')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
@@ -47,7 +47,7 @@
                                             @enderror            
                                 </div>
                                 <div class="form-group">
-                                <input id="email" type="email"  class="form-control form-control-user" name="email" value="{{ old('email') }}" required autocomplete="email"  placeholder="Email Address">
+                                <input id="email" type="email"  class="form-control form-control-user" name="email" value="{{ old('email') }}" required autocomplete="email"  placeholder="อีเมล">
                                             @error('email')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
@@ -56,7 +56,7 @@
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                    <input id="password" type="password" class="form-control form-control-user" name="password" required autocomplete="new-password" placeholder="Password">
+                                    <input id="password" type="password" class="form-control form-control-user" name="password" required autocomplete="new-password" placeholder="รหัสผ่าน">
                                             @error('password')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
@@ -64,11 +64,11 @@
                                             @enderror
                                     </div>
                                     <div class="col-sm-6">
-                                            <input id="password-confirm" type="password" class="form-control form-control-user" name="password_confirmation" required autocomplete="new-password" placeholder="Repeat Password">
+                                            <input id="password-confirm" type="password" class="form-control form-control-user" name="password_confirmation" required autocomplete="new-password" placeholder="ยืนยันรหัสผ่าน">
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-user btn-block">
-                                    {{ __('Register') }}
+                                    {{ __('สมัครสมาชิก') }}
                                 </button>
                                 <hr>
                                 <a href="#" class="btn btn-google btn-user btn-block">
@@ -80,10 +80,10 @@
                             </form>
                             <hr>
                             <div class="text-center">
-                                <a class="small" href="{{ route('password.request') }}">Forgot Password?</a>
+                                <a class="small" href="{{ route('password.request') }}">ลืมรหัสผ่าน?</a>
                             </div>
                             <div class="text-center">
-                                <a class="small" href="{{ route('login') }}">Already have an account? Login!</a>
+                                <a class="small" href="{{ route('login') }}">มีไอดีอยู่แล้ว? ไปหน้าล็อกอิน!</a>
                             </div>
                         </div>
                     </div>

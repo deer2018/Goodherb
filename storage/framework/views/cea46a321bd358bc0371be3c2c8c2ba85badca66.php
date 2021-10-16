@@ -1,0 +1,1 @@
+<?php echo e($a->email); ?><?php /**PATH C:\xampp\htdocs\Goodherb\resources\views/test.blade.php ENDPATH**/ ?>

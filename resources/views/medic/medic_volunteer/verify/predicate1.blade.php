@@ -21,10 +21,10 @@
                                     <div class="col mr-2">
                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                            <h6>แบบสอบถามคัดเลือก</h6></div>                
-                                        <div class="h6 mb-1 font-weight-bold text-gray-800">เครียดมากที่สุด </div>
+                                        <div class="h6 mb-1 font-weight-bold text-gray-800">{{$_qt_4->group}}</div>
                                     </div>
                                     <div class="col-auto">
-                                        <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                     {{$_qt_4->total}}
                                     </div>
                                 </div>
                             </div>
@@ -45,7 +45,7 @@
                                         <div class="m6 mb-1 font-weight-bold text-gray-800">ระดับต่ำ </div>
                                     </div>
                                     <div class="col-auto">
-                                        <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                        {{$_qt_1->total}}
                                     </div>
                                 </div>
                             </div>
@@ -65,7 +65,7 @@
                                         <div class="m6 mb-1 font-weight-bold text-gray-800">เครียดมากที่สุด</div>
                                     </div>
                                     <div class="col-auto">
-                                        <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                        {{$_qt_2->total}}
                                     </div>
                                 </div>
                             </div>
@@ -87,7 +87,7 @@
                                         <div class="m6 mb-1 font-weight-bold text-gray-800">การมีคุณภาพชีวิตที่ไม่ดี</div>
                                     </div>
                                     <div class="col-auto">
-                                        <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                     {{$_qt_3->total}}
                                     </div>
                                 </div>
                             </div>
@@ -130,7 +130,8 @@
                                 <div class="mb-3">
                                     <code>เลือกตัวยา</code>
                                 </div>
-                                @include ('medic.medic_volunteer.verify.quest1_medicine', ['formMode' => 'predicate1.blade'])
+                                
+                                <a href="{{ url('/medicine') }}" title="View Crud"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>รายละเอียด</button></a>
                             </div>
                         </div>
                     </div>

@@ -2,8 +2,10 @@
   <thead>
     <tr>
       <th scope="col">ลำดับ</th>
-      </th>
+     
       <th scope="col">ชื่อดอกไม้</th>
+      <th></th>
+      <th scope="col">จำนวน</th>
     </tr>
   </thead>
   <tbody>
@@ -13,11 +15,12 @@
       <div class="form-group {{ $errors->has('ep1_1') ? 'has-error' : ''}}">
         <td>
           <div class="radio">
-            <label><input name="ep1_1" type="radio" value="1" {{ (isset($_q1_1) && 1 == $_q1_1->ep1_1) ? 'checked' : '' }}> </label>
+            <label><input name="ep1_1" type="checkbox" value="1" {{ (isset($_q1_1) && 1 == $_q1_1->ep1_1) ? 'checked' : '' }}> </label>
           </div>
         </td>
         {!! $errors->first('ep1_1', '<p class="help-block">:message</p>') !!}
       </div>
+      <td><input type="number"></td>
     </tr>
     <tr>
         <td>2</td>
