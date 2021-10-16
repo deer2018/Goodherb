@@ -60,7 +60,7 @@ class Questionone_fourController extends Controller
         }else if($requestData["total"]==9){
             echo $requestData["group"] = 'พึ่งพาปานกลาง ';
         }else if($requestData["total"]>11){
-            echo $requestData["group"] = 'ไม่เปนภาระ';
+            echo $requestData["group"] = 'ไม่เป็นภาระ';
         }
         // บันทึกลงฐานข้อมูล
         //Questionone_four::create($requestData);
