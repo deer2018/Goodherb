@@ -177,7 +177,7 @@
                             </strong>
                         </td>
                         <td class="text-primary">
-                        {{ $data->status }}
+                        {{ $data->relationship }}
                         </td>
                     </tr>
                     <tr>        

@@ -182,7 +182,7 @@
                             </strong>
                         </td>
                         <td class="text-primary">
-                        <?php echo e($data->status); ?>
+                        <?php echo e($data->relationship); ?>
 
                         </td>
                     </tr>
