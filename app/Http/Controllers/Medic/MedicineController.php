@@ -34,22 +34,20 @@ class MedicineController extends Controller
         return view('medic.medic_volunteer.medicine.medicine_create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    
     public function store(Request $request)
     {
+        // ดึงข้อมูลจากหน้าฟอร์ม
         $requestData = $request->all();
+        $user_id = Auth::id();
+        $requestData["user_id"] = $user_id;
+        $requestData["user_id"] = Auth::id();
         
         Medicine::create($requestData);
 
         return redirect('medicine')->with('flash_message', 'Medicine added!');
     }
 
- 
     public function show(Medicine $medicine)
     {
         //

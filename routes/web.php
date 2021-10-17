@@ -153,6 +153,8 @@ Route::get('/medic_quest26', function () {
 Route::resource('medic_personal', 'Medic\Medic_PersonalController');
 
 Route::get('predicate1/{id}','Medic\MedicVolunteerController@edit');
+Route::post('predicate1/{id}','Medic\MedicVolunteerController@store');
+
 Route::get('predicate2/{id}','Medic\MedicVolunteerController@edit2');
 
 Route::get('/medic_volunteer_sub/{id}','Medic\MedicController@volunteer_sub');
@@ -169,3 +171,8 @@ Route::post('/medicine/', 'Medic\MedicineController@store');
 Route::get('/medicine/{id}/medicine_edit', 'Medic\MedicineController@edit');
 Route::patch('/medicine/{id}', 'Medic\MedicineController@update');
 Route::delete('/medicine/{id}', 'Medic\MedicineController@destroy');
+
+//Medic_Emotion -----------------------------------------------------
+
+Route::get('/medic_emotion/', 'Medic\Medic_EmotionController@index');
+Route::post('/medic_emotion/', 'Medic\Medic_EmotionController@store');

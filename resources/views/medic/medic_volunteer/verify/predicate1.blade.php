@@ -97,9 +97,11 @@
                         </div>
                     </div>
             </div>
-
+        
+       
              <!-- Content Row -->
              <div class="row">
+                
 
                     <!-- แสดงข้อมูล ภาวะอารมณ์ -->
                     <div class="col-lg-6">
@@ -112,8 +114,8 @@
                                 <div class="mb-3">
                                     <code>เลือกภาวะอารมณ์</code>
                                 </div>
-                                <div class="mb-3">
-                                    @include ('medic.medic_volunteer.verify.quest1_medic', ['formMode' => 'predicate1.blade'])
+                                <div class="mb-1">
+                                <a href="{{ url('/medic_emotion') }}" title="View Crud"><button class="btn btn-info btn-sm"><i class="" aria-hidden="true"></i> ภาวะอารมณ์</button></a>
                                 </div>
                             </div>
                         </div>
@@ -131,13 +133,15 @@
                                     <code>เลือกตัวยา</code>
                                 </div>
                                 
-                                <a href="{{ url('/medicine') }}" title="View Crud"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>รายละเอียด</button></a>
+                                <a href="{{ url('/medicine') }}" title="View Crud"><button class="btn btn-info btn-sm"><i class="" aria-hidden="true"></i>รายละเอียด</button></a>
                             </div>
                         </div>
                     </div>
-
+              
             </div><br>
+    
 
+       
                 <!-- Content Row -->
             <div class="row">
 
@@ -157,6 +161,6 @@
                         </div>
                     </div>
             </div>
-
+        
     </div>
 @endsection

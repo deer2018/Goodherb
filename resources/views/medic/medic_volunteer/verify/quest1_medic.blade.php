@@ -109,33 +109,36 @@
 </head>
 <body>
 
+<form method="POST" action="modal" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
+                        {{ method_field('PATCH') }}
+                        {{ csrf_field() }}
 
-<div class="container bootstrap snippets bootdey">
-    <div class="btn-demo " id="btn-color-targets">
-        <a href="#modalmedic" data-target-color="bluegray" data-toggle="modal" data-dismiss="modal" class="navbar  navbar-expand navbar-light bg-light mb-4 ">Emotion</a>
+    <div class="container bootstrap snippets bootdey">
+        <div class="btn-demo " id="btn-color-targets">
+            <a href="#modalmedic" data-target-color="bluegray" data-toggle="modal" data-dismiss="modal" class="navbar  navbar-expand navbar-light bg-light mb-4 ">Emotion</a>
+        </div>
+        
     </div>
-    
-</div>
 
-<div class="modal fade" data-modal-color="" id="modalmedic" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">เลือกภาวะทางอารมณ์</h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-            <div class="modal-body">
-                @include ('questionnaireone.quest_medic', ['formMode' => 'quest1_medic.blade.blade'])
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-link">Save changes</button>
-                <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+    <div class="modal fade" data-modal-color="" id="modalmedic" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">เลือกภาวะทางอารมณ์</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    @include ('questionnaireone.quest_medic', ['formMode' => 'quest1_medic.blade.blade'])
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-link">Save changes</button>
+                    <button type="submit" class="btn btn-link" data-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-
+</form> 
 
 
 

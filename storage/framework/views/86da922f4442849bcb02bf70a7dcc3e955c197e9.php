@@ -101,9 +101,11 @@
                         </div>
                     </div>
             </div>
-
+        
+       
              <!-- Content Row -->
              <div class="row">
+                
 
                     <!-- แสดงข้อมูล ภาวะอารมณ์ -->
                     <div class="col-lg-6">
@@ -116,8 +118,8 @@
                                 <div class="mb-3">
                                     <code>เลือกภาวะอารมณ์</code>
                                 </div>
-                                <div class="mb-3">
-                                    <?php echo $__env->make('medic.medic_volunteer.verify.quest1_medic', ['formMode' => 'predicate1.blade'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+                                <div class="mb-1">
+                                <a href="<?php echo e(url('/medic_emotion')); ?>" title="View Crud"><button class="btn btn-info btn-sm"><i class="" aria-hidden="true"></i> ภาวะอารมณ์</button></a>
                                 </div>
                             </div>
                         </div>
@@ -135,12 +137,16 @@
                                     <code>เลือกตัวยา</code>
                                 </div>
                                 
-                                <a href="<?php echo e(url('/medicine')); ?>" title="View Crud"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>รายละเอียด</button></a>
+                                <a href="<?php echo e(url('/medicine')); ?>" title="View Crud"><button class="btn btn-info btn-sm"><i class="" aria-hidden="true"></i>รายละเอียด</button></a>
                             </div>
                         </div>
                     </div>
-
+              
             </div><br>
+    
+
+        <form method="POST" action="<?php echo e(url('/medic_volunteer/')); ?>" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
+            <?php echo e(csrf_field()); ?>
 
                 <!-- Content Row -->
             <div class="row">
@@ -161,7 +167,7 @@
                         </div>
                     </div>
             </div>
-
+        </form>
     </div>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.medic.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\Goodherb\resources\views/medic/medic_volunteer/verify/predicate1.blade.php ENDPATH**/ ?>

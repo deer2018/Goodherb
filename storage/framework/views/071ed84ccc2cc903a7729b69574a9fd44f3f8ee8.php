@@ -7,10 +7,10 @@
 
             <div class="col-md-10">
                 <div class="card">
-                    <div class="card-header"> <a href="<?php echo e(url('/predicate1/ . $users->id')); ?>" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a></div>
+                    <div class="card-header"> <a href="<?php echo e(url('/predicate1/1')); ?>" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a></div>
                     <div class="card-body">
                         <a href="<?php echo e(url('/medicine/medicine_create')); ?>" class="btn btn-success btn-sm" title="Add New Crud">
-                            <i class="fa fa-plus" aria-hidden="true"></i> เพิ่มดอกไม้
+                            <i class="fa fa-plus" aria-hidden="true"></i> เพิ่มข้อมูล
                         </a>
 
                    

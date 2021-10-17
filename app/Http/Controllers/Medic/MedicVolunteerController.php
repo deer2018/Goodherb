@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests;
 
 use App\User;
+use App\Models\Diagnosis;
 use App\Models\Questionone;
 use App\Models\Questionone_two;
 use App\Models\Questionone_tree;
@@ -23,9 +24,6 @@ class MedicVolunteerController extends Controller
 
     public function index()
     {
-        $id = Auth::id();
-        $data = _q1_1::findOrFail($id);  
-
 
     }
 
@@ -38,7 +36,17 @@ class MedicVolunteerController extends Controller
    
     public function store(Request $request)
     {
-        //
+        $requestData = $request->all();
+        $user_id = Auth::id();
+        $requestData["user_id"] = $user_id;
+        $requestData["user_id"] = Auth::id();
+        $requestData["user_id"] = $user_id;
+
+
+
+         $diagnosis = Diagnosis::firstOrNew(array('user_id' => $user_id));
+         $diagnosis->fill($requestData)->save();
+
     }
 
   
