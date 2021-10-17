@@ -14,7 +14,7 @@
         <style>
             html, body {
                 background-color: #FFCCFF;
-                color: #CC0000;
+                color: #000066;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 20;
                 height: 100vh;
@@ -50,13 +50,14 @@
             }
 
             .links > a {
-                color: #CC0000;
+                color: #000066;
                 padding: 0 25px;
                 font-size: 16px;
-                font-weight: 56;
+                font-weight: 100;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
+                font-weight: bold;
             }
 
             .m-b-md {
@@ -82,16 +83,14 @@
 
             <div class="content">
                 <div class="title m-b-md" font-size>
-                <img src="D.jpg" weight="500" height="500" >
-                    <b>ความ❀</b>
-                    <br><b>☹เครียด</b></br> 
-                </div>
+                
+                <img src="<?php echo e(asset('/img/logo.png')); ?>" weight="250" height="250" ></div>
                     <br>แอปพลิเคชันเก็บข้อมูลในโปรแกรมการลดความเครียด
                     <br>ด้วยยารักษาใจจากดอกไม้ตามสูตรของบาคของผู้ดูแล
                     <br>ผู้สูงอายุที่มีภาวะพึ่งพิง
                     <br>
                     <br>
-                    <br><marquee scrollamount="15" direction="left" >จัดทำโดย นักศึกษาจาก
+                    <br><marquee scrollamount="10" direction="left" >จัดทำโดย นักศึกษาจาก
 มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์</marquee>
                 
 
