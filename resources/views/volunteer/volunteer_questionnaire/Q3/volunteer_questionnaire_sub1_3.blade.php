@@ -3,6 +3,16 @@
 @section('content')
 <div class="container">
 
+<script language="javascript">
+    function delaler () {
+        if (confirm('กรอกข้อมูลสำเร็จแล้ว')){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+</script>
 
     <div class="col-md-10">
         <div class="card">
@@ -21,7 +31,7 @@
                             <div class="row">
                                 <div class="col" style="text-align: right">
 
-                                    <input class="btn btn-primary" type="submit" value="ถัดไป">
+                                <input class="btn btn-primary" type="submit" onclick="return delaler();" value="ยืนยัน">
 
                                 </div>
                             </div>

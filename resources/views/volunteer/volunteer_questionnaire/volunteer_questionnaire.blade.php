@@ -33,7 +33,7 @@
                                         <td>แบบสอบถามวัดความเครียดของผู้ดูแลครั้งที่ 2</td>
                                         <td>8-11-64</td>
                                         <td><a href="{{ url('/Q2') }}" title="Back"><button  class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>คลิก</button></a></td>
-                                        <td><a href="{{ url('/Q3-1') }}" title="Back"><button  class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>คลิก</button></a></td>
+                                        <td><a href="{{ url('/Q3-2') }}" title="Back"><button  class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>คลิก</button></a></td>
                                      
                                     </tr>
                             </tbody>
