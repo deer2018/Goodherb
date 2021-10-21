@@ -80,36 +80,31 @@
 
                         </div>
 
-                        <div class="form-group row">
-                        <label for="staticEmail" class="col-sm-2 col-form-label">จังหวัด</label>
-                        <div class="col-sm-10">
-                          <select class="form-control" id="input_province" onchange="showAmphoes()">
-
+                        <div class="form-group <?php echo e($errors->has('province') ? 'has-error' : ''); ?>">
+                        <label for="address" class="control-label"><?php echo e('จังหวัด'); ?></label>
+                          <select id="input_province" onchange="showAmphoes()" name="province">
+                          <option value="">กรุณาเลือกจังหวัด</option>
                           </select>
                         </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="inputPassword" class="col-sm-2 col-form-label">อำเภอ</label>
-                        <div class="col-sm-10">
-                            <select class="form-control" id="input_amphoe" onchange="showDistricts()">
 
-                            </select>
+                        <div class="form-group <?php echo e($errors->has('district') ? 'has-error' : ''); ?>">
+                        <label for="address" class="control-label"><?php echo e('อำเภอ/เขต'); ?></label>
+                          <select id="input_amphoe" onchange="showTambons()" name="district">
+                          <option value="">กรุณาเลือกเขต/อำเภอ</option>
+                          </select>
                         </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="inputPassword" class="col-sm-2 col-form-label">ตำบล</label>
-                        <div class="col-sm-10">
-                            <select class="form-control" id="input_district" onchange="showZipcode()">
+                        
+                        <div class="form-group <?php echo e($errors->has('subdistrict') ? 'has-error' : ''); ?>">
+                        <label for="address" class="control-label"><?php echo e('ตำบล/แขวง'); ?></label>
+                          <select id="input_tambon" onchange="showZipcode()" name="subdistrict">
+                          <option value="">กรุณาเลือกแขวง/ตำบล</option>
+                          </select>
+                        </div>
 
-                            </select>
+                        <div class="form-group <?php echo e($errors->has('zipcode') ? 'has-error' : ''); ?>">
+                        <label for="address" class="control-label"><?php echo e('รหัสไปรษณีย์'); ?></label>
+                          <input id="input_zipcode" placeholder="รหัสไปรษณีย์" name="zipcode"/>
                         </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="inputPassword" class="col-sm-2 col-form-label">รหัสไปรษณีย์</label>
-                        <div class="col-sm-10">
-                            <input class="form-control" id="input_zipcode" placeholder="รหัสไปรษณีย์" />
-                        </div>
-                      </div>
 
                         <div class="form-group <?php echo e($errors->has('race') ? 'has-error' : ''); ?>">
                             <label for="race" class="control-label"><?php echo e('เชื้อชาติ'); ?></label>
@@ -200,126 +195,88 @@
     </div>
 </div>
 </div>                         
-</div>  
-
+</div>
 <script>
-      $(document).ready(function(){
-        console.log("HELLO");
-        showProvinces();
-        dataTable();
-      });
-      function dataTable(){
-        var url = "<?php echo e(url('/')); ?>/api/district";
-        var callback = function(result){
-          var dataSet = [];
-          result.forEach(function(element,index) {
-            var row = [
-              element.id,
-              element.district,
-              element.amphoe,
-              element.province,
-              element.zipcode,
-            ];
-            dataSet.push(row);
-          }); //END FOREACH
-          //console.log(dataSet);
-          var table = $('#table-example').DataTable({
-            "data": dataSet,
-            "deferRender" : true,
-            "columns": [
-              { title: "id" },
-              { title: "ตำบล" },
-              { title: "อำเภอ" },
-              { title: "จังหวัด" },
-              { title: "zipcode" },
-            ],
-          }); // END DATATABLE
-        };
-        //CALL AJAX
-        ajax(url,callback);
-      }
-      function showProvinces(){
-        //PARAMETERS
-        var url = "<?php echo e(url('/')); ?>/api/province";
-        var callback = function(result){
-          $("#input_province").empty();
-          for(var i=0; i<result.length; i++){
-            $("#input_province").append(
-              $('<option></option>')
-                .attr("value", ""+result[i].province_code)
-                .html(""+result[i].province)
-            );
-          }
-          showAmphoes();
-        };
-        //CALL AJAX
-        ajax(url,callback);
-      }
-      function showAmphoes(){
-        //INPUT
-        var province_code = $("#input_province").val();
-        //PARAMETERS
-        var url = "<?php echo e(url('/')); ?>/api/province/"+province_code+"/amphoe";
-        var callback = function(result){
-          //console.log(result);
-          $("#input_amphoe").empty();
-          for(var i=0; i<result.length; i++){
-            $("#input_amphoe").append(
-              $('<option></option>')
-                .attr("value", ""+result[i].amphoe_code)
-                .html(""+result[i].amphoe)
-            );
-          }
-          showDistricts();
-        };
-        //CALL AJAX
-        ajax(url,callback);
-      }
-      function showDistricts(){
-        //INPUT
-        var province_code = $("#input_province").val();
-        var amphoe_code = $("#input_amphoe").val();
-        //PARAMETERS
-        var url = "<?php echo e(url('/')); ?>/api/province/"+province_code+"/amphoe/"+amphoe_code+"/district";
-        var callback = function(result){
-          //console.log(result);
-          $("#input_district").empty();
-          for(var i=0; i<result.length; i++){
-            $("#input_district").append(
-              $('<option></option>')
-                .attr("value", ""+result[i].district_code)
-                .html(""+result[i].district)
-            );
-          }
-          showZipcode();
-        };
-        //CALL AJAX
-        ajax(url,callback);
-      }
-      function showZipcode(){
-        //INPUT
-        var province_code = $("#input_province").val();
-        var amphoe_code = $("#input_amphoe").val();
-        var district_code = $("#input_district").val();
-        //PARAMETERS
-        var url = "<?php echo e(url('/')); ?>/api/province/"+province_code+"/amphoe/"+amphoe_code+"/district/"+district_code;
-        var callback = function(result){
-          //console.log(result);
-          for(var i=0; i<result.length; i++){
-            $("#input_zipcode").val(result[i].zipcode);
-          }
-        };
-        //CALL AJAX
-        ajax(url,callback);
-      }
-      function ajax(url, callback){
-        $.ajax({
-    			"url" : url,
-    			"type" : "GET",
-    			"dataType" : "json",
-    		})
-        .done(callback); //END AJAX
-      }
-    </script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    console.log("START");
+    showProvinces();    
+});
+function showProvinces(){
+    //PARAMETERS
+    fetch("<?php echo e(url('/')); ?>/api/provinces")
+        .then(response => response.json())
+        .then(result => {
+            console.log(result);
+            //UPDATE SELECT OPTION
+            let input_province = document.querySelector("#input_province");
+            input_province.innerHTML = "";
+            for(let item of result){
+                let option = document.createElement("option");
+                option.text = item.province;
+                option.value = item.province;
+                input_province.appendChild(option);                
+            }
+            //QUERY AMPHOES
+            showAmphoes();
+        });
+}
+function showAmphoes(){
+    let input_province = document.querySelector("#input_province");
+    fetch("<?php echo e(url('/')); ?>/api/province/"+input_province.value+"/amphoes")
+        .then(response => response.json())
+        .then(result => {
+            console.log(result);
+            //UPDATE SELECT OPTION
+            let input_amphoe = document.querySelector("#input_amphoe");
+            input_amphoe.innerHTML = "";
+            for(let item of result){
+                let option = document.createElement("option");
+                option.text = item.amphoe;
+                option.value = item.amphoe;
+                input_amphoe.appendChild(option);                
+            }
+            //QUERY AMPHOES
+            showTambons();
+        });
+}
+function showTambons(){
+    let input_province = document.querySelector("#input_province");
+    let input_amphoe = document.querySelector("#input_amphoe");
+    fetch("<?php echo e(url('/')); ?>/api/province/"+input_province.value+"/amphoe/"+input_amphoe.value+"/tambons")
+        .then(response => response.json())
+        .then(result => {
+            console.log(result);
+            //UPDATE SELECT OPTION
+            let input_tambon = document.querySelector("#input_tambon");
+            input_tambon.innerHTML = "";
+            for(let item of result){
+                let option = document.createElement("option");
+                option.text = item.tambon;
+                option.value = item.tambon;
+                input_tambon.appendChild(option);                
+            }
+            //QUERY AMPHOES
+            showZipcode();
+        });
+}
+function showZipcode(){
+    let input_province = document.querySelector("#input_province");
+    let input_amphoe = document.querySelector("#input_amphoe");
+    let input_tambon = document.querySelector("#input_tambon");
+    fetch("<?php echo e(url('/')); ?>/api/province/"+input_province.value+"/amphoe/"+input_amphoe.value+"/tambon/"+input_tambon.value+"/zipcodes")
+        .then(response => response.json())
+        .then(result => {
+            console.log(result);
+            //UPDATE SELECT OPTION
+            let input_zipcode = document.querySelector("#input_zipcode");
+            input_zipcode.value = "";
+            for(let item of result){
+                input_zipcode.value = item.zipcode;
+                break; 
+            }
+        });
+    
+}
+</script>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.volunteer.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\Goodherb\resources\views/volunteer/volunteer_personal/volunteer_personal.blade.php ENDPATH**/ ?>
