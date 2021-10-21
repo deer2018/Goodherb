@@ -50,6 +50,7 @@
                         <div class="form-group <?php echo e($errors->has('sex') ? 'has-error' : ''); ?>">
                             <label for="sex" class="control-label"><?php echo e('เพศ'); ?></label>
                             <select name="sex" class="form-control" id="sex">
+                                <option value=""selected disabled>-กรุณาเลือกเพศ-</option>
                                 <?php $__currentLoopData = json_decode('{"ชาย":"ชาย","หญิง":"หญิง"}', true); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $optionKey => $optionValue): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                 <option value="<?php echo e($optionKey); ?>" <?php echo e((isset($User->sex) && $User->sex == $optionKey) ? 'selected' : ''); ?>><?php echo e($optionValue); ?></option>
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -82,28 +83,28 @@
 
                         <div class="form-group <?php echo e($errors->has('province') ? 'has-error' : ''); ?>">
                         <label for="address" class="control-label"><?php echo e('จังหวัด'); ?></label>
-                          <select id="input_province" onchange="showAmphoes()" name="province">
-                          <option value="">กรุณาเลือกจังหวัด</option>
+                          <select id="input_province" onchange="showAmphoes()" name="province" class="form-control">
+                          <option value=""selected disabled>กรุณาเลือกจังหวัด</option>
                           </select>
                         </div>
 
                         <div class="form-group <?php echo e($errors->has('district') ? 'has-error' : ''); ?>">
                         <label for="address" class="control-label"><?php echo e('อำเภอ/เขต'); ?></label>
-                          <select id="input_amphoe" onchange="showTambons()" name="district">
-                          <option value="">กรุณาเลือกเขต/อำเภอ</option>
+                          <select id="input_amphoe" onchange="showTambons()" name="district" class="form-control">
+                          <option value=""selected disabled>กรุณาเลือกเขต/อำเภอ</option>
                           </select>
                         </div>
                         
                         <div class="form-group <?php echo e($errors->has('subdistrict') ? 'has-error' : ''); ?>">
                         <label for="address" class="control-label"><?php echo e('ตำบล/แขวง'); ?></label>
-                          <select id="input_tambon" onchange="showZipcode()" name="subdistrict">
-                          <option value="">กรุณาเลือกแขวง/ตำบล</option>
+                          <select id="input_tambon" onchange="showZipcode()" name="subdistrict" class="form-control">
+                          <option value=""selected disabled>กรุณาเลือกแขวง/ตำบล</option>
                           </select>
                         </div>
 
                         <div class="form-group <?php echo e($errors->has('zipcode') ? 'has-error' : ''); ?>">
                         <label for="address" class="control-label"><?php echo e('รหัสไปรษณีย์'); ?></label>
-                          <input id="input_zipcode" placeholder="รหัสไปรษณีย์" name="zipcode"/>
+                          <input id="input_zipcode" placeholder="รหัสไปรษณีย์" name="zipcode" class="form-control">
                         </div>
 
                         <div class="form-group <?php echo e($errors->has('race') ? 'has-error' : ''); ?>">
@@ -116,6 +117,7 @@
                         <div class="form-group <?php echo e($errors->has('religion') ? 'has-error' : ''); ?>">
                             <label for="religion" class="control-label"><?php echo e('ศาสนา'); ?></label>
                             <select name="religion" class="form-control" id="religion">
+                                <option value=""selected disabled>-กรุณาเลือกศาสนา-</option>
                                 <?php $__currentLoopData = json_decode('{"พุทธ":"พุทธ","คริสต์":"คริสต์","อิสลาม":"อิสลาม","ฮินดู":"ฮินดู"}', true); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $optionKey => $optionValue): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                 <option value="<?php echo e($optionKey); ?>" <?php echo e((isset($User->religion) && $User->religion == $optionKey) ? 'selected' : ''); ?>><?php echo e($optionValue); ?></option>
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -127,6 +129,7 @@
                         <div class="form-group <?php echo e($errors->has('relationship') ? 'has-error' : ''); ?>">
                             <label for="relationship" class="control-label"><?php echo e('สถานภาพสมรส'); ?></label>
                             <select name="relationship" class="form-control" id="relationship">
+                                <option value=""selected disabled>-กรุณาเลือกสถานภาพสมรส-</option>
                                 <?php $__currentLoopData = json_decode('{"โสด":"โสด","สมรส":"สมรส","หม้าย":"หม้าย","หย่า":"หย่า","แยกกันอยู่":"แยกกันอยู่"}', true); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $optionKey => $optionValue): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                 <option value="<?php echo e($optionKey); ?>" <?php echo e((isset($User->relationship) && $User->relationship == $optionKey) ? 'selected' : ''); ?>><?php echo e($optionValue); ?></option>
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -138,6 +141,7 @@
                         <div class="form-group <?php echo e($errors->has('occupation') ? 'has-error' : ''); ?>">
                             <label for="occupation" class="control-label"><?php echo e('อาชีพ'); ?></label>
                             <select name="occupation" class="form-control" id="occupation">
+                                <option value=""selected disabled>-กรุณาเลือกอาชีพ-</option>
                                 <?php $__currentLoopData = json_decode('{"ข้าราชการ/รัฐวิสาหกิจ":"ข้าราชการ/รัฐวิสาหกิจ","ค้าขาย/ธุรกิจส่วนตัว/เจ้าของกิจการ":"ค้าขาย/ธุรกิจส่วนตัว/เจ้าของกิจการ","เกษตรกรรม/ประมง":"เกษตรกรรม/ประมง","พนักงานบริษัท":"พนักงานบริษัท","นักเรียน/นักศึกษา":"นักเรียน/นักศึกษา"}', true); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $optionKey => $optionValue): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                 <option value="<?php echo e($optionKey); ?>" <?php echo e((isset($User->occupation) && $User->occupation == $optionKey) ? 'selected' : ''); ?>><?php echo e($optionValue); ?></option>
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -147,6 +151,7 @@
                         <div class="form-group <?php echo e($errors->has('income') ? 'has-error' : ''); ?>">
                             <label for="income" class="control-label"><?php echo e('รายได้ต่อเดือน'); ?></label>
                             <select name="income" class="form-control" id="income">
+                                <option value=""selected disabled>-กรุณาเลือกรายได้-</option>
                                 <?php $__currentLoopData = json_decode('{"ต่ำกว่า 3,000 บาท":"ต่ำกว่า 3,000 บาท","3,000 - 5,000 บาท":"3,000 - 5,000 บาท","5,000 - 10,000 บาท":"5,000 - 10,000 บาท","10,000 - 20,000 บาท":"10,000 - 20,000 บาท","20,000 บาทขึ้นไป":"20,000 บาทขึ้นไป"}', true); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $optionKey => $optionValue): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                 <option value="<?php echo e($optionKey); ?>" <?php echo e((isset($User->income) && $User->income == $optionKey) ? 'selected' : ''); ?>><?php echo e($optionValue); ?></option>
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -158,6 +163,7 @@
                         <div class="form-group <?php echo e($errors->has('education') ? 'has-error' : ''); ?>">
                             <label for="education" class="control-label"><?php echo e('ระดับการศึกษา'); ?></label>
                             <select name="education" class="form-control" id="education">
+                                <option value=""selected disabled>-กรุณาเลือกระดับการศึกษา-</option>
                                 <?php $__currentLoopData = json_decode('{"ประถมศึกษา":"ประถมศึกษา","มัธยมศึกษาตอนต้น":"มัธยมศึกษาตอนต้น","มัธยมศึกษาตอนปลาย/ปวช.":"มัธยมศึกษาตอนปลาย/ปวช.","อนุปริญญา/ปวส./ปวท":"อนุปริญญา/ปวส./ปวท","ปริญญาตรี":"ปริญญาตรี","สูงกว่าปริญญาตรี":"สูงกว่าปริญญาตรี"}', true); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $optionKey => $optionValue): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                 <option value="<?php echo e($optionKey); ?>" <?php echo e((isset($User->education) && $User->education == $optionKey) ? 'selected' : ''); ?>><?php echo e($optionValue); ?></option>
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -169,6 +175,7 @@
                         <div class="form-group <?php echo e($errors->has('relevance') ? 'has-error' : ''); ?>">
                             <label for="relevance" class="control-label"><?php echo e('ความเกี่ยวข้องกับผู้ป่วยที่ดูแล'); ?></label>
                             <select name="relevance" class="form-control" id="relevance">
+                                <option value=""selected disabled>-กรุณาเลือกความเกี่ยวข้องกับผู้ป่วยที่ดูแล-</option>
                                 <?php $__currentLoopData = json_decode('{"บิดา":"บิดา","มารดา":"มารดา","บุตร":"บุตร","พี่":"พี่","น้อง":"น้อง","ญาติ":"ญาติ"}', true); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $optionKey => $optionValue): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                 <option value="<?php echo e($optionKey); ?>" <?php echo e((isset($User->relevance) && $User->relevance == $optionKey) ? 'selected' : ''); ?>><?php echo e($optionValue); ?></option>
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
