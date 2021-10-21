@@ -50,6 +50,7 @@ return array(
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\Models\\Crud' => $baseDir . '/app/Models/Crud.php',
+    'App\\Models\\Diagnosis' => $baseDir . '/app/Models/Diagnosis.php',
     'App\\Models\\District' => $baseDir . '/app/Models/District.php',
     'App\\Models\\Medic' => $baseDir . '/app/Models/Medic.php',
     'App\\Models\\Medic_Emotion' => $baseDir . '/app/Models/Medic_Emotion.php',

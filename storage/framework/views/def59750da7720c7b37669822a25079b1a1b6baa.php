@@ -531,7 +531,7 @@
 <div class="container px-0">
   <div class="row gx-5">
     <div class="col">
-        <div class="p-2 border bg-light">17.ท่านมีกำลังเท่านมีเงินพอใช้จ่ายตามความจำเป็นมากน้อยเพียงใด</div>
+        <div class="p-2 border bg-light">17.ท่านมีเงินพอใช้จ่ายตามความจำเป็นมากน้อยเพียงใด</div>
     </div>
   </div>
 <br>

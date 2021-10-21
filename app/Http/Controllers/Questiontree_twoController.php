@@ -28,9 +28,9 @@ class Questiontree_twoController extends Controller
     public function create()
     {
         $id = Auth::id();
-        //$Q = Questiontree_two::firstOrNew(array('user_id' => $id));
+        $Q = Questiontree_two::firstOrNew(array('user_id' => $id));
 
-        return view('volunteer.volunteer_questionnaire.Q3.volunteer_questionnaire_sub2_3', compact('id'));
+        return view('volunteer.volunteer_questionnaire.Q3.volunteer_questionnaire_sub2_3', compact('id','Q'));
     }
 
     /**

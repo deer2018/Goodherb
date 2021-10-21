@@ -79,7 +79,7 @@
                             <?php echo $errors->first('address', '<p class="help-block">:message</p>'); ?>
 
                         </div>
-                        <div>
+
                         <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">จังหวัด</label>
                         <div class="col-sm-10">

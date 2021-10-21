@@ -537,6 +537,7 @@ class ComposerStaticInit22113b6d9ae4e4ec1ee16a0a317478d7
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Models\\Crud' => __DIR__ . '/../..' . '/app/Models/Crud.php',
+        'App\\Models\\Diagnosis' => __DIR__ . '/../..' . '/app/Models/Diagnosis.php',
         'App\\Models\\District' => __DIR__ . '/../..' . '/app/Models/District.php',
         'App\\Models\\Medic' => __DIR__ . '/../..' . '/app/Models/Medic.php',
         'App\\Models\\Medic_Emotion' => __DIR__ . '/../..' . '/app/Models/Medic_Emotion.php',
