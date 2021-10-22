@@ -40,7 +40,7 @@ class MedicVolunteerController extends Controller
         $user_id = Auth::id();
         $requestData["user_id"] = $user_id;
         $requestData["user_id"] = Auth::id();
-        $requestData["user_id"] = $user_id;
+       
 
 
 
