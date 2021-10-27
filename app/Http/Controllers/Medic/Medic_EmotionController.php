@@ -37,6 +37,8 @@ class Medic_EmotionController extends Controller
         $emotion = Medic_Emotion::firstOrNew(array('user_id' => $user_id));
         $emotion->fill($requestData)->save();
 
+        
+
         return redirect('predicate1/1')->with('flash_message', 'Questionone added!');
     }
 

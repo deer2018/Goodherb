@@ -68,6 +68,8 @@
                                         </tbody>
                                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                       </table>
+                                      <div class="pagination-wrapper"> <?php echo $users->appends(['search' => Request::get('search')])->render(); ?> </div>
+
       </div>
     </div>
   </div>

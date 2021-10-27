@@ -12,10 +12,7 @@ class CreateDiagnosisTable extends Migration
         Schema::create('diagnosis', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->integer('user_id')->nullable();
-            $table->integer('medic_emotion_id')->nullable();
-            $table->integer('medicine_id')->nullable();
-            $table->integer('quest_select_id')->nullable();
+            $table->integer('user_id')->nullable();           
             $table->string('advice')->nullable();
         });
     }

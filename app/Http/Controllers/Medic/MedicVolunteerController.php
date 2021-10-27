@@ -8,6 +8,7 @@ use App\Http\Requests;
 
 use App\User;
 use App\Models\Diagnosis;
+use App\Models\Medic_Emotion;
 use App\Models\Questionone;
 use App\Models\Questionone_two;
 use App\Models\Questionone_tree;
@@ -42,10 +43,10 @@ class MedicVolunteerController extends Controller
         $requestData["user_id"] = Auth::id();
        
 
-
-
          $diagnosis = Diagnosis::firstOrNew(array('user_id' => $user_id));
          $diagnosis->fill($requestData)->save();
+
+         return redirect('predicate1/1')->with('flash_message', 'Diagnosis added!');
 
     }
 
@@ -65,7 +66,11 @@ class MedicVolunteerController extends Controller
         $_qt_2 = Questionone_two::where('user_id', '=', $users->id)->firstOrFail();
         $_qt_3 = Questionone_tree::where('user_id', '=', $users->id)->firstOrFail();
         $_qt_4 = Questionone_four::where('user_id', '=', $users->id)->firstOrFail();
-        return view('medic.medic_volunteer.verify.predicate1', compact('users','_qt_1','_qt_2','_qt_3','_qt_4'));
+        
+        $emotion = Medic_Emotion::latest()->first();
+
+
+        return view('medic.medic_volunteer.verify.predicate1', compact('users','_qt_1','_qt_2','_qt_3','_qt_4','emotion'));
     }
 
     public function edit2($id)
