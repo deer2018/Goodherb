@@ -110,18 +110,18 @@
 <body>
 
 <form method="POST" action="modal" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
-                        <?php echo e(method_field('PATCH')); ?>
-
                         <?php echo e(csrf_field()); ?>
 
 
     <div class="container bootstrap snippets bootdey">
         <div class="btn-demo " id="btn-color-targets">
-            <a href="#modalmedic" data-target-color="bluegray" data-toggle="modal" data-dismiss="modal" class="navbar  navbar-expand navbar-light bg-light mb-4 ">Emotion</a>
+            <a href="#modalmedic" data-target-color="bluegray" data-toggle="modal" data-dismiss="modal" class="btn btn-success  btn-block">เลือกภาวะอารมณ์</a>
         </div>
         
     </div>
-
+ 
+    
+     
     <div class="modal fade" data-modal-color="" id="modalmedic" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -133,12 +133,13 @@
                     <?php echo $__env->make('questionnaireone.quest_medic', ['formMode' => 'quest1_medic.blade.blade'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-link">Save changes</button>
-                    <button type="submit" class="btn btn-link" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-link">บันทึก</button>
+                    <button type="submit" class="btn btn-link" data-dismiss="modal">ปิด</button>
                 </div>
             </div>
         </div>
     </div>
+   
 
 </form> 
 

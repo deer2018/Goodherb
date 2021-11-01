@@ -26,7 +26,7 @@ class Medic_EmotionController extends Controller
         return view('medic.medic_volunteer.medic_emotion.medic_emotion_index', compact('emotion'));
     }
 
-    public function store(Request $request)
+    public function store_emotion(Request $request)
     {
         // ดึงข้อมูลจากหน้าฟอร์ม
         $requestData = $request->all();

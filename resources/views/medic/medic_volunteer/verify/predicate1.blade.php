@@ -101,29 +101,29 @@
         </div>
 
         <!-- Content Row -->
-        <div class="row">
+        
 
 
             <!-- แสดงข้อมูล ภาวะอารมณ์ -->
-            <div class="col-lg-6">
+            <div class="col-lg-12">
 
                 <div class="card position-relative shadow h-100  border-bottom-success">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-dark">
-                            ขั้นตอนการวิเคราะห์เพื่อให้ได้ตัวยาที่คล้ายกับอาการที่ผู้ป่วยเป็น</h6>
+                        <h6 class="m-0 font-weight-bold text-dark">ขั้นตอนการวิเคราะห์เพื่อให้ได้ตัวยาที่คล้ายกับอาการที่ผู้ป่วยเป็น</h6>
                     </div>
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-auto text-gray-800 h6 font-weight-bold">ภาวะอารมณ์</div>
-                            <div class="col-auto text-gray-800 h6 font-weight-bold">
+                            <div class="col-auto text-gray-800 h6 font-weight-bold">ภาวะอารมณ์ :</div>
+                            <div class="col-auto text-danger h6 font-weight-bold">
                                 <?php if (empty($emotion['emotion'])) {
                                     echo "กรุณาเลือกภาวะอารมณ์";} 
                                         else {
                                     echo $emotion['emotion'];}?></div>
                         </div><br>
                         <div class="mb-2">
-                            <a href="{{ url('/medic_emotion') }}" title="View Crud"><button class="btn btn-success  btn-block"><i
-                                        class="" aria-hidden="true"></i>เลือกภาวะอารมณ์</button></a>
+                            {{-- <a href="{{ url('/medic_emotion') }}" title="View Crud"><button class="btn btn-success  btn-block"><i
+                                        class="" aria-hidden="true"></i>เลือกภาวะอารมณ์</button></a> --}}
+                                <div> @include ('medic.medic_volunteer.verify.quest1_medic', ['formMode' => 'predicate1.blade'])</div>
                         </div>
 
                         
@@ -131,26 +131,57 @@
                     </div>
                 </div>
             </div>
-
+            <br>
             <!-- แสดงข้อมูล ดอกไม้ -->
-            <div class="col-lg-6">
+            <div class="col-lg-12">
 
                 <div class="card position-relative shadow h-100 border-bottom-info">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-dark">ขั้นตอนการเลือกความแรงของยา</h6>
+                        <h6 class="m-0 font-weight-bold text-dark">ขั้นตอนการเลือกชนิดของยาจากดอกไม้</h6>
                     </div>
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-auto text-gray-800 h6 font-weight-bold">ตัวยา</div>
+                            {{-- <div class="col-auto text-gray-800 h6 font-weight-bold">ตัวยา</div> --}}
+                            <div class="table-responsive">
+                                <table class="table table-sm">
+                                    <thead>
+                                        <tr>
+                                            <th>ลำดับ</th>
+                                            <th>ดอกไม้</th>
+                                            <th>จำนวน/หยด</th>
+                                                        
+                                            <th></th>
+                                        </tr> 
+                                    </thead>
+                                    <tbody>
+                                    @foreach($medicines as $item)
+                                        <tr>
+                                            <td>{{ $loop->iteration }}</td>                                 
+                                            <td>{{ $item->medicine }}</td>
+                                            <td>{{ $item->quantity }}</td>                                                                               
+                                            <td>
+                                                <form method="POST" action="{{ url('/predicate1/1') }}" accept-charset="UTF-8" style="display:inline">
+                                                    {{ method_field('DELETE') }}
+                                                    {{ csrf_field() }}
+                                                    <button type="submit" class="btn btn-danger btn-sm" title="Delete Crud" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                    </tbody>
+                                </table>
+                                <div class="pagination-wrapper"> {!! $medicines->appends(['search' => Request::get('search')])->render() !!} </div>
+                            </div>
                         </div><br>
                         <div class="mb-2">
-                            <a href="{{ url('/medicine') }}" title="View Crud"><button class="btn btn-info  btn-block"><i class="btn-block" aria-hidden="true"></i>เลือกยาจากดอกไม้</button></a>
+                            {{-- <a href="{{ url('/medicine') }}" title="View Crud"><button class="btn btn-info  btn-block"><i class="btn-block" aria-hidden="true"></i>เลือกยาจากดอกไม้</button></a> --}}
+                            @include ('medic.medic_volunteer.verify.quest1_medicine', ['formMode' => 'predicate1.blade'])
                         </div>
                     </div>
                 </div>
             </div>
 
-        </div><br>
+        <br>
 
 
 
@@ -169,8 +200,8 @@
                             {{ csrf_field() }}
                             <div class="form-group {{ $errors->has('advice') ? 'has-error' : ''}}">
                                 <label for="advice" class="control-label">{{ 'รายละเอียด' }}</label>
-                                <textarea class="form-control" name="advice" type="text" id="advice" value="{{ isset($diagnosis->advice) ? $diagnosis->advice : ''}}">
-                                {!! $errors->first('advice', '<p class="help-block">:message</p>') !!}</textarea>
+                                <textarea class="form-control" name="advice" type="text" id="advice" value="{{ isset($diagnosis->advice) ? $diagnosis->advice : ''}}" >
+                                {{ $advice->advice}}</textarea>
                             </div><br>
                             <button type="submit" class="btn btn-primary btn-user btn-block"> บันทึก </button>
                         </form>

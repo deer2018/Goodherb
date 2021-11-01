@@ -101,29 +101,28 @@
         </div>
 
         <!-- Content Row -->
-        <div class="row">
+        
 
 
             <!-- แสดงข้อมูล ภาวะอารมณ์ -->
-            <div class="col-lg-6">
+            <div class="col-lg-12">
 
                 <div class="card position-relative shadow h-100  border-bottom-success">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-dark">
-                            ขั้นตอนการวิเคราะห์เพื่อให้ได้ตัวยาที่คล้ายกับอาการที่ผู้ป่วยเป็น</h6>
+                        <h6 class="m-0 font-weight-bold text-dark">ขั้นตอนการวิเคราะห์เพื่อให้ได้ตัวยาที่คล้ายกับอาการที่ผู้ป่วยเป็น</h6>
                     </div>
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-auto text-gray-800 h6 font-weight-bold">ภาวะอารมณ์</div>
-                            <div class="col-auto text-gray-800 h6 font-weight-bold">
+                            <div class="col-auto text-gray-800 h6 font-weight-bold">ภาวะอารมณ์ :</div>
+                            <div class="col-auto text-danger h6 font-weight-bold">
                                 <?php if (empty($emotion['emotion'])) {
                                     echo "กรุณาเลือกภาวะอารมณ์";} 
                                         else {
                                     echo $emotion['emotion'];}?></div>
                         </div><br>
                         <div class="mb-2">
-                            <a href="<?php echo e(url('/medic_emotion')); ?>" title="View Crud"><button class="btn btn-success  btn-block"><i
-                                        class="" aria-hidden="true"></i>เลือกภาวะอารมณ์</button></a>
+                            
+                                <div> <?php echo $__env->make('medic.medic_volunteer.verify.quest1_medic', ['formMode' => 'predicate1.blade'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?></div>
                         </div>
 
                         
@@ -131,33 +130,60 @@
                     </div>
                 </div>
             </div>
-
+            <br>
             <!-- แสดงข้อมูล ดอกไม้ -->
-            <div class="col-lg-6">
+            <div class="col-lg-12">
 
                 <div class="card position-relative shadow h-100 border-bottom-info">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-dark">ขั้นตอนการเลือกความแรงของยา</h6>
+                        <h6 class="m-0 font-weight-bold text-dark">ขั้นตอนการเลือกชนิดของยาจากดอกไม้</h6>
                     </div>
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-auto text-gray-800 h6 font-weight-bold">ตัวยา</div>
+                            
+                            <div class="table-responsive">
+                                <table class="table table-sm">
+                                    <thead>
+                                        <tr>
+                                            <th>ลำดับ</th>
+                                            <th>ดอกไม้</th>
+                                            <th>จำนวน/หยด</th>
+                                                        
+                                            <th></th>
+                                        </tr> 
+                                    </thead>
+                                    <tbody>
+                                    <?php $__currentLoopData = $medicines; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                        <tr>
+                                            <td><?php echo e($loop->iteration); ?></td>                                 
+                                            <td><?php echo e($item->medicine); ?></td>
+                                            <td><?php echo e($item->quantity); ?></td>                                                                               
+                                            <td>
+                                                <form method="POST" action="<?php echo e(url('/predicate1/1')); ?>" accept-charset="UTF-8" style="display:inline">
+                                                    <?php echo e(method_field('DELETE')); ?>
+
+                                                    <?php echo e(csrf_field()); ?>
+
+                                                    <button type="submit" class="btn btn-danger btn-sm" title="Delete Crud" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                    </tbody>
+                                </table>
+                                <div class="pagination-wrapper"> <?php echo $medicines->appends(['search' => Request::get('search')])->render(); ?> </div>
+                            </div>
                         </div><br>
                         <div class="mb-2">
-                            <a href="<?php echo e(url('/medicine')); ?>" title="View Crud"><button class="btn btn-info  btn-block"><i class="btn-block" aria-hidden="true"></i>เลือกยาจากดอกไม้</button></a>
+                            
+                            <?php echo $__env->make('medic.medic_volunteer.verify.quest1_medicine', ['formMode' => 'predicate1.blade'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                         </div>
                     </div>
                 </div>
             </div>
 
-<<<<<<< HEAD
-       
-                <!-- Content Row -->
-            <div class="row">
-=======
-        </div><br>
+        <br>
 
->>>>>>> 20b966033dd334902b816d27a130989b1d18f861
 
 
         <!-- Content Row -->
@@ -177,20 +203,16 @@
 
                             <div class="form-group <?php echo e($errors->has('advice') ? 'has-error' : ''); ?>">
                                 <label for="advice" class="control-label"><?php echo e('รายละเอียด'); ?></label>
-                                <textarea class="form-control" name="advice" type="text" id="advice" value="<?php echo e(isset($diagnosis->advice) ? $diagnosis->advice : ''); ?>">
-                                <?php echo $errors->first('advice', '<p class="help-block">:message</p>'); ?></textarea>
+                                <textarea class="form-control" name="advice" type="text" id="advice" value="<?php echo e(isset($diagnosis->advice) ? $diagnosis->advice : ''); ?>" >
+                                <?php echo e($advice->advice); ?></textarea>
                             </div><br>
                             <button type="submit" class="btn btn-primary btn-user btn-block"> บันทึก </button>
                         </form>
                     </div>
                 </div>
             </div>
-<<<<<<< HEAD
-        
-=======
         </div>
 
->>>>>>> 20b966033dd334902b816d27a130989b1d18f861
     </div>
 <?php $__env->stopSection(); ?>
 

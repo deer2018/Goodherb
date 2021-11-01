@@ -19,7 +19,4 @@
 
 
 
-<div class="form-group">
-    <input class="btn btn-primary" type="submit" value="<?php echo e($formMode === 'medicine_edit' ? 'อัพเดท' : 'Create'); ?>">
-</div>
 <?php /**PATH C:\xampp\htdocs\Goodherb\resources\views/medic/medic_volunteer/medicine/medicine_form.blade.php ENDPATH**/ ?>

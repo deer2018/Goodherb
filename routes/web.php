@@ -125,11 +125,54 @@ Route::get('/medic_quest26', function () {
 });
 
 // ---------------------------
+Route::get('/medic_index', function () {
+    return view('medic.medic_index');
+});
+
+
+// Q1 -> Medic  --------------
+ Route::get('/medic_quest1_select', function () {
+     return view('medic.medic_volunteer.quest1.medic_quest1_select');
+ });
+ Route::get('/medic_quest1_5', function () {
+    return view('medic.medic_volunteer.quest1.medic_quest1_5');
+});
+ Route::get('/medic_quest1_13', function () {
+    return view('medic.medic_volunteer.quest1.medic_quest1_13');
+});
+ Route::get('/medic_quest1_26', function () {
+    return view('medic.medic_volunteer.quest1.medic_quest1_26');
+});
+// Q2 -> Medic  --------------
+Route::get('/medic_quest3', function () {
+    return view('medic.medic_volunteer.quest2.medic_quest3');
+});
+Route::get('/medic_quest5', function () {
+   return view('medic.medic_volunteer.quest2.medic_quest5');
+});
+Route::get('/medic_quest13', function () {
+   return view('medic.medic_volunteer.quest2.medic_quest13');
+});
+Route::get('/medic_quest26', function () {
+   return view('medic.medic_volunteer.quest2.medic_quest26');
+});
+
+// ---------------------------
 
 Route::resource('medic_personal', 'Medic\Medic_PersonalController');
 
+////////////////// predicate1
 Route::get('predicate1/{id}','Medic\MedicVolunteerController@edit');
-Route::post('predicate1/{id}','Medic\MedicVolunteerController@store');
+// Route::post('predicate1/{id}','Medic\MedicVolunteerController@store');
+Route::patch('predicate1/{id}','Medic\MedicVolunteerController@update');
+
+Route::post('predicate1/{id}','Medic\MedicineController@store');
+Route::delete('predicate1/{id}','Medic\MedicineController@destroy');
+
+Route::post('predicate1/{id}','Medic\Medic_EmotionController@store_emotion');
+
+
+/////////////////----
 
 Route::get('predicate2/{id}','Medic\MedicVolunteerController@edit2');
 

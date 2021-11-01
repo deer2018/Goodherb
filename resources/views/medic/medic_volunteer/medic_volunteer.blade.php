@@ -49,13 +49,7 @@
                     <td> {{ $item->username }}</td>
                     <td> {{ $item->surname }}</td>
                     <td class="text-primary"> {{ $item->group }}</td>
-                    <td class="text-danger"><?php if ($users['status'] == "ยังไม่ได้ตรวจสอบ" ) {
-                        echo "ยังไม่ได้ตรวจสอบ";} 
-                            else if ($diagnosis['advice'] != "null" ) {
-                        echo "ตรวจแล้ว";}
-                            else {
-                        echo $diagnosis['advice'];}
-                        ?>
+                    <td class="text-danger">ยังไม่ได้ตรวจสอบ
                         
                         </td>
                     <td>

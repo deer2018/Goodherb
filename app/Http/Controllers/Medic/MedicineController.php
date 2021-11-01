@@ -22,10 +22,9 @@ class MedicineController extends Controller
     {
         $perPage = 7;
 
-        $id = Auth::id();
         $medicines = Medicine::latest()->paginate($perPage);
 
-        return view('medic.medic_volunteer.medicine.medicine_index', compact('medicines'));
+        return view('medic.medic_volunteer.verify.predicate1', compact('medicines'));
     }
 
  
@@ -45,7 +44,7 @@ class MedicineController extends Controller
         
         Medicine::create($requestData);
 
-        return redirect('medicine')->with('flash_message', 'Medicine added!');
+        return redirect('predicate1/1')->with('flash_message', 'Medicine added!');
     }
 
     public function show(Medicine $medicine)
@@ -77,6 +76,6 @@ class MedicineController extends Controller
     {
         Medicine::destroy($id);
 
-        return redirect('medicine')->with('flash_message', 'Medicine deleted!');
+        return redirect('predicate1/1')->with('flash_message', 'Medicine deleted!');
     }
 }
