@@ -10,7 +10,7 @@ class AddRoleToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string("role")->nullable()->default("guest");
+            $table->string("role")->nullable()->default("อาสาสมัคร");
             $table->string("status")->nullable()->default("ยังไม่ได้ตรวจสอบ");
         });
     }

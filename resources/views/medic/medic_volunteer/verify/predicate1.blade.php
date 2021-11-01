@@ -200,8 +200,10 @@
                             {{ csrf_field() }}
                             <div class="form-group {{ $errors->has('advice') ? 'has-error' : ''}}">
                                 <label for="advice" class="control-label">{{ 'รายละเอียด' }}</label>
-                                <textarea class="form-control" name="advice" type="text" id="advice" value="{{ isset($diagnosis->advice) ? $diagnosis->advice : ''}}" >
-                                {{ $advice->advice}}</textarea>
+                                <textarea class="form-control" name="advice" type="text" id="advice" placeholder="ใส่ความคิดเห็นของแพทย์" value="{{ isset($diagnosis->advice) ? $diagnosis->advice : ''}}" ><?php if (empty($advice['advice'])) {
+                                    echo "";} 
+                                        else {
+                                    echo $advice['advice'];}?></textarea>
                             </div><br>
                             <button type="submit" class="btn btn-primary btn-user btn-block"> บันทึก </button>
                         </form>

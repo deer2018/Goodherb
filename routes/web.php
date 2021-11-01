@@ -163,14 +163,13 @@ Route::resource('medic_personal', 'Medic\Medic_PersonalController');
 
 ////////////////// predicate1
 Route::get('predicate1/{id}','Medic\MedicVolunteerController@edit');
-// Route::post('predicate1/{id}','Medic\MedicVolunteerController@store');
+Route::post('predicate1/{id}','Medic\MedicVolunteerController@store');
 Route::patch('predicate1/{id}','Medic\MedicVolunteerController@update');
 
-Route::post('predicate1/{id}','Medic\MedicineController@store');
+Route::post('/quest1_medicine','Medic\MedicineController@store');
 Route::delete('predicate1/{id}','Medic\MedicineController@destroy');
 
-Route::post('predicate1/{id}','Medic\Medic_EmotionController@store_emotion');
-
+Route::post('/quest1_medic','Medic\Medic_EmotionController@store_emotion');
 
 /////////////////----
 

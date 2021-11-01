@@ -39,11 +39,11 @@
                         
                         <!-- Nested Row within Card Body -->
                         <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block "></div>
-                            <div class="col-lg-6">
+                            
+                            <div class="col-lg-12">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4"><?php echo e(__('Login')); ?></h1>
+                                        <h1 class="h4 text-gray-900 mb-4"><?php echo e(__('หน้าเข้าสู่ระบบ')); ?></h1>
                                     </div>
                                     <form class="user" method="POST" action="<?php echo e(route('login')); ?>">
                                     <?php echo csrf_field(); ?>
