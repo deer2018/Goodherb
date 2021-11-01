@@ -28,6 +28,8 @@
             <input name="ep3_1" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep3_1) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
                 มากที่สุด
         </div>
+            <?php echo $errors->first('ep3_1', '<p class="help-block">:message</p>'); ?>
+
     </div>
 <hr>
 

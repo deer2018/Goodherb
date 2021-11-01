@@ -30,7 +30,7 @@ class volunteer_questionController extends Controller
             $update_2 = "";
             foreach($tm2 as $item){
                 if(!empty( $item->updated_at )){
-                    $updatupdate_2 = $item->updated_at ;
+                    $update_2 = $item->updated_at ;
                 }
             }
 
