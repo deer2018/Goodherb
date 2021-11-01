@@ -51,7 +51,7 @@ class Questiontwo_fourController extends Controller
         $Q = Questiontwo_four::firstOrNew(array('user_id' => $user_id));
         $Q->fill($requestData)->save();
 
-        return redirect('volunteer_questionnaire')->with('flash_message', 'Questiontwo_four added!');
+        return redirect('volunteer_question')->with('flash_message', 'Questiontwo_four added!');
     }
 
     /**
