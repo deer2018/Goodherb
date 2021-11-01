@@ -73,21 +73,4 @@
     </div>
 </div>
 
-<!-- <script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-        console.log("START");
-        disable_btn();
-    });
-
-    function disable_btn(){
-        fetch("{{ url('/') }}/api/disablebtn")
-            .then(response => response.json())
-            .then(result => {
-                console.log(result);
-                
-            });
-    }
-
-</script> -->
-
 @endsection
