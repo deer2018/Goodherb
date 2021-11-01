@@ -7,7 +7,7 @@
     <div class="sidebar-brand-icon rotate-n-15">
       <i class="fas fa-leaf"></i>
     </div>
-    <div class="sidebar-brand-text mx-3" >ความเคลียด</div>
+    <div class="sidebar-brand-text mx-3" >ความเครียด</div>
   </a>
 
   <!-- Divider -->
@@ -25,12 +25,12 @@
                 <span>หน้าหลัก</span></a>
         </li>
   <li class="nav-item">
-            <a class="nav-link" href="{{ url('/volunteer_questionnaire') }}">
+            <a class="nav-link" href="{{ url('/volunteer_question') }}">
                 <i class="fas fa-circle"></i>
                 <span>แบบสอบถาม</span></a>
         </li>
   <li class="nav-item">
-            <a class="nav-link" href="{{ url('/volunteer_conclusion') }}">
+            <a class="nav-link" href="{{ url('/volunteer_con') }}">
                 <i class="fas fa-circle"></i>
                 <span>ผลการรักษา</span></a>
      

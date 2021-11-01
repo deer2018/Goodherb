@@ -145,9 +145,7 @@
             </div><br>
     
 
-        <form method="POST" action="<?php echo e(url('/medic_volunteer/')); ?>" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
-            <?php echo e(csrf_field()); ?>
-
+       
                 <!-- Content Row -->
             <div class="row">
 
@@ -167,7 +165,7 @@
                         </div>
                     </div>
             </div>
-        </form>
+        
     </div>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.medic.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\Goodherb\resources\views/medic/medic_volunteer/verify/predicate1.blade.php ENDPATH**/ ?>

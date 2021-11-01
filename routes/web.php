@@ -45,41 +45,17 @@ Route::get('/admin_index', 'Admin\AdminIndexController@index');
 
 //Route Volunteer --------------------------------------------------------------------
 
-Route::get('/volunteer_questionnaire', function () {
-    return view('volunteer.volunteer_questionnaire.volunteer_questionnaire');
-});
-// Route::get('/volunteer_questionnaire_sub1', function () {
-//     return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_sub1');
+// Route::get('/volunteer_question', function () {
+//     return view('volunteer.volunteer_question');
 // });
-// Route::get('/volunteer_questionnaire_sub1_2', function () {
-//     return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_sub1_2');
-// });
-// Route::get('/volunteer_questionnaire_sub2', function () {
-//     return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_sub2');
-// });
-// Route::get('/volunteer_questionnaire_sub2_2', function () {
-//     return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_sub2_2');
-// });
-// Route::get('/volunteer_questionnaire_sub3', function () {
-//     return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_sub3');
-// });
-// Route::get('/volunteer_questionnaire_sub3_2', function () {
-//     return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_sub3_2');
-// });
-// Route::get('/volunteer_questionnaire_sub4', function () {
-//     return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_sub4');
-// });
-// Route::get('/volunteer_questionnaire_sub4_2', function () {
-//     return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_sub4_2');
-// });
-Route::get('/volunteer_questionnaire_confirm', function () {
-    return view('volunteer.volunteer_questionnaire.volunteer_questionnaire_confirm');
-});
-Route::get('/volunteer_conclusion', function () {
-    return view('volunteer.volunteer_conclusion.volunteer_conclusion');
-});
+
+// Route::get('volunteer_question', 'Volunteer\VolunteerController@volunteer_questionnaire');
+
+Route::resource('volunteer_con', 'Volunteer\volunteer_conController');
 
 Route::resource('volunteer_per', 'Volunteer\volunteer_perController');
+
+Route::get('volunteer_question','Volunteer\volunteer_questionController@volunteer_question');
 
 Route::get('Q1','QuestiononeController@create');
 Route::post('Q1','QuestiononeController@store');
@@ -110,8 +86,8 @@ Route::post('Q2-4','Questiontwo_fourController@store');
 Route::get('Q3','QuestiontreeController@create');
 Route::post('Q3','QuestiontreeController@store');
 
-Route::get('Q3-2','QuestiontreeController@create');
-Route::post('Q3-2','QuestiontreeController@store');
+Route::get('Q3-2','Questiontree_twoController@create');
+Route::post('Q3-2','Questiontree_twoController@store');
 
 //Route Medic -------------------------------------------------------------------------
 

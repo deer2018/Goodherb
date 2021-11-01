@@ -2,45 +2,42 @@
 
 @section('content')
 <div class="container-fluid">
-        <div class="row">
-         
-
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-header">ผลการรักษา</div>
-                      <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table">   
-                                <thead>
-                                        <tr>
-                                            <th>ชื่อ - สกุล</th>
-                                            <th>วีรพล พรมราช</th>
-                                            <th></th>
-                                        </tr>
-                                </thead>
-                                <tbody>
-                                        <tr>
-                                            <td>ประเภท</td>
-                                            <td>1</td>
-                                        </tr>
-                                </tbody>
-                                <tbody>
-                                        <tr>
-                                            <td>ผลวินิจฉัย</td>
-                                            <td>อยู่ในเกณฑ์ปลอดภัย</td>
-                                        </tr>
-                                </tbody>
-                                <tbody>
-                                        <tr>
-                                            <td>รับยา</td>
-                                            <td>น้ำดอกไม้ M 78</td>
-                                        </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                      </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">ผลการรักษา</div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-user-information">
+                            <thead>
+                                <tr>
+                                    <td>ชื่อ - สกุล</td>
+                                    <td><a class="m-1 font-weight-bold text-primary">{{ $users->username }}</a><a class="m-1 font-weight-bold text-primary">{{ $users->surname }}</a></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ประเภท</td>
+                                    <td><a class="m-1 font-weight-bold text-primary">{{ $qt->group}}</td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td>ผลวินิจฉัย</td>
+                                    <td><a class="m-1 font-weight-bold text-primary">{{ $me->emotion }}</td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td>รับยา</td>
+                                    <td><a class="m-1 font-weight-bold text-primary">{{ $md->medicine }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
+        </div>
     </div>
 </div>
 

@@ -25,7 +25,7 @@
                 <div id="13" class="tabcontent">
                     <form method="POST" action="{{ url('/Q3-2') }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
                     {{ csrf_field() }}
-                        @include ('questionnaireone.quest3')
+                    @include ('questionnaireone.quest3', ['formMode' => 'volunteer_questionnaire_sub2_3'])
 
 
                         <td>

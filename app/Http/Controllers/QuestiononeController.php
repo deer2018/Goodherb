@@ -6,6 +6,12 @@ use App\Models\Questionone;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+
+use App\User;
+use App\Models\Questiontwo;
+use App\Models\Questiontree;
+use App\Models\Questiontree_two;
+
 class QuestiononeController extends Controller
 {
     /**

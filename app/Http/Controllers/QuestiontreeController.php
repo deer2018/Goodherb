@@ -46,6 +46,7 @@ class QuestiontreeController extends Controller
         $user_id = Auth::id();
         $requestData["user_id"] = $user_id;
         
+        
         //Questiontree::create($requestData);
         // ค้นข้อมูลก่อนว่ามีมั้ยแล้วค่อยบันทึก
         $Q = Questiontree::firstOrNew(array('user_id' => $user_id));

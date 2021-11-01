@@ -53,15 +53,15 @@ class Questionone_twoController extends Controller
         $requestData["group"] = rand(10,20);
         echo "<h1> Your Score: {$requestData["total"]}/20 </h1>"; 
         if($requestData["total"]<5){
-            echo $requestData["group"] = 'เคลียดน้อย';
+            echo $requestData["group"] = 'เครียดน้อย';
         }else if($requestData["total"]<8){
-            echo $requestData["group"] = 'เคลียดปานกลาง';
+            echo $requestData["group"] = 'เครียดปานกลาง';
         }else if($requestData["total"]<10){
-            echo $requestData["group"] = 'เคลียดมาก';
+            echo $requestData["group"] = 'เครียดมาก';
         }else if($requestData["total"]==9){
-            echo $requestData["group"] = 'เคลียดมาก';
+            echo $requestData["group"] = 'เครียดมาก';
         }else if($requestData["total"]>9){
-            echo $requestData["group"] = 'เคลียดมากที่สุด';
+            echo $requestData["group"] = 'เครียดมากที่สุด';
         }
 
         // บันทึกลงฐานข้อมูล

@@ -13,7 +13,7 @@
                     <a href="{{ url('/volunteer_questionnaire') }}">
                         แบบสอบถาม <br>
                     </a>
-                    <a href="{{ url('/volunteer_conclusion') }}">
+                    <a href="{{ url('/volunteer_con') }}">
                         ผลการรักษา <br>
                     </a>
 
