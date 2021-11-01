@@ -18,19 +18,19 @@
                             <tbody>
                                 <tr>
                                     <td>ประเภท</td>
-                                    <td><a class="m-1 font-weight-bold text-primary">{{ $qt->group}}</td>
+                                    <td><a class="m-1 font-weight-bold text-primary">{{ isset($me->emotion) ? $qt->group : "" }}</a></td>
                                 </tr>
                             </tbody>
                             <tbody>
                                 <tr>
                                     <td>ผลวินิจฉัย</td>
-                                    <td><a class="m-1 font-weight-bold text-primary">{{ $me->emotion }}</td>
+                                    <td><a class="m-1 font-weight-bold text-primary">{{ isset($me->emotion) ? $me->emotion : "" }}</a></td>
                                 </tr>
                             </tbody>
                             <tbody>
                                 <tr>
                                     <td>รับยา</td>
-                                    <td><a class="m-1 font-weight-bold text-primary">{{ $md->medicine }}</td>
+                                    <td><a class="m-1 font-weight-bold text-primary">{{isset($md->medicine) ?  $md->medicine : "" }}</a></td>
                                 </tr>
                             </tbody>
                         </table>

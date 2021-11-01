@@ -7,12 +7,12 @@
   <br>
   <div class="form-group {{ $errors->has('ep1_1') ? 'has-error' : ''}}">
     <div class="radio">
-      <lable><input name="ep1_1" type="radio" value="1" required @if (isset($Q)) {{ (1 == $Q->ep1_1) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+      <lable><input name="ep1_1" type="radio" value="1" required @if (isset($Q->ep1_1)) {{ (1 == $Q->ep1_1) ? 'checked' : '' }} @else {{ '' }} @endif> </label>
         ใช่
     </div>
 
     <div class="radio">
-      <label><input name="ep1_1" type="radio" value="0" required @if (isset($Q)) {{ (0 == $Q->ep1_1) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+      <label><input name="ep1_1" type="radio" value="0" required @if (isset($Q->ep1_1)) {{ (0 == $Q->ep1_1) ? 'checked' : '' }} @else {{ '' }} @endif> </label>
       ไม่
     </div>
     {!! $errors->first('ep1_1', '<p class="help-block">:message</p>') !!}
@@ -29,12 +29,12 @@
   <br>
   <div class="form-group {{ $errors->has('ep1_2') ? 'has-error' : ''}}">
     <div class="radio">
-      <label><input name="ep1_2" type="radio" value="1" required @if (isset($Q)) {{ (1 == $Q->ep1_2) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+      <label><input name="ep1_2" type="radio" value="1" required @if (isset($Q->ep1_2)) {{ (1 == $Q->ep1_2) ? 'checked' : '' }} @else {{ '' }} @endif> </label>
       ใช่
     </div>
 
     <div class="radio">
-      <label><input name="ep1_2" type="radio" value="0" required @if (isset($Q)) {{ (0 == $Q->ep1_2) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+      <label><input name="ep1_2" type="radio" value="0" required @if (isset($Q->ep1_2)) {{ (0 == $Q->ep1_2) ? 'checked' : '' }} @else {{ '' }} @endif> </label>
       ไม่
     </div>
     {!! $errors->first('ep1_2', '<p class="help-block">:message</p>') !!}
@@ -50,12 +50,12 @@
   <br>
   <div class="form-group {{ $errors->has('ep1_3') ? 'has-error' : ''}}">
     <div class="radio">
-      <label><input name="ep1_3" type="radio" value="1" required @if (isset($Q)) {{ (1 == $Q->ep1_3) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+      <label><input name="ep1_3" type="radio" value="1" required @if (isset($Q->ep1_3)) {{ (1 == $Q->ep1_3) ? 'checked' : '' }} @else {{ '' }} @endif> </label>
       ใช่
     </div>
 
     <div class="radio">
-      <label><input name="ep1_3" type="radio" value="0" required @if (isset($Q)) {{ (0 == $Q->ep1_3) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+      <label><input name="ep1_3" type="radio" value="0" required @if (isset($Q->ep1_3)) {{ (0 == $Q->ep1_3) ? 'checked' : '' }} @else {{ '' }} @endif> </label>
       ไม่
     </div>
     {!! $errors->first('ep1_3', '<p class="help-block">:message</p>') !!}
@@ -71,12 +71,12 @@
   <br>
   <div class="form-group {{ $errors->has('ep1_4') ? 'has-error' : ''}}">
     <div class="radio">
-      <label><input name="ep1_4" type="radio" value="1" required @if (isset($Q)) {{ (1 == $Q->ep1_4) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+      <label><input name="ep1_4" type="radio" value="1" required @if (isset($Q->ep1_4)) {{ (1 == $Q->ep1_4) ? 'checked' : '' }} @else {{ '' }} @endif> </label>
       ใช่
     </div>
 
     <div class="radio">
-      <label><input name="ep1_4" type="radio" value="0" required @if (isset($Q)) {{ (0 == $Q->ep1_4) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+      <label><input name="ep1_4" type="radio" value="0" required @if (isset($Q->ep1_4)) {{ (0 == $Q->ep1_4) ? 'checked' : '' }} @else {{ '' }} @endif> </label>
       ไม่
     </div>
     {!! $errors->first('ep1_4', '<p class="help-block">:message</p>') !!}
@@ -92,12 +92,12 @@
   <br>
   <div class="form-group {{ $errors->has('ep1_5') ? 'has-error' : ''}}">
     <div class="radio">
-      <label><input name="ep1_5" type="radio" value="1" required @if (isset($Q)) {{ (1 == $Q->ep1_5) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+      <label><input name="ep1_5" type="radio" value="1" required @if (isset($Q->ep1_5)) {{ (1 == $Q->ep1_5) ? 'checked' : '' }} @else {{ '' }} @endif> </label>
       ใช่
     </div>
 
     <div class="radio">
-      <label><input name="ep1_5" type="radio" value="0" required @if (isset($Q)) {{ (0 == $Q->ep1_5) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+      <label><input name="ep1_5" type="radio" value="0" required @if (isset($Q->ep1_5)) {{ (0 == $Q->ep1_5) ? 'checked' : '' }} @else {{ '' }} @endif> </label>
       ไม่
     </div>
     {!! $errors->first('ep1_5', '<p class="help-block">:message</p>') !!}
@@ -113,12 +113,12 @@
   <br>
   <div class="form-group {{ $errors->has('ep1_6') ? 'has-error' : ''}}">
     <div class="radio">
-      <label><input name="ep1_6" type="radio" value="1" required @if (isset($Q)) {{ (1 == $Q->ep1_6) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+      <label><input name="ep1_6" type="radio" value="1" required @if (isset($Q->ep1_6)) {{ (1 == $Q->ep1_6) ? 'checked' : '' }} @else {{ '' }} @endif> </label>
       ใช่
     </div>
 
     <div class="radio">
-      <label><input name="ep1_6" type="radio" value="0" required @if (isset($Q)) {{ (0 == $Q->ep1_6) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+      <label><input name="ep1_6" type="radio" value="0" required @if (isset($Q->ep1_6)) {{ (0 == $Q->ep1_6) ? 'checked' : '' }} @else {{ '' }} @endif> </label>
       ไม่
     </div>
     {!! $errors->first('ep1_6', '<p class="help-block">:message</p>') !!}
@@ -134,12 +134,12 @@
   <br>
   <div class="form-group {{ $errors->has('ep1_7') ? 'has-error' : ''}}">
     <div class="radio">
-      <label><input name="ep1_7" type="radio" value="1" required @if (isset($Q)) {{ (1 == $Q->ep1_7) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+      <label><input name="ep1_7" type="radio" value="1" required @if (isset($Q->ep1_7)) {{ (1 == $Q->ep1_7) ? 'checked' : '' }} @else {{ '' }} @endif> </label>
       ใช่
     </div>
 
     <div class="radio">
-      <label><input name="ep1_7" type="radio" value="0" required @if (isset($Q)) {{ (0 == $Q->ep1_7) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+      <label><input name="ep1_7" type="radio" value="0" required @if (isset($Q->ep1_7)) {{ (0 == $Q->ep1_7) ? 'checked' : '' }} @else {{ '' }} @endif> </label>
       ไม่
     </div>
     {!! $errors->first('ep1_7', '<p class="help-block">:message</p>') !!}
@@ -155,12 +155,12 @@
   <br>
   <div class="form-group {{ $errors->has('ep1_8') ? 'has-error' : ''}}">
     <div class="radio">
-      <label><input name="ep1_8" type="radio" value="1" required @if (isset($Q)) {{ (1 == $Q->ep1_8) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+      <label><input name="ep1_8" type="radio" value="1" required @if (isset($Q->ep1_8)) {{ (1 == $Q->ep1_8) ? 'checked' : '' }} @else {{ '' }} @endif> </label>
       ใช่
     </div>
 
     <div class="radio">
-      <label><input name="ep1_8" type="radio" value="0" required @if (isset($Q)) {{ (0 == $Q->ep1_8) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+      <label><input name="ep1_8" type="radio" value="0" required @if (isset($Q->ep1_8)) {{ (0 == $Q->ep1_8) ? 'checked' : '' }} @else {{ '' }} @endif> </label>
       ไม่
     </div>
     {!! $errors->first('ep1_8', '<p class="help-block">:message</p>') !!}
@@ -176,12 +176,12 @@
   <br>
   <div class="form-group {{ $errors->has('ep1_9') ? 'has-error' : ''}}">
     <div class="radio">
-      <label><input name="ep1_9" type="radio" value="1" required @if (isset($Q)) {{ (1 == $Q->ep1_9) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+      <label><input name="ep1_9" type="radio" value="1" required @if (isset($Q->ep1_9)) {{ (1 == $Q->ep1_9) ? 'checked' : '' }} @else {{ '' }} @endif> </label>
       ใช่
     </div>
 
     <div class="radio">
-      <label><input name="ep1_9" type="radio" value="0" required @if (isset($Q)) {{ (0 == $Q->ep1_9) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+      <label><input name="ep1_9" type="radio" value="0" required @if (isset($Q->ep1_9)) {{ (0 == $Q->ep1_9) ? 'checked' : '' }} @else {{ '' }} @endif> </label>
       ไม่
     </div>
     {!! $errors->first('ep1_9', '<p class="help-block">:message</p>') !!}
@@ -197,12 +197,12 @@
   <br>
   <div class="form-group {{ $errors->has('ep1_10') ? 'has-error' : ''}}">
     <div class="radio">
-      <label><input name="ep1_10" type="radio" value="1" required @if (isset($Q)) {{ (1 == $Q->ep1_10) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+      <label><input name="ep1_10" type="radio" value="1" required @if (isset($Q->ep1_10)) {{ (1 == $Q->ep1_10) ? 'checked' : '' }} @else {{ '' }} @endif> </label>
       ใช่
     </div>
 
     <div class="radio">
-      <label><input name="ep1_10" type="radio" value="0" required @if (isset($Q)) {{ (0 == $Q->ep1_10) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+      <label><input name="ep1_10" type="radio" value="0" required @if (isset($Q->ep1_10)) {{ (0 == $Q->ep1_10) ? 'checked' : '' }} @else {{ '' }} @endif> </label>
       ไม่
     </div>
     {!! $errors->first('ep1_10', '<p class="help-block">:message</p>') !!}
@@ -218,12 +218,12 @@
   <br>
   <div class="form-group {{ $errors->has('ep1_11') ? 'has-error' : ''}}">
     <div class="radio">
-      <label><input name="ep1_11" type="radio" value="1" required @if (isset($Q)) {{ (1 == $Q->ep1_11) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+      <label><input name="ep1_11" type="radio" value="1" required @if (isset($Q->ep1_11)) {{ (1 == $Q->ep1_11) ? 'checked' : '' }} @else {{ '' }} @endif> </label>
       ใช่
     </div>
 
     <div class="radio">
-      <label><input name="ep1_11" type="radio" value="0" required @if (isset($Q)) {{ (0 == $Q->ep1_11) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+      <label><input name="ep1_11" type="radio" value="0" required @if (isset($Q->ep1_11)) {{ (0 == $Q->ep1_11) ? 'checked' : '' }} @else {{ '' }} @endif> </label>
       ไม่
     </div>
     {!! $errors->first('ep1_11', '<p class="help-block">:message</p>') !!}
@@ -239,12 +239,12 @@
   <br>
   <div class="form-group {{ $errors->has('ep1_12') ? 'has-error' : ''}}">
     <div class="radio">
-      <label><input name="ep1_12" type="radio" value="1" required @if (isset($Q)) {{ (1 == $Q->ep1_12) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+      <label><input name="ep1_12" type="radio" value="1" required @if (isset($Q->ep1_12)) {{ (1 == $Q->ep1_12) ? 'checked' : '' }} @else {{ '' }} @endif> </label>
       ใช่
     </div>
 
     <div class="radio">
-      <label><input name="ep1_12" type="radio" value="0" required @if (isset($Q)) {{ (0 == $Q->ep1_12) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+      <label><input name="ep1_12" type="radio" value="0" required @if (isset($Q->ep1_12)) {{ (0 == $Q->ep1_12) ? 'checked' : '' }} @else {{ '' }} @endif> </label>
       ไม่
     </div>
     {!! $errors->first('ep1_12', '<p class="help-block">:message</p>') !!}
@@ -260,12 +260,12 @@
   <br>
   <div class="form-group {{ $errors->has('ep1_13') ? 'has-error' : ''}}">
     <div class="radio">
-      <label><input name="ep1_13" type="radio" value="1" required @if (isset($Q)) {{ (1 == $Q->ep1_13) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+      <label><input name="ep1_13" type="radio" value="1" required @if (isset($Q->ep1_13)) {{ (1 == $Q->ep1_13) ? 'checked' : '' }} @else {{ '' }} @endif> </label>
       ใช่
     </div>
 
     <div class="radio">
-      <label><input name="ep1_13" type="radio" value="0" required @if (isset($Q)) {{ (0 == $Q->ep1_13) ? 'checked' : '' }} @else {{ 'checked' }} @endif> </label>
+      <label><input name="ep1_13" type="radio" value="0" required @if (isset($Q->ep1_13)) {{ (0 == $Q->ep1_13) ? 'checked' : '' }} @else {{ '' }} @endif> </label>
       ไม่
     </div>
     {!! $errors->first('ep1_13', '<p class="help-block">:message</p>') !!}

@@ -18,19 +18,19 @@
                             <tbody>
                                 <tr>
                                     <td>ประเภท</td>
-                                    <td><a class="m-1 font-weight-bold text-primary"><?php echo e($qt->group); ?></td>
+                                    <td><a class="m-1 font-weight-bold text-primary"><?php echo e(isset($me->emotion) ? $qt->group : ""); ?></a></td>
                                 </tr>
                             </tbody>
                             <tbody>
                                 <tr>
                                     <td>ผลวินิจฉัย</td>
-                                    <td><a class="m-1 font-weight-bold text-primary"><?php echo e($me->emotion); ?></td>
+                                    <td><a class="m-1 font-weight-bold text-primary"><?php echo e(isset($me->emotion) ? $me->emotion : ""); ?></a></td>
                                 </tr>
                             </tbody>
                             <tbody>
                                 <tr>
                                     <td>รับยา</td>
-                                    <td><a class="m-1 font-weight-bold text-primary"><?php echo e($md->medicine); ?></td>
+                                    <td><a class="m-1 font-weight-bold text-primary"><?php echo e(isset($md->medicine) ?  $md->medicine : ""); ?></a></td>
                                 </tr>
                             </tbody>
                         </table>

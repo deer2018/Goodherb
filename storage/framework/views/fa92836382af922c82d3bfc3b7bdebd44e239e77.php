@@ -7,12 +7,12 @@
   <br>
   <div class="form-group <?php echo e($errors->has('ep1_1') ? 'has-error' : ''); ?>">
     <div class="radio">
-      <lable><input name="ep1_1" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep1_1) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>> </label>
+      <lable><input name="ep1_1" type="radio" value="1" required <?php if(isset($Q->ep1_1)): ?> <?php echo e((1 == $Q->ep1_1) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>> </label>
         ใช่
     </div>
 
     <div class="radio">
-      <label><input name="ep1_1" type="radio" value="0" required <?php if(isset($Q)): ?> <?php echo e((0 == $Q->ep1_1) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>> </label>
+      <label><input name="ep1_1" type="radio" value="0" required <?php if(isset($Q->ep1_1)): ?> <?php echo e((0 == $Q->ep1_1) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>> </label>
       ไม่
     </div>
     <?php echo $errors->first('ep1_1', '<p class="help-block">:message</p>'); ?>
@@ -30,12 +30,12 @@
   <br>
   <div class="form-group <?php echo e($errors->has('ep1_2') ? 'has-error' : ''); ?>">
     <div class="radio">
-      <label><input name="ep1_2" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep1_2) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>> </label>
+      <label><input name="ep1_2" type="radio" value="1" required <?php if(isset($Q->ep1_2)): ?> <?php echo e((1 == $Q->ep1_2) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>> </label>
       ใช่
     </div>
 
     <div class="radio">
-      <label><input name="ep1_2" type="radio" value="0" required <?php if(isset($Q)): ?> <?php echo e((0 == $Q->ep1_2) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>> </label>
+      <label><input name="ep1_2" type="radio" value="0" required <?php if(isset($Q->ep1_2)): ?> <?php echo e((0 == $Q->ep1_2) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>> </label>
       ไม่
     </div>
     <?php echo $errors->first('ep1_2', '<p class="help-block">:message</p>'); ?>
@@ -52,12 +52,12 @@
   <br>
   <div class="form-group <?php echo e($errors->has('ep1_3') ? 'has-error' : ''); ?>">
     <div class="radio">
-      <label><input name="ep1_3" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep1_3) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>> </label>
+      <label><input name="ep1_3" type="radio" value="1" required <?php if(isset($Q->ep1_3)): ?> <?php echo e((1 == $Q->ep1_3) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>> </label>
       ใช่
     </div>
 
     <div class="radio">
-      <label><input name="ep1_3" type="radio" value="0" required <?php if(isset($Q)): ?> <?php echo e((0 == $Q->ep1_3) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>> </label>
+      <label><input name="ep1_3" type="radio" value="0" required <?php if(isset($Q->ep1_3)): ?> <?php echo e((0 == $Q->ep1_3) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>> </label>
       ไม่
     </div>
     <?php echo $errors->first('ep1_3', '<p class="help-block">:message</p>'); ?>
@@ -74,12 +74,12 @@
   <br>
   <div class="form-group <?php echo e($errors->has('ep1_4') ? 'has-error' : ''); ?>">
     <div class="radio">
-      <label><input name="ep1_4" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep1_4) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>> </label>
+      <label><input name="ep1_4" type="radio" value="1" required <?php if(isset($Q->ep1_4)): ?> <?php echo e((1 == $Q->ep1_4) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>> </label>
       ใช่
     </div>
 
     <div class="radio">
-      <label><input name="ep1_4" type="radio" value="0" required <?php if(isset($Q)): ?> <?php echo e((0 == $Q->ep1_4) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>> </label>
+      <label><input name="ep1_4" type="radio" value="0" required <?php if(isset($Q->ep1_4)): ?> <?php echo e((0 == $Q->ep1_4) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>> </label>
       ไม่
     </div>
     <?php echo $errors->first('ep1_4', '<p class="help-block">:message</p>'); ?>
@@ -96,12 +96,12 @@
   <br>
   <div class="form-group <?php echo e($errors->has('ep1_5') ? 'has-error' : ''); ?>">
     <div class="radio">
-      <label><input name="ep1_5" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep1_5) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>> </label>
+      <label><input name="ep1_5" type="radio" value="1" required <?php if(isset($Q->ep1_5)): ?> <?php echo e((1 == $Q->ep1_5) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>> </label>
       ใช่
     </div>
 
     <div class="radio">
-      <label><input name="ep1_5" type="radio" value="0" required <?php if(isset($Q)): ?> <?php echo e((0 == $Q->ep1_5) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>> </label>
+      <label><input name="ep1_5" type="radio" value="0" required <?php if(isset($Q->ep1_5)): ?> <?php echo e((0 == $Q->ep1_5) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>> </label>
       ไม่
     </div>
     <?php echo $errors->first('ep1_5', '<p class="help-block">:message</p>'); ?>
@@ -118,12 +118,12 @@
   <br>
   <div class="form-group <?php echo e($errors->has('ep1_6') ? 'has-error' : ''); ?>">
     <div class="radio">
-      <label><input name="ep1_6" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep1_6) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>> </label>
+      <label><input name="ep1_6" type="radio" value="1" required <?php if(isset($Q->ep1_6)): ?> <?php echo e((1 == $Q->ep1_6) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>> </label>
       ใช่
     </div>
 
     <div class="radio">
-      <label><input name="ep1_6" type="radio" value="0" required <?php if(isset($Q)): ?> <?php echo e((0 == $Q->ep1_6) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>> </label>
+      <label><input name="ep1_6" type="radio" value="0" required <?php if(isset($Q->ep1_6)): ?> <?php echo e((0 == $Q->ep1_6) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>> </label>
       ไม่
     </div>
     <?php echo $errors->first('ep1_6', '<p class="help-block">:message</p>'); ?>
@@ -140,12 +140,12 @@
   <br>
   <div class="form-group <?php echo e($errors->has('ep1_7') ? 'has-error' : ''); ?>">
     <div class="radio">
-      <label><input name="ep1_7" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep1_7) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>> </label>
+      <label><input name="ep1_7" type="radio" value="1" required <?php if(isset($Q->ep1_7)): ?> <?php echo e((1 == $Q->ep1_7) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>> </label>
       ใช่
     </div>
 
     <div class="radio">
-      <label><input name="ep1_7" type="radio" value="0" required <?php if(isset($Q)): ?> <?php echo e((0 == $Q->ep1_7) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>> </label>
+      <label><input name="ep1_7" type="radio" value="0" required <?php if(isset($Q->ep1_7)): ?> <?php echo e((0 == $Q->ep1_7) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>> </label>
       ไม่
     </div>
     <?php echo $errors->first('ep1_7', '<p class="help-block">:message</p>'); ?>
@@ -162,12 +162,12 @@
   <br>
   <div class="form-group <?php echo e($errors->has('ep1_8') ? 'has-error' : ''); ?>">
     <div class="radio">
-      <label><input name="ep1_8" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep1_8) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>> </label>
+      <label><input name="ep1_8" type="radio" value="1" required <?php if(isset($Q->ep1_8)): ?> <?php echo e((1 == $Q->ep1_8) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>> </label>
       ใช่
     </div>
 
     <div class="radio">
-      <label><input name="ep1_8" type="radio" value="0" required <?php if(isset($Q)): ?> <?php echo e((0 == $Q->ep1_8) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>> </label>
+      <label><input name="ep1_8" type="radio" value="0" required <?php if(isset($Q->ep1_8)): ?> <?php echo e((0 == $Q->ep1_8) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>> </label>
       ไม่
     </div>
     <?php echo $errors->first('ep1_8', '<p class="help-block">:message</p>'); ?>
@@ -184,12 +184,12 @@
   <br>
   <div class="form-group <?php echo e($errors->has('ep1_9') ? 'has-error' : ''); ?>">
     <div class="radio">
-      <label><input name="ep1_9" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep1_9) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>> </label>
+      <label><input name="ep1_9" type="radio" value="1" required <?php if(isset($Q->ep1_9)): ?> <?php echo e((1 == $Q->ep1_9) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>> </label>
       ใช่
     </div>
 
     <div class="radio">
-      <label><input name="ep1_9" type="radio" value="0" required <?php if(isset($Q)): ?> <?php echo e((0 == $Q->ep1_9) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>> </label>
+      <label><input name="ep1_9" type="radio" value="0" required <?php if(isset($Q->ep1_9)): ?> <?php echo e((0 == $Q->ep1_9) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>> </label>
       ไม่
     </div>
     <?php echo $errors->first('ep1_9', '<p class="help-block">:message</p>'); ?>
@@ -206,12 +206,12 @@
   <br>
   <div class="form-group <?php echo e($errors->has('ep1_10') ? 'has-error' : ''); ?>">
     <div class="radio">
-      <label><input name="ep1_10" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep1_10) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>> </label>
+      <label><input name="ep1_10" type="radio" value="1" required <?php if(isset($Q->ep1_10)): ?> <?php echo e((1 == $Q->ep1_10) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>> </label>
       ใช่
     </div>
 
     <div class="radio">
-      <label><input name="ep1_10" type="radio" value="0" required <?php if(isset($Q)): ?> <?php echo e((0 == $Q->ep1_10) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>> </label>
+      <label><input name="ep1_10" type="radio" value="0" required <?php if(isset($Q->ep1_10)): ?> <?php echo e((0 == $Q->ep1_10) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>> </label>
       ไม่
     </div>
     <?php echo $errors->first('ep1_10', '<p class="help-block">:message</p>'); ?>
@@ -228,12 +228,12 @@
   <br>
   <div class="form-group <?php echo e($errors->has('ep1_11') ? 'has-error' : ''); ?>">
     <div class="radio">
-      <label><input name="ep1_11" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep1_11) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>> </label>
+      <label><input name="ep1_11" type="radio" value="1" required <?php if(isset($Q->ep1_11)): ?> <?php echo e((1 == $Q->ep1_11) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>> </label>
       ใช่
     </div>
 
     <div class="radio">
-      <label><input name="ep1_11" type="radio" value="0" required <?php if(isset($Q)): ?> <?php echo e((0 == $Q->ep1_11) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>> </label>
+      <label><input name="ep1_11" type="radio" value="0" required <?php if(isset($Q->ep1_11)): ?> <?php echo e((0 == $Q->ep1_11) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>> </label>
       ไม่
     </div>
     <?php echo $errors->first('ep1_11', '<p class="help-block">:message</p>'); ?>
@@ -250,12 +250,12 @@
   <br>
   <div class="form-group <?php echo e($errors->has('ep1_12') ? 'has-error' : ''); ?>">
     <div class="radio">
-      <label><input name="ep1_12" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep1_12) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>> </label>
+      <label><input name="ep1_12" type="radio" value="1" required <?php if(isset($Q->ep1_12)): ?> <?php echo e((1 == $Q->ep1_12) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>> </label>
       ใช่
     </div>
 
     <div class="radio">
-      <label><input name="ep1_12" type="radio" value="0" required <?php if(isset($Q)): ?> <?php echo e((0 == $Q->ep1_12) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>> </label>
+      <label><input name="ep1_12" type="radio" value="0" required <?php if(isset($Q->ep1_12)): ?> <?php echo e((0 == $Q->ep1_12) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>> </label>
       ไม่
     </div>
     <?php echo $errors->first('ep1_12', '<p class="help-block">:message</p>'); ?>
@@ -272,12 +272,12 @@
   <br>
   <div class="form-group <?php echo e($errors->has('ep1_13') ? 'has-error' : ''); ?>">
     <div class="radio">
-      <label><input name="ep1_13" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep1_13) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>> </label>
+      <label><input name="ep1_13" type="radio" value="1" required <?php if(isset($Q->ep1_13)): ?> <?php echo e((1 == $Q->ep1_13) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>> </label>
       ใช่
     </div>
 
     <div class="radio">
-      <label><input name="ep1_13" type="radio" value="0" required <?php if(isset($Q)): ?> <?php echo e((0 == $Q->ep1_13) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>> </label>
+      <label><input name="ep1_13" type="radio" value="0" required <?php if(isset($Q->ep1_13)): ?> <?php echo e((0 == $Q->ep1_13) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>> </label>
       ไม่
     </div>
     <?php echo $errors->first('ep1_13', '<p class="help-block">:message</p>'); ?>
