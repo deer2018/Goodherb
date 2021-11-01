@@ -66,6 +66,8 @@
                                         </tbody>
                                     @endforeach
                                       </table>
+                                      <div class="pagination-wrapper"> {!! $users->appends(['search' => Request::get('search')])->render() !!} </div>
+
       </div>
     </div>
   </div>

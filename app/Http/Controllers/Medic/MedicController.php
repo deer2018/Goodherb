@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests;
 
 use App\User;
+use App\Models\Diagnosis;
 use Illuminate\Http\Request;
 
 class MedicController extends Controller
@@ -20,12 +21,13 @@ class MedicController extends Controller
     public function index(Request $request)
     {
         $perPage = 25;
-        $users = User::all();
+        // $users = User::all();
+        $diagnosis = Diagnosis::latest()->first();
         $keyword = $request->get('search'); 
         switch(Auth::user()->role)
         {
                 case "หมอ" : 
-                    $users = User::latest()->paginate($perPage);
+                    // $users = User::latest()->paginate($perPage);
     
                     if (!empty($keyword)) {
                         $users = User::where(function($q) use ($keyword){
@@ -34,7 +36,9 @@ class MedicController extends Controller
                         })
                         ->get();
                     } else {
-                        $users = User::where('role', "อาสาสมัคร")
+                        $users = User::join('_q1_4', 'users.id', '=', '_q1_4.user_id')
+                        ->where('role', "อาสาสมัคร")
+                        ->select('users.*', '_q1_4.group')
                         ->latest()->paginate($perPage);
                     }
                     break;

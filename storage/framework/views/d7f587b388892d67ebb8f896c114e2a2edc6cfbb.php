@@ -13,7 +13,8 @@
                                     <th>ลำดับ</th>
                                     <th>แบบสอบถาม</th>
                                     <th>วันที่</th>
-                                    <th>การประเมิน</th>             
+                                    <th>การประเมิน</th>
+                                    <th>แบบประเมินการรับประทานยา</th>             
                                 </tr>
                         </thead>    
                         <tbody>
@@ -22,6 +23,7 @@
                                     <td>แบบสอบถามครั้งที่ 1</td>
                                     <td>1-8-64</td>
                                     <td><a href="<?php echo e(url('/predicate1/' . $users->id )); ?>" title="Click"><button  class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>ประเมินครั้งที่ 1</button></a></td>
+                                    <td><a href="#" title="Click"><button  class="btn btn-info btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>การรับประทานยาครั้งที่ 1</button></a></td>
                                     
                                 </tr>
                                 <tr>
@@ -29,6 +31,7 @@
                                     <td>แบบสอบถามครั้งที่ 2</td>
                                     <td>14-8-64</td>
                                     <td><a href="<?php echo e(url('/predicate2/' . $users->id )); ?>" title="Back"><button  class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>ประเมินครั้งที่ 2</button></a></td>
+                                    <td><a href="#" title="Click"><button  class="btn btn-info btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>การรับประทานยาครั้งที่ 2</button></a></td>
                                     
                                 </tr>
                         </tbody>

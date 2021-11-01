@@ -48,8 +48,16 @@
                     <td><?php echo e($loop->iteration); ?></td>
                     <td> <?php echo e($item->username); ?></td>
                     <td> <?php echo e($item->surname); ?></td>
-                    <td class="text-primary"> ภาวะพึ่งพาโดยสมบูรณ์</td>
-                    <td class="text-danger"> ยังไม่ได้ตรวจสอบ</td>
+                    <td class="text-primary"> <?php echo e($item->group); ?></td>
+                    <td class="text-danger"><?php if ($users['status'] == "ยังไม่ได้ตรวจสอบ" ) {
+                        echo "ยังไม่ได้ตรวจสอบ";} 
+                            else if ($diagnosis['advice'] != "null" ) {
+                        echo "ตรวจแล้ว";}
+                            else {
+                        echo $diagnosis['advice'];}
+                        ?>
+                        
+                        </td>
                     <td>
                         <a href="<?php echo e(url('/medic_volunteer_sub/' . $item->id)); ?>"><button class="btn btn-info btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>ประเมินอาการ</button></a>
                         <a href="<?php echo e(url('/medic_volunteer/' . $item->id)); ?>"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>ข้อมูลอาสาสมัคร</button></a>
