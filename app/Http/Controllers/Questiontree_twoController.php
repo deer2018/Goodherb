@@ -51,7 +51,7 @@ class Questiontree_twoController extends Controller
         $Q = Questiontree_two::firstOrNew(array('user_id' => $user_id));
         $Q->fill($requestData)->save();
 
-        return redirect('volunteer_questionnaire')->with('flash_message', 'Questiontree_two added!');
+        return redirect('volunteer_question')->with('flash_message', 'Questiontree_two added!');
     }
 
     /**
