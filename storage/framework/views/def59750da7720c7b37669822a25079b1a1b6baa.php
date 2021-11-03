@@ -9,23 +9,23 @@
 <br>
     <div class="form-group <?php echo e($errors->has('ep3_1') ? 'has-error' : ''); ?>">
         <div class="radio">
-            <input name="ep3_1" type="radio" value="5" required <?php if(isset($Q)): ?> <?php echo e((5 == $Q->ep3_1) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+            <input name="ep3_1" type="radio" value="5" required <?php if(isset($Q->ep3_1)): ?> <?php echo e((5 == $Q->ep3_1) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ไม่เลย
         </div>
         <div class="radio">
-            <input name="ep3_1" type="radio" value="4" required <?php if(isset($Q)): ?> <?php echo e((4 == $Q->ep3_1) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+            <input name="ep3_1" type="radio" value="4" required <?php if(isset($Q->ep3_1)): ?> <?php echo e((4 == $Q->ep3_1) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 เล็กน้อย
         </div>
         <div class="radio">
-            <input name="ep3_1" type="radio" value="3" required <?php if(isset($Q)): ?> <?php echo e((3 == $Q->ep3_1) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+            <input name="ep3_1" type="radio" value="3" required <?php if(isset($Q->ep3_1)): ?> <?php echo e((3 == $Q->ep3_1) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ปานกลาง
         </div>
         <div class="radio">
-            <input name="ep3_1" type="radio" value="2" required <?php if(isset($Q)): ?> <?php echo e((2 == $Q->ep3_1) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+            <input name="ep3_1" type="radio" value="2" required <?php if(isset($Q->ep3_1)): ?> <?php echo e((2 == $Q->ep3_1) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มาก
         </div>
         <div class="radio">
-            <input name="ep3_1" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep3_1) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+            <input name="ep3_1" type="radio" value="1" required <?php if(isset($Q->ep3_1)): ?> <?php echo e((1 == $Q->ep3_1) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มากที่สุด
         </div>
             <?php echo $errors->first('ep3_1', '<p class="help-block">:message</p>'); ?>
@@ -40,25 +40,25 @@
     </div>
   </div>
 <br>
-    <div class="form-group <?php echo e($errors->has('ep3_1') ? 'has-error' : ''); ?>">
+    <div class="form-group <?php echo e($errors->has('ep3_2') ? 'has-error' : ''); ?>">
         <div class="radio">
-                <input name="ep3_2" type="radio" value="5" required <?php if(isset($Q)): ?> <?php echo e((5 == $Q->ep3_2) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_2" type="radio" value="5" required <?php if(isset($Q->ep3_2)): ?> <?php echo e((5 == $Q->ep3_2) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ไม่เลย
             </div>
         <div class="radio">
-                <input name="ep3_2" type="radio" value="4" required <?php if(isset($Q)): ?> <?php echo e((4 == $Q->ep3_2) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_2" type="radio" value="4" required <?php if(isset($Q->ep3_2)): ?> <?php echo e((4 == $Q->ep3_2) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 เล็กน้อย
             </div>
         <div class="radio">
-                <input name="ep3_2" type="radio" value="3" required <?php if(isset($Q)): ?> <?php echo e((3 == $Q->ep3_2) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_2" type="radio" value="3" required <?php if(isset($Q->ep3_2)): ?> <?php echo e((3 == $Q->ep3_2) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ปานกลาง
             </div>
         <div class="radio">
-                <input name="ep3_2" type="radio" value="2" required <?php if(isset($Q)): ?> <?php echo e((2 == $Q->ep3_2) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_2" type="radio" value="2" required <?php if(isset($Q->ep3_2)): ?> <?php echo e((2 == $Q->ep3_2) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มาก
             </div>
         <div class="radio">
-                <input name="ep3_2" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep3_2) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_2" type="radio" value="1" required <?php if(isset($Q->ep3_2)): ?> <?php echo e((1 == $Q->ep3_2) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มากที่สุด
             </div>
             <?php echo $errors->first('ep3_2', '<p class="help-block">:message</p>'); ?>
@@ -75,23 +75,23 @@
 <br>
     <div class="form-group <?php echo e($errors->has('ep3_3') ? 'has-error' : ''); ?>">
         <div class="radio">
-                <input name="ep3_3" type="radio" value="5" required <?php if(isset($Q)): ?> <?php echo e((5 == $Q->ep3_3) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_3" type="radio" value="5" required <?php if(isset($Q->ep3_3)): ?> <?php echo e((5 == $Q->ep3_3) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ไม่เลย
             </div>
         <div class="radio">
-                <input name="ep3_3" type="radio" value="4" required <?php if(isset($Q)): ?> <?php echo e((4 == $Q->ep3_3) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_3" type="radio" value="4" required <?php if(isset($Q->ep3_3)): ?> <?php echo e((4 == $Q->ep3_3) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 เล็กน้อย
             </div>
         <div class="radio">
-                <input name="ep3_3" type="radio" value="3" required <?php if(isset($Q)): ?> <?php echo e((3 == $Q->ep3_3) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_3" type="radio" value="3" required <?php if(isset($Q->ep3_3)): ?> <?php echo e((3 == $Q->ep3_3) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ปานกลาง
             </div>
         <div class="radio">
-                <input name="ep3_3" type="radio" value="2" required <?php if(isset($Q)): ?> <?php echo e((2 == $Q->ep3_3) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_3" type="radio" value="2" required <?php if(isset($Q->ep3_3)): ?> <?php echo e((2 == $Q->ep3_3) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มาก
             </div>
         <div class="radio">
-                <input name="ep3_3" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep3_3) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_3" type="radio" value="1" required <?php if(isset($Q->ep3_3)): ?> <?php echo e((1 == $Q->ep3_3) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มากที่สุด
             </div>
             <?php echo $errors->first('ep3_3', '<p class="help-block">:message</p>'); ?>
@@ -108,23 +108,23 @@
 <br>
     <div class="form-group <?php echo e($errors->has('ep3_4') ? 'has-error' : ''); ?>">
         <div class="radio">
-                <input name="ep3_4" type="radio" value="5" required <?php if(isset($Q)): ?> <?php echo e((5 == $Q->ep3_4) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_4" type="radio" value="5" required <?php if(isset($Q->ep3_4)): ?> <?php echo e((5 == $Q->ep3_4) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ไม่เลย
             </div>
         <div class="radio">
-                <input name="ep3_4" type="radio" value="4" required <?php if(isset($Q)): ?> <?php echo e((4 == $Q->ep3_4) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_4" type="radio" value="4" required <?php if(isset($Q->ep3_4)): ?> <?php echo e((4 == $Q->ep3_4) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 เล็กน้อย
             </div>
         <div class="radio">
-                <input name="ep3_4" type="radio" value="3" required <?php if(isset($Q)): ?> <?php echo e((3 == $Q->ep3_4) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_4" type="radio" value="3" required <?php if(isset($Q->ep3_4)): ?> <?php echo e((3 == $Q->ep3_4) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ปานกลาง
             </div>
         <div class="radio">
-                <input name="ep3_4" type="radio" value="2" required <?php if(isset($Q)): ?> <?php echo e((2 == $Q->ep3_4) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_4" type="radio" value="2" required <?php if(isset($Q->ep3_4)): ?> <?php echo e((2 == $Q->ep3_4) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มาก
             </div>
         <div class="radio">
-                <input name="ep3_4" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep3_4) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_4" type="radio" value="1" required <?php if(isset($Q->ep3_4)): ?> <?php echo e((1 == $Q->ep3_4) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มากที่สุด
             </div>
             <?php echo $errors->first('ep3_4', '<p class="help-block">:message</p>'); ?>
@@ -141,23 +141,23 @@
 <br>
     <div class="form-group <?php echo e($errors->has('ep3_5') ? 'has-error' : ''); ?>">
         <div class="radio">
-                <input name="ep3_5" type="radio" value="5" required <?php if(isset($Q)): ?> <?php echo e((5 == $Q->ep3_5) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_5" type="radio" value="5" required <?php if(isset($Q->ep3_5)): ?> <?php echo e((5 == $Q->ep3_5) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ไม่เลย
             </div>
         <div class="radio">
-                <input name="ep3_5" type="radio" value="4" required <?php if(isset($Q)): ?> <?php echo e((4 == $Q->ep3_5) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_5" type="radio" value="4" required <?php if(isset($Q->ep3_5)): ?> <?php echo e((4 == $Q->ep3_5) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 เล็กน้อย
             </div>
         <div class="radio">
-                <input name="ep3_5" type="radio" value="3" required <?php if(isset($Q)): ?> <?php echo e((3 == $Q->ep3_5) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_5" type="radio" value="3" required <?php if(isset($Q->ep3_5)): ?> <?php echo e((3 == $Q->ep3_5) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ปานกลาง
             </div>
         <div class="radio">
-                <input name="ep3_5" type="radio" value="2" required <?php if(isset($Q)): ?> <?php echo e((2 == $Q->ep3_5) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_5" type="radio" value="2" required <?php if(isset($Q->ep3_5)): ?> <?php echo e((2 == $Q->ep3_5) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มาก
             </div>
         <div class="radio">
-                <input name="ep3_5" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep3_5) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_5" type="radio" value="1" required <?php if(isset($Q->ep3_5)): ?> <?php echo e((1 == $Q->ep3_5) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มากที่สุด
             </div>
             <?php echo $errors->first('ep3_5', '<p class="help-block">:message</p>'); ?>
@@ -174,23 +174,23 @@
 <br>
     <div class="form-group <?php echo e($errors->has('ep3_6') ? 'has-error' : ''); ?>">
         <div class="radio">
-                <input name="ep3_6" type="radio" value="5" required <?php if(isset($Q)): ?> <?php echo e((5 == $Q->ep3_6) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_6" type="radio" value="5" required <?php if(isset($Q->ep3_6)): ?> <?php echo e((5 == $Q->ep3_6) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ไม่เลย
             </div>
         <div class="radio">
-                <input name="ep3_6" type="radio" value="4" required <?php if(isset($Q)): ?> <?php echo e((4 == $Q->ep3_6) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_6" type="radio" value="4" required <?php if(isset($Q->ep3_6)): ?> <?php echo e((4 == $Q->ep3_6) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 เล็กน้อย
             </div>
         <div class="radio">
-                <input name="ep3_6" type="radio" value="3" required <?php if(isset($Q)): ?> <?php echo e((3 == $Q->ep3_6) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_6" type="radio" value="3" required <?php if(isset($Q->ep3_6)): ?> <?php echo e((3 == $Q->ep3_6) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ปานกลาง
             </div>
         <div class="radio">
-                <input name="ep3_6" type="radio" value="2" required <?php if(isset($Q)): ?> <?php echo e((2 == $Q->ep3_6) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_6" type="radio" value="2" required <?php if(isset($Q->ep3_6)): ?> <?php echo e((2 == $Q->ep3_6) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มาก
             </div>
         <div class="radio">
-                <input name="ep3_6" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep3_6) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_6" type="radio" value="1" required <?php if(isset($Q->ep3_6)): ?> <?php echo e((1 == $Q->ep3_6) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มากที่สุด
             </div>
             <?php echo $errors->first('ep3_6', '<p class="help-block">:message</p>'); ?>
@@ -207,23 +207,23 @@
 <br>
     <div class="form-group <?php echo e($errors->has('ep3_7') ? 'has-error' : ''); ?>">
         <div class="radio">
-                <input name="ep3_7" type="radio" value="5" required <?php if(isset($Q)): ?> <?php echo e((5 == $Q->ep3_7) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_7" type="radio" value="5" required <?php if(isset($Q->ep3_7)): ?> <?php echo e((5 == $Q->ep3_7) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ไม่เลย
             </div>
         <div class="radio">
-                <input name="ep3_7" type="radio" value="4" required <?php if(isset($Q)): ?> <?php echo e((4 == $Q->ep3_7) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_7" type="radio" value="4" required <?php if(isset($Q->ep3_7)): ?> <?php echo e((4 == $Q->ep3_7) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 เล็กน้อย
             </div>
         <div class="radio">
-                <input name="ep3_7" type="radio" value="3" required <?php if(isset($Q)): ?> <?php echo e((3 == $Q->ep3_7) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_7" type="radio" value="3" required <?php if(isset($Q->ep3_7)): ?> <?php echo e((3 == $Q->ep3_7) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ปานกลาง
             </div>
         <div class="radio">
-                <input name="ep3_7" type="radio" value="2" required <?php if(isset($Q)): ?> <?php echo e((2 == $Q->ep3_7) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_7" type="radio" value="2" required <?php if(isset($Q->ep3_7)): ?> <?php echo e((2 == $Q->ep3_7) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มาก
             </div>
         <div class="radio">
-                <input name="ep3_7" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep3_7) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_7" type="radio" value="1" required <?php if(isset($Q->ep3_7)): ?> <?php echo e((1 == $Q->ep3_7) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มากที่สุด
             </div>
             <?php echo $errors->first('ep3_7', '<p class="help-block">:message</p>'); ?>
@@ -240,23 +240,23 @@
 <br>
     <div class="form-group <?php echo e($errors->has('ep3_8') ? 'has-error' : ''); ?>">
         <div class="radio">
-                <input name="ep3_8" type="radio" value="5" required <?php if(isset($Q)): ?> <?php echo e((5 == $Q->ep3_8) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_8" type="radio" value="5" required <?php if(isset($Q->ep3_8)): ?> <?php echo e((5 == $Q->ep3_8) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ไม่เลย
             </div>
         <div class="radio">
-                <input name="ep3_8" type="radio" value="4" required <?php if(isset($Q)): ?> <?php echo e((4 == $Q->ep3_8) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_8" type="radio" value="4" required <?php if(isset($Q->ep3_8)): ?> <?php echo e((4 == $Q->ep3_8) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 เล็กน้อย
             </div>
         <div class="radio">
-                <input name="ep3_8" type="radio" value="3" required <?php if(isset($Q)): ?> <?php echo e((3 == $Q->ep3_8) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_8" type="radio" value="3" required <?php if(isset($Q->ep3_8)): ?> <?php echo e((3 == $Q->ep3_8) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ปานกลาง
             </div>
         <div class="radio">
-                <input name="ep3_8" type="radio" value="2" required <?php if(isset($Q)): ?> <?php echo e((2 == $Q->ep3_8) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_8" type="radio" value="2" required <?php if(isset($Q->ep3_8)): ?> <?php echo e((2 == $Q->ep3_8) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มาก
             </div>
         <div class="radio">
-                <input name="ep3_8" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep3_8) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_8" type="radio" value="1" required <?php if(isset($Q->ep3_8)): ?> <?php echo e((1 == $Q->ep3_8) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มากที่สุด
             </div>
             <?php echo $errors->first('ep3_8', '<p class="help-block">:message</p>'); ?>
@@ -273,23 +273,23 @@
 <br>
     <div class="form-group <?php echo e($errors->has('ep3_9') ? 'has-error' : ''); ?>">
         <div class="radio">
-                <input name="ep3_9" type="radio" value="5" required <?php if(isset($Q)): ?> <?php echo e((5 == $Q->ep3_9) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_9" type="radio" value="5" required <?php if(isset($Q->ep3_9)): ?> <?php echo e((5 == $Q->ep3_9) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ไม่เลย
             </div>
         <div class="radio">
-                <input name="ep3_9" type="radio" value="4" required <?php if(isset($Q)): ?> <?php echo e((4 == $Q->ep3_9) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_9" type="radio" value="4" required <?php if(isset($Q->ep3_9)): ?> <?php echo e((4 == $Q->ep3_9) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 เล็กน้อย
             </div>
         <div class="radio">
-                <input name="ep3_9" type="radio" value="3" required <?php if(isset($Q)): ?> <?php echo e((3 == $Q->ep3_9) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_9" type="radio" value="3" required <?php if(isset($Q->ep3_9)): ?> <?php echo e((3 == $Q->ep3_9) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ปานกลาง
             </div>
         <div class="radio">
-                <input name="ep3_9" type="radio" value="2" required <?php if(isset($Q)): ?> <?php echo e((2 == $Q->ep3_9) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_9" type="radio" value="2" required <?php if(isset($Q->ep3_9)): ?> <?php echo e((2 == $Q->ep3_9) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มาก
             </div>
         <div class="radio">
-                <input name="ep3_9" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep3_9) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_9" type="radio" value="1" required <?php if(isset($Q->ep3_9)): ?> <?php echo e((1 == $Q->ep3_9) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มากที่สุด
             </div>
             <?php echo $errors->first('ep3_9', '<p class="help-block">:message</p>'); ?>
@@ -306,23 +306,23 @@
 <br>
     <div class="form-group <?php echo e($errors->has('ep3_10') ? 'has-error' : ''); ?>">
         <div class="radio">
-                <input name="ep3_10" type="radio" value="5" required <?php if(isset($Q)): ?> <?php echo e((5 == $Q->ep3_10) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_10" type="radio" value="5" required <?php if(isset($Q->ep3_10)): ?> <?php echo e((5 == $Q->ep3_10) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ไม่เลย
             </div>
         <div class="radio">
-                <input name="ep3_10" type="radio" value="4" required <?php if(isset($Q)): ?> <?php echo e((4 == $Q->ep3_10) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_10" type="radio" value="4" required <?php if(isset($Q->ep3_10)): ?> <?php echo e((4 == $Q->ep3_10) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 เล็กน้อย
             </div>
         <div class="radio">
-                <input name="ep3_10" type="radio" value="3" required <?php if(isset($Q)): ?> <?php echo e((3 == $Q->ep3_10) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_10" type="radio" value="3" required <?php if(isset($Q->ep3_10)): ?> <?php echo e((3 == $Q->ep3_10) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ปานกลาง
             </div>
         <div class="radio">
-                <input name="ep3_10" type="radio" value="2" required <?php if(isset($Q)): ?> <?php echo e((2 == $Q->ep3_10) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_10" type="radio" value="2" required <?php if(isset($Q->ep3_10)): ?> <?php echo e((2 == $Q->ep3_10) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มาก
             </div>
         <div class="radio">
-                <input name="ep3_10" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep3_10) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_10" type="radio" value="1" required <?php if(isset($Q->ep3_10)): ?> <?php echo e((1 == $Q->ep3_10) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มากที่สุด
             </div>
             <?php echo $errors->first('ep3_10', '<p class="help-block">:message</p>'); ?>
@@ -339,23 +339,23 @@
 <br>
     <div class="form-group <?php echo e($errors->has('ep3_11') ? 'has-error' : ''); ?>">
         <div class="radio">
-                <input name="ep3_11" type="radio" value="5" required <?php if(isset($Q)): ?> <?php echo e((5 == $Q->ep3_11) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_11" type="radio" value="5" required <?php if(isset($Q->ep3_11)): ?> <?php echo e((5 == $Q->ep3_11) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ไม่เลย
             </div>
         <div class="radio">
-                <input name="ep3_11" type="radio" value="4" required <?php if(isset($Q)): ?> <?php echo e((4 == $Q->ep3_11) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_11" type="radio" value="4" required <?php if(isset($Q->ep3_11)): ?> <?php echo e((4 == $Q->ep3_11) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 เล็กน้อย
             </div>
         <div class="radio">
-                <input name="ep3_11" type="radio" value="3" required <?php if(isset($Q)): ?> <?php echo e((3 == $Q->ep3_11) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_11" type="radio" value="3" required <?php if(isset($Q->ep3_11)): ?> <?php echo e((3 == $Q->ep3_11) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ปานกลาง
             </div>
         <div class="radio">
-                <input name="ep3_11" type="radio" value="2" required <?php if(isset($Q)): ?> <?php echo e((2 == $Q->ep3_11) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_11" type="radio" value="2" required <?php if(isset($Q->ep3_11)): ?> <?php echo e((2 == $Q->ep3_11) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มาก
             </div>
         <div class="radio">
-                <input name="ep3_11" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep3_11) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_11" type="radio" value="1" required <?php if(isset($Q->ep3_11)): ?> <?php echo e((1 == $Q->ep3_11) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มากที่สุด
             </div>
             <?php echo $errors->first('ep3_11', '<p class="help-block">:message</p>'); ?>
@@ -372,23 +372,23 @@
 <br>
     <div class="form-group <?php echo e($errors->has('ep3_12') ? 'has-error' : ''); ?>">
         <div class="radio">
-                <input name="ep3_12" type="radio" value="5" required <?php if(isset($Q)): ?> <?php echo e((5 == $Q->ep3_12) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_12" type="radio" value="5" required <?php if(isset($Q->ep3_12)): ?> <?php echo e((5 == $Q->ep3_12) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ไม่เลย
             </div>
         <div class="radio">
-                <input name="ep3_12" type="radio" value="4" required <?php if(isset($Q)): ?> <?php echo e((4 == $Q->ep3_12) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_12" type="radio" value="4" required <?php if(isset($Q->ep3_12)): ?> <?php echo e((4 == $Q->ep3_12) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 เล็กน้อย
             </div>
         <div class="radio">
-                <input name="ep3_12" type="radio" value="3" required <?php if(isset($Q)): ?> <?php echo e((3 == $Q->ep3_12) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_12" type="radio" value="3" required <?php if(isset($Q->ep3_12)): ?> <?php echo e((3 == $Q->ep3_12) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ปานกลาง
             </div>
         <div class="radio">
-                <input name="ep3_12" type="radio" value="2" required <?php if(isset($Q)): ?> <?php echo e((2 == $Q->ep3_12) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_12" type="radio" value="2" required <?php if(isset($Q->ep3_12)): ?> <?php echo e((2 == $Q->ep3_12) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มาก
             </div>
         <div class="radio">
-                <input name="ep3_12" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep3_12) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_12" type="radio" value="1" required <?php if(isset($Q->ep3_12)): ?> <?php echo e((1 == $Q->ep3_12) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มากที่สุด
             </div>
             <?php echo $errors->first('ep3_12', '<p class="help-block">:message</p>'); ?>
@@ -405,23 +405,23 @@
 <br>
     <div class="form-group <?php echo e($errors->has('ep3_13') ? 'has-error' : ''); ?>">
         <div class="radio">
-                <input name="ep3_13" type="radio" value="5" required <?php if(isset($Q)): ?> <?php echo e((5 == $Q->ep3_13) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_13" type="radio" value="5" required <?php if(isset($Q->ep3_13)): ?> <?php echo e((5 == $Q->ep3_13) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ไม่เลย
             </div>
         <div class="radio">
-                <input name="ep3_13" type="radio" value="4" required <?php if(isset($Q)): ?> <?php echo e((4 == $Q->ep3_13) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_13" type="radio" value="4" required <?php if(isset($Q->ep3_13)): ?> <?php echo e((4 == $Q->ep3_13) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 เล็กน้อย
             </div>
         <div class="radio">
-                <input name="ep3_13" type="radio" value="3" required <?php if(isset($Q)): ?> <?php echo e((3 == $Q->ep3_13) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_13" type="radio" value="3" required <?php if(isset($Q->ep3_13)): ?> <?php echo e((3 == $Q->ep3_13) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ปานกลาง
             </div>
         <div class="radio">
-                <input name="ep3_13" type="radio" value="2" required <?php if(isset($Q)): ?> <?php echo e((2 == $Q->ep3_13) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_13" type="radio" value="2" required <?php if(isset($Q->ep3_13)): ?> <?php echo e((2 == $Q->ep3_13) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มาก
             </div>
         <div class="radio">
-                <input name="ep3_13" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep3_13) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_13" type="radio" value="1" required <?php if(isset($Q->ep3_13)): ?> <?php echo e((1 == $Q->ep3_13) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มากที่สุด
             </div>
             <?php echo $errors->first('ep3_13', '<p class="help-block">:message</p>'); ?>
@@ -438,23 +438,23 @@
 <br>
     <div class="form-group <?php echo e($errors->has('ep3_14') ? 'has-error' : ''); ?>">
         <div class="radio">
-                <input name="ep3_14" type="radio" value="5" required <?php if(isset($Q)): ?> <?php echo e((5 == $Q->ep3_14) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_14" type="radio" value="5" required <?php if(isset($Q->ep3_14)): ?> <?php echo e((5 == $Q->ep3_14) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ไม่เลย
             </div>
         <div class="radio">
-                <input name="ep3_14" type="radio" value="4" required <?php if(isset($Q)): ?> <?php echo e((4 == $Q->ep3_14) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_14" type="radio" value="4" required <?php if(isset($Q->ep3_14)): ?> <?php echo e((4 == $Q->ep3_14) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 เล็กน้อย
             </div>
         <div class="radio">
-                <input name="ep3_14" type="radio" value="3" required <?php if(isset($Q)): ?> <?php echo e((3 == $Q->ep3_14) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_14" type="radio" value="3" required <?php if(isset($Q->ep3_14)): ?> <?php echo e((3 == $Q->ep3_14) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ปานกลาง
             </div>
         <div class="radio">
-                <input name="ep3_14" type="radio" value="2" required <?php if(isset($Q)): ?> <?php echo e((2 == $Q->ep3_14) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_14" type="radio" value="2" required <?php if(isset($Q->ep3_14)): ?> <?php echo e((2 == $Q->ep3_14) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มาก
             </div>
         <div class="radio">
-                <input name="ep3_14" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep3_14) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_14" type="radio" value="1" required <?php if(isset($Q->ep3_14)): ?> <?php echo e((1 == $Q->ep3_14) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มากที่สุด
             </div>
             <?php echo $errors->first('ep3_14', '<p class="help-block">:message</p>'); ?>
@@ -471,23 +471,23 @@
 <br>
     <div class="form-group <?php echo e($errors->has('ep3_15') ? 'has-error' : ''); ?>">
         <div class="radio">
-                <input name="ep3_15" type="radio" value="5" required <?php if(isset($Q)): ?> <?php echo e((5 == $Q->ep3_15) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_15" type="radio" value="5" required <?php if(isset($Q->ep3_15)): ?> <?php echo e((5 == $Q->ep3_15) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ไม่เลย
             </div>
         <div class="radio">
-                <input name="ep3_15" type="radio" value="4" required <?php if(isset($Q)): ?> <?php echo e((4 == $Q->ep3_15) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_15" type="radio" value="4" required <?php if(isset($Q->ep3_15)): ?> <?php echo e((4 == $Q->ep3_15) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 เล็กน้อย
             </div>
         <div class="radio">
-                <input name="ep3_15" type="radio" value="3" required <?php if(isset($Q)): ?> <?php echo e((3 == $Q->ep3_15) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_15" type="radio" value="3" required <?php if(isset($Q->ep3_15)): ?> <?php echo e((3 == $Q->ep3_15) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ปานกลาง
             </div>
         <div class="radio">
-                <input name="ep3_15" type="radio" value="2" required <?php if(isset($Q)): ?> <?php echo e((2 == $Q->ep3_15) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_15" type="radio" value="2" required <?php if(isset($Q->ep3_15)): ?> <?php echo e((2 == $Q->ep3_15) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มาก
             </div>
         <div class="radio">
-                <input name="ep3_15" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep3_15) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_15" type="radio" value="1" required <?php if(isset($Q->ep3_15)): ?> <?php echo e((1 == $Q->ep3_15) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มากที่สุด
             </div>
             <?php echo $errors->first('ep3_15', '<p class="help-block">:message</p>'); ?>
@@ -504,23 +504,23 @@
 <br>
     <div class="form-group <?php echo e($errors->has('ep3_16') ? 'has-error' : ''); ?>">
         <div class="radio">
-                <input name="ep3_16" type="radio" value="5" required <?php if(isset($Q)): ?> <?php echo e((5 == $Q->ep3_16) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_16" type="radio" value="5" required <?php if(isset($Q->ep3_16)): ?> <?php echo e((5 == $Q->ep3_16) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ไม่เลย
             </div>
         <div class="radio">
-                <input name="ep3_16" type="radio" value="4" required <?php if(isset($Q)): ?> <?php echo e((4 == $Q->ep3_16) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_16" type="radio" value="4" required <?php if(isset($Q->ep3_16)): ?> <?php echo e((4 == $Q->ep3_16) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 เล็กน้อย
             </div>
         <div class="radio">
-                <input name="ep3_16" type="radio" value="3" required <?php if(isset($Q)): ?> <?php echo e((3 == $Q->ep3_16) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_16" type="radio" value="3" required <?php if(isset($Q->ep3_16)): ?> <?php echo e((3 == $Q->ep3_16) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ปานกลาง
             </div>
         <div class="radio">
-                <input name="ep3_16" type="radio" value="2" required <?php if(isset($Q)): ?> <?php echo e((2 == $Q->ep3_16) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_16" type="radio" value="2" required <?php if(isset($Q->ep3_16)): ?> <?php echo e((2 == $Q->ep3_16) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มาก
             </div>
         <div class="radio">
-                <input name="ep3_16" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep3_16) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_16" type="radio" value="1" required <?php if(isset($Q->ep3_16)): ?> <?php echo e((1 == $Q->ep3_16) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มากที่สุด
             </div>
             <?php echo $errors->first('ep3_16', '<p class="help-block">:message</p>'); ?>
@@ -537,23 +537,23 @@
 <br>
     <div class="form-group <?php echo e($errors->has('ep3_17') ? 'has-error' : ''); ?>">
         <div class="radio">
-                <input name="ep3_17" type="radio" value="5" required <?php if(isset($Q)): ?> <?php echo e((5 == $Q->ep3_17) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_17" type="radio" value="5" required <?php if(isset($Q->ep3_17)): ?> <?php echo e((5 == $Q->ep3_17) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ไม่เลย
             </div>
         <div class="radio">
-                <input name="ep3_17" type="radio" value="4" required <?php if(isset($Q)): ?> <?php echo e((4 == $Q->ep3_17) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_17" type="radio" value="4" required <?php if(isset($Q->ep3_17)): ?> <?php echo e((4 == $Q->ep3_17) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 เล็กน้อย
             </div>
         <div class="radio">
-                <input name="ep3_17" type="radio" value="3" required <?php if(isset($Q)): ?> <?php echo e((3 == $Q->ep3_17) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_17" type="radio" value="3" required <?php if(isset($Q->ep3_17)): ?> <?php echo e((3 == $Q->ep3_17) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ปานกลาง
             </div>
         <div class="radio">
-                <input name="ep3_17" type="radio" value="2" required <?php if(isset($Q)): ?> <?php echo e((2 == $Q->ep3_17) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_17" type="radio" value="2" required <?php if(isset($Q->ep3_17)): ?> <?php echo e((2 == $Q->ep3_17) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มาก
             </div>
         <div class="radio">
-                <input name="ep3_17" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep3_17) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_17" type="radio" value="1" required <?php if(isset($Q->ep3_17)): ?> <?php echo e((1 == $Q->ep3_17) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มากที่สุด
             </div>
             <?php echo $errors->first('ep3_17', '<p class="help-block">:message</p>'); ?>
@@ -570,23 +570,23 @@
 <br>
     <div class="form-group <?php echo e($errors->has('ep3_18') ? 'has-error' : ''); ?>">
         <div class="radio">
-                <input name="ep3_18" type="radio" value="5" required <?php if(isset($Q)): ?> <?php echo e((5 == $Q->ep3_18) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_18" type="radio" value="5" required <?php if(isset($Q->ep3_18)): ?> <?php echo e((5 == $Q->ep3_18) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ไม่เลย
             </div>
         <div class="radio">
-                <input name="ep3_18" type="radio" value="4" required <?php if(isset($Q)): ?> <?php echo e((4 == $Q->ep3_18) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_18" type="radio" value="4" required <?php if(isset($Q->ep3_18)): ?> <?php echo e((4 == $Q->ep3_18) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 เล็กน้อย
             </div>
         <div class="radio">
-                <input name="ep3_18" type="radio" value="3" required <?php if(isset($Q)): ?> <?php echo e((3 == $Q->ep3_18) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_18" type="radio" value="3" required <?php if(isset($Q->ep3_18)): ?> <?php echo e((3 == $Q->ep3_18) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ปานกลาง
             </div>
         <div class="radio">
-                <input name="ep3_18" type="radio" value="2" required <?php if(isset($Q)): ?> <?php echo e((2 == $Q->ep3_18) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_18" type="radio" value="2" required <?php if(isset($Q->ep3_18)): ?> <?php echo e((2 == $Q->ep3_18) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มาก
             </div>
         <div class="radio">
-                <input name="ep3_18" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep3_18) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_18" type="radio" value="1" required <?php if(isset($Q->ep3_18)): ?> <?php echo e((1 == $Q->ep3_18) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มากที่สุด
             </div>
             <?php echo $errors->first('ep3_18', '<p class="help-block">:message</p>'); ?>
@@ -603,23 +603,23 @@
 <br>
     <div class="form-group <?php echo e($errors->has('ep3_19') ? 'has-error' : ''); ?>">
         <div class="radio">
-                <input name="ep3_19" type="radio" value="5" required <?php if(isset($Q)): ?> <?php echo e((5 == $Q->ep3_19) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_19" type="radio" value="5" required <?php if(isset($Q->ep3_19)): ?> <?php echo e((5 == $Q->ep3_19) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ไม่เลย
             </div>
         <div class="radio">
-                <input name="ep3_19" type="radio" value="4" required <?php if(isset($Q)): ?> <?php echo e((4 == $Q->ep3_19) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_19" type="radio" value="4" required <?php if(isset($Q->ep3_19)): ?> <?php echo e((4 == $Q->ep3_19) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 เล็กน้อย
             </div>
         <div class="radio">
-                <input name="ep3_19" type="radio" value="3" required <?php if(isset($Q)): ?> <?php echo e((3 == $Q->ep3_19) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_19" type="radio" value="3" required <?php if(isset($Q->ep3_19)): ?> <?php echo e((3 == $Q->ep3_19) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ปานกลาง
             </div>
         <div class="radio">
-                <input name="ep3_19" type="radio" value="2" required <?php if(isset($Q)): ?> <?php echo e((2 == $Q->ep3_19) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_19" type="radio" value="2" required <?php if(isset($Q->ep3_19)): ?> <?php echo e((2 == $Q->ep3_19) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มาก
             </div>
         <div class="radio">
-                <input name="ep3_19" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep3_19) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_19" type="radio" value="1" required <?php if(isset($Q->ep3_19)): ?> <?php echo e((1 == $Q->ep3_19) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มากที่สุด
             </div>
             <?php echo $errors->first('ep3_19', '<p class="help-block">:message</p>'); ?>
@@ -636,23 +636,23 @@
 <br>
     <div class="form-group <?php echo e($errors->has('ep3_20') ? 'has-error' : ''); ?>">
         <div class="radio">
-                <input name="ep3_20" type="radio" value="5" required <?php if(isset($Q)): ?> <?php echo e((5 == $Q->ep3_20) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_20" type="radio" value="5" required <?php if(isset($Q->ep3_20)): ?> <?php echo e((5 == $Q->ep3_20) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ไม่เลย
             </div>
         <div class="radio">
-                <input name="ep3_20" type="radio" value="4" required <?php if(isset($Q)): ?> <?php echo e((4 == $Q->ep3_20) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_20" type="radio" value="4" required <?php if(isset($Q->ep3_20)): ?> <?php echo e((4 == $Q->ep3_20) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 เล็กน้อย
             </div>
         <div class="radio">
-                <input name="ep3_20" type="radio" value="3" required <?php if(isset($Q)): ?> <?php echo e((3 == $Q->ep3_20) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_20" type="radio" value="3" required <?php if(isset($Q->ep3_20)): ?> <?php echo e((3 == $Q->ep3_20) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ปานกลาง
             </div>
         <div class="radio">
-                <input name="ep3_20" type="radio" value="2" required <?php if(isset($Q)): ?> <?php echo e((2 == $Q->ep3_20) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_20" type="radio" value="2" required <?php if(isset($Q->ep3_20)): ?> <?php echo e((2 == $Q->ep3_20) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มาก
             </div>
         <div class="radio">
-                <input name="ep3_20" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep3_20) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_20" type="radio" value="1" required <?php if(isset($Q->ep3_20)): ?> <?php echo e((1 == $Q->ep3_20) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มากที่สุด
             </div>
             <?php echo $errors->first('ep3_20', '<p class="help-block">:message</p>'); ?>
@@ -669,23 +669,23 @@
 <br>
     <div class="form-group <?php echo e($errors->has('ep3_21') ? 'has-error' : ''); ?>">
         <div class="radio">
-                <input name="ep3_21" type="radio" value="5" required <?php if(isset($Q)): ?> <?php echo e((5 == $Q->ep3_21) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_21" type="radio" value="5" required <?php if(isset($Q->ep3_21)): ?> <?php echo e((5 == $Q->ep3_21) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ไม่เลย
             </div>
         <div class="radio">
-                <input name="ep3_21" type="radio" value="4" required <?php if(isset($Q)): ?> <?php echo e((4 == $Q->ep3_21) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_21" type="radio" value="4" required <?php if(isset($Q->ep3_21)): ?> <?php echo e((4 == $Q->ep3_21) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 เล็กน้อย
             </div>
         <div class="radio">
-                <input name="ep3_21" type="radio" value="3" required <?php if(isset($Q)): ?> <?php echo e((3 == $Q->ep3_21) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_21" type="radio" value="3" required <?php if(isset($Q->ep3_21)): ?> <?php echo e((3 == $Q->ep3_21) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ปานกลาง
             </div>
         <div class="radio">
-                <input name="ep3_21" type="radio" value="2" required <?php if(isset($Q)): ?> <?php echo e((2 == $Q->ep3_21) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_21" type="radio" value="2" required <?php if(isset($Q->ep3_21)): ?> <?php echo e((2 == $Q->ep3_21) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มาก
             </div>
         <div class="radio">
-                <input name="ep3_21" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep3_21) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_21" type="radio" value="1" required <?php if(isset($Q->ep3_21)): ?> <?php echo e((1 == $Q->ep3_21) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มากที่สุด
             </div>
             <?php echo $errors->first('ep3_21', '<p class="help-block">:message</p>'); ?>
@@ -702,23 +702,23 @@
 <br>
     <div class="form-group <?php echo e($errors->has('ep3_22') ? 'has-error' : ''); ?>">
         <div class="radio">
-                <input name="ep3_22" type="radio" value="5" required <?php if(isset($Q)): ?> <?php echo e((5 == $Q->ep3_22) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_22" type="radio" value="5" required <?php if(isset($Q->ep3_22)): ?> <?php echo e((5 == $Q->ep3_22) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ไม่เลย
             </div>
         <div class="radio">
-                <input name="ep3_22" type="radio" value="4" required <?php if(isset($Q)): ?> <?php echo e((4 == $Q->ep3_22) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_22" type="radio" value="4" required <?php if(isset($Q->ep3_22)): ?> <?php echo e((5 == $Q->ep3_22) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 เล็กน้อย
             </div>
         <div class="radio">
-                <input name="ep3_22" type="radio" value="3" required <?php if(isset($Q)): ?> <?php echo e((3 == $Q->ep3_22) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_22" type="radio" value="3" required <?php if(isset($Q->ep3_22)): ?> <?php echo e((5 == $Q->ep3_22) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ปานกลาง
             </div>
         <div class="radio">
-                <input name="ep3_22" type="radio" value="2" required <?php if(isset($Q)): ?> <?php echo e((2 == $Q->ep3_22) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_22" type="radio" value="2" required <?php if(isset($Q->ep3_22)): ?> <?php echo e((5 == $Q->ep3_22) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มาก
             </div>
         <div class="radio">
-                <input name="ep3_22" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep3_22) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_22" type="radio" value="1" required <?php if(isset($Q->ep3_22)): ?> <?php echo e((5 == $Q->ep3_22) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มากที่สุด
             </div>
             <?php echo $errors->first('ep3_22', '<p class="help-block">:message</p>'); ?>
@@ -735,23 +735,23 @@
 <br>
     <div class="form-group <?php echo e($errors->has('ep3_23') ? 'has-error' : ''); ?>">
         <div class="radio">
-                <input name="ep3_23" type="radio" value="5" required <?php if(isset($Q)): ?> <?php echo e((5 == $Q->ep3_23) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_23" type="radio" value="5" required <?php if(isset($Q->ep3_23)): ?> <?php echo e((5 == $Q->ep3_23) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ไม่เลย
             </div>
         <div class="radio">
-                <input name="ep3_23" type="radio" value="4" required <?php if(isset($Q)): ?> <?php echo e((4 == $Q->ep3_23) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_23" type="radio" value="4" required <?php if(isset($Q->ep3_23)): ?> <?php echo e((4 == $Q->ep3_23) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 เล็กน้อย
             </div>
         <div class="radio">
-                <input name="ep3_23" type="radio" value="3" required <?php if(isset($Q)): ?> <?php echo e((3 == $Q->ep3_23) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_23" type="radio" value="3" required <?php if(isset($Q->ep3_23)): ?> <?php echo e((3 == $Q->ep3_23) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ปานกลาง
             </div>
         <div class="radio">
-                <input name="ep3_23" type="radio" value="2" required <?php if(isset($Q)): ?> <?php echo e((2 == $Q->ep3_23) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_23" type="radio" value="2" required <?php if(isset($Q->ep3_23)): ?> <?php echo e((2 == $Q->ep3_23) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มาก
             </div>
         <div class="radio">
-                <input name="ep3_23" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep3_23) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_23" type="radio" value="1" required <?php if(isset($Q->ep3_23)): ?> <?php echo e((1 == $Q->ep3_23) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มากที่สุด
             </div>
             <?php echo $errors->first('ep3_23', '<p class="help-block">:message</p>'); ?>
@@ -768,23 +768,23 @@
 <br>
     <div class="form-group <?php echo e($errors->has('ep3_24') ? 'has-error' : ''); ?>">
         <div class="radio">
-                <input name="ep3_24" type="radio" value="5" required <?php if(isset($Q)): ?> <?php echo e((5 == $Q->ep3_24) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_24" type="radio" value="5" required <?php if(isset($Q->ep3_24)): ?> <?php echo e((5 == $Q->ep3_24) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ไม่เลย
             </div>
         <div class="radio">
-                <input name="ep3_24" type="radio" value="4" required <?php if(isset($Q)): ?> <?php echo e((4 == $Q->ep3_24) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_24" type="radio" value="4" required <?php if(isset($Q->ep3_24)): ?> <?php echo e((4 == $Q->ep3_24) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 เล็กน้อย
             </div>
         <div class="radio">
-                <input name="ep3_24" type="radio" value="3" required <?php if(isset($Q)): ?> <?php echo e((3 == $Q->ep3_24) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_24" type="radio" value="3" required <?php if(isset($Q->ep3_24)): ?> <?php echo e((3 == $Q->ep3_24) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ปานกลาง
             </div>
         <div class="radio">
-                <input name="ep3_24" type="radio" value="2" required <?php if(isset($Q)): ?> <?php echo e((2 == $Q->ep3_24) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_24" type="radio" value="2" required <?php if(isset($Q->ep3_24)): ?> <?php echo e((2 == $Q->ep3_24) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มาก
             </div>
         <div class="radio">
-                <input name="ep3_24" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep3_24) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_24" type="radio" value="1" required <?php if(isset($Q->ep3_24)): ?> <?php echo e((1 == $Q->ep3_24) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มากที่สุด
             </div>
             <?php echo $errors->first('ep3_24', '<p class="help-block">:message</p>'); ?>
@@ -801,23 +801,23 @@
 <br>
     <div class="form-group <?php echo e($errors->has('ep3_25') ? 'has-error' : ''); ?>">
         <div class="radio">
-                <input name="ep3_25" type="radio" value="5" required <?php if(isset($Q)): ?> <?php echo e((5 == $Q->ep3_25) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_25" type="radio" value="5" required <?php if(isset($Q->ep3_25)): ?> <?php echo e((5 == $Q->ep3_25) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ไม่เลย
             </div>
         <div class="radio">
-                <input name="ep3_25" type="radio" value="4" required <?php if(isset($Q)): ?> <?php echo e((4 == $Q->ep3_25) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_25" type="radio" value="4" required <?php if(isset($Q->ep3_25)): ?> <?php echo e((4 == $Q->ep3_25) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 เล็กน้อย
             </div>
         <div class="radio">
-                <input name="ep3_25" type="radio" value="3" required <?php if(isset($Q)): ?> <?php echo e((3 == $Q->ep3_25) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_25" type="radio" value="3" required <?php if(isset($Q->ep3_25)): ?> <?php echo e((3 == $Q->ep3_25) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ปานกลาง
             </div>
         <div class="radio">
-                <input name="ep3_25" type="radio" value="2" required <?php if(isset($Q)): ?> <?php echo e((2 == $Q->ep3_25) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_25" type="radio" value="2" required <?php if(isset($Q->ep3_25)): ?> <?php echo e((2 == $Q->ep3_25) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มาก
             </div>
         <div class="radio">
-                <input name="ep3_25" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep3_25) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_25" type="radio" value="1" required <?php if(isset($Q->ep3_25)): ?> <?php echo e((1 == $Q->ep3_25) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มากที่สุด
             </div>
             <?php echo $errors->first('ep3_25', '<p class="help-block">:message</p>'); ?>
@@ -834,23 +834,23 @@
 <br>
     <div class="form-group <?php echo e($errors->has('ep3_26') ? 'has-error' : ''); ?>">
         <div class="radio">
-                <input name="ep3_26" type="radio" value="5" required <?php if(isset($Q)): ?> <?php echo e((5 == $Q->ep3_26) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_26" type="radio" value="5" required <?php if(isset($Q->ep3_26)): ?> <?php echo e((5 == $Q->ep3_26) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ไม่เลย
             </div>
         <div class="radio">
-                <input name="ep3_26" type="radio" value="4" required <?php if(isset($Q)): ?> <?php echo e((4 == $Q->ep3_26) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_26" type="radio" value="4" required <?php if(isset($Q->ep3_26)): ?> <?php echo e((4 == $Q->ep3_26) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 เล็กน้อย
             </div>
         <div class="radio">
-                <input name="ep3_26" type="radio" value="3" required <?php if(isset($Q)): ?> <?php echo e((3 == $Q->ep3_26) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_26" type="radio" value="3" required <?php if(isset($Q->ep3_26)): ?> <?php echo e((3 == $Q->ep3_26) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 ปานกลาง
             </div>
         <div class="radio">
-                <input name="ep3_26" type="radio" value="2" required <?php if(isset($Q)): ?> <?php echo e((2 == $Q->ep3_26) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_26" type="radio" value="2" required <?php if(isset($Q->ep3_26)): ?> <?php echo e((2 == $Q->ep3_26) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มาก
             </div>
         <div class="radio">
-                <input name="ep3_26" type="radio" value="1" required <?php if(isset($Q)): ?> <?php echo e((1 == $Q->ep3_26) ? 'checked' : ''); ?> <?php else: ?> <?php echo e('checked'); ?> <?php endif; ?>>
+                <input name="ep3_26" type="radio" value="1" required <?php if(isset($Q->ep3_26)): ?> <?php echo e((1 == $Q->ep3_26) ? 'checked' : ''); ?> <?php else: ?> <?php echo e(''); ?> <?php endif; ?>>
                 มากที่สุด
             </div>
             <?php echo $errors->first('ep3_26', '<p class="help-block">:message</p>'); ?>

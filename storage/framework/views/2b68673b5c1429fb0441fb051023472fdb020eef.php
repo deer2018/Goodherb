@@ -18,9 +18,9 @@
                 <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li> -->
             </ul>
-            <div style="text-align: center" > 
+            <!-- <div style="text-align: center" > 
             <a href="#" title="Back"><button class="btn btn-warning"><i class="fa fa-user" aria-hidden="true"></i>แก้ไขรูป</button></a>
-            </div>
+            </div> -->
         </div>
         <div class="col-md-7">
             
@@ -34,15 +34,15 @@
 
                         <div class="form-group <?php echo e($errors->has('username') ? 'has-error' : ''); ?>">
 
-                            <label for="username" class="control-label"><?php echo e('ชื่อ'); ?></label>
-                            <input class="form-control" name="username" type="text" id="username" value="<?php echo e(isset($User->username) ? $User->username : ''); ?>">
+                            <label for="username" class="control-label"><?php echo e('ชื่อ'); ?><font size="2" color="#FF0000">*</font></label>
+                            <input class="form-control" name="username" type="text" id="username" value="<?php echo e(isset($User->username) ? $User->username : ''); ?>" required>
                             <?php echo $errors->first('username', '<p class="help-block">:message</p>'); ?>
 
                         </div>
 
                         <div class="form-group <?php echo e($errors->has('surname') ? 'has-error' : ''); ?>">
-                            <label for="surname" class="control-label"><?php echo e('นามสกุล'); ?></label>
-                            <input class="form-control" rows="5" name="surname" type="text" id="surname" value="<?php echo e(isset($User->surname) ? $User->surname : ''); ?>">
+                            <label for="surname" class="control-label"><?php echo e('นามสกุล'); ?><font size="2" color="#FF0000">*</font></label>
+                            <input class="form-control" rows="5" name="surname" type="text" id="surname" value="<?php echo e(isset($User->surname) ? $User->surname : ''); ?>" required>
                             <?php echo $errors->first('surname', '<p class="help-block">:message</p>'); ?>
 
                         </div>
@@ -67,44 +67,44 @@
                         </div>
 
                         <div class="form-group <?php echo e($errors->has('phone') ? 'has-error' : ''); ?>">
-                            <label for="phone" class="control-label"><?php echo e('เบอร์โทรศัพท์'); ?></label>
-                            <input class="form-control" name="phone" type="text" id="phone" value="<?php echo e(isset($User->phone) ? $User->phone : ''); ?>">
+                            <label for="phone" class="control-label"><?php echo e('เบอร์โทรศัพท์'); ?><font size="2" color="#FF0000">*</font></label>
+                            <input class="form-control" name="phone" type="text" id="phone" value="<?php echo e(isset($User->phone) ? $User->phone : ''); ?>" required>
                             <?php echo $errors->first('phone', '<p class="help-block">:message</p>'); ?>
 
                         </div>
 
                         <div class="form-group <?php echo e($errors->has('address') ? 'has-error' : ''); ?>">
 
-                            <label for="address" class="control-label"><?php echo e('ที่อยู่'); ?></label>
-                            <input class="form-control" name="address" type="text" id="address" value="<?php echo e(isset($User->address) ? $User->address : ''); ?>">
+                            <label for="address" class="control-label"><?php echo e('ที่อยู่'); ?><font size="2" color="#FF0000">*</font></label>
+                            <input class="form-control" name="address" type="text" id="address" value="<?php echo e(isset($User->address) ? $User->address : ''); ?>" required>
                             <?php echo $errors->first('address', '<p class="help-block">:message</p>'); ?>
 
                         </div>
 
                         <div class="form-group <?php echo e($errors->has('province') ? 'has-error' : ''); ?>">
-                        <label for="address" class="control-label"><?php echo e('จังหวัด'); ?></label>
-                          <select id="input_province" onchange="showAmphoes()" name="province" class="form-control">
+                        <label for="address" class="control-label"><?php echo e('จังหวัด'); ?><font size="2" color="#FF0000">*</font></label>
+                          <select id="input_province" onchange="showAmphoes()" name="province" class="form-control" required>
                           <option value=""selected disabled>กรุณาเลือกจังหวัด</option>
                           </select>
                         </div>
 
                         <div class="form-group <?php echo e($errors->has('district') ? 'has-error' : ''); ?>">
-                        <label for="address" class="control-label"><?php echo e('อำเภอ/เขต'); ?></label>
-                          <select id="input_amphoe" onchange="showTambons()" name="district" class="form-control">
+                        <label for="address" class="control-label"><?php echo e('อำเภอ/เขต'); ?><font size="2" color="#FF0000">*</font></label>
+                          <select id="input_amphoe" onchange="showTambons()" name="district" class="form-control" required>
                           <option value=""selected disabled>กรุณาเลือกเขต/อำเภอ</option>
                           </select>
                         </div>
                         
                         <div class="form-group <?php echo e($errors->has('subdistrict') ? 'has-error' : ''); ?>">
-                        <label for="address" class="control-label"><?php echo e('ตำบล/แขวง'); ?></label>
-                          <select id="input_tambon" onchange="showZipcode()" name="subdistrict" class="form-control">
+                        <label for="address" class="control-label"><?php echo e('ตำบล/แขวง'); ?><font size="2" color="#FF0000">*</font></label>
+                          <select id="input_tambon" onchange="showZipcode()" name="subdistrict" class="form-control" required>
                           <option value=""selected disabled>กรุณาเลือกแขวง/ตำบล</option>
                           </select>
                         </div>
 
                         <div class="form-group <?php echo e($errors->has('zipcode') ? 'has-error' : ''); ?>">
-                        <label for="address" class="control-label"><?php echo e('รหัสไปรษณีย์'); ?></label>
-                          <input id="input_zipcode" placeholder="รหัสไปรษณีย์" name="zipcode" class="form-control">
+                        <label for="address" class="control-label"><?php echo e('รหัสไปรษณีย์'); ?><font size="2" color="#FF0000">*</font></label>
+                          <input id="input_zipcode" placeholder="รหัสไปรษณีย์" name="zipcode" class="form-control" required>
                         </div>
 
                         <div class="form-group <?php echo e($errors->has('race') ? 'has-error' : ''); ?>">
@@ -173,8 +173,8 @@
                         </div>
 
                         <div class="form-group <?php echo e($errors->has('relevance') ? 'has-error' : ''); ?>">
-                            <label for="relevance" class="control-label"><?php echo e('ความเกี่ยวข้องกับผู้ป่วยที่ดูแล'); ?></label>
-                            <select name="relevance" class="form-control" id="relevance">
+                            <label for="relevance" class="control-label"><?php echo e('ความเกี่ยวข้องกับผู้ป่วยที่ดูแล'); ?><font size="2" color="#FF0000">*</font></label>
+                            <select name="relevance" class="form-control" id="relevance" required>
                                 <option value=""selected disabled>-กรุณาเลือกความเกี่ยวข้องกับผู้ป่วยที่ดูแล-</option>
                                 <?php $__currentLoopData = json_decode('{"บิดา":"บิดา","มารดา":"มารดา","บุตร":"บุตร","พี่":"พี่","น้อง":"น้อง","ญาติ":"ญาติ"}', true); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $optionKey => $optionValue): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                 <option value="<?php echo e($optionKey); ?>" <?php echo e((isset($User->relevance) && $User->relevance == $optionKey) ? 'selected' : ''); ?>><?php echo e($optionValue); ?></option>

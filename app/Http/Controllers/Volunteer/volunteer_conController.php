@@ -24,3 +24,4 @@ class volunteer_conController extends Controller
         return view('volunteer.volunteer_conclusion.volunteer_conclusion', compact('users', 'qt', 'me', 'md'));
     }
 }
+

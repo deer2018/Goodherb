@@ -18,9 +18,9 @@
                 <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li> -->
             </ul>
-            <div style="text-align: center" > 
+            <!-- <div style="text-align: center" > 
             <a href="#" title="Back"><button class="btn btn-warning"><i class="fa fa-user" aria-hidden="true"></i>แก้ไขรูป</button></a>
-            </div>
+            </div> -->
         </div>
         <div class="col-md-7">
             
@@ -32,14 +32,14 @@
 
                         <div class="form-group {{ $errors->has('username') ? 'has-error' : ''}}">
 
-                            <label for="username" class="control-label">{{ 'ชื่อ' }}</label>
-                            <input class="form-control" name="username" type="text" id="username" value="{{ isset($User->username) ? $User->username : ''}}">
+                            <label for="username" class="control-label">{{ 'ชื่อ' }}<font size="2" color="#FF0000">*</font></label>
+                            <input class="form-control" name="username" type="text" id="username" value="{{ isset($User->username) ? $User->username : ''}}" required>
                             {!! $errors->first('username', '<p class="help-block">:message</p>') !!}
                         </div>
 
                         <div class="form-group {{ $errors->has('surname') ? 'has-error' : ''}}">
-                            <label for="surname" class="control-label">{{ 'นามสกุล' }}</label>
-                            <input class="form-control" rows="5" name="surname" type="text" id="surname" value="{{ isset($User->surname) ? $User->surname : ''}}">
+                            <label for="surname" class="control-label">{{ 'นามสกุล' }}<font size="2" color="#FF0000">*</font></label>
+                            <input class="form-control" rows="5" name="surname" type="text" id="surname" value="{{ isset($User->surname) ? $User->surname : ''}}" required>
                             {!! $errors->first('surname', '<p class="help-block">:message</p>') !!}
                         </div>
 
@@ -61,42 +61,42 @@
                         </div>
 
                         <div class="form-group {{ $errors->has('phone') ? 'has-error' : ''}}">
-                            <label for="phone" class="control-label">{{ 'เบอร์โทรศัพท์' }}</label>
-                            <input class="form-control" name="phone" type="text" id="phone" value="{{ isset($User->phone) ? $User->phone : ''}}">
+                            <label for="phone" class="control-label">{{ 'เบอร์โทรศัพท์' }}<font size="2" color="#FF0000">*</font></label>
+                            <input class="form-control" name="phone" type="text" id="phone" value="{{ isset($User->phone) ? $User->phone : ''}}" required>
                             {!! $errors->first('phone', '<p class="help-block">:message</p>') !!}
                         </div>
 
                         <div class="form-group {{ $errors->has('address') ? 'has-error' : ''}}">
 
-                            <label for="address" class="control-label">{{ 'ที่อยู่' }}</label>
-                            <input class="form-control" name="address" type="text" id="address" value="{{ isset($User->address) ? $User->address : ''}}">
+                            <label for="address" class="control-label">{{ 'ที่อยู่' }}<font size="2" color="#FF0000">*</font></label>
+                            <input class="form-control" name="address" type="text" id="address" value="{{ isset($User->address) ? $User->address : ''}}" required>
                             {!! $errors->first('address', '<p class="help-block">:message</p>') !!}
                         </div>
 
                         <div class="form-group {{ $errors->has('province') ? 'has-error' : ''}}">
-                        <label for="address" class="control-label">{{ 'จังหวัด' }}</label>
-                          <select id="input_province" onchange="showAmphoes()" name="province" class="form-control">
+                        <label for="address" class="control-label">{{ 'จังหวัด' }}<font size="2" color="#FF0000">*</font></label>
+                          <select id="input_province" onchange="showAmphoes()" name="province" class="form-control" required>
                           <option value=""selected disabled>กรุณาเลือกจังหวัด</option>
                           </select>
                         </div>
 
                         <div class="form-group {{ $errors->has('district') ? 'has-error' : ''}}">
-                        <label for="address" class="control-label">{{ 'อำเภอ/เขต' }}</label>
-                          <select id="input_amphoe" onchange="showTambons()" name="district" class="form-control">
+                        <label for="address" class="control-label">{{ 'อำเภอ/เขต' }}<font size="2" color="#FF0000">*</font></label>
+                          <select id="input_amphoe" onchange="showTambons()" name="district" class="form-control" required>
                           <option value=""selected disabled>กรุณาเลือกเขต/อำเภอ</option>
                           </select>
                         </div>
                         
                         <div class="form-group {{ $errors->has('subdistrict') ? 'has-error' : ''}}">
-                        <label for="address" class="control-label">{{ 'ตำบล/แขวง' }}</label>
-                          <select id="input_tambon" onchange="showZipcode()" name="subdistrict" class="form-control">
+                        <label for="address" class="control-label">{{ 'ตำบล/แขวง' }}<font size="2" color="#FF0000">*</font></label>
+                          <select id="input_tambon" onchange="showZipcode()" name="subdistrict" class="form-control" required>
                           <option value=""selected disabled>กรุณาเลือกแขวง/ตำบล</option>
                           </select>
                         </div>
 
                         <div class="form-group {{ $errors->has('zipcode') ? 'has-error' : ''}}">
-                        <label for="address" class="control-label">{{ 'รหัสไปรษณีย์' }}</label>
-                          <input id="input_zipcode" placeholder="รหัสไปรษณีย์" name="zipcode" class="form-control">
+                        <label for="address" class="control-label">{{ 'รหัสไปรษณีย์' }}<font size="2" color="#FF0000">*</font></label>
+                          <input id="input_zipcode" placeholder="รหัสไปรษณีย์" name="zipcode" class="form-control" required>
                         </div>
 
                         <div class="form-group {{ $errors->has('race') ? 'has-error' : ''}}">
@@ -160,8 +160,8 @@
                         </div>
 
                         <div class="form-group {{ $errors->has('relevance') ? 'has-error' : ''}}">
-                            <label for="relevance" class="control-label">{{ 'ความเกี่ยวข้องกับผู้ป่วยที่ดูแล' }}</label>
-                            <select name="relevance" class="form-control" id="relevance">
+                            <label for="relevance" class="control-label">{{ 'ความเกี่ยวข้องกับผู้ป่วยที่ดูแล' }}<font size="2" color="#FF0000">*</font></label>
+                            <select name="relevance" class="form-control" id="relevance" required>
                                 <option value=""selected disabled>-กรุณาเลือกความเกี่ยวข้องกับผู้ป่วยที่ดูแล-</option>
                                 @foreach (json_decode('{"บิดา":"บิดา","มารดา":"มารดา","บุตร":"บุตร","พี่":"พี่","น้อง":"น้อง","ญาติ":"ญาติ"}', true) as $optionKey => $optionValue)
                                 <option value="{{ $optionKey }}" {{ (isset($User->relevance) && $User->relevance == $optionKey) ? 'selected' : ''}}>{{ $optionValue }}</option>
