@@ -6,7 +6,7 @@
 
     <div class="col-md-10">
         <div class="card">
-            <div class="card-header">แบบประเมินความเครียด</div>
+            <div class="card-header">แบบประเมินความเครียดอาการหรือความรู้สึกที่เกิดในระยะ 2 - 4 สัปดาห์</div>
             <div class="card-body">
 
                 <!--แบบประเมินความเครียด 5 ข้อคำถาม -->

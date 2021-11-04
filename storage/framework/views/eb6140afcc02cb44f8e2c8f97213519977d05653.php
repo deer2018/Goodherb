@@ -2,7 +2,7 @@
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th rowspan="2">อาการหรือความรู้สึกที่เกิดในระยะ 2 - 4 สัปดาห์</th>
+                <!-- <th rowspan="2">อาการหรือความรู้สึกที่เกิดในระยะ 2 - 4 สัปดาห์</th> -->
                 <!-- <th style="text-align: center" colspan="4">คะแนน</th> -->
             </tr>
             <!-- <tr>
@@ -15,7 +15,9 @@
 
         <tbody>
             <tr>
-                <td>1.มีปัญหาการนอน นอนไม่หลับหรือนอนมาก
+                <td>
+                    <div class="p-2 border bg-light">1.มีปัญหาการนอน นอนไม่หลับหรือนอนมาก</div>
+                    <br>
                     <div class="form-group <?php echo e($errors->has('ep2_1') ? 'has-error' : ''); ?>">
 
                         <div class="radio">
@@ -43,7 +45,9 @@
                 </td>
             </tr>
             <tr>
-                <td>2.มีสมาธิน้อยลง
+                <td>
+                    <div class="p-2 border bg-light">2.มีสมาธิน้อยลง</div>
+                    <br>
                     <div class="form-group <?php echo e($errors->has('ep2_2') ? 'has-error' : ''); ?>">
 
                         <div class="radio">
@@ -71,7 +75,9 @@
                 </td>
             </tr>
             <tr>
-                <td>3.หงุดหงิด/กระวนกระวาย/ว้าวุ้นใจ
+                <td>
+                    <div class="p-2 border bg-light">3.หงุดหงิด/กระวนกระวาย/ว้าวุ้นใจ</div>
+                    <br>
                     <div class="form-group <?php echo e($errors->has('ep2_3') ? 'has-error' : ''); ?>">
 
                         <div class="radio">
@@ -99,7 +105,9 @@
                 </td>
             </tr>
             <tr>
-                <td>4.รู้สึกเบื่อ เซ็ง
+                <td>
+                    <div class="p-2 border bg-light">4.รู้สึกเบื่อ เซ็ง</div>
+                    <br>
                     <div class="form-group <?php echo e($errors->has('ep2_4') ? 'has-error' : ''); ?>">
 
                         <div class="radio">
@@ -127,7 +135,9 @@
                 </td>
             </tr>
             <tr>
-                <td>5.ไม่อยากพบปะผู้คน
+                <td>
+                    <div class="p-2 border bg-light">5.ไม่อยากพบปะผู้คน</div>
+                    <br>
                     <div class="form-group <?php echo e($errors->has('ep2_5') ? 'has-error' : ''); ?>">
 
                         <div class="radio">
