@@ -122,7 +122,7 @@
                         </div><br>
                         <div class="mb-2">
                             
-                                <div> <?php echo $__env->make('medic.medic_volunteer.verify.quest1_medic', ['formMode' => 'predicate1.blade'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?></div>
+                                <div> <?php echo $__env->make('medic.medic_volunteer.verify.quest1_medic', ['formMode' => 'quest1_medic.blade'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?></div>
                         </div>
 
                         
@@ -164,7 +164,7 @@
 
                                                     <?php echo e(csrf_field()); ?>
 
-                                                    <button type="submit" class="btn btn-danger btn-sm" title="Delete Crud" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                                    <button type="submit" name="medicine_delete" class="btn btn-danger btn-sm" title="Delete Crud" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fa fa-trash" aria-hidden="true"></i></button>
                                                 </form>
                                             </td>
                                         </tr>
@@ -176,7 +176,7 @@
                         </div><br>
                         <div class="mb-2">
                             
-                            <?php echo $__env->make('medic.medic_volunteer.verify.quest1_medicine', ['formMode' => 'predicate1.blade'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+                            <?php echo $__env->make('medic.medic_volunteer.verify.quest1_medicine', ['formMode' => 'quest1_medicine.blade'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                         </div>
                     </div>
                 </div>
@@ -196,7 +196,7 @@
                         <h6 class="m-0 font-weight-bold text-dark">คำแนะนำของแพทย์</h6>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="<?php echo e(url('/predicate1/' . $users->id )); ?>" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
+                        <form method="POST" id="advice_form" action="<?php echo e(url('/predicate1/' . $users->id )); ?>" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
                             <?php echo e(method_field('POST')); ?>
 
                             <?php echo e(csrf_field()); ?>
@@ -208,7 +208,7 @@
                                         else {
                                     echo $advice['advice'];}?></textarea>
                             </div><br>
-                            <button type="submit" class="btn btn-primary btn-user btn-block"> บันทึก </button>
+                            <button type="submit" name="advice_form" class="btn btn-primary btn-user btn-block"> บันทึก </button>
                         </form>
                     </div>
                 </div>

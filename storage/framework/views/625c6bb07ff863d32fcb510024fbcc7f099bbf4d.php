@@ -109,7 +109,7 @@
 </head>
 <body>
 
-<form method="POST" action="modal" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
+<form method="POST" action="<?php echo e(url('/predicate1/' . $users->id )); ?>" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
                         <?php echo e(csrf_field()); ?>
 
 
@@ -133,7 +133,7 @@
                     <?php echo $__env->make('questionnaireone.quest_medic', ['formMode' => 'quest1_medic.blade.blade'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-link">บันทึก</button>
+                    <button type="submit" name="emotion_form" class="btn btn-link">บันทึก</button>
                     <button type="submit" class="btn btn-link" data-dismiss="modal">ปิด</button>
                 </div>
             </div>

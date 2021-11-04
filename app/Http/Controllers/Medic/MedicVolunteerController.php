@@ -36,19 +36,56 @@ class MedicVolunteerController extends Controller
     }
 
    
-    public function store(Request $request)
+    public function store_advice(Request $request)
+    
+    { 
+        
+        
+            
+            $requestData = $request->all();
+            $user_id = Auth::id();
+            $requestData["user_id"] = $user_id;
+            $requestData["user_id"] = Auth::id();
+       
+
+            $diagnosis = Diagnosis::firstOrNew(array('user_id' => $user_id));
+            $diagnosis->fill($requestData)->save();
+
+            return redirect('predicate1/2')->with('flash_message', 'Diagnosis added!');
+       
+
+    }
+
+    public function store_emotion(Request $request)
     {
+      
+
+        // ดึงข้อมูลจากหน้าฟอร์ม
         $requestData = $request->all();
         $user_id = Auth::id();
         $requestData["user_id"] = $user_id;
         $requestData["user_id"] = Auth::id();
+
+        $emotion = Medic_Emotion::firstOrNew(array('user_id' => $user_id));
+        $emotion->fill($requestData)->save();
+    
+        return redirect('predicate1/2')->with('flash_message', 'Questionone added!');
        
+    }
 
-         $diagnosis = Diagnosis::firstOrNew(array('user_id' => $user_id));
-         $diagnosis->fill($requestData)->save();
+    public function store_medicine(Request $request)
+    {
+      
+        // ดึงข้อมูลจากหน้าฟอร์ม
+        $requestData = $request->all();
+        $user_id = Auth::id();
+        $requestData["user_id"] = $user_id;
+        $requestData["user_id"] = Auth::id();
+        
+        Medicine::create($requestData);
 
-         return redirect('predicate1/1')->with('flash_message', 'Diagnosis added!');
-
+        return redirect('predicate1/2')->with('flash_message', 'Medicine added!');
+      
     }
   
     public function show(MedicVolunteerController $medicVolunteerController)
@@ -75,6 +112,8 @@ class MedicVolunteerController extends Controller
 
         return view('medic.medic_volunteer.verify.predicate1', compact('users','_qt_1','_qt_2','_qt_3','_qt_4','emotion','advice','medicines'));
     }
+
+    
 
     public function edit2($id)
     {

@@ -34,7 +34,7 @@ class MedicineController extends Controller
     }
 
     
-    public function store(Request $request)
+    public function store_medicine(Request $request)
     {
         // ดึงข้อมูลจากหน้าฟอร์ม
         $requestData = $request->all();
@@ -44,7 +44,7 @@ class MedicineController extends Controller
         
         Medicine::create($requestData);
 
-        return redirect('predicate1/1')->with('flash_message', 'Medicine added!');
+        return redirect('predicate1/4')->with('flash_message', 'Medicine added!');
     }
 
     public function show(Medicine $medicine)

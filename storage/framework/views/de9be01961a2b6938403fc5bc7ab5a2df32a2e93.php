@@ -104,7 +104,7 @@
 
 <body>
 
-    <form method="POST" action="modal" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
+    <form method="POST" action="<?php echo e(url('/predicate1/' . $users->id )); ?>" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
         <?php echo e(csrf_field()); ?>
 
 
@@ -129,7 +129,7 @@
                         <?php echo $__env->make('medic.medic_volunteer.medicine.medicine_form', ['formMode'=>'quest1_medicine.blade.blade'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-link">สร้างตัวยา</button>
+                        <button type="submit" name="medicine_form" class="btn btn-link">สร้างตัวยา</button>
                         <button type="submit" class="btn btn-link" data-dismiss="modal">ปิด</button>
                     </div>
                 </div>

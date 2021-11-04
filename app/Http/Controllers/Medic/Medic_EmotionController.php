@@ -39,7 +39,7 @@ class Medic_EmotionController extends Controller
 
         
 
-        return redirect('predicate1/1')->with('flash_message', 'Questionone added!');
+        return redirect('predicate1/4')->with('flash_message', 'Questionone added!');
     }
 
 }
