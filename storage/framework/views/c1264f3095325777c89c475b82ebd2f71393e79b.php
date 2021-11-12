@@ -33,6 +33,7 @@
             <a class="nav-link" href="<?php echo e(url('/volunteer_con')); ?>">
                 <i class="fas fa-circle"></i>
                 <span>ผลการรักษา</span></a>
+  </li>
      
 </ul>
 <!-- End of Sidebar -->

@@ -9,7 +9,6 @@
 
 <body id="page-top">
  
-<?php echo $__env->make('layouts.volunteer.js', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
   <!-- Page Wrapper -->
   <div id="wrapper">
  
@@ -43,6 +42,7 @@
   <!-- End of Page Wrapper -->
  
    
+<?php echo $__env->make('layouts.volunteer.js', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     
 </body>
  

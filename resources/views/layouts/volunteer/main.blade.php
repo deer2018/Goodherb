@@ -9,7 +9,6 @@
 
 <body id="page-top">
  
-@include('layouts.volunteer.js')
   <!-- Page Wrapper -->
   <div id="wrapper">
  
@@ -43,6 +42,7 @@
   <!-- End of Page Wrapper -->
  
    
+@include('layouts.volunteer.js')
     
 </body>
  
