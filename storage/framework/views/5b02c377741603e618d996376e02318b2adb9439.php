@@ -1,12 +1,12 @@
 
 
 <?php $__env->startSection('content'); ?>
-<div class="container">
+
 
 
     <div class="col-md-10">
         <div class="card">
-            <div class="card-header">แบบสอบถามวัดความเครียดของผู้ดูแล</div>
+            <div class="card-header">(1/3) แบบสอบถามวัดความเครียดของผู้ดูแล</div>
             <div class="card-body">
 
                 <!--แบบสอบถามวัดความเครียดของผู้ดูแล 13 ข้อคำถาม -->
@@ -34,6 +34,6 @@
             </div>
         </div>
     </div>
-</div>
+
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.volunteer.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\Goodherb\resources\views/volunteer/volunteer_questionnaire/Q2/volunteer_questionnaire_sub1_2.blade.php ENDPATH**/ ?>

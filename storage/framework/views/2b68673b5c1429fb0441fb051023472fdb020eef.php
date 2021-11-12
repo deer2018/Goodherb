@@ -81,7 +81,7 @@
 
                         </div>
 
-                        <div class="form-group <?php echo e($errors->has('province') ? 'has-error' : ''); ?>">
+                        <!-- <div class="form-group <?php echo e($errors->has('province') ? 'has-error' : ''); ?>">
                         <label for="address" class="control-label"><?php echo e('จังหวัด'); ?><font size="2" color="#FF0000">*</font></label>
                           <select id="input_province" onchange="showAmphoes()" name="province" class="form-control" required>
                           <option value=""selected disabled>กรุณาเลือกจังหวัด</option>
@@ -105,7 +105,7 @@
                         <div class="form-group <?php echo e($errors->has('zipcode') ? 'has-error' : ''); ?>">
                         <label for="address" class="control-label"><?php echo e('รหัสไปรษณีย์'); ?><font size="2" color="#FF0000">*</font></label>
                           <input id="input_zipcode" placeholder="รหัสไปรษณีย์" name="zipcode" class="form-control" required>
-                        </div>
+                        </div> -->
 
                         <div class="form-group <?php echo e($errors->has('race') ? 'has-error' : ''); ?>">
                             <label for="race" class="control-label"><?php echo e('เชื้อชาติ'); ?></label>

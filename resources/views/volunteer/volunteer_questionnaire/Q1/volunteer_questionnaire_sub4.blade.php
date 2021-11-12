@@ -1,7 +1,7 @@
 @extends('layouts.volunteer.main')
 
 @section('content')
-<div class="container">
+
 <script language="javascript">
     function delaler () {
         if (confirm('กรอกข้อมูลสำเร็จแล้ว')){
@@ -15,7 +15,7 @@
 
     <div class="col-md-10">
         <div class="card">
-            <div class="card-header">แบบคัดเลือกอาสาสมัคร</div>
+            <div class="card-header">(4/4) แบบคัดเลือกอาสาสมัคร</div>
             <div class="card-body">
 
                 <!--แบบคัดเลือกอาสาสมัคร 10 ข้อคำถาม -->
@@ -41,5 +41,5 @@
             </div>
         </div>
     </div>
-</div>
+
 @endsection

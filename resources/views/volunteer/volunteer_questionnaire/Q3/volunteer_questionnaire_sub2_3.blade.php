@@ -1,7 +1,7 @@
 @extends('layouts.volunteer.main')
 
 @section('content')
-<div class="container">
+
 
 <script language="javascript">
     function delaler () {
@@ -43,5 +43,5 @@
             </div>
         </div>
     </div>
-</div>
+
 @endsection

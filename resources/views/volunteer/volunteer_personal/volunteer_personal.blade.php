@@ -73,7 +73,7 @@
                             {!! $errors->first('address', '<p class="help-block">:message</p>') !!}
                         </div>
 
-                        <div class="form-group {{ $errors->has('province') ? 'has-error' : ''}}">
+                        <!-- <div class="form-group {{ $errors->has('province') ? 'has-error' : ''}}">
                         <label for="address" class="control-label">{{ 'จังหวัด' }}<font size="2" color="#FF0000">*</font></label>
                           <select id="input_province" onchange="showAmphoes()" name="province" class="form-control" required>
                           <option value=""selected disabled>กรุณาเลือกจังหวัด</option>
@@ -97,7 +97,7 @@
                         <div class="form-group {{ $errors->has('zipcode') ? 'has-error' : ''}}">
                         <label for="address" class="control-label">{{ 'รหัสไปรษณีย์' }}<font size="2" color="#FF0000">*</font></label>
                           <input id="input_zipcode" placeholder="รหัสไปรษณีย์" name="zipcode" class="form-control" required>
-                        </div>
+                        </div> -->
 
                         <div class="form-group {{ $errors->has('race') ? 'has-error' : ''}}">
                             <label for="race" class="control-label">{{ 'เชื้อชาติ' }}</label>

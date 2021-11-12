@@ -1,12 +1,12 @@
 @extends('layouts.volunteer.main')
 
 @section('content')
-<div class="container">
+
 
 
     <div class="col-md-10">
         <div class="card">
-            <div class="card-header">แบบสอบถามวัดความเครียดของผู้ดูแล</div>
+            <div class="card-header">(1/4) แบบสอบถามวัดความเครียดของผู้ดูแล</div>
             <div class="card-body">
 
                 <!--แบบสอบถามวัดความเครียดของผู้ดูแล 13 ข้อคำถาม -->
@@ -32,5 +32,5 @@
             </div>
         </div>
     </div>
-</div>
+
 @endsection

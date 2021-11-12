@@ -1,12 +1,12 @@
 @extends('layouts.volunteer.main')
 
 @section('content')
-<div class="container">
+
 
 
     <div class="col-md-10">
         <div class="card">
-            <div class="card-header">แบบประเมินความเครียดอาการหรือความรู้สึกที่เกิดในระยะ 2 - 4 สัปดาห์</div>
+            <div class="card-header">(2/4) แบบประเมินความเครียดอาการหรือความรู้สึกที่เกิดในระยะ 2 - 4 สัปดาห์</div>
             <div class="card-body">
 
                 <!--แบบประเมินความเครียด 5 ข้อคำถาม -->
@@ -31,5 +31,5 @@
             </div>
         </div>
     </div>
-</div>
+
 @endsection

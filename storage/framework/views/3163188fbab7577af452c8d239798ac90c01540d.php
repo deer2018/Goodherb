@@ -1,7 +1,7 @@
 
 
 <?php $__env->startSection('content'); ?>
-<div class="container">
+
 <script language="javascript">
     function delaler () {
         if (confirm('กรอกข้อมูลสำเร็จแล้ว')){
@@ -15,7 +15,7 @@
 
     <div class="col-md-10">
         <div class="card">
-            <div class="card-header">แบบคัดเลือกอาสาสมัคร</div>
+            <div class="card-header">(4/4) แบบคัดเลือกอาสาสมัคร</div>
             <div class="card-body">
 
                 <!--แบบคัดเลือกอาสาสมัคร 10 ข้อคำถาม -->
@@ -42,6 +42,6 @@
             </div>
         </div>
     </div>
-</div>
+
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.volunteer.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\Goodherb\resources\views/volunteer/volunteer_questionnaire/Q1/volunteer_questionnaire_sub4.blade.php ENDPATH**/ ?>

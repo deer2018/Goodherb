@@ -1,12 +1,12 @@
 
 
 <?php $__env->startSection('content'); ?>
-<div class="container">
+
 
 
     <div class="col-md-10">
         <div class="card">
-            <div class="card-header">แบบสอบถามเครื่องชี้วัดคุณภาพชีวิตขององค์การอนามัยโลก</div>
+            <div class="card-header">(3/4) แบบสอบถามเครื่องชี้วัดคุณภาพชีวิตขององค์การอนามัยโลก</div>
             <div class="card-body">
 
                 <!--เครื่องชี้วัดคุณภาพชีวิตขององค์การอนามัยโลก 26 ข้อคำถาม -->
@@ -33,6 +33,6 @@
             </div>
         </div>
     </div>
-</div>
+
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.volunteer.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\Goodherb\resources\views/volunteer/volunteer_questionnaire/Q1/volunteer_questionnaire_sub3.blade.php ENDPATH**/ ?>

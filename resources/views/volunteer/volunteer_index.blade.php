@@ -120,14 +120,14 @@
                                     <td>
                                         <strong>
                                             <span class="glyphicon glyphicon-eye-open text-primary"></span>
-                                            ที่อยู่ (เลขที่บ้าน,หมู่)
+                                            ที่อยู่
                                         </strong>
                                     </td>
                                     <td class="text-primary">
                                         {{ $data->address }}
                                     </td>
                                 </tr>
-                                <tr>
+                                <!-- <tr>
                                     <td>
                                         <strong>
                                             <span class="glyphicon glyphicon-eye-open text-primary"></span>
@@ -170,7 +170,7 @@
                                     <td class="text-primary">
                                         {{ $data->zipcode }}
                                     </td>
-                                </tr>
+                                </tr>-->
                                 <tr>
                                     <td>
                                         <strong>

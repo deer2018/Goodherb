@@ -127,7 +127,7 @@
                                     <td>
                                         <strong>
                                             <span class="glyphicon glyphicon-eye-open text-primary"></span>
-                                            ที่อยู่ (เลขที่บ้าน,หมู่)
+                                            ที่อยู่
                                         </strong>
                                     </td>
                                     <td class="text-primary">
@@ -135,7 +135,7 @@
 
                                     </td>
                                 </tr>
-                                <tr>
+                                <!-- <tr>
                                     <td>
                                         <strong>
                                             <span class="glyphicon glyphicon-eye-open text-primary"></span>
@@ -182,7 +182,7 @@
                                         <?php echo e($data->zipcode); ?>
 
                                     </td>
-                                </tr>
+                                </tr>-->
                                 <tr>
                                     <td>
                                         <strong>

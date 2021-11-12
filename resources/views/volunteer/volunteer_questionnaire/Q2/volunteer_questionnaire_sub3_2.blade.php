@@ -1,7 +1,7 @@
 @extends('layouts.volunteer.main')
 
 @section('content')
-<div class="container">
+
 <script language="javascript">
     function delaler () {
         if (confirm('กรอกข้อมูลสำเร็จแล้ว')){
@@ -15,7 +15,7 @@
 
     <div class="col-md-10">
         <div class="card">
-            <div class="card-header">แบบสอบถามเครื่องชี้วัดคุณภาพชีวิตขององค์การอนามัยโลก</div>
+            <div class="card-header">(3/3) แบบสอบถามเครื่องชี้วัดคุณภาพชีวิตขององค์การอนามัยโลก</div>
             <div class="card-body">
 
                 <!--เครื่องชี้วัดคุณภาพชีวิตขององค์การอนามัยโลก 26 ข้อคำถาม -->
@@ -41,5 +41,5 @@
             </div>
         </div>
     </div>
-</div>
+
 @endsection
