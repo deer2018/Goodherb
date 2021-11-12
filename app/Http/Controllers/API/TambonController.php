@@ -7,13 +7,14 @@ class TambonController extends Controller
 {
     public function getProvinces()
     {
-        $provinces = Tambon::groupBy('province_code')->get();
+        $provinces = Tambon::groupBy('province_code')->select('tambon','amphoe','province','zipcode','tambon_code','amphoe_code','province_code')->get();
         return $provinces;
     }
     public function getAmphoes($province)
     {
         $amphoes = Tambon::where('province',$province)
             ->groupBy('amphoe_code')
+            ->select('tambon','amphoe','province','zipcode','tambon_code','amphoe_code','province_code')
             ->get();
         return $amphoes;
     }
@@ -22,6 +23,7 @@ class TambonController extends Controller
         $tambons = Tambon::where('province',$province)
             ->where('amphoe',$amphoe)
             ->groupBy('tambon_code')
+            ->select('tambon','amphoe','province','zipcode','tambon_code','amphoe_code','province_code')
             ->get();
         return $tambons;
     }
@@ -30,6 +32,7 @@ class TambonController extends Controller
         $zipcodes = Tambon::where('province',$province)
             ->where('amphoe',$amphoe)        
             ->where('tambon',$tambon)
+            ->select('tambon','amphoe','province','zipcode','tambon_code','amphoe_code','province_code')
             ->get();
         return $zipcodes;
     }
