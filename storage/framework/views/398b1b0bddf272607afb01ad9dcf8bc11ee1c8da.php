@@ -4,7 +4,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Goodherb</title>
+  <title>ความเครียด</title>
 
   <!-- Custom fonts for this template-->
     <link href="<?php echo e(asset('vendor/fontawesome-free/css/all.min.css')); ?>" rel="stylesheet" type="text/css" />

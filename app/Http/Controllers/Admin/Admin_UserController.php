@@ -22,14 +22,15 @@ class Admin_UserController extends Controller
     {
         $perPage = 25;
         $keyword = $request->get('search'); 
+        $type = $request->get('dataTable_length');
         switch(Auth::user()->role)
         {
                 case "แอดมิน" : 
                    
                     if (!empty($keyword)) {
-                        $users = User::where('user_id', 'LIKE', "%$keyword%")
-                            ->orWhere('name', 'LIKE', "%$keyword%")
-                            ->orWhere('email', 'LIKE', "%$keyword%")
+                        // $users = User::where('user_id', 'LIKE', "%$keyword%")
+                            $users = User::Where('name', 'LIKE', "%$keyword%")
+                            // ->orWhere('email', 'LIKE', "%$keyword%")
                             ->orwhere('role', 'LIKE',"%$keyword%" )
                             ->latest()->paginate($perPage);
                     } else {

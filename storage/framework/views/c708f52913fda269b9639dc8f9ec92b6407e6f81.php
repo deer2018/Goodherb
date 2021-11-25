@@ -7,7 +7,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-leaf"></i>
         </div>
-        <div class="sidebar-brand-text mx-3" >GoodHerb </div>
+        <div class="sidebar-brand-text mx-3" >ความเครียด </div>
       </a>
 
       <!-- Divider -->
@@ -31,7 +31,7 @@
                     <span>ข้อมูลอาสาสมัคร</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo e(url('/admin_medic_index')); ?>">
+                <a class="nav-link" href="<?php echo e(url('/admin_medic')); ?>">
                     <i class="fas fa-circle"></i>
                     <span>ข้อมูลแพทย์</span></a>
             </li>

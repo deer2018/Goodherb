@@ -19,19 +19,18 @@ class Admin_MedicController extends Controller
     public function index(Request $request)
     {
         $perPage = 25;
-        $users = User::all();
-        $search = $request->get('search'); 
+        // $users = User::all();
+        $keyword = $request->get('search'); 
         switch(Auth::user()->role)
         {
                 case "แอดมิน" : 
-                    $users = User::latest()->paginate($perPage);
+                    $users = User::Where('role', '=', "หมอ")
+                    ->latest()->paginate($perPage);
     
                     if (!empty($keyword)) {
-                        $users = User::where('user_id', 'LIKE', "%$keyword%")
-                            ->orWhere('name', 'LIKE', "%$keyword%")
-                            ->orWhere('email', 'LIKE', "%$keyword%")
-                            ->orwhere('role', '=',"guest" )
-                            ->latest()->paginate($perPage);
+                        $users = User::Where('role', '=', "หมอ")
+                        ->where('name', 'LIKE' , "%$keyword%")
+                        ->latest()->paginate($perPage);
                     } else {
                         $users = User::where('role', "หมอ")
                         ->orwhere('role', "หมอ")

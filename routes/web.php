@@ -36,8 +36,9 @@ Route::resource('admin_user', 'Admin\Admin_UserController');
 Route::resource('admin_volunteer', 'Admin\Admin_VolunteerController');
 
         //Admin->Medic -------------------------------------------
-Route::get('/admin_medic_index', 'Admin\Admin_MedicController@index');
+// Route::get('/admin_medic_index', 'Admin\Admin_MedicController@index');
 // Route::resource('admin_medic', 'Admin\Admin_MedicController');
+Route::resource('admin_medic', 'Admin\Admin_MedicController');
 
 Route::get('/admin_index', 'Admin\AdminIndexController@index');
 

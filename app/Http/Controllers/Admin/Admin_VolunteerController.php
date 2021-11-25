@@ -20,17 +20,20 @@ class Admin_VolunteerController extends Controller
     public function index(Request $request)
     {
         $perPage = 25;
-        $users = User::all();
+        // $users = User::all();
+        $keyword = $request->get('search');
         switch(Auth::user()->role)
         {
                 case "แอดมิน" : 
-                    $users = User::latest()->paginate($perPage);
+                    $users = User::Where('role', '=', "อาสาสมัคร")
+                    ->latest()->paginate($perPage);
     
                     if (!empty($keyword)) {
-                        $users = User::where('user_id', 'LIKE', "%$keyword%")
-                            ->orWhere('name', 'LIKE', "%$keyword%")
-                            ->orWhere('email', 'LIKE', "%$keyword%")
-                            ->orwhere('role', '=',"guest" )
+                            $users = User::Where('role', '=', "อาสาสมัคร")
+                            ->where('name', 'LIKE' , "%$keyword%")
+                            // ->where('name', 'LIKE' , "%$keyword%")
+                            // ->orwhere('role', '!=' , "อาสาสมัคร")
+                            // ->orWhere('email', 'LIKE', "%$keyword%")
                             ->latest()->paginate($perPage);
                     } else {
                         $users = User::where('role', "อาสาสมัคร")
