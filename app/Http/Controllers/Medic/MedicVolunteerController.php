@@ -5,9 +5,10 @@ namespace App\Http\Controllers\Medic;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
-
+use Illuminate\Support\Facades\DB;
 use App\User;
 use App\Models\Diagnosis;
+use App\Models\Emotion_t;
 use App\Models\Medic_Emotion;
 use App\Models\Medicine;
 use App\Models\Questionone;
@@ -51,14 +52,15 @@ class MedicVolunteerController extends Controller
             $diagnosis = Diagnosis::firstOrNew(array('user_id' => $user_id));
             $diagnosis->fill($requestData)->save();
 
-            return redirect('predicate1/2')->with('flash_message', 'Diagnosis added!');
+            return redirect('predicate1/3')->with('flash_message', 'Diagnosis added!');
        
 
     }
 
-    public function store_emotion(Request $request)
+    public function store_emotion($id ,Request $request)
     {
-      
+        //เชื่อม table -- medic_emotion กับ emotion_t
+        $auth = User::findorfail($id);
 
         // ดึงข้อมูลจากหน้าฟอร์ม
         $requestData = $request->all();
@@ -66,10 +68,18 @@ class MedicVolunteerController extends Controller
         $requestData["user_id"] = $user_id;
         $requestData["user_id"] = Auth::id();
 
-        $emotion = Medic_Emotion::firstOrNew(array('user_id' => $user_id));
-        $emotion->fill($requestData)->save();
+        $emotions = Medic_Emotion::firstOrNew(array('user_id' => $user_id));
+        $emotions->fill($requestData)->save();
+
+        // $emotions = Medic_Emotion::join('emotion_t','medic_emotion.id','=','emotion_t.id')
+        // ->select('emotion_t.name','=','medic_emotion.emotion');
+        // $emotions = DB::table('medic_emotion')
+        //     ->select('emotion')
+        //     ->join('emotion_t', 'medic_emotion.id', '=', 'emotion_t.id')
+        //     ->where('emotion_t.emotion_name', $requestData)
+        //     ->get();
     
-        return redirect('predicate1/2')->with('flash_message', 'Questionone added!');
+         return redirect()->route('predicate1', [$auth]);
        
     }
 
@@ -84,7 +94,7 @@ class MedicVolunteerController extends Controller
         
         Medicine::create($requestData);
 
-        return redirect('predicate1/2')->with('flash_message', 'Medicine added!');
+        return redirect('predicate1/3')->with('flash_message', 'Medicine added!');
       
     }
   
@@ -94,11 +104,14 @@ class MedicVolunteerController extends Controller
     }
 
     
-    public function edit($id)
+    public function edit($id , Request $request)
     {
-        $perPage = 7;
+        //แบ่งหน้ารายการ
+        $perPage = 10;
+        
        //ค้นหาตาม pk
         $users = User::findOrFail($id);
+       
         //ค้นหา column ไหนก็ได้   
         $_qt_1 = Questionone::where('user_id', '=', $users->id)->firstOrFail();
         $_qt_2 = Questionone_two::where('user_id', '=', $users->id)->firstOrFail();

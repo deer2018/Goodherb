@@ -15,7 +15,7 @@
         <div class="row">
 
 
-            <!-- แบบวัดความเครียดของผู้ดูแล -->
+            <!-- แบบวัดความเครียดของผู้ดูแล  13 ข้อคำถาม-->
             <div class="col-xl-3 col-md-6 mb-4">
                 <div class="card border-left-primary shadow h-100 py-2">
                     <div class="card-body">
@@ -30,12 +30,12 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <?php echo $__env->make('medic.medic_volunteer.quest1.medic_quest1_5', ['formMode' => 'predicate1.blade'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+                        <?php echo $__env->make('medic.medic_volunteer.quest1.medic_quest1_13', ['formMode' => 'predicate1.blade'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                     </div>
                 </div>
             </div>
 
-            <!-- แบบประเมินความเครียด -->
+            <!--แบบประเมินความเครียด 5 ข้อคำถาม -->
             <div class="col-xl-3 col-md-6 mb-4">
                 <div class="card border-left-primary shadow h-100 py-2">
                     <div class="card-body">
@@ -113,12 +113,13 @@
                     </div>
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-auto text-gray-800 h6 font-weight-bold">ภาวะอารมณ์ :</div>
-                            <div class="col-auto text-danger h6 font-weight-bold">
-                                <?php if (empty($emotion['emotion'])) {
-                                    echo "กรุณาเลือกภาวะอารมณ์";} 
-                                        else {
-                                    echo $emotion['emotion'];}?></div>
+                                <div class="col-auto text-gray-800 h6 font-weight-bold">ภาวะอารมณ์ :</div>
+                                <div class="col-auto text-danger h6 font-weight-bold">
+                                    <?php if (empty($emotion['emotion'])) {
+                                        echo "กรุณาเลือกภาวะอารมณ์";} 
+                                            else {
+                                        echo $emotion['emotion'];}?>
+                                </div>
                         </div><br>
                         <div class="mb-2">
                             

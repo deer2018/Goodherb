@@ -110,9 +110,7 @@
 
         <div class="container bootstrap snippets bootdey">
             <div class="btn-demo" id="btn-color-targets">
-                <a href="#modalmedicine" data-target-color="bluegray" data-toggle="modal" data-dismiss="modal"
-                    class="btn btn-info  btn-block">เลือกตัวยา</a>
-
+                <a href="#modalmedicine" data-target-color="bluegray" data-toggle="modal" data-dismiss="modal" class="btn btn-info btn-user btn-block">เลือกตัวยา</a>
             </div>
 
         </div>
