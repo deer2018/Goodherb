@@ -130,7 +130,7 @@
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <?php echo $__env->make('questionnaireone.quest_medic', ['formMode' => 'quest1_medic.blade.blade'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+                    <?php echo $__env->make('questionnaireone.quest_medic', ['formMode' => 'quest1_medic.blade'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                 </div>
                 <div class="modal-footer">
                     <button type="submit" name="emotion_form" class="btn btn-link">บันทึก</button>

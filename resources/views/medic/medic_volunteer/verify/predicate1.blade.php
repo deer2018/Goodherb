@@ -7,8 +7,10 @@
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h4 mb-0 text-gray-800">ข้อมูลของ<a class="m-1 font-weight-bold text-primary">
                     {{ $users->username }}</a> ครั้งที่ 1</h1>
-            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                    class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+
+                {{-- หน้ารีพอร์ท --}}
+            {{-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                    class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> --}}
         </div>
 
         <!-- Content Row -->
@@ -161,7 +163,7 @@
                                             <td>{{ $item->medicine }}</td>
                                             <td>{{ $item->quantity }}</td>                                                                               
                                             <td>
-                                                <form method="POST" action="{{ url('/predicate1/1') }}" accept-charset="UTF-8" style="display:inline">
+                                                <form method="POST" action="{{ url('/predicate1/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                     {{ method_field('DELETE') }}
                                                     {{ csrf_field() }}
                                                     <button type="submit" name="medicine_delete" class="btn btn-danger btn-sm" title="Delete Crud" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fa fa-trash" aria-hidden="true"></i></button>

@@ -37,10 +37,11 @@ class MedicVolunteerController extends Controller
     }
 
    
-    public function store_advice(Request $request)
+    public function store_advice($id ,Request $request)
     
     { 
-        
+        //รับค่าไอดีจาก user
+        $auth = User::findorfail($id);
         
             
             $requestData = $request->all();
@@ -52,14 +53,13 @@ class MedicVolunteerController extends Controller
             $diagnosis = Diagnosis::firstOrNew(array('user_id' => $user_id));
             $diagnosis->fill($requestData)->save();
 
-            return redirect('predicate1/3')->with('flash_message', 'Diagnosis added!');
-       
+            return redirect()->route('predicate1', [$auth]);
 
     }
 
     public function store_emotion($id ,Request $request)
     {
-        //เชื่อม table -- medic_emotion กับ emotion_t
+        //รับค่าไอดีจาก user
         $auth = User::findorfail($id);
 
         // ดึงข้อมูลจากหน้าฟอร์ม
@@ -79,13 +79,16 @@ class MedicVolunteerController extends Controller
         //     ->where('emotion_t.emotion_name', $requestData)
         //     ->get();
     
-         return redirect()->route('predicate1', [$auth]);
+         return redirect()->route('quest1_medic', [$auth]);
        
     }
 
-    public function store_medicine(Request $request)
+    public function store_medicine($id ,Request $request)
     {
-      
+      //รับค่าไอดีจาก user
+      $auth = User::findorfail($id);
+
+
         // ดึงข้อมูลจากหน้าฟอร์ม
         $requestData = $request->all();
         $user_id = Auth::id();
@@ -94,7 +97,7 @@ class MedicVolunteerController extends Controller
         
         Medicine::create($requestData);
 
-        return redirect('predicate1/3')->with('flash_message', 'Medicine added!');
+        return redirect()->route('quest1_medicine', [$auth]);
       
     }
   
@@ -150,8 +153,11 @@ class MedicVolunteerController extends Controller
   
     public function destroy($id)
     {
-        Medicine::destroy($id);
+        
 
-        return redirect('predicate1/1')->with('flash_message', 'Medicine deleted!');
+        Medicine::destroy($id);
+        
+       
+        return redirect()->back();
     }
 }

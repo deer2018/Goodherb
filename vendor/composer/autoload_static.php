@@ -540,6 +540,7 @@ class ComposerStaticInit22113b6d9ae4e4ec1ee16a0a317478d7
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Models\\Crud' => __DIR__ . '/../..' . '/app/Models/Crud.php',
         'App\\Models\\Diagnosis' => __DIR__ . '/../..' . '/app/Models/Diagnosis.php',
+        'App\\Models\\Emotion_t' => __DIR__ . '/../..' . '/app/Models/Emotion_t.php',
         'App\\Models\\Medic' => __DIR__ . '/../..' . '/app/Models/Medic.php',
         'App\\Models\\Medic_Emotion' => __DIR__ . '/../..' . '/app/Models/Medic_Emotion.php',
         'App\\Models\\Medicine' => __DIR__ . '/../..' . '/app/Models/Medicine.php',

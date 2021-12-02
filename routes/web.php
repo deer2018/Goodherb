@@ -164,14 +164,18 @@ Route::resource('medic_personal', 'Medic\Medic_PersonalController');
 
 ////////////////// predicate1
 Route::get('predicate1/{id}','Medic\MedicVolunteerController@edit');
-Route::post('quest1_medic','Medic\MedicVolunteerController@store_advice')->name('predicate1');
-Route::post('quest1_medicine','Medic\MedicVolunteerController@store_medicine')->name('predicate1');
-Route::post('predicate1/{id}','Medic\MedicVolunteerController@store_emotion')->name('predicate1');
+
+Route::post('predicate1/{id}','Medic\MedicVolunteerController@store_emotion')->name('quest1_medic');
+Route::post('predicate1/{id}','Medic\MedicVolunteerController@store_advice')->name('predicate1');
+Route::post('predicate1/{id}','Medic\MedicVolunteerController@store_medicine')->name('quest1_medicine');
+
 Route::patch('predicate1/{id}','Medic\MedicVolunteerController@update');
+
+// Route::resource('predicate1/{id}','Medic\MedicVolunteerController');
 
 
 // Route::post('predicate1/{id}','Medic\MedicineController@store_medicine');
-Route::delete('predicate1/{id}','Medic\MedicineController@destroy');
+Route::delete('predicate1/{id}','Medic\MedicVolunteerController@destroy')->name('predicate1');
 
 // Route::post('predicate1/{id}','Medic\Medic_EmotionController@store_emotion');
 

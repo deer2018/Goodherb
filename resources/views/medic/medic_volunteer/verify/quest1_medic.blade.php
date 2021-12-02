@@ -129,7 +129,7 @@
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
-                    @include ('questionnaireone.quest_medic', ['formMode' => 'quest1_medic.blade.blade'])
+                    @include ('questionnaireone.quest_medic', ['formMode' => 'quest1_medic.blade'])
                 </div>
                 <div class="modal-footer">
                     <button type="submit" name="emotion_form" class="btn btn-link">บันทึก</button>
