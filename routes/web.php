@@ -165,9 +165,9 @@ Route::resource('medic_personal', 'Medic\Medic_PersonalController');
 ////////////////// predicate1
 Route::get('predicate1/{id}','Medic\MedicVolunteerController@edit');
 
-Route::post('predicate1/{id}','Medic\MedicVolunteerController@store_emotion')->name('quest1_medic');
 Route::post('predicate1/{id}','Medic\MedicVolunteerController@store_advice')->name('predicate1');
-Route::post('predicate1/{id}','Medic\MedicVolunteerController@store_medicine')->name('quest1_medicine');
+Route::post('quest1_medicine/{id}','Medic\MedicVolunteerController@store_medicine')->name('quest1_medicine');
+Route::post('quest1_medic/{id}','Medic\MedicVolunteerController@store_emotion')->name('quest1_medic');
 
 Route::patch('predicate1/{id}','Medic\MedicVolunteerController@update');
 

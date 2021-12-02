@@ -109,7 +109,7 @@
 </head>
 <body>
 
-<form method="POST" action="{{ url('/predicate1/' . $users->id ) }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
+<form method="POST" action="{{ url('/quest1_medic/' . $users->id ) }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
                         {{ csrf_field() }}
 
     <div class="container bootstrap snippets bootdey">

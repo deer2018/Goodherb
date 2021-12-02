@@ -57,11 +57,9 @@ class MedicVolunteerController extends Controller
 
     }
 
-    public function store_emotion($id ,Request $request)
+    public function store_emotion(Request $request)
     {
-        //รับค่าไอดีจาก user
-        $auth = User::findorfail($id);
-
+      
         // ดึงข้อมูลจากหน้าฟอร์ม
         $requestData = $request->all();
         $user_id = Auth::id();
@@ -79,14 +77,13 @@ class MedicVolunteerController extends Controller
         //     ->where('emotion_t.emotion_name', $requestData)
         //     ->get();
     
-         return redirect()->route('quest1_medic', [$auth]);
+        return redirect()->back();
        
     }
 
-    public function store_medicine($id ,Request $request)
+    public function store_medicine(Request $request)
     {
-      //รับค่าไอดีจาก user
-      $auth = User::findorfail($id);
+      
 
 
         // ดึงข้อมูลจากหน้าฟอร์ม
@@ -97,7 +94,7 @@ class MedicVolunteerController extends Controller
         
         Medicine::create($requestData);
 
-        return redirect()->route('quest1_medicine', [$auth]);
+        return redirect()->back();
       
     }
   
