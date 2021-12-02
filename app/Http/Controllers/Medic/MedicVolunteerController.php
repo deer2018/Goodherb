@@ -37,23 +37,20 @@ class MedicVolunteerController extends Controller
     }
 
    
-    public function store_advice($id ,Request $request)
+    public function store_advice(Request $request)
     
     { 
-        //รับค่าไอดีจาก user
-        $auth = User::findorfail($id);
         
-            
+                    
             $requestData = $request->all();
-            $user_id = Auth::id();
+            $user_id = $request->get('user_id');
             $requestData["user_id"] = $user_id;
-            $requestData["user_id"] = Auth::id();
-       
-
+            
+           
             $diagnosis = Diagnosis::firstOrNew(array('user_id' => $user_id));
             $diagnosis->fill($requestData)->save();
 
-            return redirect()->route('predicate1', [$auth]);
+            return redirect()->back();
 
     }
 
@@ -62,20 +59,19 @@ class MedicVolunteerController extends Controller
       
         // ดึงข้อมูลจากหน้าฟอร์ม
         $requestData = $request->all();
-        $user_id = Auth::id();
+        $user_id = $request->get('user_id');
         $requestData["user_id"] = $user_id;
-        $requestData["user_id"] = Auth::id();
+        
 
         $emotions = Medic_Emotion::firstOrNew(array('user_id' => $user_id));
         $emotions->fill($requestData)->save();
 
         // $emotions = Medic_Emotion::join('emotion_t','medic_emotion.id','=','emotion_t.id')
-        // ->select('emotion_t.name','=','medic_emotion.emotion');
-        // $emotions = DB::table('medic_emotion')
-        //     ->select('emotion')
-        //     ->join('emotion_t', 'medic_emotion.id', '=', 'emotion_t.id')
-        //     ->where('emotion_t.emotion_name', $requestData)
-        //     ->get();
+        //     ->where('emotion')
+        //     ->select('emotion_t.*','emotion_t.emotion_name');
+         $emotions = DB::table('medic_emotion')
+              ->leftJoin('emotion_r', 'medic_emotion.emotion', '=', 'emotion_r.emotion')
+              ->get();
     
         return redirect()->back();
        
@@ -156,5 +152,24 @@ class MedicVolunteerController extends Controller
         
        
         return redirect()->back();
+    }
+
+    public function volunteer_status()
+    {
+        {
+            $user = Auth::user();
+            $user_id = $user->id;
+
+            $tm1 = Diagnosis::where('user_id'  ,$user_id )->get();
+            $update_status = User::where('user_id'  ,$user_id )->get();
+            foreach($tm1 as $item){
+                if(!empty( $item->advice )){
+                    $update_status = "ตรวจสอบครั้ง 1 แล้ว";
+                }
+            }
+
+    
+            return view('medic.medic_volunteer.verify.predicate1', compact('user_id','update_status') );
+        }
     }
 }

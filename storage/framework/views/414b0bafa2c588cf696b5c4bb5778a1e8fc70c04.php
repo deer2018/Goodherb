@@ -49,8 +49,11 @@
                     <td> <?php echo e($item->username); ?></td>
                     <td> <?php echo e($item->surname); ?></td>
                     <td class="text-primary"> <?php echo e($item->group); ?></td>
-                    <td class="text-danger">ยังไม่ได้ตรวจสอบ
-                        
+                    <td class="text-danger">
+                        <?php if (!empty($item['advice'])) {
+                        echo "<font color='#10BD27'>ตรวจสอบครั้งที่ 1 แล้ว</font>";} 
+                            else {
+                        echo  $item['status'] ;}?>
                         </td>
                     <td>
                         <a href="<?php echo e(url('/medic_volunteer_sub/' . $item->id)); ?>"><button class="btn btn-info btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>ประเมินอาการ</button></a>

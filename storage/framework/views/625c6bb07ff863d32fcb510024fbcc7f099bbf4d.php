@@ -112,7 +112,7 @@
 <form method="POST" action="<?php echo e(url('/quest1_medic/' . $users->id )); ?>" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
                         <?php echo e(csrf_field()); ?>
 
-
+    <input class="form-control d-none" name="user_id" type="integer" id="user_id" value=" <?php echo e($users->id); ?>">
     <div class="container bootstrap snippets bootdey">
         <div class="btn-demo " id="btn-color-targets">
             <a href="#modalmedic" data-target-color="bluegray" data-toggle="modal" data-dismiss="modal" class="btn btn-success  btn-block">เลือกภาวะอารมณ์</a>

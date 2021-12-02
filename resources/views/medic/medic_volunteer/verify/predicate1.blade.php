@@ -32,7 +32,7 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        @include ('medic.medic_volunteer.quest1.medic_quest1_13', ['formMode' => 'predicate1.blade'])
+                        {{-- @include ('medic.medic_volunteer.quest1.medic_quest1_13', ['formMode' => 'predicate1.blade']) --}}
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        @include ('medic.medic_volunteer.quest1.medic_quest1_5', ['formMode' => 'predicate1.blade'])
+                        {{-- @include ('medic.medic_volunteer.quest1.medic_quest1_5', ['formMode' => 'predicate1.blade']) --}}
                     </div>
                 </div>
             </div>
@@ -73,7 +73,7 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        @include ('medic.medic_volunteer.quest1.medic_quest1_26', ['formMode' => 'predicate1.blade'])
+                        {{-- @include ('medic.medic_volunteer.quest1.medic_quest1_26', ['formMode' => 'predicate1.blade']) --}}
                     </div>
                 </div>
             </div>
@@ -95,7 +95,7 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        @include ('medic.medic_volunteer.quest1.medic_quest1_select', ['formMode' => 'predicate1.blade'])
+                        {{-- @include ('medic.medic_volunteer.quest1.medic_quest1_select', ['formMode' => 'predicate1.blade']) --}}
                     </div>
                 </div>
             </div>
@@ -120,7 +120,7 @@
                                     <?php if (empty($emotion['emotion'])) {
                                         echo "กรุณาเลือกภาวะอารมณ์";} 
                                             else {
-                                        echo $emotion['emotion'];}?>
+                                        echo $emotion['emotion_name'];}?>
                                 </div>
                         </div><br>
                         <div class="mb-2">
@@ -203,11 +203,13 @@
                             {{ csrf_field() }}
                             <div class="form-group {{ $errors->has('advice') ? 'has-error' : ''}}">
                                 <label for="advice" class="control-label">{{ 'รายละเอียด' }}</label>
+                                <input class="form-control d-none" name="user_id" type="integer" id="user_id" value=" {{ $users->id }}">
                                 <textarea class="form-control" name="advice" type="text" id="advice" placeholder="ใส่ความคิดเห็นของแพทย์" value="{{ isset($diagnosis->advice) ? $diagnosis->advice : ''}}" ><?php if (empty($advice['advice'])) {
                                     echo "";} 
                                         else {
                                     echo $advice['advice'];}?></textarea>
                             </div><br>
+                           
                             <button type="submit" name="advice_form" class="btn btn-primary btn-user btn-block"> บันทึก </button>
                         </form>
                     </div>

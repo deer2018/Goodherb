@@ -31,7 +31,7 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <?php echo $__env->make('medic.medic_volunteer.quest1.medic_quest1_13', ['formMode' => 'predicate1.blade'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+                        
                     </div>
                 </div>
             </div>
@@ -51,7 +51,7 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <?php echo $__env->make('medic.medic_volunteer.quest1.medic_quest1_5', ['formMode' => 'predicate1.blade'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+                        
                     </div>
                 </div>
             </div>
@@ -72,7 +72,7 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <?php echo $__env->make('medic.medic_volunteer.quest1.medic_quest1_26', ['formMode' => 'predicate1.blade'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+                        
                     </div>
                 </div>
             </div>
@@ -94,7 +94,7 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <?php echo $__env->make('medic.medic_volunteer.quest1.medic_quest1_select', ['formMode' => 'predicate1.blade'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+                        
                     </div>
                 </div>
             </div>
@@ -119,7 +119,7 @@
                                     <?php if (empty($emotion['emotion'])) {
                                         echo "กรุณาเลือกภาวะอารมณ์";} 
                                             else {
-                                        echo $emotion['emotion'];}?>
+                                        echo $emotion['emotion_name'];}?>
                                 </div>
                         </div><br>
                         <div class="mb-2">
@@ -205,11 +205,13 @@
 
                             <div class="form-group <?php echo e($errors->has('advice') ? 'has-error' : ''); ?>">
                                 <label for="advice" class="control-label"><?php echo e('รายละเอียด'); ?></label>
+                                <input class="form-control d-none" name="user_id" type="integer" id="user_id" value=" <?php echo e($users->id); ?>">
                                 <textarea class="form-control" name="advice" type="text" id="advice" placeholder="ใส่ความคิดเห็นของแพทย์" value="<?php echo e(isset($diagnosis->advice) ? $diagnosis->advice : ''); ?>" ><?php if (empty($advice['advice'])) {
                                     echo "";} 
                                         else {
                                     echo $advice['advice'];}?></textarea>
                             </div><br>
+                           
                             <button type="submit" name="advice_form" class="btn btn-primary btn-user btn-block"> บันทึก </button>
                         </form>
                     </div>

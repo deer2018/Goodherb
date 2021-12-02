@@ -22,24 +22,32 @@ class MedicController extends Controller
     {
         $perPage = 25;
         // $users = User::all();
-        $diagnosis = Diagnosis::latest()->first();
         $keyword = $request->get('search'); 
         switch(Auth::user()->role)
         {
                 case "หมอ" : 
                     // $users = User::latest()->paginate($perPage);
-    
                     if (!empty($keyword)) {
-                        $users = User::where(function($q) use ($keyword){
-                            $q->where('username', )
-                              ->orWhere('surname', $keyword);        
-                        })
-                        ->get();
+                        $users = User::join('_q1_4', 'users.id', '=', '_q1_4.user_id')
+                        ->leftJoin('diagnosis', 'users.id', '=', 'diagnosis.user_id')
+                        ->where('role', "อาสาสมัคร")
+                        ->where('name', 'LIKE' , "%$keyword%")
+                        ->select('users.*', '_q1_4.group', 'diagnosis.advice')
+                        ->latest()->paginate($perPage);
                     } else {
                         $users = User::join('_q1_4', 'users.id', '=', '_q1_4.user_id')
+                        ->leftJoin('diagnosis', 'users.id', '=', 'diagnosis.user_id')
                         ->where('role', "อาสาสมัคร")
-                        ->select('users.*', '_q1_4.group')
+                        ->select('users.*', '_q1_4.group', 'diagnosis.advice')
+                        ->orderBy('status', 'DESC')
                         ->latest()->paginate($perPage);
+
+                        // $users = User::leftJoin('_q1_4', 'users.id', '=', '_q1_4.user_id')
+                        // ->where('role', "อาสาสมัคร")
+                        // ->select('users.*', '_q1_4.group', )
+                        // ->latest()->paginate($perPage);
+
+                        
                     }
                     break;
             default : 
