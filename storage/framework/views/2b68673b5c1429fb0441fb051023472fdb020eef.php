@@ -9,19 +9,7 @@
 <div class="panel-body inf-content">
     
     <div class="row">
-        <div class="col-md-3">
-            <img alt="" style="width:600px;" title="" class="img-circle img-thumbnail isTooltip" src="https://bootdey.com/img/Content/avatar/avatar7.png" data-original-title="Usuario"> 
-            <ul title="Ratings" class="list-inline ratings text-center">
-                <!-- <li><a href="#"><span class="fab fa-google fa-fw"></span></a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li> -->
-            </ul>
-            <!-- <div style="text-align: center" > 
-            <a href="#" title="Back"><button class="btn btn-warning"><i class="fa fa-user" aria-hidden="true"></i>แก้ไขรูป</button></a>
-            </div> -->
-        </div>
+        
         <div class="col-md-7">
             
             <div class="table-responsive">

@@ -9,19 +9,6 @@
     <div class="container bootstrap snippets bootdey">
         <div class="panel-body inf-content">
             <div class="row">
-                <div class="col-md-3">
-                    <img alt="" style="width:600px;" title="" class="img-circle img-thumbnail isTooltip" src="https://bootdey.com/img/Content/avatar/avatar7.png" data-original-title="Usuario">
-                    <ul title="Ratings" class="list-inline ratings text-center">
-                        <!-- <li><a href="#"><span class="fab fa-google fa-fw"></span></a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li> -->
-                    </ul>
-                    <div style="text-align: center">
-                        <a href="<?php echo e(url('/volunteer_per/' . $data->id . '/edit')); ?>" title="Edit Crud"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>แก้ไขข้อมูล</button></a>
-                    </div><br>
-                </div>
                 <div class="col-md-6">
 
                     <div class="table-responsive">
@@ -35,6 +22,7 @@
                                         </strong>
                                     </td>
                                     <td class="text-primary">
+                                        <?php echo e($data->id); ?>
 
                                     </td>
                                 </tr>
@@ -293,6 +281,11 @@
                                 </tr>
                             </tbody>
                         </table>
+                        <tr>
+                            <div style="text-align: center">
+                                <a href="<?php echo e(url('/volunteer_per/' . $data->id . '/edit')); ?>" title="Edit Crud"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>แก้ไขข้อมูล</button></a>
+                            </div><br>
+                        </tr>
                     </div>
                 </div>
             </div>
