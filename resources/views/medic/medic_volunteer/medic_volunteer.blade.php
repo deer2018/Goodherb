@@ -50,10 +50,13 @@
                     <td> {{ $item->surname }}</td>
                     <td class="text-primary"> {{ $item->group }}</td>
                     <td class="text-danger">
-                        <?php if (!empty($item['advice'])) {
-                        echo "<font color='#10BD27'>ตรวจสอบครั้งที่ 1 แล้ว</font>";} 
+                        <?php if (!empty($item['advice2'])) {
+                        echo "<font color='#10BD27'>ตรวจสอบครั้งที่ 2 แล้ว</font>";} 
+                            else if(!empty($item['advice'])) {
+                        echo "<font color='#10BD27'>ตรวจสอบครั้งที่ 1 แล้ว</font>";}
                             else {
-                        echo  $item['status'] ;}?>
+                        echo  $item['status'] ;}
+                        ?>
                         </td>
                     <td>
                         <a href="{{ url('/medic_volunteer_sub/' . $item->id) }}"><button class="btn btn-info btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>ประเมินอาการ</button></a>

@@ -121,11 +121,11 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">แบบสอบถามคัดเลือก</h4>
+                <h4 class="modal-title">แบบประเมินความเครียด</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
-                <?php echo $__env->make('questionnaireone.quest5', ['formMode' => 'medic_quest1_5.blade'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+                <?php echo $__env->make('medic.medic_questionnaire.quest5', ['formMode' => 'medic_quest1_5.blade'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>

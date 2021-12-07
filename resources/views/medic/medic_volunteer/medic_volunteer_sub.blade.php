@@ -26,7 +26,7 @@
                                 <td><a href="{{ url('/predicate1/' . $users->id) }}" title="Click"><button
                                             class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o"
                                                 aria-hidden="true"></i>ประเมินครั้งที่ 1</button></a></td>
-                                <td><a href="#" title="Click"><button class="btn btn-info btn-sm"><i
+                                <td><a href="{{ url('/check_m1/' . $users->id) }}" title="Click"><button class="btn btn-info btn-sm"><i
                                                 class="fa fa-pencil-square-o" aria-hidden="true"></i>การรับประทานยาครั้งที่
                                             1</button></a></td>
 
@@ -37,7 +37,7 @@
                                 <td><a href="{{ url('/predicate2/' . $users->id) }}" title="Back"><button
                                             class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o"
                                                 aria-hidden="true"></i>ประเมินครั้งที่ 2</button></a></td>
-                                <td><a href="#" title="Click"><button class="btn btn-info btn-sm"><i
+                                <td><a href="{{ url('/check_m2/' . $users->id) }}" title="Click"><button class="btn btn-info btn-sm"><i
                                                 class="fa fa-pencil-square-o" aria-hidden="true"></i>การรับประทานยาครั้งที่
                                             2</button></a></td>
 

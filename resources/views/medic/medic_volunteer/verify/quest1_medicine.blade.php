@@ -106,7 +106,7 @@
 
     <form method="POST" action="{{ url('/quest1_medicine/' . $users->id ) }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
         {{ csrf_field() }}
-
+        <input class="form-control d-none" name="user_id" type="integer" id="user_id" value=" {{ $users->id }}">
         <div class="container bootstrap snippets bootdey">
             <div class="btn-demo" id="btn-color-targets">
                 <a href="#modalmedicine" data-target-color="bluegray" data-toggle="modal" data-dismiss="modal" class="btn btn-info btn-user btn-block">เลือกตัวยา</a>

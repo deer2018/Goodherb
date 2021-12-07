@@ -131,32 +131,32 @@ Route::get('/medic_index', function () {
 });
 
 
-// Q1 -> Medic  --------------
- Route::get('/medic_quest1_select', function () {
-     return view('medic.medic_volunteer.quest1.medic_quest1_select');
- });
- Route::get('/medic_quest1_5', function () {
-    return view('medic.medic_volunteer.quest1.medic_quest1_5');
-});
- Route::get('/medic_quest1_13', function () {
-    return view('medic.medic_volunteer.quest1.medic_quest1_13');
-});
- Route::get('/medic_quest1_26', function () {
-    return view('medic.medic_volunteer.quest1.medic_quest1_26');
-});
-// Q2 -> Medic  --------------
-Route::get('/medic_quest3', function () {
-    return view('medic.medic_volunteer.quest2.medic_quest3');
-});
-Route::get('/medic_quest5', function () {
-   return view('medic.medic_volunteer.quest2.medic_quest5');
-});
-Route::get('/medic_quest13', function () {
-   return view('medic.medic_volunteer.quest2.medic_quest13');
-});
-Route::get('/medic_quest26', function () {
-   return view('medic.medic_volunteer.quest2.medic_quest26');
-});
+    // // Q1 -> Medic  --------------
+    // Route::get('/medic_quest1_select', function () {
+    //     return view('medic.medic_volunteer.quest1.medic_quest1_select');
+    // });
+    // Route::get('/medic_quest1_5', function () {
+    //     return view('medic.medic_volunteer.quest1.medic_quest1_5');
+    // });
+    // Route::get('/medic_quest1_13', function () {
+    //     return view('medic.medic_volunteer.quest1.medic_quest1_13');
+    // });
+    // Route::get('/medic_quest1_26', function () {
+    //     return view('medic.medic_volunteer.quest1.medic_quest1_26');
+    // });
+    // // Q2 -> Medic  --------------
+    // Route::get('/medic_quest3', function () {
+    //     return view('medic.medic_volunteer.quest2.medic_quest3');
+    // });
+    // Route::get('/medic_quest5', function () {
+    // return view('medic.medic_volunteer.quest2.medic_quest5');
+    // });
+    // Route::get('/medic_quest13', function () {
+    // return view('medic.medic_volunteer.quest2.medic_quest13');
+    // });
+    // Route::get('/medic_quest26', function () {
+    // return view('medic.medic_volunteer.quest2.medic_quest26');
+    // });
 
 // ---------------------------
 
@@ -171,18 +171,21 @@ Route::post('quest1_medic/{id}','Medic\MedicVolunteerController@store_emotion')-
 
 Route::patch('predicate1/{id}','Medic\MedicVolunteerController@update');
 
-// Route::resource('predicate1/{id}','Medic\MedicVolunteerController');
-
-
-// Route::post('predicate1/{id}','Medic\MedicineController@store_medicine');
 Route::delete('predicate1/{id}','Medic\MedicVolunteerController@destroy')->name('predicate1');
 
-// Route::post('predicate1/{id}','Medic\Medic_EmotionController@store_emotion');
+/////////////////--predicate2
 
-/////////////////----
+Route::get('predicate2/{id}','Medic\MedicVolunteerController@edit2')->name('predicate2');
+Route::post('predicate2/{id}','Medic\MedicVolunteerController@store_advice2')->name('predicate2');
 
-Route::get('predicate2/{id}','Medic\MedicVolunteerController@edit2');
+/////////////////-- check_medicine
 
+
+Route::get('check_m1/{id}','Medic\Medicine_CheckController@medicine1');
+Route::get('check_m2/{id}','Medic\Medicine_CheckController@medicine2');
+
+
+////////////////////////////
 Route::get('/medic_volunteer_sub/{id}','Medic\MedicController@volunteer_sub');
 Route::get('/medic_volunteer', 'Medic\MedicController@index');
 Route::get('/medic_volunteer/{id}', 'Medic\MedicController@show');

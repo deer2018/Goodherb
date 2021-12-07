@@ -125,7 +125,7 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
-                @include ('questionnaireone.quest_select', ['formMode' => 'medic_quest1_select.blade'])
+                @include ('medic.medic_questionnaire.quest_select', ['formMode' => 'medic_quest1_select.blade'])
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>

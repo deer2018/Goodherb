@@ -11,14 +11,15 @@ use Illuminate\Http\Request;
 
 class Medic_PersonalController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('role:หมอ');
+    }
+    
     public function index(Request $request)
     {
 
-        public function __construct()
-        {
-            $this->middleware('auth');
-            $this->middleware('role:หมอ');
-        }
         
         {
             $id = Auth::id();

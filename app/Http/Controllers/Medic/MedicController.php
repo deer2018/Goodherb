@@ -37,8 +37,9 @@ class MedicController extends Controller
                     } else {
                         $users = User::join('_q1_4', 'users.id', '=', '_q1_4.user_id')
                         ->leftJoin('diagnosis', 'users.id', '=', 'diagnosis.user_id')
+                        ->leftJoin('diagnosis2', 'users.id', '=', 'diagnosis2.user_id')
                         ->where('role', "อาสาสมัคร")
-                        ->select('users.*', '_q1_4.group', 'diagnosis.advice')
+                        ->select('users.*', '_q1_4.group', 'diagnosis.advice','diagnosis2.advice2')
                         ->orderBy('status', 'DESC')
                         ->latest()->paginate($perPage);
 
