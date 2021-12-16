@@ -19,7 +19,7 @@ use App\Models\Questionone_four;
 use App\Models\Questiontwo;
 use App\Models\Questiontwo_two;
 use App\Models\Questiontwo_tree;
-use App\Models\Questiontwo_four;
+
 use Illuminate\Http\Request;
 
 class MedicVolunteerController extends Controller
@@ -85,6 +85,10 @@ class MedicVolunteerController extends Controller
         $requestData = $request->all();
         $user_id = $request->get('user_id');
         $requestData["user_id"] = $user_id;
+
+        // $requestData["total"] =  $requestData["quantity"]->sum();
+        // // $requestData["quantity"]->sum($requestData["total"]);
+       
     
         Medicine::create($requestData);
         return redirect()->back();
@@ -134,9 +138,9 @@ class MedicVolunteerController extends Controller
         //ค้นหาตาม pk
         $users = User::findOrFail($id);
          //ค้นหา column ไหนก็ได้   
-         $_qt_1 = Questiontwo::where('user_id', '=', $users->id)->firstOrFail();
-         $_qt_2 = Questiontwo_two::where('user_id', '=', $users->id)->firstOrFail();
-         $_qt_3 = Questiontwo_tree::where('user_id', '=', $users->id)->firstOrFail();
+        $_qt_1 = Questiontwo::where('user_id', '=', $users->id)->firstOrFail();
+        $_qt_2 = Questiontwo_two::where('user_id', '=', $users->id)->firstOrFail();
+        $_qt_3 = Questiontwo_tree::where('user_id', '=', $users->id)->firstOrFail();
          
          $advice2 = Diagnosis2::where('user_id', '=', $users->id)->first();
       

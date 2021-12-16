@@ -205,3 +205,11 @@ Route::delete('/medicine/{id}', 'Medic\MedicineController@destroy');
 
 Route::get('/medic_emotion/', 'Medic\Medic_EmotionController@index');
 Route::post('/medic_emotion/', 'Medic\Medic_EmotionController@store');
+
+
+
+
+
+// Report PDF ------------------------------------------
+
+Route::get('medic_pdf/{id}','MedicPDFController@report');

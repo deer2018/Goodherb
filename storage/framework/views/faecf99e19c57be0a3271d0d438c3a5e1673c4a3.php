@@ -10,10 +10,8 @@
                     <div class="card-body">
                         <a href="<?php echo e(url('/medic_volunteer')); ?>" title="Back"><button class="btn btn-info btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i>ย้อนกลับ</button></a>
                        </br><br>
-                            <div class="col-md-4 ">
-                                <img alt="" style="width:600px;" title=""  class="img-circle img-thumbnail isTooltip rounded-circle" src="https://bootdey.com/img/Content/avatar/avatar7.png" data-original-title="Usuario">
-                            </div>  
-                            </br>
+                            
+                            
                         <div class="table-responsive">
                             <table class="table">
                                 <tbody>

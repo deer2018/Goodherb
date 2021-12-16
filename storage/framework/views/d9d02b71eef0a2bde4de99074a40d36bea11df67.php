@@ -6,7 +6,7 @@
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h4 mb-0 text-gray-800">ข้อมูลของ<a class="m-1 font-weight-bold text-primary">
-                    <?php echo e($users->username); ?></a> ครั้งที่ 2</h1>
+                <?php echo e($users->username); ?> <?php echo e($users->surname); ?></a> ครั้งที่ 2</h1>
             
         </div>
 

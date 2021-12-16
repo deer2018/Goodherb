@@ -6,11 +6,11 @@
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h4 mb-0 text-gray-800">ข้อมูลของ<a class="m-1 font-weight-bold text-primary">
-                    {{ $users->username }}</a> ครั้งที่ 1</h1>
+                    {{ $users->username }} {{ $users->surname }}</a> ครั้งที่ 1</h1>
 
             {{-- หน้ารีพอร์ท --}}
-            {{-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                    class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> --}}
+            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                    class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
         </div>
 
         <!-- Content Row -->
@@ -121,11 +121,11 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-auto text-gray-800 h6 font-weight-bold">ภาวะอารมณ์ :</div>
-                        <div class="col-auto text-danger h6 font-weight-bold">
+                        <div class="col-auto text-dark h6 font-weight-bold">
                             @if (!isset($emotion)) {
                                 กรุณาเลือกภาวะอารมณ์
                             @else
-                                {{ $emotion->id }} {{ $emotion->emotion_name }}
+                                {{ $emotion->id }}. {{ $emotion->emotion_name }}
                             @endif
                         </div>
                     </div><br>
@@ -145,10 +145,14 @@
         <!-- แสดงข้อมูล ดอกไม้ -->
         <div class="col-lg-12">
 
+        
+        <?php $total = 0 ?>
+        
             <div class="card position-relative shadow h-100 border-bottom-info">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-dark">ขั้นตอนการเลือกชนิดของยาจากดอกไม้</h6>
                 </div>
+               
                 <div class="card-body">
                     <div class="row">
                         {{-- <div class="col-auto text-gray-800 h6 font-weight-bold">ตัวยา</div> --}}
@@ -164,9 +168,8 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-
+                                  
                                     @foreach ($medicines as $item)
-
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
                                             <td>{{ $item->medicine }}</td>
@@ -183,7 +186,7 @@
                                                 </form>
                                             </td>
                                         </tr>
-
+                                    <?php $total += $item->quantity ?>
                                     @endforeach
 
 
@@ -191,6 +194,9 @@
                             </table>
                             <div class="pagination-wrapper"> {!! $medicines->appends(['search' => Request::get('search')])->render() !!} </div>
                         </div>
+                    </div><br>
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-dark">จำนวนทั้งหมด : <a style="color: #4e73df" >{{$total}}</a> หยด</h6>
                     </div><br>
                     <div class="mb-2">
                         {{-- <a href="{{ url('/medicine') }}" title="View Crud"><button class="btn btn-info  btn-block"><i class="btn-block" aria-hidden="true"></i>เลือกยาจากดอกไม้</button></a> --}}
