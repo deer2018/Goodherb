@@ -9,6 +9,9 @@ use App\Http\Requests;
 use App\User;
 use App\Models\Diagnosis;
 use App\Models\Diagnosis2;
+use App\Models\Questionone_four;
+use App\Models\Questiontree;
+use App\Models\Questiontree_two;
 use Illuminate\Http\Request;
 
 class MedicController extends Controller
@@ -81,8 +84,35 @@ class MedicController extends Controller
 
 
         $users = User::findOrFail($id);
+       
+        $user_id = $users->id;
 
-        return view('medic.medic_volunteer.medic_volunteer_sub', compact('users'));
+        $tm1 = Questionone_four::where('user_id'  ,$user_id )->get();
+        $update_1 = "";
+        foreach($tm1 as $item){
+            if(!empty( $item->group )){
+                $update_1 = 1 ;
+            }
+        }
+
+        $tm3 = Questiontree::where('user_id'  ,$user_id )->get();
+        $update_3 = "";
+        foreach($tm3 as $item){
+            if(!empty( $item->updated_at )){
+                $update_3 = $item->updated_at ;
+            }
+        }
+
+        $tm4 = Questiontree_two::where('user_id'  ,$user_id )->get();
+        $update_4 = "";
+        foreach($tm4 as $item){
+            if(!empty( $item->updated_at )){
+                $update_4 = $item->updated_at ;
+            }
+        }
+
+
+        return view('medic.medic_volunteer.medic_volunteer_sub', compact('users','update_1','update_3','update_4'));
     }
 
 

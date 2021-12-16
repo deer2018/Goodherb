@@ -4,7 +4,7 @@
   font-weight: normal;
   src: url("{{ asset('fonts/THSarabunNew.tff') }}") format('truetype');
 }
-@font-face{
+/* @font-face{
   font-family: 'THSarabunNew';
   font-style: normal;
   font-weight: normal;
@@ -21,7 +21,7 @@
   font-style: normal;
   font-weight: normal;
   src: url("{{ asset('fonts/THSarabunNew BoldItalic.tff') }}") format('truetype');
-}
+} */
 
 body {
   position: relative;

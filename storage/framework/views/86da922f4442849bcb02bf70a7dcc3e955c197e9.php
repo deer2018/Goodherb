@@ -126,7 +126,7 @@
                     <div class="row">
                         <div class="col-auto text-gray-800 h6 font-weight-bold">ภาวะอารมณ์ :</div>
                         <div class="col-auto text-dark h6 font-weight-bold">
-                            <?php if(!isset($emotion)): ?> {
+                            <?php if(!isset($emotion)): ?>
                                 กรุณาเลือกภาวะอารมณ์
                             <?php else: ?>
                                 <?php echo e($emotion->id); ?>. <?php echo e($emotion->emotion_name); ?>

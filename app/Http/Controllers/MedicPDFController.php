@@ -37,7 +37,7 @@ class MedicPDFController extends Controller
          $compact = compact('users','_qt_1','_qt_2','_qt_3','_qt_4','_qt2_1','_qt2_2','_qt2_3');
 
          $pdf = PDF::loadView('pdf.medic_pdf', $compact);
-         return @$pdf->stream('medic_pdf.pdf');
+         return @$pdf->download('medic_pdf.pdf');
 
         // return view('pdf.medic_pdf'  , compact('users','_qt_1','_qt_2','_qt_3','_qt_4','_qt2_1','_qt2_2','_qt2_3'));
     }

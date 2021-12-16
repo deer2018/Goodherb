@@ -23,23 +23,39 @@
                             <tr>
                                 <td>1</td>
                                 <td>แบบสอบถามครั้งที่ 1</td>
-                                <td><a href="{{ url('/predicate1/' . $users->id) }}" title="Click"><button
+                                <td>
+                                    <a href="{{ url('/predicate1/' . $users->id) }}" title="Click"><button
                                             class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o"
-                                                aria-hidden="true"></i>ประเมินครั้งที่ 1</button></a></td>
-                                <td><a href="{{ url('/check_m1/' . $users->id) }}" title="Click"><button class="btn btn-info btn-sm"><i
-                                                class="fa fa-pencil-square-o" aria-hidden="true"></i>การรับประทานยาครั้งที่
-                                            1</button></a></td>
-
+                                                aria-hidden="true"></i>ประเมินครั้งที่ 1</button></a>
+                                </td>
+                                @if(!empty($update_3))
+                                    <td><a href="{{ url('/check_m1/' . $users->id) }}" title="Click"><button class="btn btn-info btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>การรับประทานยาครั้งที่ 1</button></a></td>
+                                @else
+                                    <td><a href="{{ url('/check_m1/' . $users->id) }}" title="Click"><button class="btn btn-info btn-sm" disabled><i class="fa fa-pencil-square-o" aria-hidden="true"></i>การรับประทานยาครั้งที่ 1</button></a></td>
+                                @endif 
                             </tr>
                             <tr>
                                 <td>2</td>
                                 <td>แบบสอบถามครั้งที่ 2</td>
-                                <td><a href="{{ url('/predicate2/' . $users->id) }}" title="Back"><button
-                                            class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o"
+                                @if(!empty($update_1))
+                                    <td><a href="{{ url('/predicate2/' . $users->id) }}" title="Back"><button
+                                            class="btn btn-primary btn-sm" ><i class="fa fa-pencil-square-o"
                                                 aria-hidden="true"></i>ประเมินครั้งที่ 2</button></a></td>
-                                <td><a href="{{ url('/check_m2/' . $users->id) }}" title="Click"><button class="btn btn-info btn-sm"><i
-                                                class="fa fa-pencil-square-o" aria-hidden="true"></i>การรับประทานยาครั้งที่
-                                            2</button></a></td>
+                                @else
+                                    <td><a href="{{ url('/predicate2/' . $users->id) }}" title="Back"><button
+                                    class="btn btn-primary btn-sm" disabled><i class="fa fa-pencil-square-o"
+                                        aria-hidden="true"></i>ประเมินครั้งที่ 2</button></a></td>
+                                @endif  
+
+                                @if(!empty($update_4))
+                                <td><a href="{{ url('/check_m2/' . $users->id) }}" title="Click"><button
+                                            class="btn btn-info btn-sm"><i class="fa fa-pencil-square-o"
+                                                aria-hidden="true"></i>การรับประทานยาครั้งที่ 2</button></a></td>
+                                @else
+                                <td><a href="{{ url('/check_m2/' . $users->id) }}" title="Click"><button
+                                    class="btn btn-info btn-sm" disabled><i class="fa fa-pencil-square-o"
+                                        aria-hidden="true"></i>การรับประทานยาครั้งที่ 2</button></a></td>
+                                @endif
 
                             </tr>
                         </tbody>

@@ -11,19 +11,7 @@
 
     <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
                 <!-- ค้นหา -->
-            <div class="col-sm-12 col-md-12">
-                        <form method="GET" action="<?php echo e(url('/medic_volunteer')); ?>" accept-charset="UTF-8" class="form-inline my-2 my-lg-0 float-right" role="search">
-                            <div class="input-group">
-                               
-                                <input class="form-control form-control" name="search" id="search" value="<?php echo e(request('search')); ?>" />
-                                <span class="input-group-append">
-                                    <button class="btn btn-primary" type="submit">
-                                        <i class="fa fa-search"></i>
-                                    </button>
-                                </span>
-                            </div>
-                        </form>
-            </div>
+            
   
 
   

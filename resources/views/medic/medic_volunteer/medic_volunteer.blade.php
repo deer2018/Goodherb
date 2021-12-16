@@ -11,7 +11,7 @@
 
     <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
                 <!-- ค้นหา -->
-            <div class="col-sm-12 col-md-12">
+            {{-- <div class="col-sm-12 col-md-12">
                         <form method="GET" action="{{ url('/medic_volunteer') }}" accept-charset="UTF-8" class="form-inline my-2 my-lg-0 float-right" role="search">
                             <div class="input-group">
                                
@@ -23,7 +23,7 @@
                                 </span>
                             </div>
                         </form>
-            </div>
+            </div> --}}
   
 
   

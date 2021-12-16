@@ -2,11 +2,24 @@
 <html lang="en">
 
 <head>
-    
+
     <link href="{{ asset('/css/style.css') }}" rel="stylesheet" media="all">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Goodherb</title>
-   
+
+    <style>
+        @font-face {
+            font-family: 'THSarabunNew';
+            font-style: normal;
+            font-weight: normal;
+            src: url("{{ asset('fonts/THSarabunNew.tff') }}") format('truetype');
+        }
+
+        body {
+            font-family: "THSarabunNew";
+        }
+
+    </style>
 
 </head>
 

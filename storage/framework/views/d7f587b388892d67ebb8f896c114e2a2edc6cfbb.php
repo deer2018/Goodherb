@@ -23,23 +23,39 @@
                             <tr>
                                 <td>1</td>
                                 <td>แบบสอบถามครั้งที่ 1</td>
-                                <td><a href="<?php echo e(url('/predicate1/' . $users->id)); ?>" title="Click"><button
+                                <td>
+                                    <a href="<?php echo e(url('/predicate1/' . $users->id)); ?>" title="Click"><button
                                             class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o"
-                                                aria-hidden="true"></i>ประเมินครั้งที่ 1</button></a></td>
-                                <td><a href="<?php echo e(url('/check_m1/' . $users->id)); ?>" title="Click"><button class="btn btn-info btn-sm"><i
-                                                class="fa fa-pencil-square-o" aria-hidden="true"></i>การรับประทานยาครั้งที่
-                                            1</button></a></td>
-
+                                                aria-hidden="true"></i>ประเมินครั้งที่ 1</button></a>
+                                </td>
+                                <?php if(!empty($update_3)): ?>
+                                    <td><a href="<?php echo e(url('/check_m1/' . $users->id)); ?>" title="Click"><button class="btn btn-info btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>การรับประทานยาครั้งที่ 1</button></a></td>
+                                <?php else: ?>
+                                    <td><a href="<?php echo e(url('/check_m1/' . $users->id)); ?>" title="Click"><button class="btn btn-info btn-sm" disabled><i class="fa fa-pencil-square-o" aria-hidden="true"></i>การรับประทานยาครั้งที่ 1</button></a></td>
+                                <?php endif; ?> 
                             </tr>
                             <tr>
                                 <td>2</td>
                                 <td>แบบสอบถามครั้งที่ 2</td>
-                                <td><a href="<?php echo e(url('/predicate2/' . $users->id)); ?>" title="Back"><button
-                                            class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o"
+                                <?php if(!empty($update_1)): ?>
+                                    <td><a href="<?php echo e(url('/predicate2/' . $users->id)); ?>" title="Back"><button
+                                            class="btn btn-primary btn-sm" ><i class="fa fa-pencil-square-o"
                                                 aria-hidden="true"></i>ประเมินครั้งที่ 2</button></a></td>
-                                <td><a href="<?php echo e(url('/check_m2/' . $users->id)); ?>" title="Click"><button class="btn btn-info btn-sm"><i
-                                                class="fa fa-pencil-square-o" aria-hidden="true"></i>การรับประทานยาครั้งที่
-                                            2</button></a></td>
+                                <?php else: ?>
+                                    <td><a href="<?php echo e(url('/predicate2/' . $users->id)); ?>" title="Back"><button
+                                    class="btn btn-primary btn-sm" disabled><i class="fa fa-pencil-square-o"
+                                        aria-hidden="true"></i>ประเมินครั้งที่ 2</button></a></td>
+                                <?php endif; ?>  
+
+                                <?php if(!empty($update_4)): ?>
+                                <td><a href="<?php echo e(url('/check_m2/' . $users->id)); ?>" title="Click"><button
+                                            class="btn btn-info btn-sm"><i class="fa fa-pencil-square-o"
+                                                aria-hidden="true"></i>การรับประทานยาครั้งที่ 2</button></a></td>
+                                <?php else: ?>
+                                <td><a href="<?php echo e(url('/check_m2/' . $users->id)); ?>" title="Click"><button
+                                    class="btn btn-info btn-sm" disabled><i class="fa fa-pencil-square-o"
+                                        aria-hidden="true"></i>การรับประทานยาครั้งที่ 2</button></a></td>
+                                <?php endif; ?>
 
                             </tr>
                         </tbody>

@@ -9,8 +9,8 @@
                     {{ $users->username }} {{ $users->surname }}</a> ครั้งที่ 1</h1>
 
             {{-- หน้ารีพอร์ท --}}
-            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                    class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+            {{-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                    class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> --}}
         </div>
 
         <!-- Content Row -->
@@ -122,7 +122,7 @@
                     <div class="row">
                         <div class="col-auto text-gray-800 h6 font-weight-bold">ภาวะอารมณ์ :</div>
                         <div class="col-auto text-dark h6 font-weight-bold">
-                            @if (!isset($emotion)) {
+                            @if (!isset($emotion))
                                 กรุณาเลือกภาวะอารมณ์
                             @else
                                 {{ $emotion->id }}. {{ $emotion->emotion_name }}
