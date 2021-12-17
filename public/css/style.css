@@ -1,50 +1,59 @@
 @font-face{
   font-family: 'THSarabunNew';
-  font-style: normal;
-  font-weight: normal;
-  src: url("{{ asset('fonts/THSarabunNew.tff') }}") format('truetype');
+ 
+  src: url("{{ public_path('fonts/THSarabunNew.ttf') }}") format('truetype');
 }
-/* @font-face{
+@font-face{
   font-family: 'THSarabunNew';
-  font-style: normal;
-  font-weight: normal;
+ 
   src: url("{{ asset('fonts/THSarabunNew Bold.tff') }}") format('truetype');
 }
 @font-face{
   font-family: 'THSarabunNew';
-  font-style: normal;
-  font-weight: normal;
+ 
   src: url("{{ asset('fonts/THSarabunNew Italic.tff') }}") format('truetype');
 }
 @font-face{
   font-family: 'THSarabunNew';
-  font-style: normal;
-  font-weight: normal;
   src: url("{{ asset('fonts/THSarabunNew BoldItalic.tff') }}") format('truetype');
+}
+
+/* @font-face {
+  font-family: 'THSarabunNew';
+  font-style: normal;
+  font-weight: bold;
+  src: local('Quattrocento Sans Bold'), local('QuattrocentoSans-Bold'),url("{{ asset('http://164.115.33.174/awards_opdc/assets/fonts/THSarabunNew/THSarabunNew.ttf') }}") format('truetype');
 } */
 
+
 body {
-  position: relative;
-  width: 21cm;  
-  height: 29.7cm; 
-  margin: 0 auto; 
-  color: #555555;
-  background: #FFFFFF; 
   font-family: 'THSarabunNew'; 
-  font-size: 14px; 
-  
+
 }
 
 header {
   padding: 10px 0;
   margin-bottom: 20px;
   border-bottom: 1px solid #AAAAAA;
-  font-family: 'THSarabunNew'; 
+  
   /* display: flex;
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px; */
 }
+
+footer {
+  color: #777777;
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid #AAAAAA;
+  padding: 8px 0;
+  text-align: center;
+ 
+}
+
 
 
 .clearfix:after {
@@ -60,81 +69,7 @@ header {
   margin-left: -15px;
 }
 
-.col-xl,
-.col-xl-auto,
-.col-xl-12,
-.col-xl-11,
-.col-xl-10,
-.col-xl-9,
-.col-xl-8,
-.col-xl-7,
-.col-xl-6,
-.col-xl-5,
-.col-xl-4,
-.col-xl-3,
-.col-xl-2,
-.col-xl-1,
-.col-lg,
-.col-lg-auto,
-.col-lg-12,
-.col-lg-11,
-.col-lg-10,
-.col-lg-9,
-.col-lg-8,
-.col-lg-7,
-.col-lg-6,
-.col-lg-5,
-.col-lg-4,
-.col-lg-3,
-.col-lg-2,
-.col-lg-1,
-.col-md,
-.col-md-auto,
-.col-md-12,
-.col-md-11,
-.col-md-10,
-.col-md-9,
-.col-md-8,
-.col-md-7,
-.col-md-6,
-.col-md-5,
-.col-md-4,
-.col-md-3,
-.col-md-2,
-.col-md-1,
-.col-sm,
-.col-sm-auto,
-.col-sm-12,
-.col-sm-11,
-.col-sm-10,
-.col-sm-9,
-.col-sm-8,
-.col-sm-7,
-.col-sm-6,
-.col-sm-5,
-.col-sm-4,
-.col-sm-3,
-.col-sm-2,
-.col-sm-1,
-.col,
-.col-auto,
-.col-12,
-.col-11,
-.col-10,
-.col-9,
-.col-8,
-.col-7,
-.col-6,
-.col-5,
-.col-4,
-.col-3,
-.col-2,
-.col-1 {
-  position: relative;
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-}
+
 
 .div1 {
   width: 300px;
@@ -179,7 +114,7 @@ a {
   margin-bottom: 50px;
 }
 
-#client {
+.client {
   padding-left: 6px;
   border-left: 6px solid #0087C3;
   float: left;
@@ -190,9 +125,10 @@ a {
   color: #777777;
 }
 
-h2.name {
-  font-size: 1.4em;
-  font-weight: normal;
+.name {
+  font-size: 1.1em;
+  font-weight: bold;
+  font-family: 'THSarabunNew';
   margin: 0;
 }
 
@@ -322,15 +258,4 @@ table tfoot tr td:first-child {
   font-size: 1.2em;
 }
 
-footer {
-  color: #777777;
-  width: 100%;
-  height: 30px;
-  position: absolute;
-  bottom: 0;
-  border-top: 1px solid #AAAAAA;
-  padding: 8px 0;
-  text-align: center;
-  font-family: 'THSarabunNew'; 
-}
 
