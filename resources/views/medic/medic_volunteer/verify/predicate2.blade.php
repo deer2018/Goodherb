@@ -1,6 +1,15 @@
 @extends('layouts.medic.main')
 
 @section('content')
+
+
+{{-- แจ้งเตือนการบันทึก --}}
+<script language="javascript">
+    function delaler () {
+      alert("กรอกข้อมูลสำเร็จแล้ว");
+    }
+</script>
+
     <!-- Begin Page Content -->
     <div class="container-fluid">
         <!-- Page Heading -->
@@ -111,7 +120,7 @@
                                         
                             </div><br>
 
-                            <button type="submit" name="advice_form" class="btn btn-primary btn-user btn-block"> บันทึก
+                            <button type="submit" name="advice_form" class="btn btn-primary btn-user btn-block" onclick="return delaler();"> บันทึก
                             </button>
                         </form>
                     </div>

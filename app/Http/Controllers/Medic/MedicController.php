@@ -9,7 +9,7 @@ use App\Http\Requests;
 use App\User;
 use App\Models\Diagnosis;
 use App\Models\Diagnosis2;
-use App\Models\Questionone_four;
+use App\Models\Questiontwo_tree;
 use App\Models\Questiontree;
 use App\Models\Questiontree_two;
 use Illuminate\Http\Request;
@@ -87,7 +87,7 @@ class MedicController extends Controller
        
         $user_id = $users->id;
 
-        $tm1 = Questionone_four::where('user_id'  ,$user_id )->get();
+        $tm1 = Questiontwo_tree::where('user_id'  ,$user_id )->get();
         $update_1 = "";
         foreach($tm1 as $item){
             if(!empty( $item->group )){
@@ -99,7 +99,7 @@ class MedicController extends Controller
         $update_3 = "";
         foreach($tm3 as $item){
             if(!empty( $item->updated_at )){
-                $update_3 = $item->updated_at ;
+                $update_3 = 3 ;
             }
         }
 
@@ -107,7 +107,7 @@ class MedicController extends Controller
         $update_4 = "";
         foreach($tm4 as $item){
             if(!empty( $item->updated_at )){
-                $update_4 = $item->updated_at ;
+                $update_4 = 4 ;
             }
         }
 

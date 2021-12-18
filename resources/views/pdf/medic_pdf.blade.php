@@ -60,7 +60,7 @@
                 <div class="name">อีเมล : <a>{{ $users->email }}</a></div>
                 <div class="name">เบอร์โทรศัพท์ : <a>{{ $users->phone }}</a></div>
             </div>
-            <div style="float: right; margin-right: 30%; line-height: 20pt;">
+            <div class="right">
                 <div class="name">ศาสนา : <a>{{ $users->religion }}</a></div>
                 <div class="name">เชื้อชาติ : <a>{{ $users->age }}</a></div>
                 <div class="name">สถานภาพสมรส : <a>{{ $users->relationship }}</a></div>
@@ -71,8 +71,8 @@
         </div>
         <div class="clearfix">
             <div class="client">
-                <div class="name">ที่อยู่ : <a>{{ $users->address }}</a></div>
-                <div class="name">ความเกี่ยวข้องกับผู้ป่วย : <a>{{ $users->relevance }}</a></div>
+                <div class="nameaddress">ที่อยู่ : <a>{{ $users->address }}</a></div>
+                <div class="nameaddress">ความเกี่ยวข้องกับผู้ป่วย : <a>{{ $users->relevance }}</a></div>
             </div>
         </div>
         <hr>
@@ -85,13 +85,11 @@
         <div class="clearfix">
             <div class="client">
                 <div style='color:rgb(9, 9, 99); font-weight:bold;'>แบบประเมินครั้งที่ 1 </div>
-                <div class="name">แบบวัดความเครียดของผู้ดูแล 13 ข้อ : &nbsp;<a>{{ $_qt_1->total }}</a>
-                    คะแนน</div>
+                <div class="name">แบบวัดความเครียดของผู้ดูแล 13 ข้อ : &nbsp;<a>{{ $_qt_1->total }}</a> คะแนน</div>
                 <div class="name">แบบประเมินความเครียด 5 ข้อ : &nbsp;<a>{{ $_qt_2->total }}</a> คะแนน</div>
-                <div class="name">เครื่องชี้วัดคุณภาพชีวิต 26 ข้อ : &nbsp;<a>{{ $_qt_3->total }}</a> คะแนน
-                </div>
+                <div class="name">เครื่องชี้วัดคุณภาพชีวิต 26 ข้อ : &nbsp;<a>{{ $_qt_3->total }}</a> คะแนน</div>
             </div>
-            <div style="float: right; margin-right: 30%; line-height: 20pt;">
+            <div class="right">
                 <div style='color:rgb(9, 9, 99); font-weight:bold;'>เกณฑ์</div>
                 <div class="name">อยู่ในระดับ : <a>{{ $_qt_1->group }}</a> </div>
                 <div class="name">อยู่ในระดับ : <a>{{ $_qt_2->group }}</a> </div>
@@ -102,14 +100,11 @@
         <div class="clearfix">
             <div class="client">
                 <div style='color:rgb(9, 9, 99); font-weight:bold;'>แบบประเมินครั้งที่ 2 </div>
-                <div class="name">แบบวัดความเครียดของผู้ดูแล 13 ข้อ : &nbsp;<a>{{ $_qt2_1->total }}</a>
-                    คะแนน</div>
-                <div class="name">แบบประเมินความเครียด 5 ข้อ : &nbsp;<a>{{ $_qt2_2->total }}</a> คะแนน
-                </div>
-                <div class="name">เครื่องชี้วัดคุณภาพชีวิต 26 ข้อ : &nbsp;<a>{{ $_qt2_3->total }}</a> คะแนน
-                </div>
+                <div class="name">แบบวัดความเครียดของผู้ดูแล 13 ข้อ : &nbsp;<a>{{ $_qt2_1->total }}</a> คะแนน</div>
+                <div class="name">แบบประเมินความเครียด 5 ข้อ : &nbsp;<a>{{ $_qt2_2->total }}</a> คะแนน</div>
+                <div class="name">เครื่องชี้วัดคุณภาพชีวิต 26 ข้อ : &nbsp;<a>{{ $_qt2_3->total }}</a> คะแนน</div>
             </div>
-            <div style="float: right; margin-right: 30%; line-height: 20pt;">
+            <div class="right">
                 <div style='color:rgb(9, 9, 99); font-weight:bold;'>เกณฑ์</div>
                 <div class="name">อยู่ในระดับ : <a>{{ $_qt2_1->group }}</a> </div>
                 <div class="name">อยู่ในระดับ : <a>{{ $_qt2_2->group }}</a> </div>
@@ -120,9 +115,9 @@
       
 
     </main>
-    <footer>
+    {{-- <footer>
 
-    </footer>
+    </footer> --}}
 </body>
 
 </html>

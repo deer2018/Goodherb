@@ -54,11 +54,26 @@ footer {
  
 }
 
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 20px;
+  text-align: center;
+}
 
+.flex-item-left {
+  padding: 10px;
+  flex: 50%;
+}
+
+.flex-item-right {
+  padding: 10px;
+  flex: 50%;
+}
 
 .clearfix:after {
   content: "";
-  display: table;
+  display: inline-block;
   clear: both;
 }
 
@@ -69,6 +84,13 @@ footer {
   margin-left: -15px;
 }
 
+.inline{
+  display: inline-block;
+  font-size: 1.1em;
+  font-weight: bold;
+  font-family: 'THSarabunNew';
+  margin: 0;
+}
 
 
 .div1 {
@@ -118,11 +140,26 @@ a {
   padding-left: 6px;
   border-left: 6px solid #0087C3;
   float: left;
-  line-height: 20pt
+  line-height: 20pt;
+  flex: 50%;
+}
+
+.right{
+  float: right; 
+  margin-right: 25%; 
+  line-height: 20pt;
 }
 
 #client .to {
   color: #777777;
+}
+
+.nameaddress {
+  font-size: 1.1em;
+  font-weight: bold;
+  font-family: 'THSarabunNew';
+  margin: 0;
+  flex: 100%;
 }
 
 .name {
